@@ -5,6 +5,7 @@ import com.joshy.hywrapper.model.RateLimit
 import com.joshy.hywrapper.model.housing.HousingActiveResponse
 import com.joshy.hywrapper.model.housing.HousingHouseResponse
 import com.joshy.hywrapper.model.parseRateLimit
+import com.joshy.hywrapper.model.other.*
 import com.joshy.hywrapper.model.playerdata.GuildResponse
 import com.joshy.hywrapper.model.playerdata.OnlineResponse
 import com.joshy.hywrapper.model.playerdata.PlayerResponse
@@ -116,6 +117,14 @@ class HypixelClient(
             mapOf("house" to UuidUtils.undash(houseUuid)),
         )
 
+    suspend fun getBoosters(): BoostersResponse = fetch("/boosters")
+
+    suspend fun getCounts(): CountsResponse = fetch("/counts")
+
+    suspend fun getLeaderboards(): LeaderboardsResponse = fetch("/leaderboards")
+
+    suspend fun getPunishmentStats(): PunishmentStatsResponse = fetch("/punishmentstats")
+
     suspend fun getResourceGames(): GamesResponse =
         fetch(
             "/resources/games",
@@ -175,6 +184,12 @@ class HypixelClient(
         fetch(
             "/skyblock/auctions",
             mapOf("page" to page.toString()),
+        )
+
+    suspend fun getGarden(profileUuid: String): GardenResponse =
+        fetch(
+            "/skyblock/garden",
+            mapOf("profile" to UuidUtils.undash(profileUuid)),
         )
 
     suspend fun getFiresales(): FiresalesResponse = fetch("/skyblock/firesales")

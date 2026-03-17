@@ -645,6 +645,32 @@ class HypixelClientTest {
         }
 
     @Test
+    fun `test getGarden success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "garden": {
+                        "uuid": "garden-uuid",
+                        "unlocked_plots_ids": [],
+                        "garden_experience": 1000.5
+                    }
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getGarden("ad8fefaa8351454bb739a4eaa872173f")
+            assertEquals(true, response.success)
+            assertEquals("garden-uuid", response.garden?.uuid)
+            assertEquals(1000.5, response.garden?.gardenExperience)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/garden?profile=ad8fefaa8351454bb739a4eaa872173f", recordedRequest.path)
+        }
+
+    @Test
     fun `test getAuctions success`() =
         runBlocking {
             val jsonResponse =
@@ -769,5 +795,47 @@ class HypixelClientTest {
 
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/skyblock/skills", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getBoosters success`() =
+        runBlocking {
+            val jsonResponse = """{"success": true, "boosters": []}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+            val response = client.getBoosters()
+            assertEquals(true, response.success)
+            assertEquals("/boosters", server.takeRequest().path)
+        }
+
+    @Test
+    fun `test getCounts success`() =
+        runBlocking {
+            val jsonResponse = """{"success": true, "games": {}, "playerCount": 100}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+            val response = client.getCounts()
+            assertEquals(true, response.success)
+            assertEquals(100, response.playerCount)
+            assertEquals("/counts", server.takeRequest().path)
+        }
+
+    @Test
+    fun `test getLeaderboards success`() =
+        runBlocking {
+            val jsonResponse = """{"success": true, "leaderboards": {}}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+            val response = client.getLeaderboards()
+            assertEquals(true, response.success)
+            assertEquals("/leaderboards", server.takeRequest().path)
+        }
+
+    @Test
+    fun `test getPunishmentStats success`() =
+        runBlocking {
+            val jsonResponse = """{"success": true, "staff_total": 10}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+            val response = client.getPunishmentStats()
+            assertEquals(true, response.success)
+            assertEquals(10, response.staffTotal)
+            assertEquals("/punishmentstats", server.takeRequest().path)
         }
 }
