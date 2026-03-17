@@ -21,11 +21,9 @@ data class MuseumResponse(
 data class Member(
     val value: Long? = 0,
     val appraisal: Boolean? = null,
-    val items: Map<String, MuseumItemInfo> = emptyMap(),
+    val items: Map<MuseumItem, MuseumItemInfo> = emptyMap(),
     val special: List<SpecialItemInfo> = emptyList(),
-) {
-    fun getItem(museumItem: MuseumItem): MuseumItemInfo? = items[museumItem.id]
-}
+)
 
 @Serializable
 data class MuseumItemInfo(
@@ -34,14 +32,14 @@ data class MuseumItemInfo(
     @SerialName("featured_slot")
     val featuredSlot: String? = null,
     val borrowing: Boolean? = null,
-    val items: com.joshy.hywrapper.model.skyblock.MuseumItem? = null,
+    val items: MuseumItem? = null,
 )
 
 @Serializable
 data class SpecialItemInfo(
     @SerialName("donated_time")
     val donatedTime: Long? = 0,
-    val items: com.joshy.hywrapper.model.skyblock.MuseumItem? = null,
+    val items: MuseumItem? = null,
 )
 
 @Serializable
