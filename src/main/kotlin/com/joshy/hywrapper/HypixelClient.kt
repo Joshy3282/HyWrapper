@@ -192,6 +192,12 @@ class HypixelClient(
             mapOf("profile" to UuidUtils.undash(profileUuid)),
         )
 
+    suspend fun getMuseum(profileUuid: String): MuseumResponse =
+        fetch(
+            "/skyblock/museum",
+            mapOf("profile" to UuidUtils.undash(profileUuid)),
+        )
+
     suspend fun getFiresales(): FiresalesResponse = fetch("/skyblock/firesales")
 
     suspend fun getSkyblockSkills(): SkillsResponse = fetch("/resources/skyblock/skills", authenticated = false)

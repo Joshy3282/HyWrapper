@@ -668,10 +668,42 @@ class HypixelClientTest {
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/garden?profile=ad8fefaa8351454bb739a4eaa872173f", recordedRequest.path)
-        }
+            }
 
-    @Test
-    fun `test getAuctions success`() =
+            @Test
+            fun `test getMuseum success`() =
+            runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "members": {
+                        "ad8fefaa8351454bb739a4eaa872173f": {
+                            "value": 1000,
+                            "appraisal": true,
+                            "items": {
+                                "HYPERION": {
+                                    "donated_time": 1618214400000
+                                }
+                            }
+                        }
+                    }
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getMuseum("ad8fefaa8351454bb739a4eaa872173f")
+            assertEquals(true, response.success)
+            assertNotNull(response.members["ad8fefaa8351454bb739a4eaa872173f"])
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/museum?profile=ad8fefaa8351454bb739a4eaa872173f", recordedRequest.path)
+            }
+
+            @Test
+            fun `test getAuctions success`() =
+
         runBlocking {
             val jsonResponse =
                 """
