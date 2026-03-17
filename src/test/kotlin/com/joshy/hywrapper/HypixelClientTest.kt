@@ -645,6 +645,74 @@ class HypixelClientTest {
         }
 
     @Test
+    fun `test getAuctions success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "page": 1,
+                    "totalPages": 5,
+                    "totalAuctions": 100,
+                    "lastUpdated": 1618214400000,
+                    "auctions": [
+                        {
+                            "uuid": "auction-uuid",
+                            "auctioneer": "player-uuid",
+                            "item_name": "Hyperion",
+                            "starting_bid": 1000000000
+                        }
+                    ]
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getAuctions(1)
+            assertEquals(true, response.success)
+            assertEquals(1, response.page)
+            assertEquals(5, response.totalPages)
+            assertEquals(1, response.auctions.size)
+            assertEquals("Hyperion", response.auctions[0].itemName)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/auctions?page=1", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getAuctions 404 page not found`(): Unit =
+        runBlocking {
+            val jsonResponse = """{"success": false, "cause": "Page not found"}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(404))
+
+            assertFailsWith<ResourceNotFoundException> {
+                client.getAuctions(999)
+            }
+        }
+
+    @Test
+    fun `test getAuctions 422 invalid page`(): Unit =
+        runBlocking {
+            val jsonResponse = """{"success": false, "cause": "Invalid page"}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(422))
+
+            assertFailsWith<InvalidDataException> {
+                client.getAuctions(-1)
+            }
+        }
+
+    @Test
+    fun `test getAuctions 503 data not populated`(): Unit =
+        runBlocking {
+            val jsonResponse = """{"success": false, "cause": "Data not populated"}"""
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(503))
+
+            assertFailsWith<DataNotPopulatedException> {
+                client.getAuctions(1)
+            }
+        }
+
+    @Test
     fun `test getFiresales success`() =
         runBlocking {
             val jsonResponse =

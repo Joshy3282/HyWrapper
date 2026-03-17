@@ -171,6 +171,12 @@ class HypixelClient(
 
     suspend fun getAuctionsEnded(): AuctionsEndedResponse = fetch("/skyblock/auctions_ended")
 
+    suspend fun getAuctions(page: Int): AuctionsResponse =
+        fetch(
+            "/skyblock/auctions",
+            mapOf("page" to page.toString()),
+        )
+
     suspend fun getFiresales(): FiresalesResponse = fetch("/skyblock/firesales")
 
     suspend fun getSkyblockSkills(): SkillsResponse = fetch("/resources/skyblock/skills", authenticated = false)
