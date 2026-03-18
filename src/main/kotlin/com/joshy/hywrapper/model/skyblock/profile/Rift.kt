@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Rift(
     val villagePlaza: VillagePlaza? = null,
+    val witherCage: WitherCage? = null,
+    val blackLagoon: BlackLagoon? = null,
 )
 
 @Serializable
@@ -62,4 +64,22 @@ data class Lonely(
 data class Seraphine(
     @SerialName("step_index")
     val stepIndex: Int = 0,
+)
+
+@Serializable
+data class WitherCage(
+    @SerialName("killed_eyes")
+    val killedEyes: List<String> = emptyList()
+)
+
+@Serializable
+data class BlackLagoon(
+    @SerialName("talked_to_edwin")
+    val talkedToEdwin: Boolean? = null,
+    @SerialName("received_science_paper")
+    val receivedSciencePaper: Boolean? = null,
+    @SerialName("completed_step")
+    val completedStep: Int = 0,
+    @SerialName("delivered_science_paper")
+    val deliveredSciencePaper: Boolean? = null,
 )
