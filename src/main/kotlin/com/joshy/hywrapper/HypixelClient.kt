@@ -67,6 +67,7 @@ class HypixelClient(
             ignoreUnknownKeys = true
             isLenient = true
             encodeDefaults = true
+            decodeEnumsCaseInsensitive = true
         }
 
     @Volatile
@@ -173,6 +174,7 @@ class HypixelClient(
 
     suspend fun getSkyblockNews(): NewsResponse = fetch("/skyblock/news")
 
+    suspend fun getSkyblockItems(): ItemsResponse = fetch("/resources/skyblock/items", authenticated = false)
 
     suspend fun getBazaar(): BazaarResponse = fetch("/skyblock/bazaar")
 

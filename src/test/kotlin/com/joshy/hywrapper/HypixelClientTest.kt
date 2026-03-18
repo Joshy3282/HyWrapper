@@ -116,6 +116,36 @@ class HypixelClientTest {
         }
 
     @Test
+    fun `test getSkyblockItems success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "lastUpdated": 1618214400000,
+                    "items": [
+                        {
+                            "id": "SKYBLOCK_ITEM",
+                            "name": "SkyBlock Item",
+                            "material": "DIAMOND"
+                        }
+                    ]
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getSkyblockItems()
+            assertEquals(true, response.success)
+            assertEquals(1, response.items.size)
+            assertEquals("SKYBLOCK_ITEM", response.items[0].id)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/resources/skyblock/items", recordedRequest.path)
+            assertEquals(null, recordedRequest.getHeader("API-Key"))
+        }
+
+    @Test
     fun `test getBazaar success`() =
         runBlocking {
             val jsonResponse =
