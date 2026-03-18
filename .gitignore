@@ -1,9 +1,9 @@
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-.kotlin
+kotlin/.gradle
+kotlin/build/
+kotlin/!gradle/wrapper/gradle-wrapper.jar
+kotlin/!**/src/main/**/build/
+kotlin/!**/src/test/**/build/
+kotlin/.kotlin
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
