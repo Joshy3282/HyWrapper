@@ -1,7 +1,15 @@
-# HyWrapper Hypixel API Client
 
-## General Usage
+# HyWrapper - Hypixel API Wrapper
 
+An asynchronous and multi-platform Hypixel API wrapper for Python, Kotlin, and Java.
+
+## Setup
+
+TODO
+
+## Usage
+
+### Kotlin
 ```kotlin
 // Initialize the client
 val client = HypixelClient(apiKey = "your-api-key")
@@ -13,25 +21,38 @@ if (response.success) {
 }
 ```
 
+### Python
+```python
+import asyncio
+from hywrapper import HypixelClient
+
+async def main():
+    client = HypixelClient(api_key="your-api-key")
+    response = await client.get_player("ac29411d0826412f98c0dd14b334c1fa")
+    if response.success:
+        print("Player Found!")
+
+asyncio.run(main())
+```
+
 ## Examples
 
-### Bazaar
+### Bazaar (Kotlin)
 ```kotlin
 val bazaar = client.getBazaar()
 val enchantedDiamond = bazaar.getProduct(BazaarItem.ENCHANTED_DIAMOND)
 println("Sell Price: ${enchantedDiamond?.quickStatus?.sellPrice}")
 ```
 
-### Firesales
-```kotlin
-val firesales = client.getFiresales()
-firesales.sales.forEach { sale ->
-    println("Item: ${sale.itemId}, Price: ${sale.price}")
-}
-```
-
-### Guild Information
+### Guild Information (Kotlin)
 ```kotlin
 val guild = client.getGuildByPlayer("ac29411d0826412f98c0dd14b334c1fa")
 println("Guild Name: ${guild.guild?.name}")
 ```
+
+## Todo List
+- [ ] Complete non-skyblock models
+- [ ] Complete skyblock models
+- [ ] Add more helper methods
+- [ ] Add documentation
+- [ ] Expand test coverage (mostly python)
