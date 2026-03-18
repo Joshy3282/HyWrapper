@@ -4,8 +4,11 @@ import com.joshy.hywrapper.model.HypixelResponse
 import com.joshy.hywrapper.model.RateLimit
 import com.joshy.hywrapper.model.housing.HousingActiveResponse
 import com.joshy.hywrapper.model.housing.HousingHouseResponse
+import com.joshy.hywrapper.model.other.BoostersResponse
+import com.joshy.hywrapper.model.other.CountsResponse
+import com.joshy.hywrapper.model.other.LeaderboardsResponse
+import com.joshy.hywrapper.model.other.PunishmentStatsResponse
 import com.joshy.hywrapper.model.parseRateLimit
-import com.joshy.hywrapper.model.other.*
 import com.joshy.hywrapper.model.playerdata.GuildResponse
 import com.joshy.hywrapper.model.playerdata.OnlineResponse
 import com.joshy.hywrapper.model.playerdata.PlayerResponse
@@ -13,6 +16,7 @@ import com.joshy.hywrapper.model.playerdata.RecentGamesResponse
 import com.joshy.hywrapper.model.resources.*
 import com.joshy.hywrapper.model.skyblock.*
 import com.joshy.hywrapper.util.UuidUtils
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.boolean
@@ -28,7 +32,8 @@ open class HypixelException(message: String, val code: Int? = null) : Exception(
 
 class InvalidApiKeyException(message: String) : HypixelException(message, 403)
 
-class RateLimitException(message: String, val isGlobal: Boolean = false) : HypixelException(message, 429)
+class RateLimitException(message: String, val isGlobal: Boolean = false, val retryAfter: Long? = null) :
+    HypixelException(message, 429)
 
 
 class ResourceNotFoundException(message: String) : HypixelException(message, 404)
@@ -47,6 +52,8 @@ class HypixelClient(
     httpClient: OkHttpClient = OkHttpClient(),
     private val baseUrl: String = "https://api.hypixel.net/v2",
     private val defaultCacheDurationMinutes: Int = 1,
+    private val autoRetry: Boolean = false,
+    private val maxRetries: Int = 3,
 ) {
     private val internalHttpClient: OkHttpClient =
         httpClient.newBuilder()
@@ -216,104 +223,124 @@ class HypixelClient(
         queryParams: Map<String, String> = emptyMap(),
         authenticated: Boolean = true,
     ): T {
-        val urlBuilder = "$baseUrl$endpoint".toHttpUrl().newBuilder()
-        queryParams.forEach { (name, value) ->
-            urlBuilder.addQueryParameter(name, value)
-        }
-        val url = urlBuilder.build()
+        var attempts = 0
+        while (true) {
+            val urlBuilder = "$baseUrl$endpoint".toHttpUrl().newBuilder()
+            queryParams.forEach { (name, value) ->
+                urlBuilder.addQueryParameter(name, value)
+            }
+            val url = urlBuilder.build()
 
-        val requestBuilder =
-            Request.Builder()
-                .url(url)
-                .header("Accept", "application/json")
+            val requestBuilder =
+                Request.Builder()
+                    .url(url)
+                    .header("Accept", "application/json")
 
-        if (authenticated) {
-            requestBuilder.header("API-Key", apiKey)
-        }
-
-        val request = requestBuilder.build()
-
-        return suspendCancellableCoroutine { continuation ->
-            val call = internalHttpClient.newCall(request)
-
-            continuation.invokeOnCancellation {
-                call.cancel()
+            if (authenticated) {
+                requestBuilder.header("API-Key", apiKey)
             }
 
-            call.enqueue(
-                object : Callback {
-                    override fun onResponse(
-                        call: Call,
-                        response: Response,
-                    ) {
-                        response.use {
-                            val rateLimit = parseRateLimit(response.headers)
-                            if (rateLimit != null) {
-                                lastRateLimit = rateLimit
-                            }
+            val request = requestBuilder.build()
 
-                            if (!response.isSuccessful) {
-                                val errorBody = response.body.string()
-                                val cause =
-                                    runCatching {
-                                        json.parseToJsonElement(errorBody).jsonObject["cause"]?.jsonPrimitive?.content
-                                    }.getOrNull() ?: "HTTP Error: ${response.code}"
+            val result =
+                runCatching {
+                    suspendCancellableCoroutine<T> { continuation ->
+                        val call = internalHttpClient.newCall(request)
 
-                                val exception =
-                                    when (response.code) {
-                                        400 -> {
-                                            if (cause.contains("Missing", ignoreCase = true)) {
-                                                MissingFieldException(cause)
-                                            } else {
-                                                InvalidDataException(cause)
-                                            }
-                                        }
-
-                                        403 -> InvalidApiKeyException(cause)
-                                        404 -> ResourceNotFoundException(cause)
-                                        422 -> InvalidDataException(cause)
-                                        429 -> {
-                                            val isGlobal =
-                                                runCatching {
-                                                    json.parseToJsonElement(errorBody).jsonObject["global"]?.jsonPrimitive?.boolean
-                                                }.getOrNull() ?: false
-                                            RateLimitException(cause, isGlobal)
-                                        }
-
-                                        503 -> DataNotPopulatedException(cause)
-                                        else -> HypixelException(cause, response.code)
-                                    }
-                                continuation.resumeWithException(exception)
-                                return
-                            }
-
-                            try {
-                                val body = response.body.string()
-                                val decoded = json.decodeFromString<T>(body)
-
-                                decoded.rateLimit = rateLimit
-
-                                if (!decoded.success) {
-                                    continuation.resumeWithException(
-                                        HypixelException("API Error: ${decoded.cause ?: "Unknown error"}"),
-                                    )
-                                } else {
-                                    continuation.resume(decoded)
-                                }
-                            } catch (e: Exception) {
-                                continuation.resumeWithException(e)
-                            }
+                        continuation.invokeOnCancellation {
+                            call.cancel()
                         }
-                    }
 
-                    override fun onFailure(
-                        call: Call,
-                        e: IOException,
-                    ) {
-                        continuation.resumeWithException(e)
+                        call.enqueue(
+                            object : Callback {
+                                override fun onResponse(
+                                    call: Call,
+                                    response: Response,
+                                ) {
+                                    response.use {
+                                        val rateLimit = parseRateLimit(response.headers)
+                                        if (rateLimit != null) {
+                                            lastRateLimit = rateLimit
+                                        }
+
+                                        if (!response.isSuccessful) {
+                                            val errorBody = response.body.string()
+                                            val cause =
+                                                runCatching {
+                                                    json.parseToJsonElement(errorBody).jsonObject["cause"]?.jsonPrimitive?.content
+                                                }.getOrNull() ?: "HTTP Error: ${response.code}"
+
+                                            val exception =
+                                                when (response.code) {
+                                                    400 -> {
+                                                        if (cause.contains("Missing", ignoreCase = true)) {
+                                                            MissingFieldException(cause)
+                                                        } else {
+                                                            InvalidDataException(cause)
+                                                        }
+                                                    }
+
+                                                    403 -> InvalidApiKeyException(cause)
+                                                    404 -> ResourceNotFoundException(cause)
+                                                    422 -> InvalidDataException(cause)
+                                                    429 -> {
+                                                        val isGlobal =
+                                                            runCatching {
+                                                                json.parseToJsonElement(errorBody).jsonObject["global"]?.jsonPrimitive?.boolean
+                                                            }.getOrNull() ?: false
+                                                        val retryAfter = response.header("Retry-After")?.toLongOrNull()
+                                                        RateLimitException(cause, isGlobal, retryAfter)
+                                                    }
+
+                                                    503 -> DataNotPopulatedException(cause)
+                                                    else -> HypixelException(cause, response.code)
+                                                }
+                                            continuation.resumeWithException(exception)
+                                            return
+                                        }
+
+                                        try {
+                                            val body = response.body.string()
+                                            val decoded = json.decodeFromString<T>(body)
+
+                                            decoded.rateLimit = rateLimit
+
+                                            if (!decoded.success) {
+                                                continuation.resumeWithException(
+                                                    HypixelException("API Error: ${decoded.cause ?: "Unknown error"}"),
+                                                )
+                                            } else {
+                                                continuation.resume(decoded)
+                                            }
+                                        } catch (e: Exception) {
+                                            continuation.resumeWithException(e)
+                                        }
+                                    }
+                                }
+
+                                override fun onFailure(
+                                    call: Call,
+                                    e: IOException,
+                                ) {
+                                    continuation.resumeWithException(e)
+                                }
+                            },
+                        )
                     }
-                },
-            )
+                }
+
+            if (result.isSuccess) {
+                return result.getOrThrow()
+            } else {
+                val exception = result.exceptionOrNull()
+                if (exception is RateLimitException && autoRetry && attempts < maxRetries) {
+                    val waitTime = exception.retryAfter ?: lastRateLimit?.reset?.toLong() ?: 1L
+                    delay(waitTime * 1000)
+                    attempts++
+                } else {
+                    throw exception ?: HypixelException("Unknown error during fetch")
+                }
+            }
         }
     }
 }
