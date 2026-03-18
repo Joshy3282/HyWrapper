@@ -204,6 +204,12 @@ class HypixelClient(
 
     suspend fun getSkyblockSkills(): SkillsResponse = fetch("/resources/skyblock/skills", authenticated = false)
 
+    suspend fun getProfile(uuid: String): PlayerResponse =
+        fetch(
+            "/skyblock/profile",
+            mapOf("uuid" to UuidUtils.undash(uuid)),
+        )
+
 
     private suspend inline fun <reified T : HypixelResponse> fetch(
         endpoint: String,

@@ -900,4 +900,27 @@ class HypixelClientTest {
             assertEquals(10, response.staffTotal)
             assertEquals("/punishmentstats", server.takeRequest().path)
         }
+
+    @Test
+    fun `test getProfile success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "profile": {
+                        "profile_id": "profile-uuid",
+                        "members": {}
+                    }
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getProfile("ac29411d0826412f98c0dd14b334c1fa")
+            assertEquals(true, response.success)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/profile?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
 }
