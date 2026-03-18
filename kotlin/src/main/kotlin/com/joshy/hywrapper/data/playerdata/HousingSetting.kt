@@ -8,5 +8,5 @@ enum class HousingSetting(val cleanName: String, val type: KClass<*>) {
     BORDER("Border", Boolean::class),
     PRO_TOOLS_PARTICLES("Pro Tools Particles", Boolean::class),
     HOUSING_PLUS_PREFIX("Housing Plus Prefix", Boolean::class),
-    JUKEBOX_MUSIC("Jukebox Music", Boolean::class)
+    JUKEBOX_MUSIC("Jukebox Music", Boolean::class),
 }

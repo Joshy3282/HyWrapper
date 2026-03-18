@@ -10,6 +10,11 @@ plugins {
     id("java")
     `maven-publish`
     id("org.jlleitschuh.gradle.ktlint")
+    id("application")
+}
+
+configure<JavaApplication> {
+    mainClass.set("com.joshy.hywrapper.util.PythonModelGeneratorKt")
 }
 
 group = "com.joshy"

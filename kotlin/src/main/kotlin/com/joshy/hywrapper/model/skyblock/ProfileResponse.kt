@@ -27,19 +27,17 @@ data class Profile(
     val banking: Banking? = null,
 )
 
-
 @Serializable
 data class MemberData(
     val rift: Rift? = null,
 )
 
-
 @Serializable
 data class CommunityUpgrades(
     @SerialName("currently_upgrading")
-    val currentlyUpgrading: String = "", // TODO verify
+    val currentlyUpgrading: String = "",
     @SerialName("upgrade_states")
-    val upgradeStates: List<UpgradeState> = emptyList()
+    val upgradeStates: List<UpgradeState> = emptyList(),
 )
 
 @Serializable
@@ -51,13 +49,13 @@ data class UpgradeState(
     @SerialName("started_by")
     val startedBy: String = "",
     @SerialName("claimed_by")
-    val claimedBy: String = ""
+    val claimedBy: String = "",
 )
 
 @Serializable
 data class Banking(
     val balance: Double = 0.0,
-    val transactions: List<Transaction> = emptyList()
+    val transactions: List<Transaction> = emptyList(),
 )
 
 @Serializable
@@ -66,5 +64,5 @@ data class Transaction(
     val timestamp: Long = 0L,
     val action: String = "",
     @SerialName("initiator_name")
-    val initiatorName: String = ""
+    val initiatorName: String = "",
 )

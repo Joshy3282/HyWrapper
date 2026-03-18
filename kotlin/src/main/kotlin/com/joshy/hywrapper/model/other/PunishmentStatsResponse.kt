@@ -24,4 +24,3 @@ data class PunishmentStatsResponse(
     @Transient
     override var rateLimit: RateLimit? = null
 }
-

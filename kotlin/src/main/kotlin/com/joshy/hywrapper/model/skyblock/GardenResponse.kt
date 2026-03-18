@@ -14,9 +14,7 @@ import kotlinx.serialization.Transient
 data class GardenResponse(
     override val success: Boolean = false,
     override val cause: String? = null,
-
-    val garden: Garden? = null
-
+    val garden: Garden? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -43,11 +41,11 @@ data class Garden(
     @SerialName("garden_upgrades")
     val gardenUpgrades: Map<GardenUpgrade, Int> = emptyMap(),
     @SerialName("unlocked_barn_skins")
-    val unlockedBarnSkins: List<String> = emptyList(), // TODO enum?
+    val unlockedBarnSkins: List<String> = emptyList(),
     @SerialName("greenhouse_slots")
     val greenhouseSlots: List<GreenhouseCoordinate> = emptyList(),
     @SerialName("last_growth_stage_time")
-    val lastGrowthStageTime: Long = 0L
+    val lastGrowthStageTime: Long = 0L,
 )
 
 @Serializable
@@ -57,7 +55,7 @@ data class CommissionData(
     @SerialName("total_completed")
     val totalCompleted: Int = 0,
     @SerialName("unique_npcs_served")
-    val uniqueNpcsServed: Int = 0
+    val uniqueNpcsServed: Int = 0,
 )
 
 @Serializable
@@ -87,11 +85,11 @@ data class ComposterUpgrades(
     @SerialName("organic_matter_cap")
     val organicMatterCap: Int = 0,
     @SerialName("cost_reduction")
-    val costReduction: Int = 0
+    val costReduction: Int = 0,
 )
 
 @Serializable
 data class GreenhouseCoordinate(
     val x: Int = 0,
-    val y: Int = 0
+    val y: Int = 0,
 )

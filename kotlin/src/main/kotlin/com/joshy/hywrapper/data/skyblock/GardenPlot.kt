@@ -75,5 +75,5 @@ enum class GardenPlot(val cleanName: String, val id: Int) {
     EXPERT_3("Expert 3", 23),
 
     @SerialName("expert_4")
-    EXPERT_4("Expert 4", 24)
+    EXPERT_4("Expert 4", 24),
 }

@@ -411,5 +411,5 @@ enum class Visitor(val cleanName: String) {
     MAYOR_FOXY("Mayor Foxy"),
 
     @SerialName("mayor_aatrox")
-    MAYOR_AATROX("Mayor Aatrox")
+    MAYOR_AATROX("Mayor Aatrox"),
 }

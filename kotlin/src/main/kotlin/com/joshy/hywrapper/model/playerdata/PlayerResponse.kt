@@ -11,8 +11,8 @@ import kotlinx.serialization.Transient
 data class PlayerResponse(
     override val success: Boolean = false,
     override val cause: String? = null,
-
-    ) : HypixelResponse {
+    val player: Player? = null,
+) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 }
@@ -57,14 +57,14 @@ data class Player(
     val tourney: Tourney? = null,
     val fortuneBuff: Int? = 0,
     val giftedMeta: GiftedMeta? = null,
-    val achievementRewardsNew: Map<String, Long> = emptyMap(), // TODO enum?
+    val achievementRewardsNew: Map<String, Long> = emptyMap(),
     val main2017Tutorial: Boolean? = null,
     val currentGadget: String = "",
     val achievementSync: AchievementSync? = null,
     val monthylRankColor: String = "",
     // TODO cachedData. enum?
     @SerialName("adsense_tokens")
-    val adsenseTokens: Int = 0
+    val adsenseTokens: Int = 0,
 )
 
 @Serializable
@@ -76,18 +76,19 @@ data class HousingMeta(
     val playerSettings: Map<String, String> = emptyMap(),
     // TODO given cookies
     @SerialName("selectedChannels_v3")
-    val selectedChannelsV3: List<String> = emptyList()
+    val selectedChannelsV3: List<String> = emptyList(),
 ) {
     @Suppress("UNCHECKED_CAST")
     fun <T : Any> getHousingSetting(setting: HousingSetting): T? {
         val raw = playerSettings[setting.name] ?: return null
         val valueStr = raw.substringAfter("-")
-        val parsed: Any? = when (setting.type) {
-            Boolean::class -> valueStr.toBooleanStrictOrNull()
-            Int::class -> valueStr.toIntOrNull()
-            String::class -> valueStr
-            else -> valueStr
-        }
+        val parsed: Any? =
+            when (setting.type) {
+                Boolean::class -> valueStr.toBooleanStrictOrNull()
+                Int::class -> valueStr.toIntOrNull()
+                String::class -> valueStr
+                else -> valueStr
+            }
 
         return parsed as? T
     }
@@ -95,22 +96,22 @@ data class HousingMeta(
 
 @Serializable
 data class Eugene(
-    val dailyTwoKExp: Long? = 0L
+    val dailyTwoKExp: Long? = 0L,
 )
 
 @Serializable
 data class VanityMeta(
-    val packages: List<String> = emptyList()
+    val packages: List<String> = emptyList(),
 )
 
 @Serializable
 data class Leveling(
-    val claimedRewards: List<Int> = emptyList()
+    val claimedRewards: List<Int> = emptyList(),
 )
 
 @Serializable
 data class QuestSettings(
-    val autoActivate: Boolean? = null
+    val autoActivate: Boolean? = null,
 )
 
 @Serializable
@@ -122,11 +123,11 @@ data class Tourney(
 @Serializable
 data class GiftedMeta(
     val ranksGiven: Int? = 0,
-    val rankgiftingmilestones: List<String> = emptyList()
+    val rankgiftingmilestones: List<String> = emptyList(),
 )
 
 @Serializable
 data class AchievementSync(
     @SerialName("quake_tiered")
-    val quakeTiered: Int? = 0
+    val quakeTiered: Int? = 0,
 )

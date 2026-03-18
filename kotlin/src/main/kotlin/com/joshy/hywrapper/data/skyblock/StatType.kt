@@ -201,5 +201,5 @@ enum class StatType(val cleanName: String) {
     WEAPON_ABILITY_DAMAGE("Weapon Ability Damage"),
 
     @SerialName("WHEAT_FORTUNE")
-    WHEAT_FORTUNE("Wheat Fortune");
+    WHEAT_FORTUNE("Wheat Fortune"),
 }

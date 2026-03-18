@@ -45,5 +45,5 @@ data class SpecialItemInfo(
 @Serializable
 data class MuseumItem(
     val type: Int = 0,
-    val data: String = ""
+    val data: String = "",
 )

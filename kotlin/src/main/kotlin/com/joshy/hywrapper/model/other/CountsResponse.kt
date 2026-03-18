@@ -26,4 +26,3 @@ data class GameCount(
     val players: Int = 0,
     val modes: Map<String, Int> = emptyMap(),
 )
-

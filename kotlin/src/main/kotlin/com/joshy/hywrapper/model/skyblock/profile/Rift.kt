@@ -19,7 +19,7 @@ data class VillagePlaza(
     val lonely: Lonely? = null,
     val seraphine: Seraphine? = null,
     @SerialName("got_scammed")
-    val gotScammed: Boolean? = null
+    val gotScammed: Boolean? = null,
 )
 
 @Serializable
@@ -57,7 +57,7 @@ data class Cowboy(
 @Serializable
 data class Lonely(
     @SerialName("seconds_sitting")
-    val secondsSitting: Int = 0
+    val secondsSitting: Int = 0,
 )
 
 @Serializable
@@ -69,7 +69,7 @@ data class Seraphine(
 @Serializable
 data class WitherCage(
     @SerialName("killed_eyes")
-    val killedEyes: List<String> = emptyList()
+    val killedEyes: List<String> = emptyList(),
 )
 
 @Serializable

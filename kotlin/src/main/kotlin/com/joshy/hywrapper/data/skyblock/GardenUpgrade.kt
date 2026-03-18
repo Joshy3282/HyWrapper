@@ -12,5 +12,5 @@ enum class GardenUpgrade(val cleanName: String) {
     CROP_UPGRADE("Crop Upgrade"),
 
     @SerialName("PLOT_LIMIT")
-    PLOT_LIMIT("Plot Limit")
+    PLOT_LIMIT("Plot Limit"),
 }

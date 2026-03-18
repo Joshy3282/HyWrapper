@@ -34,4 +34,3 @@ data class Booster(
 data class BoosterState(
     val decrementing: Boolean? = null,
 )
-

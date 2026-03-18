@@ -89,7 +89,8 @@ enum class CollectionType(val id: String, val itemName: String) {
     WATER_LILY("WATER_LILY", "Lily Pad"),
     WHEAT("WHEAT", "Wheat"),
     WILD_ROSE("WILD_ROSE", "Wild Rose"),
-    WILTED_BERBERIS("WILTED_BERBERIS", "Wilted Berberis");
+    WILTED_BERBERIS("WILTED_BERBERIS", "Wilted Berberis"),
+    ;
 
     companion object {
         fun fromId(id: String): CollectionType? = entries.find { it.id == id }

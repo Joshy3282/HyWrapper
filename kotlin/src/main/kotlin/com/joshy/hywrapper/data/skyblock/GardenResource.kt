@@ -42,5 +42,5 @@ enum class GardenResource(val cleanName: String) {
     MOONFLOWER("Moonflower"),
 
     @SerialName("WILD_ROSE")
-    WILD_ROSE("Wild Rose")
+    WILD_ROSE("Wild Rose"),
 }

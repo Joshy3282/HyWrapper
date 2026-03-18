@@ -10,19 +10,15 @@ import kotlinx.serialization.Transient
 data class AuctionsResponse(
     override val success: Boolean = false,
     override val cause: String? = null,
-
     val page: Int = 0,
     val totalPages: Int = 0,
     val totalAuctions: Int = 0,
     val lastUpdated: Long = 0L,
-
-    val auctions: List<Auction> = emptyList()
-
+    val auctions: List<Auction> = emptyList(),
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 }
-
 
 @Serializable
 data class Auction(
@@ -55,7 +51,7 @@ data class Auction(
     val bin: Boolean = false,
     val bids: List<Bid> = emptyList(),
     @SerialName("item_uuid")
-    val itemUuid: String? = null
+    val itemUuid: String? = null,
 )
 
 @Serializable
@@ -66,5 +62,5 @@ data class Bid(
     @SerialName("profile_id")
     val profileId: String = "",
     val amount: Long = 0L,
-    val timestamp: Long = 0L
+    val timestamp: Long = 0L,
 )

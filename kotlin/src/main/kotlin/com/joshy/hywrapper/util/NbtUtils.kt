@@ -3,11 +3,10 @@ package com.joshy.hywrapper.util
 import net.querz.nbt.io.NBTDeserializer
 import net.querz.nbt.tag.CompoundTag
 import java.io.ByteArrayInputStream
-import java.util.*
+import java.util.Base64
 import java.util.zip.GZIPInputStream
 
 object NbtUtils {
-
     fun decodeInventoryData(base64Encoded: String): ByteArray {
         val cleanedBase64 = unescapeUnicode(base64Encoded)
         val decodedBytes = Base64.getDecoder().decode(cleanedBase64)

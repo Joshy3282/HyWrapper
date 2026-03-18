@@ -13,8 +13,24 @@ import com.joshy.hywrapper.model.playerdata.GuildResponse
 import com.joshy.hywrapper.model.playerdata.OnlineResponse
 import com.joshy.hywrapper.model.playerdata.PlayerResponse
 import com.joshy.hywrapper.model.playerdata.RecentGamesResponse
-import com.joshy.hywrapper.model.resources.*
-import com.joshy.hywrapper.model.skyblock.*
+import com.joshy.hywrapper.model.resources.AchievementsResponse
+import com.joshy.hywrapper.model.resources.ChallengesResponse
+import com.joshy.hywrapper.model.resources.GamesResponse
+import com.joshy.hywrapper.model.resources.GuildsAchievementsResponse
+import com.joshy.hywrapper.model.resources.QuestsResponse
+import com.joshy.hywrapper.model.resources.VanityResponse
+import com.joshy.hywrapper.model.skyblock.AuctionsEndedResponse
+import com.joshy.hywrapper.model.skyblock.AuctionsResponse
+import com.joshy.hywrapper.model.skyblock.BazaarResponse
+import com.joshy.hywrapper.model.skyblock.BingoResponse
+import com.joshy.hywrapper.model.skyblock.CollectionsResponse
+import com.joshy.hywrapper.model.skyblock.ElectionResponse
+import com.joshy.hywrapper.model.skyblock.FiresalesResponse
+import com.joshy.hywrapper.model.skyblock.GardenResponse
+import com.joshy.hywrapper.model.skyblock.ItemsResponse
+import com.joshy.hywrapper.model.skyblock.MuseumResponse
+import com.joshy.hywrapper.model.skyblock.NewsResponse
+import com.joshy.hywrapper.model.skyblock.SkillsResponse
 import com.joshy.hywrapper.util.UuidUtils
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.suspendCancellableCoroutine
@@ -22,8 +38,12 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import okhttp3.*
+import okhttp3.Call
+import okhttp3.Callback
 import okhttp3.HttpUrl.Companion.toHttpUrl
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import java.io.IOException
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
@@ -35,15 +55,11 @@ class InvalidApiKeyException(message: String) : HypixelException(message, 403)
 class RateLimitException(message: String, val isGlobal: Boolean = false, val retryAfter: Long? = null) :
     HypixelException(message, 429)
 
-
 class ResourceNotFoundException(message: String) : HypixelException(message, 404)
-
 
 class MissingFieldException(message: String) : HypixelException(message, 400)
 
-
 class InvalidDataException(message: String) : HypixelException(message, 422)
-
 
 class DataNotPopulatedException(message: String) : HypixelException(message, 503)
 
@@ -217,7 +233,6 @@ class HypixelClient(
             mapOf("uuid" to UuidUtils.undash(uuid)),
         )
 
-
     private suspend inline fun <reified T : HypixelResponse> fetch(
         endpoint: String,
         queryParams: Map<String, String> = emptyMap(),
@@ -267,7 +282,8 @@ class HypixelClient(
                                             val errorBody = response.body.string()
                                             val cause =
                                                 runCatching {
-                                                    json.parseToJsonElement(errorBody).jsonObject["cause"]?.jsonPrimitive?.content
+                                                    val element = json.parseToJsonElement(errorBody)
+                                                    element.jsonObject["cause"]?.jsonPrimitive?.content
                                                 }.getOrNull() ?: "HTTP Error: ${response.code}"
 
                                             val exception =
@@ -286,7 +302,8 @@ class HypixelClient(
                                                     429 -> {
                                                         val isGlobal =
                                                             runCatching {
-                                                                json.parseToJsonElement(errorBody).jsonObject["global"]?.jsonPrimitive?.boolean
+                                                                json.parseToJsonElement(errorBody)
+                                                                    .jsonObject["global"]?.jsonPrimitive?.boolean
                                                             }.getOrNull() ?: false
                                                         val retryAfter = response.header("Retry-After")?.toLongOrNull()
                                                         RateLimitException(cause, isGlobal, retryAfter)

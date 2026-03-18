@@ -32,6 +32,7 @@ class NbtUtilsTest {
         val parsed = NbtUtils.parseCompoundTag(base64)
 
         assertEquals("hello", parsed.getString("test"))
+        @Suppress("UNCHECKED_CAST")
         assertEquals(1, (parsed.getListTag("items") as ListTag<CompoundTag>)[0].getInt("id"))
     }
 
@@ -63,9 +64,22 @@ class NbtUtilsTest {
 
     @Test
     fun testDecodeHypixelItemBytes() {
-        val itemBytes = "H4sIAAAAAAAA/2VSTU/bQBAdJ6EkbhHlQnuqtlKrfiDT2Eljw40AAaSUSAROVYXW9sSsWO9G6zVq/kRvvXHPtcee81P4EVVPqGNaqag9rGbnvZk3b7TrArTAES4AODWoidTxHFja1aWyjgt1yzMHHp6p2CC/5LFEpw6tQ5HiQPKsoKZbF5ZTUUwln7WgMdQGm4SuwNpiHh4il/Zimy3myUavDesEHSmLUooMVYIVEXs+PCH8g1BCZWw8RUwrvLfht+HpX2KgjS0V/qa68Ixi9JHom+svdPv0J41uvn+tUnLwigoHpZRsjJb1tSqLbTbOubGMFNFQQ/i6/a77Bl7SbVerKzS2YDNdGnbfY1UnlNXQ+cckpZt3Zuj4NJbdJ6uuiTbwliKS8qza1H9PZv8TN5jrK0w3yXKVkvvTC1EwYTFnCVcsRmaQtDJMn8PjxXxrMZcnOyf7rD8anY7rsJRoSZPCb/0mNI55jrBKRQc6lkLR3toW4MLq/mdr+I61RsSlxaJZPTQ8Ohj1h0fH53dK1F2WBL7gadBJMJh4QSdMvG6Qhl4Uoe8l7R73J90giMKtBrSsyLGwPJ/Sv7n+OfwRANTgwR7PeYa0C/wCjr4LK1gCAAA="
+        val itemBytes =
+            """
+        H4sIAAAAAAAA/2VSTU/bQBAdJ6EkbhHlQnuqtlKrfiDT2Eljw40AAaSUSAROVYXW
+        9sSsWO9G6zVq/kRvvXHPtcee81P4EVVPqGNaqag9rGbnvZk3b7TrArTAES4AODWo
+        idTxHFja1aWyjgt1yzMHHp6p2CC/5LFEpw6tQ5HiQPKsoKZbF5ZTUUwln7WgMdQG
+        m4SuwNpiHh4il/Zimy3myUavDesEHSmLUooMVYIVEXs+PCH8g1BCZWw8RUwrvLfh
+        t+HpX2KgjS0V/qa68Ixi9JHom+svdPv0J41uvn+tUnLwigoHpZRsjJb1tSqLbTbO
+        ubGMFNFQQ/i6/a77Bl7SbVerKzS2YDNdGnbfY1UnlNXQ+cckpZt3Zuj4NJbdJ6uu
+        iTbwliKS8qza1H9PZv8TN5jrK0w3yXKVkvvTC1EwYTFnCVcsRmaQtDJMn8PjxXxr
+        MZcnOyf7rD8anY7rsJRoSZPCb/0mNI55jrBKRQc6lkLR3toW4MLq/mdr+I61RsSl
+        xaJZPTQ8Ohj1h0fH53dK1F2WBL7gadBJMJh4QSdMvG6Qhl4Uoe8l7R73J90giMKt
+        BrSsyLGwPJ/Sv7n+OfwRANTgwR7PeYa0C/wCjr4LK1gCAAA=
+        """.replace("\\s+".toRegex(), "") // TODO horrible fucking code oh my god
         val parsed = NbtUtils.parseCompoundTag(itemBytes)
-        
+
+        @Suppress("UNCHECKED_CAST")
         val items = parsed.getListTag("i") as ListTag<CompoundTag>
         val firstItem = items[0]
         val tag = firstItem.getCompoundTag("tag")

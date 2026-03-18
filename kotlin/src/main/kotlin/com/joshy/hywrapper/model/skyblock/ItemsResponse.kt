@@ -12,10 +12,8 @@ import kotlinx.serialization.Transient
 data class ItemsResponse(
     override val success: Boolean = false,
     override val cause: String? = null,
-
     val lastUpdated: Long? = 0,
-
-    val items: List<Item> = emptyList()
+    val items: List<Item> = emptyList(),
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -125,7 +123,6 @@ data class Item(
     @SerialName("lose_motes_value_on_transfer")
     val loseMotesValueOnTransfer: Boolean? = null,
     // TODO prestige
-
 )
 
 @Serializable
@@ -139,14 +136,14 @@ data class Salvage(
     val type: String? = null,
     @SerialName("essence_type")
     val essenceType: String? = null,
-    val amount: Int? = null
+    val amount: Int? = null,
 )
 
 @Serializable
 data class DungeonItemConversionCost(
     @SerialName("essence_type")
     val essenceType: String = "",
-    val amount: Int = 0
+    val amount: Int = 0,
 )
 
 @Serializable
@@ -154,7 +151,7 @@ data class UpgradeCost(
     val type: String = "",
     @SerialName("essence_type")
     val essenceType: String = "",
-    val amount: Int = 0
+    val amount: Int = 0,
 )
 
 @Serializable
@@ -167,11 +164,10 @@ data class MuseumData(
     val gameStage: String = "",
 )
 
-
 @Serializable
 data class CatacombsRequirement(
     val type: String = "",
     @SerialName("dungeon_type")
     val dungeonType: String = "",
-    val level: Int = 0
+    val level: Int = 0,
 )

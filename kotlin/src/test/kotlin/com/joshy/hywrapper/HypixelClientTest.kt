@@ -698,11 +698,11 @@ class HypixelClientTest {
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/garden?profile=ad8fefaa8351454bb739a4eaa872173f", recordedRequest.path)
-            }
+        }
 
-            @Test
-            fun `test getMuseum success`() =
-            runBlocking {
+    @Test
+    fun `test getMuseum success`() =
+        runBlocking {
             val jsonResponse =
                 """
                 {
@@ -729,10 +729,10 @@ class HypixelClientTest {
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/museum?profile=ad8fefaa8351454bb739a4eaa872173f", recordedRequest.path)
-            }
+        }
 
-            @Test
-            fun `test getAuctions success`() =
+    @Test
+    fun `test getAuctions success`() =
 
         runBlocking {
             val jsonResponse =

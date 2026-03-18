@@ -1,4 +1,4 @@
-# Hypixel Kotlin API Client
+# HyWrapper Hypixel API Client
 
 ## General Usage
 

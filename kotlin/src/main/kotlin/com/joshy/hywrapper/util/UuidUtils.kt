@@ -1,8 +1,6 @@
 package com.joshy.hywrapper.util
 
-
 object UuidUtils {
-
     fun undash(uuid: String): String {
         return uuid.replace("-", "").lowercase()
     }

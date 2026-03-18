@@ -1449,7 +1449,8 @@ enum class MuseumItem(val id: String) {
     ZOMBIE_SOLDIER_CUTLASS("ZOMBIE_SOLDIER_CUTLASS"),
 
     @SerialName("ZORROS_CAPE")
-    ZORROS_CAPE("ZORROS_CAPE");
+    ZORROS_CAPE("ZORROS_CAPE"),
+    ;
 
     companion object {
         fun fromId(id: String): MuseumItem? = entries.find { it.id == id }
