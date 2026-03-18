@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from hywrapper.data.skyblock.garden_plot import GardenPlot
 from hywrapper.data.skyblock.garden_resource import GardenResource
 from hywrapper.data.skyblock.garden_upgrade import GardenUpgrade
-from hywrapper.data.skyblock.visitors import Visitor
+from hywrapper.data.skyblock.visitor import Visitor
 from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.rate_limit import RateLimit
 

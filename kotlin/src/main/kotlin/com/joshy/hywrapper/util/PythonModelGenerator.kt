@@ -170,9 +170,9 @@ fun convertKotlinToPython(
             val firstParam = constructorParams.split(",").firstOrNull()?.trim()
             if (firstParam != null && (firstParam.contains(": Int") || firstParam.contains(": Long"))) {
                 imports.add("from enum import IntEnum")
-                result.append("class $className(IntEnum):\n")
+                result.append("\n\nclass $className(IntEnum):\n")
             } else {
-                result.append("class $className(str, Enum):\n")
+                result.append("\n\nclass $className(str, Enum):\n")
             }
             return@forEach
         }
@@ -231,7 +231,7 @@ fun convertKotlinToPython(
                 }
             }
 
-            result.append("class $name(${baseClasses.joinToString(", ")}):\n")
+            result.append("\n\nclass $name(${baseClasses.joinToString(", ")}):\n")
             result.append("    model_config = ConfigDict(populate_by_name=True)\n")
             return@forEach
         }
@@ -244,7 +244,7 @@ fun convertKotlinToPython(
             val className = interfaceMatch.groupValues[1]
             imports.add("from pydantic import BaseModel")
             imports.add("from typing import Optional, List, Dict, Any, Union")
-            result.append("class $className(BaseModel):\n")
+            result.append("\n\nclass $className(BaseModel):\n")
             return@forEach
         }
 
@@ -321,6 +321,11 @@ fun convertKotlinToPython(
             if (trimmed == "}" && braceDepth == 0) {
                 inClass = false
                 result.append("\n")
+            }
+        } else {
+            // Add extra newline between top-level declarations if needed
+            if (trimmed.isEmpty() && result.isNotEmpty() && !result.endsWith("\n\n")) {
+                // result.append("\n")
             }
         }
     }

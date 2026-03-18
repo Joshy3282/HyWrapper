@@ -7,7 +7,7 @@ from hywrapper.data.skyblock.garden_resource import GardenResource
 from hywrapper.data.skyblock.garden_upgrade import GardenUpgrade
 from hywrapper.data.skyblock.skill_type import SkillType
 from hywrapper.data.skyblock.stat_type import StatType
-from hywrapper.data.skyblock.visitors import Visitor
+from hywrapper.data.skyblock.visitor import Visitor
 
 __all__ = [
     "BazaarItem",
