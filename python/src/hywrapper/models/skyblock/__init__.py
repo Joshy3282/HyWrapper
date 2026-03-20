@@ -130,6 +130,7 @@ from hywrapper.models.skyblock.profile_response import (
     UpgradeState,
     WinterPlayerData,
 )
+from hywrapper.models.skyblock.profiles_response import ProfilesResponse
 from hywrapper.models.skyblock.skills_response import Level, Skill, SkillsResponse
 
 __all__ = [
@@ -232,6 +233,7 @@ __all__ = [
     "Profile",
     "ProfileData",
     "ProfileResponse",
+    "ProfilesResponse",
     "QuickStatus",
     "RabbitHitmen",
     "Rabbits",

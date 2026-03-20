@@ -3,6 +3,7 @@ from hywrapper.models.housing.housing_responses import (
     House,
     HousingActiveResponse,
     HousingHouseResponse,
+    HousingHousesResponse,
 )
 
 __all__ = [
@@ -10,4 +11,5 @@ __all__ = [
     "House",
     "HousingActiveResponse",
     "HousingHouseResponse",
+    "HousingHousesResponse",
 ]

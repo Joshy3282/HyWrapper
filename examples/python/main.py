@@ -23,7 +23,7 @@ async def main():
 
         for product_id in list(products.keys())[:5]:
             product = products[product_id]
-            print(f'- {product_id}: Buy Price {product.quick_status.buy_price}')
+            print(f'- {product_id}: Buy Price {product.quickStatus.buyPrice}')
 
     except Exception as e:
         print(f'Error: {e}')

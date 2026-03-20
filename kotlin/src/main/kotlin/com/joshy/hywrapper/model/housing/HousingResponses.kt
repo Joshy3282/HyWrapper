@@ -39,3 +39,13 @@ data class House(
 data class Cookies(
     val current: Int? = null,
 )
+
+@Serializable
+data class HousingHousesResponse(
+    override val success: Boolean? = null,
+    override val cause: String? = null,
+    val houses: List<House>? = null,
+) : HypixelResponse {
+    @Transient
+    override var rateLimit: RateLimit? = null
+}

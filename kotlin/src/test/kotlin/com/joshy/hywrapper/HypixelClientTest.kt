@@ -54,7 +54,7 @@ class HypixelClientTest {
             assertEquals("Bingo", response.name)
 
             val recordedRequest = server.takeRequest()
-            assertEquals("test-api-key", recordedRequest.getHeader("API-Key"))
+            assertEquals(null, recordedRequest.getHeader("API-Key"))
             assertEquals("/skyblock/bingo", recordedRequest.path)
         }
 
@@ -81,11 +81,12 @@ class HypixelClientTest {
             assertEquals("Mayor Name", response.mayor?.name)
 
             val recordedRequest = server.takeRequest()
+            assertEquals(null, recordedRequest.getHeader("API-Key"))
             assertEquals("/skyblock/election", recordedRequest.path)
         }
 
     @Test
-    fun `test getSkyblockNews success`() =
+    fun `test getNews success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -106,7 +107,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getSkyblockNews()
+            val response = client.getNews()
             assertEquals(true, response.success)
             assertEquals(1, response.items?.size)
             assertEquals("SkyBlock v0.11", response.items?.get(0)?.title)
@@ -116,7 +117,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getSkyblockItems success`() =
+    fun `test getItems success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -135,7 +136,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getSkyblockItems()
+            val response = client.getItems()
             assertEquals(true, response.success)
             assertEquals(1, response.items?.size)
             assertEquals("SKYBLOCK_ITEM", response.items?.get(0)?.id)
@@ -208,6 +209,31 @@ class HypixelClientTest {
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/skyblock/collections", recordedRequest.path)
             assertEquals(null, recordedRequest.getHeader("API-Key"))
+        }
+
+    @Test
+    fun `test getPlayer with dashed uuid success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "player": {
+                        "displayname": "PlayerName",
+                        "uuid": "ac29411d0826412f98c0dd14b334c1fa"
+                    }
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            // Dashed UUID
+            val response = client.getPlayer("ac29411d-0826-412f-98c0-dd14b334c1fa")
+            assertEquals(true, response.success)
+
+            val recordedRequest = server.takeRequest()
+            // Should be undashed in the request
+            assertEquals("/player?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
         }
 
     @Test
@@ -390,7 +416,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceGames success`() =
+    fun `test getGames success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -408,7 +434,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceGames()
+            val response = client.getGames()
             assertEquals(true, response.success)
             assertEquals("SkyWars", response.games?.get("SKYWARS")?.name)
 
@@ -418,7 +444,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceAchievements success`() =
+    fun `test getAchievements success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -431,7 +457,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceAchievements()
+            val response = client.getAchievements()
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
@@ -439,7 +465,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceChallenges success`() =
+    fun `test getChallenges success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -452,7 +478,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceChallenges()
+            val response = client.getChallenges()
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
@@ -460,7 +486,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceQuests success`() =
+    fun `test getRQuests success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -473,7 +499,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceQuests()
+            val response = client.getQuests()
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
@@ -481,7 +507,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceGuildAchievements success`() =
+    fun `test getGuildAchievements success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -495,7 +521,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceGuildAchievements()
+            val response = client.getGuildAchievements()
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
@@ -503,7 +529,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceVanityPets success`() =
+    fun `test getVanityPets success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -517,7 +543,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceVanityPets()
+            val response = client.getVanityPets()
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
@@ -525,7 +551,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getResourceVanityCompanions success`() =
+    fun `test getVanityCompanions success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -539,7 +565,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getResourceVanityCompanions()
+            val response = client.getVanityCompanions()
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
@@ -831,7 +857,7 @@ class HypixelClientTest {
         }
 
     @Test
-    fun `test getSkyblockSkills success`() =
+    fun `test getSkills success`() =
         runBlocking {
             val jsonResponse =
                 """
@@ -851,7 +877,7 @@ class HypixelClientTest {
 
             server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
 
-            val response = client.getSkyblockSkills()
+            val response = client.getSkills()
             assertEquals(true, response.success)
             assertEquals("Farming", response.skills?.get("FARMING")?.name)
 
@@ -921,6 +947,163 @@ class HypixelClientTest {
             assertEquals(true, response.success)
 
             val recordedRequest = server.takeRequest()
-            assertEquals("/skyblock/profile?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+            assertEquals("/skyblock/profile?profile=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getGuildByPlayer success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "guild": {
+                        "_id": "530967340cf200673456",
+                        "name": "The Guild"
+                    }
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getGuildByPlayer("ac29411d0826412f98c0dd14b334c1fa")
+            assertEquals(true, response.success)
+            assertEquals("The Guild", response.guild?.name)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/guild?player=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getHousingHouses success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "houses": [
+                        {
+                            "uuid": "house_uuid",
+                            "owner": "owner_uuid",
+                            "name": "Cool House"
+                        }
+                    ]
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getHousingHouses("ac29411d0826412f98c0dd14b334c1fa")
+            assertEquals(true, response.success)
+            assertEquals(1, response.houses?.size)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/housing/houses?player=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getProfiles success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "profiles": [
+                        {
+                            "profile_id": "profile-uuid",
+                            "cute_name": "Apple"
+                        }
+                    ]
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getProfiles("ac29411d0826412f98c0dd14b334c1fa")
+            assertEquals(true, response.success)
+            assertEquals(1, response.profiles?.size)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/profiles?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getPlayerBingo success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "goals": []
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getPlayerBingo("ac29411d0826412f98c0dd14b334c1fa")
+            assertEquals(true, response.success)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/bingo?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getAuction by uuid success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "auctions": []
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getAuction(uuid = "ac29411d-0826-412f-98c0-dd14b334c1fa")
+            assertEquals(true, response.success)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/auction?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getAuction by player success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "auctions": []
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getAuction(player = "ac29411d-0826-412f-98c0-dd14b334c1fa")
+            assertEquals(true, response.success)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/auction?player=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
+        }
+
+    @Test
+    fun `test getAuction by profile success`() =
+        runBlocking {
+            val jsonResponse =
+                """
+                {
+                    "success": true,
+                    "auctions": []
+                }
+                """.trimIndent()
+
+            server.enqueue(MockResponse().setBody(jsonResponse).setResponseCode(200))
+
+            val response = client.getAuction(profile = "ac29411d-0826-412f-98c0-dd14b334c1fa")
+            assertEquals(true, response.success)
+
+            val recordedRequest = server.takeRequest()
+            assertEquals("/skyblock/auction?profile=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
         }
 }

@@ -3,6 +3,7 @@ from hywrapper.models.housing.housing_responses import (
     House,
     HousingActiveResponse,
     HousingHouseResponse,
+    HousingHousesResponse,
 )
 from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.other.boosters_response import Booster, BoostersResponse, BoosterState
@@ -168,6 +169,7 @@ from hywrapper.models.skyblock.profile_response import (
     TuningSlot,
     UpgradeState,
 )
+from hywrapper.models.skyblock.profiles_response import ProfilesResponse
 from hywrapper.models.skyblock.skills_response import Level, Skill, SkillsResponse
 
 __all__ = [
@@ -250,6 +252,7 @@ __all__ = [
     "House",
     "HousingActiveResponse",
     "HousingHouseResponse",
+    "HousingHousesResponse",
     "HousingMeta",
     "HypixelResponse",
     "Inventory",
@@ -294,6 +297,7 @@ __all__ = [
     "Profile",
     "ProfileData",
     "ProfileResponse",
+    "ProfilesResponse",
     "PunishmentStatsResponse",
     "Quest",
     "QuestObjective",

@@ -35,3 +35,10 @@ class House(BaseModel):
 class Cookies(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     current: Optional[int] = Field(default=None)
+
+
+class HousingHousesResponse(HypixelResponse):
+    model_config = ConfigDict(populate_by_name=True)
+    success: Optional[bool] = Field(default=None)
+    houses: Optional[List[House]] = Field(default=None)
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
