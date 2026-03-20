@@ -1,7 +1,7 @@
 version: 2
 
 updates:
-  - package-ecosystem: uv
+  - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: daily
@@ -9,7 +9,21 @@ updates:
       dependencies:
         patterns:
           - "*"
-  - package-ecosystem: github-actions
-    directory: /
+
+  - package-ecosystem: gradle
+    directory: /kotlin
     schedule:
       interval: daily
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+
+  - package-ecosystem: uv
+    directory: /python
+    schedule:
+      interval: daily
+    groups:
+      dependencies:
+        patterns:
+          - "*"
