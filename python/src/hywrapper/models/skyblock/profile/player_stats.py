@@ -204,7 +204,9 @@ class RiftStats(BaseModel):
     colosseumBacteDefeated: Optional[float] = Field(default=None, alias="colosseum_bacte_defeated")
     castleSentToPrison: Optional[float] = Field(default=None, alias="castle_sent_to_prison")
     castleEffigyBroken: Optional[float] = Field(default=None, alias="castle_effigy_broken")
-    shenItemBought: Optional[Dict[str, float]] = Field(default_factory=dict, alias="shen_item_bought")
+    shenItemBought: Optional[Dict[str, float]] = Field(
+        default_factory=dict, alias="shen_item_bought"
+    )
 
 
 class Spooky(BaseModel):
