@@ -55,6 +55,30 @@ data class MemberData(
     val playerId: String? = null,
     @SerialName("nether_island_player_data")
     val crimsonIslePlayerData: CrimsonIslePlayerData? = null,
+    val experimentation: Experimentation? = null,
+    @SerialName("foraging_core")
+    val foragingCore: ForagingCore? = null,
+    val shards: Shards? = null,
+    @SerialName("mining_core")
+    val miningCore: MiningCore? = null,
+    val bestiary: Bestiary? = null,
+    val quests: Quests? = null,
+    @SerialName("player_stats")
+    val playerStats: PlayerStats? = null,
+    val inventory: PlayerInventory? = null,
+    @SerialName("winter_player_data")
+    val winterPlayerData: WinterPlayerData? = null,
+    // TODO forge
+    @SerialName("fairy_soul")
+    val fairySoul: FairySoul? = null,
+    val temples: Temples? = null,
+    @SerialName("shared_inventory")
+    val sharedInventory: SharedInventory? = null,
+    val attributes: Attributes? = null,
+    val slayer: Slayer? = null,
+    // TODO trophy_fish
+    val objectives: List<Objective>? = null,
+    val collection: Map<String, Long>? = null,
 )
 
 @Serializable
@@ -184,6 +208,103 @@ data class Currencies(
 @Serializable
 data class EssenceInfo(
     val current: Int? = null,
+)
+
+@Serializable
+data class ForagingCore(
+    @SerialName("daily_trees_cut_day")
+    val dailyTreesCutDay: Int? = null,
+    @SerialName("daily_trees_cut")
+    val dailyTreesCut: Int? = null,
+    @SerialName("daily_gifts")
+    val dailyGifts: Int? = null,
+    @SerialName("daily_log_cut_day")
+    val dailyLogCutDay: Int? = null,
+    // TODO daily_log_cut
+    @SerialName("forests_whispers")
+    val forestWhispers: Long? = null,
+    @SerialName("forests_whispers_spent")
+    val forestWhispersSpent: Long? = null,
+    @SerialName("current_daily_effect")
+    val currentDailyEffect: String? = null,
+    @SerialName("current_daily_effect_last_changed")
+    val currentDailyEffectLastChanged: Int? = null,
+)
+
+@Serializable
+data class Shards(
+    // TODO traps
+    @SerialName("shard_sort")
+    val shardSort: String? = null,
+    @SerialName("fusion_result_sort")
+    val fusionResultSort: String? = null,
+    val owned: List<ShardOwned>? = null,
+)
+
+@Serializable
+data class ShardOwned(
+    val type: String? = null,
+    @SerialName("amount_owned")
+    val amountOwned: Int? = null,
+    val captured: Long? = null,
+)
+
+@Serializable
+data class Quests(
+    @SerialName("trapper_quest")
+    val trapperQuest: TrapperQuest? = null
+)
+
+@Serializable
+data class TrapperQuest(
+    @SerialName("last_task_time")
+    val lastTaskTime: Long? = null,
+    @SerialName("pelt_count")
+    val peltCount: Int? = null,
+)
+
+@Serializable
+data class WinterPlayerData(
+    @SerialName("refined_jyrre_uses")
+    val refinedJyrreUses: Int? = null,
+)
+
+@Serializable
+data class FairySoul(
+    @SerialName("fairy_exchanges")
+    val fairyExchanges: Int? = null,
+    @SerialName("total_collected")
+    val totalCollected: Int? = null,
+    @SerialName("unspent_souls")
+    val unspentSouls: Int? = null,
+)
+
+@Serializable
+data class Temples(
+    @SerialName("unlocked_temples")
+    val unlockedTemples: List<String>? = null,
+)
+
+@Serializable
+data class SharedInventory(
+    @SerialName("carnival_mask_inventory_contents")
+    val carnivalMaskInventoryContents: InventoryObject? = null,
+    @SerialName("candy_inventory_contents")
+    val candyInventoryContents: InventoryObject? = null,
+)
+
+@Serializable
+data class Attributes(
+    val stacks: Map<String, Int>? = null, // TODO enum
+)
+
+@Serializable
+data class Objective(
+    val status: String? = null,
+    val progress: Double? = null,
+    @SerialName("completed_at")
+    val completedAt: Long? = null,
+    val data: Map<String, String> = emptyMap()
 )
 
 @Serializable

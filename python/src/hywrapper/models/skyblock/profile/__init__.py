@@ -1,3 +1,4 @@
+from hywrapper.models.skyblock.profile.bestiary import Bestiary, Milestone, Miscellaneous
 from hywrapper.models.skyblock.profile.event import (
     Easter,
     Event,
@@ -6,6 +7,7 @@ from hywrapper.models.skyblock.profile.event import (
     Shop,
     TimeTower,
 )
+from hywrapper.models.skyblock.profile.experimentation import Experimentation, ExperimentationGame
 from hywrapper.models.skyblock.profile.foraging import (
     Foraging,
     Harp,
@@ -15,7 +17,20 @@ from hywrapper.models.skyblock.profile.foraging import (
     Starlyn,
     TreeGifts,
 )
+from hywrapper.models.skyblock.profile.inventory import (
+    BagContents,
+    InventoryObject,
+    PlayerInventory,
+)
 from hywrapper.models.skyblock.profile.jacobs_content import Content, JacobsContent, Perks
+from hywrapper.models.skyblock.profile.mining_core import (
+    Biomes,
+    Crystal,
+    Goblin,
+    Jungle,
+    MiningCore,
+    Precursor,
+)
 from hywrapper.models.skyblock.profile.pets_data import (
     Autopet,
     AutopetException,
@@ -25,6 +40,23 @@ from hywrapper.models.skyblock.profile.pets_data import (
     PetsData,
 )
 from hywrapper.models.skyblock.profile.player_data import ActiveEffect, PlayerData
+from hywrapper.models.skyblock.profile.player_stats import (
+    Auctions,
+    CandyCollected,
+    DragonFight,
+    DungeonHub,
+    EndIsland,
+    Gifts,
+    ItemsFished,
+    Mythos,
+    Pets,
+    PetsMilestone,
+    PlayerStats,
+    Races,
+    RiftStats,
+    ShredderRod,
+    Spooky,
+)
 from hywrapper.models.skyblock.profile.rift import (
     Access,
     BarryCenter,
@@ -55,26 +87,81 @@ from hywrapper.models.skyblock.profile.rift import (
     WizardTower,
     WyldWoods,
 )
+from hywrapper.models.skyblock.profile.slayer import OngoingSlayerQuest, Slayer, SlayerData
 from hywrapper.models.skyblock.profile_response import (
     AccessoryBagStorage,
+    Attributes,
     Banking,
     CommunityUpgrades,
     Currencies,
     EssenceInfo,
+    FairySoul,
+    ForagingCore,
     GardenPlayerData,
     GlacitePlayerData,
     ItemData,
     Leveling,
     MemberData,
+    Objective,
     Profile,
     ProfileData,
     ProfileResponse,
+    Quests,
+    ShardOwned,
+    Shards,
+    SharedInventory,
+    Temples,
     Transaction,
+    TrapperQuest,
     TuningSlot,
     UpgradeState,
+    WinterPlayerData,
 )
 
 __all__ = [
+    "Attributes",
+    "Auctions",
+    "BagContents",
+    "Bestiary",
+    "Biomes",
+    "CandyCollected",
+    "Crystal",
+    "DragonFight",
+    "DungeonHub",
+    "EndIsland",
+    "Experimentation",
+    "ExperimentationGame",
+    "FairySoul",
+    "ForagingCore",
+    "Gifts",
+    "Goblin",
+    "InventoryObject",
+    "ItemsFished",
+    "Jungle",
+    "Milestone",
+    "MiningCore",
+    "Miscellaneous",
+    "Mythos",
+    "Objective",
+    "OngoingSlayerQuest",
+    "Pets",
+    "PetsMilestone",
+    "PlayerInventory",
+    "PlayerStats",
+    "Precursor",
+    "Quests",
+    "Races",
+    "RiftStats",
+    "ShardOwned",
+    "Shards",
+    "SharedInventory",
+    "ShredderRod",
+    "Slayer",
+    "SlayerData",
+    "Spooky",
+    "Temples",
+    "TrapperQuest",
+    "WinterPlayerData",
     "Access",
     "AccessoryBagStorage",
     "ActiveEffect",

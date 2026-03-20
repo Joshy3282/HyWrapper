@@ -6,14 +6,20 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.rate_limit import RateLimit
+from hywrapper.models.skyblock.profile.bestiary import Bestiary
 from hywrapper.models.skyblock.profile.crimson_isle import CrimsonIslePlayerData
 from hywrapper.models.skyblock.profile.dungeons import Dungeons
 from hywrapper.models.skyblock.profile.event import Event
+from hywrapper.models.skyblock.profile.experimentation import Experimentation
 from hywrapper.models.skyblock.profile.foraging import Foraging
+from hywrapper.models.skyblock.profile.inventory import InventoryObject, PlayerInventory
 from hywrapper.models.skyblock.profile.jacobs_content import JacobsContent
+from hywrapper.models.skyblock.profile.mining_core import MiningCore
 from hywrapper.models.skyblock.profile.pets_data import PetsData
 from hywrapper.models.skyblock.profile.player_data import PlayerData
+from hywrapper.models.skyblock.profile.player_stats import PlayerStats
 from hywrapper.models.skyblock.profile.rift import Rift
+from hywrapper.models.skyblock.profile.slayer import Slayer
 
 
 class ProfileResponse(HypixelResponse):
@@ -55,6 +61,24 @@ class MemberData(BaseModel):
     crimsonIslePlayerData: Optional[CrimsonIslePlayerData] = Field(
         default=None, alias="nether_island_player_data"
     )
+    experimentation: Optional[Experimentation] = None
+    foragingCore: Optional[ForagingCore] = Field(default=None, alias="foraging_core")
+    shards: Optional[Shards] = None
+    miningCore: Optional[MiningCore] = Field(default=None, alias="mining_core")
+    bestiary: Optional[Bestiary] = None
+    quests: Optional[Quests] = None
+    playerStats: Optional[PlayerStats] = Field(default=None, alias="player_stats")
+    inventory: Optional[PlayerInventory] = None
+    winterPlayerData: Optional[WinterPlayerData] = Field(default=None, alias="winter_player_data")
+    # TODO forge
+    fairySoul: Optional[FairySoul] = Field(default=None, alias="fairy_soul")
+    temples: Optional[Temples] = None
+    sharedInventory: Optional[SharedInventory] = Field(default=None, alias="shared_inventory")
+    attributes: Optional[Attributes] = None
+    slayer: Optional[Slayer] = None
+    # TODO trophy_fish
+    objectives: Optional[List[Objective]] = None
+    collection: Optional[Dict[str, int]] = None
 
 
 class GlacitePlayerData(BaseModel):
@@ -185,3 +209,84 @@ class Transaction(BaseModel):
     timestamp: Optional[int] = Field(default=None)
     action: Optional[str] = Field(default=None)
     initiatorName: Optional[str] = Field(default=None, alias="initiator_name")
+
+
+class ForagingCore(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    dailyTreesCutDay: Optional[int] = Field(default=None, alias="daily_trees_cut_day")
+    dailyTreesCut: Optional[int] = Field(default=None, alias="daily_trees_cut")
+    dailyGifts: Optional[int] = Field(default=None, alias="daily_gifts")
+    dailyLogCutDay: Optional[int] = Field(default=None, alias="daily_log_cut_day")
+    # TODO daily_log_cut
+    forestWhispers: Optional[int] = Field(default=None, alias="forests_whispers")
+    forestWhispersSpent: Optional[int] = Field(default=None, alias="forests_whispers_spent")
+    currentDailyEffect: Optional[str] = Field(default=None, alias="current_daily_effect")
+    currentDailyEffectLastChanged: Optional[int] = Field(
+        default=None, alias="current_daily_effect_last_changed"
+    )
+
+
+class Shards(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    # TODO traps
+    shardSort: Optional[str] = Field(default=None, alias="shard_sort")
+    fusionResultSort: Optional[str] = Field(default=None, alias="fusion_result_sort")
+    owned: Optional[List[ShardOwned]] = None
+
+
+class ShardOwned(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    type: Optional[str] = None
+    amountOwned: Optional[int] = Field(default=None, alias="amount_owned")
+    captured: Optional[int] = None
+
+
+class Quests(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    trapperQuest: Optional[TrapperQuest] = Field(default=None, alias="trapper_quest")
+
+
+class TrapperQuest(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    lastTaskTime: Optional[int] = Field(default=None, alias="last_task_time")
+    peltCount: Optional[int] = Field(default=None, alias="pelt_count")
+
+
+class WinterPlayerData(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    refinedJyrreUses: Optional[int] = Field(default=None, alias="refined_jyrre_uses")
+
+
+class FairySoul(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    fairyExchanges: Optional[int] = Field(default=None, alias="fairy_exchanges")
+    totalCollected: Optional[int] = Field(default=None, alias="total_collected")
+    unspentSouls: Optional[int] = Field(default=None, alias="unspent_souls")
+
+
+class Temples(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    unlockedTemples: Optional[List[str]] = Field(default=None, alias="unlocked_temples")
+
+
+class SharedInventory(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    carnivalMaskInventoryContents: Optional[InventoryObject] = Field(
+        default=None, alias="carnival_mask_inventory_contents"
+    )
+    candyInventoryContents: Optional[InventoryObject] = Field(
+        default=None, alias="candy_inventory_contents"
+    )
+
+
+class Attributes(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    stacks: Optional[Dict[str, int]] = None
+
+
+class Objective(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    status: Optional[str] = None
+    progress: Optional[float] = None
+    completedAt: Optional[int] = Field(default=None, alias="completed_at")
+    data: Dict[str, str] = Field(default_factory=dict)
