@@ -9,7 +9,6 @@ plugins {
     kotlin("plugin.serialization")
     id("java")
     `maven-publish`
-    id("org.jlleitschuh.gradle.ktlint")
     id("application")
 }
 

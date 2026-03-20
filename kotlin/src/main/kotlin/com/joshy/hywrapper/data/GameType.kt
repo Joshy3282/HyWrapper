@@ -1,5 +1,14 @@
 package com.joshy.hywrapper.data
 
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.descriptors.PrimitiveKind
+import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
+
+@Serializable(with = GameTypeSerializer::class)
 enum class GameType(val id: Int, val databaseName: String, val cleanName: String) {
     QUAKECRAFT(2, "Quake", "Quake"),
     WALLS(3, "Walls", "Walls"),
@@ -31,4 +40,23 @@ enum class GameType(val id: Int, val databaseName: String, val cleanName: String
     REPLAY(65, "Replay", "Replay"),
     SMP(67, "SMP", "SMP"),
     WOOL_GAMES(68, "WoolGames", "Wool Wars"),
+    ;
+
+    companion object {
+        fun fromId(id: Int): GameType? = entries.find { it.id == id }
+    }
+}
+
+object GameTypeSerializer : KSerializer<GameType> {
+    override val descriptor: SerialDescriptor =
+        PrimitiveSerialDescriptor("GameType", PrimitiveKind.INT)
+
+    override fun serialize(encoder: Encoder, value: GameType) {
+        encoder.encodeInt(value.id)
+    }
+
+    override fun deserialize(decoder: Decoder): GameType {
+        val id = decoder.decodeInt()
+        return GameType.fromId(id) ?: throw IllegalArgumentException("Unknown GameType ID: $id")
+    }
 }

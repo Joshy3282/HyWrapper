@@ -1,22 +1,18 @@
 from __future__ import annotations
 
-from typing import Dict, Optional
+from typing import Dict
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from hywrapper.models.rate_limit import RateLimit
-
-
-class CountsResponse(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
-    games: Dict[str, GameCount] = Field(default={})
-    playerCount: int = Field(default=0)
-    rateLimit: Optional[RateLimit] = None
+from hywrapper.models.hypixel_response import HypixelResponse
 
 
 class GameCount(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    players: int = Field(default=0)
-    modes: Dict[str, int] = Field(default={})
+    players: int = 0
+    modes: Dict[str, int] = Field(default_factory=dict)
+
+
+class CountsResponse(HypixelResponse):
+    games: Dict[str, GameCount] = Field(default_factory=dict)
+    player_count: int = Field(default=0, alias="playerCount")

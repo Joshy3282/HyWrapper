@@ -2,10 +2,7 @@ package com.joshy.hywrapper.model.skyblock
 
 import com.joshy.hywrapper.model.HypixelResponse
 import com.joshy.hywrapper.model.RateLimit
-import com.joshy.hywrapper.model.skyblock.profile.Event
-import com.joshy.hywrapper.model.skyblock.profile.PetsData
-import com.joshy.hywrapper.model.skyblock.profile.PlayerData
-import com.joshy.hywrapper.model.skyblock.profile.Rift
+import com.joshy.hywrapper.model.skyblock.profile.*
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
@@ -49,6 +46,15 @@ data class MemberData(
     val leveling: Leveling? = null,
     @SerialName("item_data")
     val itemData: ItemData? = null,
+    @SerialName("jacobs_contest")
+    val jacobsContent: JacobsContent? = null,
+    val currencies: Currencies? = null,
+    val foraging: Foraging? = null,
+    val dungeons: Dungeons? = null,
+    @SerialName("player_id")
+    val playerId: String = "",
+    @SerialName("nether_island_player_data")
+    val crimsonIslePlayerData: CrimsonIslePlayerData? = null,
 )
 
 @Serializable
@@ -164,6 +170,20 @@ data class ItemData(
     val soulflow: Int = 0,
     @SerialName("favorite_arrow")
     val favoriteArrow: String = "",
+)
+
+@Serializable
+data class Currencies(
+    @SerialName("coin_purse")
+    val coinPurse: Double = 0.0,
+    @SerialName("motes_purse")
+    val motesPurse: Double = 0.0,
+    val essence: Map<String, EssenceInfo> = emptyMap(),
+)
+
+@Serializable
+data class EssenceInfo(
+    val current: Int = 0,
 )
 
 @Serializable

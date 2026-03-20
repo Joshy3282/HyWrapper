@@ -2,12 +2,13 @@ from __future__ import annotations
 
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict, Field
 
 from hywrapper.models.rate_limit import RateLimit
 
 
 class HypixelResponse(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
     success: bool
     cause: Optional[str] = None
-    rateLimit: Optional[RateLimit] = None
+    rateLimit: Optional[RateLimit] = Field(default=None)

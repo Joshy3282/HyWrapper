@@ -1,19 +1,13 @@
 from __future__ import annotations
 
-from typing import Optional
+from pydantic import Field
 
-from pydantic import BaseModel, ConfigDict, Field
-
-from hywrapper.models.rate_limit import RateLimit
+from hywrapper.models.hypixel_response import HypixelResponse
 
 
-class PunishmentStatsResponse(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
-    watchdogLastMinute: int = Field(default=0)
-    staffRollingDaily: int = Field(default=0)
-    watchdogTotal: int = Field(default=0)
-    watchdogRollingDaily: int = Field(default=0)
-    staffTotal: int = Field(default=0)
-    rateLimit: Optional[RateLimit] = None
+class PunishmentStatsResponse(HypixelResponse):
+    watchdog_last_minute: int = Field(default=0, alias="watchdog_lastMinute")
+    staff_rolling_daily: int = Field(default=0, alias="staff_rollingDaily")
+    watchdog_total: int = Field(default=0, alias="watchdog_total")
+    watchdog_rolling_daily: int = Field(default=0, alias="watchdog_rollingDaily")
+    staff_total: int = Field(default=0, alias="staff_total")

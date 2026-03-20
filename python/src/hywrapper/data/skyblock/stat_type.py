@@ -1,72 +1,154 @@
 from __future__ import annotations
 
 from enum import Enum
+from typing import Any, Optional
 
 
 class StatType(str, Enum):
-    ABILITY_DAMAGE_PERCENT = "Ability Damage Percent"
-    ALCHEMY_WISDOM = "Alchemy Wisdom"
-    ATTACK_SPEED = "Attack Speed"
-    BLOCK_FORTUNE = "Block Fortune"
-    BONUS_PEST_CHANCE = "Bonus Pest Chance"
-    BREAKING_POWER = "Breaking Power"
-    CACTUS_FORTUNE = "Cactus Fortune"
-    CARROT_FORTUNE = "Carrot Fortune"
-    COCOA_BEANS_FORTUNE = "Cocoa Beans Fortune"
-    COLD_RESISTANCE = "Cold Resistance"
-    COMBAT_WISDOM = "Combat Wisdom"
-    CRITICAL_CHANCE = "Critical Chance"
-    CRITICAL_DAMAGE = "Critical Damage"
-    DAMAGE = "Damage"
-    DEFENSE = "Defense"
-    DOUBLE_HOOK_CHANCE = "Double Hook Chance"
-    DWARVEN_METAL_FORTUNE = "Dwarven Metal Fortune"
-    FARMING_FORTUNE = "Farming Fortune"
-    FARMING_WISDOM = "Farming Wisdom"
-    FEAR = "Fear"
-    FEROCITY = "Ferocity"
-    FIG_FORTUNE = "Fig Fortune"
-    FISHING_SPEED = "Fishing Speed"
-    FISHING_WISDOM = "Fishing Wisdom"
-    FORAGING_FORTUNE = "Foraging Fortune"
-    FORAGING_WISDOM = "Foraging Wisdom"
-    GEMSTONE_FORTUNE = "Gemstone Fortune"
-    HEALTH = "Health"
-    HEALTH_REGENERATION = "Health Regeneration"
-    HEAT_RESISTANCE = "Heat Resistance"
-    INTELLIGENCE = "Intelligence"
-    MAGIC_FIND = "Magic Find"
-    MANGROVE_FORTUNE = "Mangrove Fortune"
-    MELON_FORTUNE = "Melon Fortune"
-    MENDING = "Mending"
-    MINING_FORTUNE = "Mining Fortune"
-    MINING_SPEED = "Mining Speed"
-    MUSHROOM_FORTUNE = "Mushroom Fortune"
-    NETHER_STALK_FORTUNE = "Nether Stalk Fortune"
-    ORE_FORTUNE = "Ore Fortune"
-    PET_LUCK = "Pet Luck"
-    POTATO_FORTUNE = "Potato Fortune"
-    PRESSURE_RESISTANCE = "Pressure Resistance"
-    PRISTINE = "Pristine"
-    PULL = "Pull"
-    PUMPKIN_FORTUNE = "Pumpkin Fortune"
-    RESPIRATION = "Respiration"
-    RIFT_DAMAGE = "Rift Damage"
-    RIFT_HEALTH = "Rift Health"
-    RIFT_INTELLIGENCE = "Rift Intelligence"
-    RIFT_MANA_REGEN = "Rift Mana Regen"
-    RIFT_TIME = "Rift Time"
-    RIFT_WALK_SPEED = "Rift Walk Speed"
-    SEA_CREATURE_CHANCE = "Sea Creature Chance"
-    STRENGTH = "Strength"
-    SUGAR_CANE_FORTUNE = "Sugar Cane Fortune"
-    SWEEP = "Sweep"
-    SWING_RANGE = "Swing Range"
-    TRACKING = "Tracking"
-    TREASURE_CHANCE = "Treasure Chance"
-    TROPHY_FISH_CHANCE = "Trophy Fish Chance"
-    TRUE_DEFENSE = "True Defense"
-    VITALITY = "Vitality"
-    WALK_SPEED = "Walk Speed"
-    WEAPON_ABILITY_DAMAGE = "Weapon Ability Damage"
-    WHEAT_FORTUNE = "Wheat Fortune"
+    ABILITY_DAMAGE_PERCENT = "ABILITY_DAMAGE_PERCENT"
+    ALCHEMY_WISDOM = "ALCHEMY_WISDOM"
+    ATTACK_SPEED = "ATTACK_SPEED"
+    BLOCK_FORTUNE = "BLOCK_FORTUNE"
+    BONUS_PEST_CHANCE = "BONUS_PEST_CHANCE"
+    BREAKING_POWER = "BREAKING_POWER"
+    CACTUS_FORTUNE = "CACTUS_FORTUNE"
+    CARROT_FORTUNE = "CARROT_FORTUNE"
+    COCOA_BEANS_FORTUNE = "COCOA_BEANS_FORTUNE"
+    COLD_RESISTANCE = "COLD_RESISTANCE"
+    COMBAT_WISDOM = "COMBAT_WISDOM"
+    CRITICAL_CHANCE = "CRITICAL_CHANCE"
+    CRITICAL_DAMAGE = "CRITICAL_DAMAGE"
+    DAMAGE = "DAMAGE"
+    DEFENSE = "DEFENSE"
+    DOUBLE_HOOK_CHANCE = "DOUBLE_HOOK_CHANCE"
+    DWARVEN_METAL_FORTUNE = "DWARVEN_METAL_FORTUNE"
+    FARMING_FORTUNE = "FARMING_FORTUNE"
+    FARMING_WISDOM = "FARMING_WISDOM"
+    FEAR = "FEAR"
+    FEROCITY = "FEROCITY"
+    FIG_FORTUNE = "FIG_FORTUNE"
+    FISHING_SPEED = "FISHING_SPEED"
+    FISHING_WISDOM = "FISHING_WISDOM"
+    FORAGING_FORTUNE = "FORAGING_FORTUNE"
+    FORAGING_WISDOM = "FORAGING_WISDOM"
+    GEMSTONE_FORTUNE = "GEMSTONE_FORTUNE"
+    HEALTH = "HEALTH"
+    HEALTH_REGENERATION = "HEALTH_REGENERATION"
+    HEAT_RESISTANCE = "HEAT_RESISTANCE"
+    INTELLIGENCE = "INTELLIGENCE"
+    MAGIC_FIND = "MAGIC_FIND"
+    MANGROVE_FORTUNE = "MANGROVE_FORTUNE"
+    MELON_FORTUNE = "MELON_FORTUNE"
+    MENDING = "MENDING"
+    MINING_FORTUNE = "MINING_FORTUNE"
+    MINING_SPEED = "MINING_SPEED"
+    MUSHROOM_FORTUNE = "MUSHROOM_FORTUNE"
+    NETHER_STALK_FORTUNE = "NETHER_STALK_FORTUNE"
+    ORE_FORTUNE = "ORE_FORTUNE"
+    PET_LUCK = "PET_LUCK"
+    POTATO_FORTUNE = "POTATO_FORTUNE"
+    PRESSURE_RESISTANCE = "PRESSURE_RESISTANCE"
+    PRISTINE = "PRISTINE"
+    PULL = "PULL"
+    PUMPKIN_FORTUNE = "PUMPKIN_FORTUNE"
+    RESPIRATION = "RESPIRATION"
+    RIFT_DAMAGE = "RIFT_DAMAGE"
+    RIFT_HEALTH = "RIFT_HEALTH"
+    RIFT_INTELLIGENCE = "RIFT_INTELLIGENCE"
+    RIFT_MANA_REGEN = "RIFT_MANA_REGEN"
+    RIFT_TIME = "RIFT_TIME"
+    RIFT_WALK_SPEED = "RIFT_WALK_SPEED"
+    SEA_CREATURE_CHANCE = "SEA_CREATURE_CHANCE"
+    STRENGTH = "STRENGTH"
+    SUGAR_CANE_FORTUNE = "SUGAR_CANE_FORTUNE"
+    SWEEP = "SWEEP"
+    SWING_RANGE = "SWING_RANGE"
+    TRACKING = "TRACKING"
+    TREASURE_CHANCE = "TREASURE_CHANCE"
+    TROPHY_FISH_CHANCE = "TROPHY_FISH_CHANCE"
+    TRUE_DEFENSE = "TRUE_DEFENSE"
+    VITALITY = "VITALITY"
+    WALK_SPEED = "WALK_SPEED"
+    WEAPON_ABILITY_DAMAGE = "WEAPON_ABILITY_DAMAGE"
+    WHEAT_FORTUNE = "WHEAT_FORTUNE"
+
+    @property
+    def clean_name(self) -> str:
+        return _CLEAN_NAMES[self]
+
+    @classmethod
+    def from_id(cls, id: Any) -> Optional[StatType]:
+        try:
+            return cls(id)
+        except ValueError:
+            return None
+
+
+_CLEAN_NAMES = {
+    StatType.ABILITY_DAMAGE_PERCENT: "Ability Damage Percent",
+    StatType.ALCHEMY_WISDOM: "Alchemy Wisdom",
+    StatType.ATTACK_SPEED: "Attack Speed",
+    StatType.BLOCK_FORTUNE: "Block Fortune",
+    StatType.BONUS_PEST_CHANCE: "Bonus Pest Chance",
+    StatType.BREAKING_POWER: "Breaking Power",
+    StatType.CACTUS_FORTUNE: "Cactus Fortune",
+    StatType.CARROT_FORTUNE: "Carrot Fortune",
+    StatType.COCOA_BEANS_FORTUNE: "Cocoa Beans Fortune",
+    StatType.COLD_RESISTANCE: "Cold Resistance",
+    StatType.COMBAT_WISDOM: "Combat Wisdom",
+    StatType.CRITICAL_CHANCE: "Critical Chance",
+    StatType.CRITICAL_DAMAGE: "Critical Damage",
+    StatType.DAMAGE: "Damage",
+    StatType.DEFENSE: "Defense",
+    StatType.DOUBLE_HOOK_CHANCE: "Double Hook Chance",
+    StatType.DWARVEN_METAL_FORTUNE: "Dwarven Metal Fortune",
+    StatType.FARMING_FORTUNE: "Farming Fortune",
+    StatType.FARMING_WISDOM: "Farming Wisdom",
+    StatType.FEAR: "Fear",
+    StatType.FEROCITY: "Ferocity",
+    StatType.FIG_FORTUNE: "Fig Fortune",
+    StatType.FISHING_SPEED: "Fishing Speed",
+    StatType.FISHING_WISDOM: "Fishing Wisdom",
+    StatType.FORAGING_FORTUNE: "Foraging Fortune",
+    StatType.FORAGING_WISDOM: "Foraging Wisdom",
+    StatType.GEMSTONE_FORTUNE: "Gemstone Fortune",
+    StatType.HEALTH: "Health",
+    StatType.HEALTH_REGENERATION: "Health Regeneration",
+    StatType.HEAT_RESISTANCE: "Heat Resistance",
+    StatType.INTELLIGENCE: "Intelligence",
+    StatType.MAGIC_FIND: "Magic Find",
+    StatType.MANGROVE_FORTUNE: "Mangrove Fortune",
+    StatType.MELON_FORTUNE: "Melon Fortune",
+    StatType.MENDING: "Mending",
+    StatType.MINING_FORTUNE: "Mining Fortune",
+    StatType.MINING_SPEED: "Mining Speed",
+    StatType.MUSHROOM_FORTUNE: "Mushroom Fortune",
+    StatType.NETHER_STALK_FORTUNE: "Nether Stalk Fortune",
+    StatType.ORE_FORTUNE: "Ore Fortune",
+    StatType.PET_LUCK: "Pet Luck",
+    StatType.POTATO_FORTUNE: "Potato Fortune",
+    StatType.PRESSURE_RESISTANCE: "Pressure Resistance",
+    StatType.PRISTINE: "Pristine",
+    StatType.PULL: "Pull",
+    StatType.PUMPKIN_FORTUNE: "Pumpkin Fortune",
+    StatType.RESPIRATION: "Respiration",
+    StatType.RIFT_DAMAGE: "Rift Damage",
+    StatType.RIFT_HEALTH: "Rift Health",
+    StatType.RIFT_INTELLIGENCE: "Rift Intelligence",
+    StatType.RIFT_MANA_REGEN: "Rift Mana Regen",
+    StatType.RIFT_TIME: "Rift Time",
+    StatType.RIFT_WALK_SPEED: "Rift Walk Speed",
+    StatType.SEA_CREATURE_CHANCE: "Sea Creature Chance",
+    StatType.STRENGTH: "Strength",
+    StatType.SUGAR_CANE_FORTUNE: "Sugar Cane Fortune",
+    StatType.SWEEP: "Sweep",
+    StatType.SWING_RANGE: "Swing Range",
+    StatType.TRACKING: "Tracking",
+    StatType.TREASURE_CHANCE: "Treasure Chance",
+    StatType.TROPHY_FISH_CHANCE: "Trophy Fish Chance",
+    StatType.TRUE_DEFENSE: "True Defense",
+    StatType.VITALITY: "Vitality",
+    StatType.WALK_SPEED: "Walk Speed",
+    StatType.WEAPON_ABILITY_DAMAGE: "Weapon Ability Damage",
+    StatType.WHEAT_FORTUNE: "Wheat Fortune",
+}

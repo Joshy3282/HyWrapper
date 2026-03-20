@@ -8,20 +8,18 @@ from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.rate_limit import RateLimit
 
 
-class HousingActiveResponse(BaseModel):
+class HousingActiveResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
     success: bool = Field(default=False)
-    cause: Optional[str] = None
-    houses: List[House] = Field(default=[])
-    rateLimit: Optional[RateLimit] = None
+    houses: List[House] = Field(default_factory=list)
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class HousingHouseResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
     success: bool = Field(default=False)
-    cause: Optional[str] = None
-    house: Optional[House] = None
-    rateLimit: Optional[RateLimit] = None
+    house: Optional[House] = Field(default=None)
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class House(BaseModel):
@@ -29,9 +27,9 @@ class House(BaseModel):
     uuid: str = Field(default="")
     owner: str = Field(default="")
     name: str = Field(default="")
-    createdAt: int = Field(default=0)
+    created_at: int = Field(default=0, alias="createdAt")
     players: int = Field(default=0)
-    cookies: Optional[Cookies] = None
+    cookies: Optional[Cookies] = Field(default=None)
 
 
 class Cookies(BaseModel):

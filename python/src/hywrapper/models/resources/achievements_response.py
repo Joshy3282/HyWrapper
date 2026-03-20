@@ -4,44 +4,40 @@ from typing import Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from hywrapper.models.rate_limit import RateLimit
+from hywrapper.models.hypixel_response import HypixelResponse
 
 
-class AchievementsResponse(BaseModel):
+class AchievementTier(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
-    lastUpdated: int = Field(default=0)
-    achievements: Dict[str, GameAchievement] = Field(default={})
-    rateLimit: Optional[RateLimit] = None
-
-
-class GameAchievement(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    oneTime: Dict[str, OneTimeAchievement] = Field(default={})
-    tiered: Dict[str, TieredAchievement] = Field(default={})
-    totalPoints: int = Field(default=0)
-    totalLegacyPoints: int = Field(default=0)
-
-
-class OneTimeAchievement(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    name: str = Field(default="")
-    description: str = Field(default="")
-    points: int = Field(default=0)
-    gamePercentUnlocked: Optional[float] = None
-    globalPercentUnlocked: Optional[float] = None
+    tier: int = 0
+    points: int = 0
+    amount: int = 0
 
 
 class TieredAchievement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     name: str
-    description: str = Field(default="")
-    tiers: List[AchievementTier] = Field(default=[])
+    description: str = ""
+    tiers: List[AchievementTier] = Field(default_factory=list)
 
 
-class AchievementTier(BaseModel):
+class OneTimeAchievement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    tier: int = Field(default=0)
-    points: int = Field(default=0)
-    amount: int = Field(default=0)
+    name: str = ""
+    description: str = ""
+    points: int = 0
+    game_percent_unlocked: Optional[float] = Field(default=None, alias="gamePercentUnlocked")
+    global_percent_unlocked: Optional[float] = Field(default=None, alias="globalPercentUnlocked")
+
+
+class GameAchievement(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    one_time: Dict[str, OneTimeAchievement] = Field(default_factory=dict, alias="one_time")
+    tiered: Dict[str, TieredAchievement] = Field(default_factory=dict)
+    total_points: int = Field(default=0, alias="total_points")
+    total_legacy_points: int = Field(default=0, alias="total_legacy_points")
+
+
+class AchievementsResponse(HypixelResponse):
+    last_updated: int = Field(default=0, alias="lastUpdated")
+    achievements: Dict[str, GameAchievement] = Field(default_factory=dict)

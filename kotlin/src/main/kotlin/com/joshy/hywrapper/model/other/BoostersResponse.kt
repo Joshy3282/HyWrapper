@@ -1,5 +1,6 @@
 package com.joshy.hywrapper.model.other
 
+import com.joshy.hywrapper.data.GameType
 import com.joshy.hywrapper.model.HypixelResponse
 import com.joshy.hywrapper.model.RateLimit
 import kotlinx.serialization.SerialName
@@ -25,7 +26,7 @@ data class Booster(
     val amount: Double = 0.0,
     val originalLength: Int = 0,
     val length: Int = 0,
-    val gameType: Int = 0,
+    val gameType: GameType? = null,
     val dateActivated: Long = 0,
     val stacked: List<String>? = emptyList(),
 )

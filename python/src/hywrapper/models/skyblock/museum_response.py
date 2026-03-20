@@ -4,36 +4,36 @@ from typing import Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from hywrapper.data.skyblock.museum_item import MuseumItem as MuseumItemEnum
+from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.rate_limit import RateLimit
 
 
-class MuseumResponse(BaseModel):
+class MuseumResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
-    members: Dict[str, Member] = Field(default={})
-    rateLimit: Optional[RateLimit] = None
+    members: Dict[str, Member] = Field(default_factory=dict)
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Member(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    value: Optional[int] = Field(default=0)
+    value: Optional[int] = 0
     appraisal: Optional[bool] = None
-    items: Dict[MuseumItem, MuseumItemInfo] = Field(default={})
-    special: List[SpecialItemInfo] = Field(default=[])
+    items: Dict[MuseumItemEnum, MuseumItemInfo] = Field(default_factory=dict)
+    special: List[SpecialItemInfo] = Field(default_factory=list)
 
 
 class MuseumItemInfo(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    donatedTime: Optional[int] = Field(default=0)
-    featuredSlot: Optional[str] = None
+    donatedTime: Optional[int] = Field(default=0, alias="donated_time")
+    featuredSlot: Optional[str] = Field(default=None, alias="featured_slot")
     borrowing: Optional[bool] = None
     items: Optional[MuseumItem] = None
 
 
 class SpecialItemInfo(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    donatedTime: Optional[int] = Field(default=0)
+    donatedTime: Optional[int] = Field(default=0, alias="donated_time")
     items: Optional[MuseumItem] = None
 
 

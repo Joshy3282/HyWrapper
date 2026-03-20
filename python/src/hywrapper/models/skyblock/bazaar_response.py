@@ -4,24 +4,23 @@ from typing import Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.rate_limit import RateLimit
 
 
-class BazaarResponse(BaseModel):
+class BazaarResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
     lastUpdated: int = Field(default=0)
-    products: Dict[str, Product] = Field(default={})
-    rateLimit: Optional[RateLimit] = None
+    products: Dict[str, Product] = Field(default_factory=dict)
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Product(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    productId: str = Field(default="")
-    sellSummary: List[Summary] = Field(default=[])
-    buySummary: List[Summary] = Field(default=[])
-    quickStatus: Optional[QuickStatus] = None
+    productId: str = Field(default="", alias="product_id")
+    sellSummary: List[Summary] = Field(default_factory=list, alias="sell_summary")
+    buySummary: List[Summary] = Field(default_factory=list, alias="buy_summary")
+    quickStatus: Optional[QuickStatus] = Field(default=None, alias="quick_status")
 
 
 class Summary(BaseModel):

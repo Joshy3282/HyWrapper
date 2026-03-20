@@ -5,61 +5,67 @@ from typing import Dict, List, Optional
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class Event(BaseModel):
+class RabbitHitmen(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    easter: Optional[Easter] = None
+    rabbit_hitmen_slots: int = Field(default=0, alias="rabbit_hitmen_slots")
+    missed_uncollected_eggs: int = Field(default=0, alias="missed_uncollected_eggs")
+    egg_slot_cooldown_mark: int = Field(default=0, alias="egg_slot_cooldown_mark")
+    egg_slot_cooldown_sum: int = Field(default=0, alias="egg_slot_cooldown_sum")
+
+
+class Shop(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    year: int = 0
+    # TODO enum
+    rabbits: List[str] = Field(default_factory=list)
+    chocolate_spent: int = Field(default=0, alias="chocolate_spent")
+    cocoa_fortune_upgrades: int = Field(default=0, alias="cocoa_fortune_upgrades")
+
+
+class TimeTower(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    charges: int = 0
+    activation_time: int = Field(default=0, alias="activation_time")
+    level: int = 0
+
+
+class Rabbits(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    # TODO enum
+    collected_eggs: Dict[str, int] = Field(default_factory=dict, alias="collected_eggs")
+    # TODO enum
+    collected_locations: Dict[str, List[str]] = Field(
+        default_factory=dict, alias="collected_locations"
+    )
 
 
 class Easter(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     rabbits: Optional[Rabbits] = None
-    timeTower: Optional[TimeTower] = None
-    employees: Dict[str, int] = Field(default={})
-    chocolate: int = Field(default=0)
-    totalChocolate: int = Field(default=0)
-    chocolateSincePrestige: int = Field(default=0)
-    lastViewedChocolateFactory: int = Field(default=0)
+    time_tower: Optional[TimeTower] = Field(default=None, alias="timeTower")
+    # TODO enum
+    employees: Dict[str, int] = Field(default_factory=dict)
+    chocolate: int = 0
+    total_chocolate: int = Field(default=0, alias="total_chocolate")
+    chocolate_since_prestige: int = Field(default=0, alias="chocolate_since_prestige")
+    last_viewed_chocolate_factory: int = Field(default=0, alias="last_viewed_chocolate_factory")
     shop: Optional[Shop] = None
-    rabbitBarnCapacityLevel: int = Field(default=0)
-    chocolateLevel: int = Field(default=0)
-    rabbitSort: str = Field(default="")
-    rabbitFilter: str = Field(default="")
-    supremeChocolateBars: int = Field(default=0)
-    clickUpgrades: int = Field(default=0)
-    chocolateMultiplierUpgrades: int = Field(default=0)
-    rabbitRarityUpgrades: int = Field(default=0)
-    refinedDarkCacaoTruffles: int = Field(default=0)
-    elDoradoProgress: int = Field(default=0)
-    rabbitHitmen: Optional[RabbitHitmen] = None
-    goldenClickAmount: int = Field(default=0)
-    goldenClickYear: int = Field(default=0)
-    rabbitHotspotFiler: str = Field(default="")
+    rabbit_barn_capacity_level: int = Field(default=0, alias="rabbit_barn_capacity_level")
+    chocolate_level: int = Field(default=0, alias="chocolate_level")
+    rabbit_sort: str = Field(default="", alias="rabbit_sort")
+    rabbit_filter: str = Field(default="", alias="rabbit_filter")
+    supreme_chocolate_bars: int = Field(default=0, alias="supreme_chocolate_bars")
+    click_upgrades: int = Field(default=0, alias="click_upgrades")
+    chocolate_multiplier_upgrades: int = Field(default=0, alias="chocolate_multiplier_upgrades")
+    rabbit_rarity_upgrades: int = Field(default=0, alias="rabbit_rarity_upgrades")
+    refined_dark_cacao_truffles: int = Field(default=0, alias="refined_dark_cacao_truffles")
+    el_dorado_progress: int = Field(default=0, alias="el_dorado_progress")
+    rabbit_hitmen: Optional[RabbitHitmen] = Field(default=None, alias="rabbit_hitmen")
+    golden_click_amount: int = Field(default=0, alias="golden_click_amount")
+    golden_click_year: int = Field(default=0, alias="golden_click_year")
+    rabbit_hotspot_filer: str = Field(default="", alias="rabbit_hotspot_filer")
 
 
-class Rabbits(BaseModel):
+class Event(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    collectedEggs: Dict[str, int] = Field(default={})
-    collectedLocations: Dict[str, List[str]] = Field(default={})
-
-
-class TimeTower(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    charges: int = Field(default=0)
-    activationTime: int = Field(default=0)
-    level: int = Field(default=0)
-
-
-class Shop(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    year: int = Field(default=0)
-    rabbits: List[str] = Field(default=[])
-    chocolateSpent: int = Field(default=0)
-    cocoaFortuneUpgrades: int = Field(default=0)
-
-
-class RabbitHitmen(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    rabbitHitmenSlots: int = Field(default=0)
-    missedUncollectedEggs: int = Field(default=0)
-    eggSlotCooldownMark: int = Field(default=0)
-    eggSlotCooldownSum: int = Field(default=0)
+    easter: Optional[Easter] = None

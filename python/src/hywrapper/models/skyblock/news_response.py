@@ -4,15 +4,14 @@ from typing import List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from hywrapper.models.hypixel_response import HypixelResponse
 from hywrapper.models.rate_limit import RateLimit
 
 
-class NewsResponse(BaseModel):
+class NewsResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
-    items: List[NewsItem] = Field(default=[])
-    rateLimit: Optional[RateLimit] = None
+    items: List[NewsItem] = Field(default_factory=list)
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class NewsItem(BaseModel):

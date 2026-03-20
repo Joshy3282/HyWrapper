@@ -14,54 +14,58 @@ from hywrapper.models.rate_limit import RateLimit
 
 class GardenResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    success: bool = Field(default=False)
-    cause: Optional[str] = None
     garden: Optional[Garden] = None
-    rateLimit: Optional[RateLimit] = None
+    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Garden(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     uuid: str = Field(default="")
-    unlockedPlots: List[GardenPlot] = Field(default=[])
-    commissionData: Optional[CommissionData] = None
-    resourcesCollected: Dict[GardenResource, int] = Field(default={})
-    gardenExperience: float = Field(default=0.0)
-    composterData: Optional[ComposterData] = None
-    selectedBarnSkin: str = Field(default="")
-    cropUpgradeLevels: Dict[GardenResource, int] = Field(default={})
-    gardenUpgrades: Dict[GardenUpgrade, int] = Field(default={})
-    unlockedBarnSkins: List[str] = Field(default=[])
-    greenhouseSlots: List[GreenhouseCoordinate] = Field(default=[])
-    lastGrowthStageTime: int = Field(default=0)
+    unlockedPlots: List[GardenPlot] = Field(default_factory=list, alias="unlocked_plots_ids")
+    commissionData: Optional[CommissionData] = Field(default=None, alias="commission_data")
+    resourcesCollected: Dict[GardenResource, int] = Field(
+        default_factory=dict, alias="resources_collected"
+    )
+    gardenExperience: float = Field(default=0.0, alias="garden_experience")
+    composterData: Optional[ComposterData] = Field(default=None, alias="composter_data")
+    selectedBarnSkin: str = Field(default="", alias="selected_barn_skin")
+    cropUpgradeLevels: Dict[GardenResource, int] = Field(
+        default_factory=dict, alias="crop_upgrade_levels"
+    )
+    gardenUpgrades: Dict[GardenUpgrade, int] = Field(default_factory=dict, alias="garden_upgrades")
+    unlockedBarnSkins: List[str] = Field(default_factory=list, alias="unlocked_barn_skins")
+    greenhouseSlots: List[GreenhouseCoordinate] = Field(
+        default_factory=list, alias="greenhouse_slots"
+    )
+    lastGrowthStageTime: int = Field(default=0, alias="last_growth_stage_time")
 
 
 class CommissionData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    visits: Dict[Visitor, int] = Field(default={})
-    completed: Dict[Visitor, int] = Field(default={})
-    totalCompleted: int = Field(default=0)
-    uniqueNpcsServed: int = Field(default=0)
+    visits: Dict[Visitor, int] = Field(default_factory=dict)
+    completed: Dict[Visitor, int] = Field(default_factory=dict)
+    totalCompleted: int = Field(default=0, alias="total_completed")
+    uniqueNpcsServed: int = Field(default=0, alias="unique_npcs_served")
 
 
 class ComposterData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    organicMatter: float = Field(default=0.0)
-    fuelUnits: float = Field(default=0.0)
-    compostUnits: int = Field(default=0)
-    compostItems: int = Field(default=0)
-    conversionTicks: int = Field(default=0)
-    lastSave: Optional[int] = Field(default=0)
+    organicMatter: float = Field(default=0.0, alias="organic_matter")
+    fuelUnits: float = Field(default=0.0, alias="fuel_units")
+    compostUnits: int = Field(default=0, alias="compost_units")
+    compostItems: int = Field(default=0, alias="compost_items")
+    conversionTicks: int = Field(default=0, alias="conversion_ticks")
+    lastSave: Optional[int] = Field(default=0, alias="last_save")
     upgrades: Optional[ComposterUpgrades] = None
 
 
 class ComposterUpgrades(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     speed: int = Field(default=0)
-    multiDrop: int = Field(default=0)
-    fuelCap: int = Field(default=0)
-    organicMatterCap: int = Field(default=0)
-    costReduction: int = Field(default=0)
+    multiDrop: int = Field(default=0, alias="multi_drop")
+    fuelCap: int = Field(default=0, alias="fuel_cap")
+    organicMatterCap: int = Field(default=0, alias="organic_matter_cap")
+    costReduction: int = Field(default=0, alias="cost_reduction")
 
 
 class GreenhouseCoordinate(BaseModel):
