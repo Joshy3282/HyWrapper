@@ -7,69 +7,77 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class BestRun(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    timestamp: int = Field(default=0)
-    score_exploration: int = Field(default=1, alias="score_exploration")
-    score_speed: int = Field(default=1, alias="score_speed")
-    score_skill: int = Field(default=1, alias="score_skill")
-    score_bonus: int = Field(default=1, alias="score_bonus")
-    dungeon_class: str = Field(default="", alias="dungeon_class")
-    teammates: List[str] = Field(default_factory=list)
-    elapsed_time: int = Field(default=0, alias="elapsed_time")
-    damage_dealt: float = Field(default=0.0, alias="damage_dealt")
-    deaths: int = Field(default=1)
-    mobs_killed: int = Field(default=0, alias="mobs_killed")
-    secrets_found: int = Field(default=0, alias="secrets_found")
-    damage_mitigated: float = Field(default=0.0, alias="damage_mitigated")
-    ally_healing: float = Field(default=0.0, alias="ally_healing")
+    timestamp: Optional[int] = Field(default=None)
+    score_exploration: Optional[int] = Field(default=None, alias="score_exploration")
+    score_speed: Optional[int] = Field(default=None, alias="score_speed")
+    score_skill: Optional[int] = Field(default=None, alias="score_skill")
+    score_bonus: Optional[int] = Field(default=None, alias="score_bonus")
+    dungeon_class: Optional[str] = Field(default=None, alias="dungeon_class")
+    teammates: Optional[List[str]] = Field(default=None)
+    elapsed_time: Optional[int] = Field(default=None, alias="elapsed_time")
+    damage_dealt: Optional[float] = Field(default=None, alias="damage_dealt")
+    deaths: Optional[int] = Field(default=None)
+    mobs_killed: Optional[int] = Field(default=None, alias="mobs_killed")
+    secrets_found: Optional[int] = Field(default=None, alias="secrets_found")
+    damage_mitigated: Optional[float] = Field(default=None, alias="damage_mitigated")
+    ally_healing: Optional[float] = Field(default=None, alias="ally_healing")
 
 
 class Catacombs(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    times_played: Dict[str, int] = Field(default_factory=dict, alias="times_played")
-    experience: float = Field(default=0.0)
-    tier_completions: Dict[str, int] = Field(default_factory=dict, alias="tier_completions")
-    fastest_time: Dict[str, int] = Field(default_factory=dict, alias="fastest_time")
-    best_runs: Dict[str, BestRun] = Field(default_factory=dict, alias="best_runs")
-    best_score: Dict[str, int] = Field(default_factory=dict, alias="best_score")
-    mobs_killed: Dict[str, int] = Field(default_factory=dict, alias="mobs_killed")
-    most_mobs_killed: Dict[str, int] = Field(default_factory=dict, alias="most_mobs_killed")
-    most_damage_tank: Dict[str, float] = Field(default_factory=dict, alias="most_damage_tank")
-    most_healing: Dict[str, float] = Field(default_factory=dict, alias="most_healing")
-    watcher_kills: Dict[str, int] = Field(default_factory=dict, alias="watcher_kills")
-    highest_tier_completed: int = Field(default=0, alias="highest_tier_completed")
-    fastest_time_s: Dict[str, float] = Field(default_factory=dict, alias="fastest_time_s")
-    fastest_time_s_plus: Dict[str, float] = Field(default_factory=dict, alias="fastest_time_s_plus")
-    most_damage_berserk: Dict[str, float] = Field(default_factory=dict, alias="most_damage_berserk")
-    most_damage_healer: Dict[str, float] = Field(default_factory=dict, alias="most_damage_healer")
-    most_damage_mage: Dict[str, float] = Field(default_factory=dict, alias="most_damage_mage")
-    milestone_completions: Dict[str, float] = Field(
-        default_factory=dict, alias="milestone_completions"
+    times_played: Optional[Dict[str, int]] = Field(default=None, alias="times_played")
+    experience: Optional[float] = Field(default=None)
+    tier_completions: Optional[Dict[str, int]] = Field(default=None, alias="tier_completions")
+    fastest_time: Optional[Dict[str, int]] = Field(default=None, alias="fastest_time")
+    best_runs: Optional[Dict[str, BestRun]] = Field(default=None, alias="best_runs")
+    best_score: Optional[Dict[str, int]] = Field(default=None, alias="best_score")
+    mobs_killed: Optional[Dict[str, int]] = Field(default=None, alias="mobs_killed")
+    most_mobs_killed: Optional[Dict[str, int]] = Field(default=None, alias="most_mobs_killed")
+    most_damage_tank: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_tank")
+    most_healing: Optional[Dict[str, float]] = Field(default=None, alias="most_healing")
+    watcher_kills: Optional[Dict[str, int]] = Field(default=None, alias="watcher_kills")
+    highest_tier_completed: Optional[int] = Field(default=None, alias="highest_tier_completed")
+    fastest_time_s: Optional[Dict[str, float]] = Field(default=None, alias="fastest_time_s")
+    fastest_time_s_plus: Optional[Dict[str, float]] = Field(
+        default=None, alias="fastest_time_s_plus"
     )
-    most_damage_archer: Dict[str, float] = Field(default_factory=dict, alias="most_damage_archer")
+    most_damage_berserk: Optional[Dict[str, float]] = Field(
+        default=None, alias="most_damage_berserk"
+    )
+    most_damage_healer: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_healer")
+    most_damage_mage: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_mage")
+    milestone_completions: Optional[Dict[str, float]] = Field(
+        default=None, alias="milestone_completions"
+    )
+    most_damage_archer: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_archer")
 
 
 class MasterCatacombs(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    times_played: Dict[str, int] = Field(default_factory=dict, alias="times_played")
-    tier_completions: Dict[str, int] = Field(default_factory=dict, alias="tier_completions")
-    fastest_time: Dict[str, int] = Field(default_factory=dict, alias="fastest_time")
-    best_runs: Dict[str, BestRun] = Field(default_factory=dict, alias="best_runs")
-    best_score: Dict[str, int] = Field(default_factory=dict, alias="best_score")
-    mobs_killed: Dict[str, int] = Field(default_factory=dict, alias="mobs_killed")
-    most_mobs_killed: Dict[str, int] = Field(default_factory=dict, alias="most_mobs_killed")
-    most_damage_tank: Dict[str, float] = Field(default_factory=dict, alias="most_damage_tank")
-    most_healing: Dict[str, float] = Field(default_factory=dict, alias="most_healing")
-    watcher_kills: Dict[str, int] = Field(default_factory=dict, alias="watcher_kills")
-    highest_tier_completed: int = Field(default=0, alias="highest_tier_completed")
-    fastest_time_s: Dict[str, float] = Field(default_factory=dict, alias="fastest_time_s")
-    fastest_time_s_plus: Dict[str, float] = Field(default_factory=dict, alias="fastest_time_s_plus")
-    most_damage_berserk: Dict[str, float] = Field(default_factory=dict, alias="most_damage_berserk")
-    most_damage_healer: Dict[str, float] = Field(default_factory=dict, alias="most_damage_healer")
-    most_damage_mage: Dict[str, float] = Field(default_factory=dict, alias="most_damage_mage")
-    milestone_completions: Dict[str, float] = Field(
-        default_factory=dict, alias="milestone_completions"
+    times_played: Optional[Dict[str, int]] = Field(default=None, alias="times_played")
+    tier_completions: Optional[Dict[str, int]] = Field(default=None, alias="tier_completions")
+    fastest_time: Optional[Dict[str, int]] = Field(default=None, alias="fastest_time")
+    best_runs: Optional[Dict[str, BestRun]] = Field(default=None, alias="best_runs")
+    best_score: Optional[Dict[str, int]] = Field(default=None, alias="best_score")
+    mobs_killed: Optional[Dict[str, int]] = Field(default=None, alias="mobs_killed")
+    most_mobs_killed: Optional[Dict[str, int]] = Field(default=None, alias="most_mobs_killed")
+    most_damage_tank: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_tank")
+    most_healing: Optional[Dict[str, float]] = Field(default=None, alias="most_healing")
+    watcher_kills: Optional[Dict[str, int]] = Field(default=None, alias="watcher_kills")
+    highest_tier_completed: Optional[int] = Field(default=None, alias="highest_tier_completed")
+    fastest_time_s: Optional[Dict[str, float]] = Field(default=None, alias="fastest_time_s")
+    fastest_time_s_plus: Optional[Dict[str, float]] = Field(
+        default=None, alias="fastest_time_s_plus"
     )
-    most_damage_archer: Dict[str, float] = Field(default_factory=dict, alias="most_damage_archer")
+    most_damage_berserk: Optional[Dict[str, float]] = Field(
+        default=None, alias="most_damage_berserk"
+    )
+    most_damage_healer: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_healer")
+    most_damage_mage: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_mage")
+    milestone_completions: Optional[Dict[str, float]] = Field(
+        default=None, alias="milestone_completions"
+    )
+    most_damage_archer: Optional[Dict[str, float]] = Field(default=None, alias="most_damage_archer")
 
 
 class DungeonType(BaseModel):
@@ -80,34 +88,34 @@ class DungeonType(BaseModel):
 
 class DungeonJournal(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    unlocked_journals: List[str] = Field(default_factory=list, alias="unlocked_journals")
+    unlocked_journals: Optional[List[str]] = Field(default=None, alias="unlocked_journals")
 
 
 class DailyRuns(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    current_day_stamp: int = Field(default=0, alias="current_day_stamp")
-    completed_runs_count: int = Field(default=0, alias="completed_runs_count")
+    current_day_stamp: Optional[int] = Field(default=None, alias="current_day_stamp")
+    completed_runs_count: Optional[int] = Field(default=None, alias="completed_runs_count")
 
 
 class DungeonHubRaceSettings(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    selected_race: str = Field(default="", alias="selected_race")
-    selected_setting: str = Field(default="", alias="selected_setting")
+    selected_race: Optional[str] = Field(default=None, alias="selected_race")
+    selected_setting: Optional[str] = Field(default=None, alias="selected_setting")
     runback: Optional[bool] = None
 
 
 class Dungeons(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     dungeon_types: Optional[DungeonType] = Field(default=None, alias="dungeon_types")
-    player_classes: Dict[str, Dict[str, float]] = Field(
-        default_factory=dict, alias="player_classes"
+    player_classes: Optional[Dict[str, Dict[str, float]]] = Field(
+        default=None, alias="player_classes"
     )
     dungeon_journal: Optional[DungeonJournal] = Field(default=None, alias="dungeon_journal")
-    dungeons_blah_blah: List[str] = Field(default_factory=list, alias="dungeons_blah_blah")
-    selected_dungeon_class: str = Field(default="", alias="selected_dungeon_class")
+    dungeons_blah_blah: Optional[List[str]] = Field(default=None, alias="dungeons_blah_blah")
+    selected_dungeon_class: Optional[str] = Field(default=None, alias="selected_dungeon_class")
     daily_runs: Optional[DailyRuns] = Field(default=None, alias="daily_runs")
     dungeon_hub_race_settings: Optional[DungeonHubRaceSettings] = Field(
         default=None, alias="dungeon_hub_race_settings"
     )
-    last_dungeon_run: str = Field(default="", alias="last_dungeon_run")
-    secrets: int = Field(default=0)
+    last_dungeon_run: Optional[str] = Field(default=None, alias="last_dungeon_run")
+    secrets: Optional[int] = Field(default=None)

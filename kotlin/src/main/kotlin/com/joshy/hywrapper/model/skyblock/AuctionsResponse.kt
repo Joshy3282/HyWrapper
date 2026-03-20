@@ -8,13 +8,13 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class AuctionsResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val page: Int = 0,
-    val totalPages: Int = 0,
-    val totalAuctions: Int = 0,
-    val lastUpdated: Long = 0L,
-    val auctions: List<Auction> = emptyList(),
+    val page: Int? = null,
+    val totalPages: Int? = null,
+    val totalAuctions: Int? = null,
+    val lastUpdated: Long? = null,
+    val auctions: List<Auction>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -22,34 +22,34 @@ data class AuctionsResponse(
 
 @Serializable
 data class Auction(
-    val uuid: String = "",
-    val auctioneer: String = "",
+    val uuid: String? = null,
+    val auctioneer: String? = null,
     @SerialName("profile_id")
-    val profileId: String = "",
-    val coop: List<String> = emptyList(),
-    val start: Long = 0L,
-    val end: Long = 0L,
+    val profileId: String? = null,
+    val coop: List<String>? = null,
+    val start: Long? = null,
+    val end: Long? = null,
     @SerialName("item_name")
-    val itemName: String = "",
+    val itemName: String? = null,
     @SerialName("item_lore")
-    val itemLore: String = "",
-    val extra: String = "",
-    val category: String = "",
-    val categories: List<String> = emptyList(),
-    val tier: String = "",
+    val itemLore: String? = null,
+    val extra: String? = null,
+    val category: String? = null,
+    val categories: List<String>? = null,
+    val tier: String? = null,
     @SerialName("starting_bid")
-    val startingBid: Long = 0L,
+    val startingBid: Long? = null,
     @SerialName("item_bytes")
-    val itemBytes: String = "",
-    val claimed: Boolean = false,
+    val itemBytes: String? = null,
+    val claimed: Boolean? = null,
     @SerialName("claimed_bidders")
-    val claimedBidders: List<String> = emptyList(),
+    val claimedBidders: List<String>? = null,
     @SerialName("highest_bid_amount")
-    val highestBidAmount: Long = 0L,
+    val highestBidAmount: Long? = null,
     @SerialName("last_updated")
-    val lastUpdated: Long = 0L,
-    val bin: Boolean = false,
-    val bids: List<Bid> = emptyList(),
+    val lastUpdated: Long? = null,
+    val bin: Boolean? = null,
+    val bids: List<Bid>? = null,
     @SerialName("item_uuid")
     val itemUuid: String? = null,
 )
@@ -57,10 +57,10 @@ data class Auction(
 @Serializable
 data class Bid(
     @SerialName("auction_id")
-    val auctionId: String = "",
-    val bidder: String = "",
+    val auctionId: String? = null,
+    val bidder: String? = null,
     @SerialName("profile_id")
-    val profileId: String = "",
-    val amount: Long = 0L,
-    val timestamp: Long = 0L,
+    val profileId: String? = null,
+    val amount: Long? = null,
+    val timestamp: Long? = null,
 )

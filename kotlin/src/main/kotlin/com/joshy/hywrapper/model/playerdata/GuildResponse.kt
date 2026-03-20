@@ -9,7 +9,7 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class GuildResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
     val guild: Guild? = null,
 ) : HypixelResponse {
@@ -20,68 +20,68 @@ data class GuildResponse(
 @Serializable
 data class Guild(
     @SerialName("_id")
-    val id: String = "",
-    val name: String = "",
+    val id: String? = null,
+    val name: String? = null,
     @SerialName("name_lower")
-    val nameLower: String = "",
-    val coins: Int = 0,
-    val coinsEver: Int = 0,
-    val created: Long = 0L,
-    val members: List<Member> = emptyList(),
-    val ranks: List<Rank> = emptyList(),
-    val achievements: Map<String, Int> = emptyMap(),
-    val exp: Long = 0L,
-    val tagColor: String = "",
+    val nameLower: String? = null,
+    val coins: Int? = null,
+    val coinsEver: Int? = null,
+    val created: Long? = null,
+    val members: List<Member>? = null,
+    val ranks: List<Rank>? = null,
+    val achievements: Map<String, Int>? = null,
+    val exp: Long? = null,
+    val tagColor: String? = null,
     val banner: Banner? = null,
     val publiclyListed: Boolean? = null,
-    val preferredGames: List<String> = emptyList(),
-    val description: String = "",
-    val chatMute: Long = 0L,
-    val tag: String = "",
-    val guildExpByGameType: Map<String, Long> = emptyMap(),
+    val preferredGames: List<String>? = null,
+    val description: String? = null,
+    val chatMute: Long? = null,
+    val tag: String? = null,
+    val guildExpByGameType: Map<String, Long>? = null,
 ) {
     fun getExpFor(game: GameType): Long {
-        return guildExpByGameType[game.name] ?: 0L
+        return guildExpByGameType?.get(game.name) ?: 0L
     }
 
     val parsedPreferredGames: List<GameType>
         get() =
-            preferredGames.mapNotNull {
+            preferredGames?.mapNotNull {
                 runCatching { GameType.valueOf(it) }.getOrNull()
-            }
+            } ?: emptyList()
 }
 
 @Serializable
 data class Member(
-    val uuid: String = "",
-    val rank: String = "",
-    val joined: Long = 0L,
-    val questParticipation: Int = 0,
-    val mutedTill: Long = 0L,
-    val expHistory: Map<String, Int> = emptyMap(),
+    val uuid: String? = null,
+    val rank: String? = null,
+    val joined: Long? = null,
+    val questParticipation: Int? = null,
+    val mutedTill: Long? = null,
+    val expHistory: Map<String, Int>? = null,
 )
 
 @Serializable
 data class Rank(
-    val name: String = "",
+    val name: String? = null,
     val default: Boolean? = null,
     val tag: String? = null,
-    val created: Long = 0L,
-    val priority: Int = 0,
+    val created: Long? = null,
+    val priority: Int? = null,
 )
 
 @Serializable
 data class Banner(
     @SerialName("Base")
-    val base: String = "",
+    val base: String? = null,
     @SerialName("Patterns")
-    val patterns: List<Pattern> = emptyList(),
+    val patterns: List<Pattern>? = null,
 )
 
 @Serializable
 data class Pattern(
     @SerialName("Pattern")
-    val pattern: String = "",
+    val pattern: String? = null,
     @SerialName("Color")
-    val color: String = "",
+    val color: String? = null,
 )

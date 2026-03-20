@@ -7,9 +7,9 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class HousingActiveResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val houses: List<House> = emptyList(),
+    val houses: List<House>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -17,7 +17,7 @@ data class HousingActiveResponse(
 
 @Serializable
 data class HousingHouseResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
     val house: House? = null,
 ) : HypixelResponse {
@@ -27,15 +27,15 @@ data class HousingHouseResponse(
 
 @Serializable
 data class House(
-    val uuid: String = "",
-    val owner: String = "",
-    val name: String = "",
-    val createdAt: Long = 0L,
-    val players: Int = 0,
+    val uuid: String? = null,
+    val owner: String? = null,
+    val name: String? = null,
+    val createdAt: Long? = null,
+    val players: Int? = null,
     val cookies: Cookies? = null,
 )
 
 @Serializable
 data class Cookies(
-    val current: Int = 0,
+    val current: Int? = null,
 )

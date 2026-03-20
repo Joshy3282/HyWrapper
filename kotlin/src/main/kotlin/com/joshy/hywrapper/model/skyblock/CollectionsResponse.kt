@@ -8,36 +8,36 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class CollectionsResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val version: String = "",
-    val collections: Map<String, Collection> = emptyMap(),
+    val lastUpdated: Long? = null,
+    val version: String? = null,
+    val collections: Map<String, Collection>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 
     fun getCollection(skill: SkillType): Collection? {
-        return collections[skill.name]
+        return collections?.get(skill.name)
     }
 }
 
 @Serializable
 data class Collection(
-    val name: String = "",
-    val items: Map<String, CollectionItem> = emptyMap(),
+    val name: String? = null,
+    val items: Map<String, CollectionItem>? = null,
 )
 
 @Serializable
 data class CollectionItem(
-    val name: String = "",
-    val maxTiers: Int = 0,
-    val tiers: List<CollectionTier> = emptyList(),
+    val name: String? = null,
+    val maxTiers: Int? = null,
+    val tiers: List<CollectionTier>? = null,
 )
 
 @Serializable
 data class CollectionTier(
-    val tier: Int = 0,
-    val amountRequired: Int = 0,
-    val unlocks: List<String> = emptyList(),
+    val tier: Int? = null,
+    val amountRequired: Int? = null,
+    val unlocks: List<String>? = null,
 )

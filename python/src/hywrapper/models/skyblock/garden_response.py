@@ -20,55 +20,57 @@ class GardenResponse(HypixelResponse):
 
 class Garden(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    uuid: str = Field(default="")
-    unlockedPlots: List[GardenPlot] = Field(default_factory=list, alias="unlocked_plots_ids")
+    uuid: Optional[str] = Field(default=None)
+    unlockedPlots: Optional[List[GardenPlot]] = Field(default=None, alias="unlocked_plots_ids")
     commissionData: Optional[CommissionData] = Field(default=None, alias="commission_data")
-    resourcesCollected: Dict[GardenResource, int] = Field(
-        default_factory=dict, alias="resources_collected"
+    resourcesCollected: Optional[Dict[GardenResource, int]] = Field(
+        default=None, alias="resources_collected"
     )
-    gardenExperience: float = Field(default=0.0, alias="garden_experience")
+    gardenExperience: Optional[float] = Field(default=None, alias="garden_experience")
     composterData: Optional[ComposterData] = Field(default=None, alias="composter_data")
-    selectedBarnSkin: str = Field(default="", alias="selected_barn_skin")
-    cropUpgradeLevels: Dict[GardenResource, int] = Field(
-        default_factory=dict, alias="crop_upgrade_levels"
+    selectedBarnSkin: Optional[str] = Field(default=None, alias="selected_barn_skin")
+    cropUpgradeLevels: Optional[Dict[GardenResource, int]] = Field(
+        default=None, alias="crop_upgrade_levels"
     )
-    gardenUpgrades: Dict[GardenUpgrade, int] = Field(default_factory=dict, alias="garden_upgrades")
-    unlockedBarnSkins: List[str] = Field(default_factory=list, alias="unlocked_barn_skins")
-    greenhouseSlots: List[GreenhouseCoordinate] = Field(
-        default_factory=list, alias="greenhouse_slots"
+    gardenUpgrades: Optional[Dict[GardenUpgrade, int]] = Field(
+        default=None, alias="garden_upgrades"
     )
-    lastGrowthStageTime: int = Field(default=0, alias="last_growth_stage_time")
+    unlockedBarnSkins: Optional[List[str]] = Field(default=None, alias="unlocked_barn_skins")
+    greenhouseSlots: Optional[List[GreenhouseCoordinate]] = Field(
+        default=None, alias="greenhouse_slots"
+    )
+    lastGrowthStageTime: Optional[int] = Field(default=None, alias="last_growth_stage_time")
 
 
 class CommissionData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    visits: Dict[Visitor, int] = Field(default_factory=dict)
-    completed: Dict[Visitor, int] = Field(default_factory=dict)
-    totalCompleted: int = Field(default=0, alias="total_completed")
-    uniqueNpcsServed: int = Field(default=0, alias="unique_npcs_served")
+    visits: Optional[Dict[Visitor, int]] = Field(default=None)
+    completed: Optional[Dict[Visitor, int]] = Field(default=None)
+    totalCompleted: Optional[int] = Field(default=None, alias="total_completed")
+    uniqueNpcsServed: Optional[int] = Field(default=None, alias="unique_npcs_served")
 
 
 class ComposterData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    organicMatter: float = Field(default=0.0, alias="organic_matter")
-    fuelUnits: float = Field(default=0.0, alias="fuel_units")
-    compostUnits: int = Field(default=0, alias="compost_units")
-    compostItems: int = Field(default=0, alias="compost_items")
-    conversionTicks: int = Field(default=0, alias="conversion_ticks")
-    lastSave: Optional[int] = Field(default=0, alias="last_save")
+    organicMatter: Optional[float] = Field(default=None, alias="organic_matter")
+    fuelUnits: Optional[float] = Field(default=None, alias="fuel_units")
+    compostUnits: Optional[int] = Field(default=None, alias="compost_units")
+    compostItems: Optional[int] = Field(default=None, alias="compost_items")
+    conversionTicks: Optional[int] = Field(default=None, alias="conversion_ticks")
+    lastSave: Optional[int] = Field(default=None, alias="last_save")
     upgrades: Optional[ComposterUpgrades] = None
 
 
 class ComposterUpgrades(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    speed: int = Field(default=0)
-    multiDrop: int = Field(default=0, alias="multi_drop")
-    fuelCap: int = Field(default=0, alias="fuel_cap")
-    organicMatterCap: int = Field(default=0, alias="organic_matter_cap")
-    costReduction: int = Field(default=0, alias="cost_reduction")
+    speed: Optional[int] = Field(default=None)
+    multiDrop: Optional[int] = Field(default=None, alias="multi_drop")
+    fuelCap: Optional[int] = Field(default=None, alias="fuel_cap")
+    organicMatterCap: Optional[int] = Field(default=None, alias="organic_matter_cap")
+    costReduction: Optional[int] = Field(default=None, alias="cost_reduction")
 
 
 class GreenhouseCoordinate(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    x: int = Field(default=0)
-    y: int = Field(default=0)
+    x: Optional[int] = Field(default=None)
+    y: Optional[int] = Field(default=None)

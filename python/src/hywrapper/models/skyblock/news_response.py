@@ -10,18 +10,18 @@ from hywrapper.models.rate_limit import RateLimit
 
 class NewsResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    items: List[NewsItem] = Field(default_factory=list)
+    items: Optional[List[NewsItem]] = Field(default=None)
     rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class NewsItem(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    title: str = Field(default="")
-    text: str = Field(default="")
-    link: str = Field(default="")
+    title: Optional[str] = Field(default=None)
+    text: Optional[str] = Field(default=None)
+    link: Optional[str] = Field(default=None)
     item: Optional[NewsMaterial] = None
 
 
 class NewsMaterial(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    material: str = Field(default="")
+    material: Optional[str] = Field(default=None)

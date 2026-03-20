@@ -13,83 +13,83 @@ data class Easter(
     val rabbits: Rabbits? = null,
     val timeTower: TimeTower? = null,
     // TODO enum
-    val employees: Map<String, Int> = emptyMap(),
-    val chocolate: Long = 0L,
+    val employees: Map<String, Int>? = null,
+    val chocolate: Long? = null,
     @SerialName("total_chocolate")
-    val totalChocolate: Long = 0L,
+    val totalChocolate: Long? = null,
     @SerialName("chocolate_since_prestige")
-    val chocolateSincePrestige: Long = 0L,
+    val chocolateSincePrestige: Long? = null,
     @SerialName("last_viewed_chocolate_factory")
-    val lastViewedChocolateFactory: Long = 0L,
+    val lastViewedChocolateFactory: Long? = null,
     val shop: Shop? = null,
     @SerialName("rabbit_barn_capacity_level")
-    val rabbitBarnCapacityLevel: Int = 0,
+    val rabbitBarnCapacityLevel: Int? = null,
     @SerialName("chocolate_level")
-    val chocolateLevel: Int = 0,
+    val chocolateLevel: Int? = null,
     @SerialName("rabbit_sort")
-    val rabbitSort: String = "",
+    val rabbitSort: String? = null,
     @SerialName("rabbit_filter")
-    val rabbitFilter: String = "",
+    val rabbitFilter: String? = null,
     @SerialName("supreme_chocolate_bars")
-    val supremeChocolateBars: Int = 0,
+    val supremeChocolateBars: Int? = null,
     @SerialName("click_upgrades")
-    val clickUpgrades: Int = 0,
+    val clickUpgrades: Int? = null,
     @SerialName("chocolate_multiplier_upgrades")
-    val chocolateMultiplierUpgrades: Int = 0,
+    val chocolateMultiplierUpgrades: Int? = null,
     @SerialName("rabbit_rarity_upgrades")
-    val rabbitRarityUpgrades: Int = 0,
+    val rabbitRarityUpgrades: Int? = null,
     @SerialName("refined_dark_cacao_truffles")
-    val refinedDarkCacaoTruffles: Int = 0,
+    val refinedDarkCacaoTruffles: Int? = null,
     @SerialName("el_dorado_progress")
-    val elDoradoProgress: Int = 0,
+    val elDoradoProgress: Int? = null,
     @SerialName("rabbit_hitmen")
     val rabbitHitmen: RabbitHitmen? = null,
     @SerialName("golden_click_amount")
-    val goldenClickAmount: Int = 0,
+    val goldenClickAmount: Int? = null,
     @SerialName("golden_click_year")
-    val goldenClickYear: Int = 0,
+    val goldenClickYear: Int? = null,
     @SerialName("rabbit_hotspot_filer")
-    val rabbitHotspotFiler: String = "",
+    val rabbitHotspotFiler: String? = null,
 )
 
 @Serializable
 data class Rabbits(
     // TODO enum
     @SerialName("collected_eggs")
-    val collectedEggs: Map<String, Long> = emptyMap(),
+    val collectedEggs: Map<String, Long>? = null,
     // TODO enum
     @SerialName("collected_locations")
-    val collectedLocations: Map<String, List<String>> = emptyMap(),
+    val collectedLocations: Map<String, List<String>>? = null,
     // TODO rabbits
 )
 
 @Serializable
 data class TimeTower(
-    val charges: Int = 0,
+    val charges: Int? = null,
     @SerialName("activation_time")
-    val activationTime: Long = 0L,
-    val level: Int = 0,
+    val activationTime: Long? = null,
+    val level: Int? = null,
 )
 
 @Serializable
 data class Shop(
-    val year: Int = 0,
+    val year: Int? = null,
     // TODO enum
-    val rabbits: List<String> = emptyList(),
+    val rabbits: List<String>? = null,
     @SerialName("chocolate_spent")
-    val chocolateSpent: Long = 0L,
+    val chocolateSpent: Long? = null,
     @SerialName("cocoa_fortune_upgrades")
-    val cocoaFortuneUpgrades: Int = 0,
+    val cocoaFortuneUpgrades: Int? = null,
 )
 
 @Serializable
 data class RabbitHitmen(
     @SerialName("rabbit_hitmen_slots")
-    val rabbitHitmenSlots: Int = 0,
+    val rabbitHitmenSlots: Int? = null,
     @SerialName("missed_uncollected_eggs")
-    val missedUncollectedEggs: Int = 0,
+    val missedUncollectedEggs: Int? = null,
     @SerialName("egg_slot_cooldown_mark")
-    val eggSlotCooldownMark: Long = 0L,
+    val eggSlotCooldownMark: Long? = null,
     @SerialName("egg_slot_cooldown_sum")
-    val eggSlotCooldownSum: Long = 0L,
+    val eggSlotCooldownSum: Long? = null,
 )

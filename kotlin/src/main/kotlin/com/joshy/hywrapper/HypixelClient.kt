@@ -322,7 +322,7 @@ class HypixelClient(
 
                                             decoded.rateLimit = rateLimit
 
-                                            if (!decoded.success) {
+                                            if (decoded.success != true) {
                                                 continuation.resumeWithException(
                                                     HypixelException("API Error: ${decoded.cause ?: "Unknown error"}"),
                                                 )

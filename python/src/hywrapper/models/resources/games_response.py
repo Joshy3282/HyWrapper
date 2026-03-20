@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict
+from typing import Dict, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -9,14 +9,14 @@ from hywrapper.models.hypixel_response import HypixelResponse
 
 class Game(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    id: int = 0
-    name: str = ""
-    database_name: str = Field(default="", alias="databaseName")
-    mode_names: Dict[str, str] = Field(default_factory=dict, alias="modeNames")
-    legacy: bool = False
-    retired: bool = False
+    id: Optional[int] = None
+    name: Optional[str] = None
+    database_name: Optional[str] = Field(default=None, alias="databaseName")
+    mode_names: Optional[Dict[str, str]] = Field(default=None, alias="modeNames")
+    legacy: Optional[bool] = None
+    retired: Optional[bool] = None
 
 
 class GamesResponse(HypixelResponse):
-    last_updated: int = Field(default=0, alias="lastUpdated")
-    games: Dict[str, Game] = Field(default_factory=dict)
+    last_updated: Optional[int] = Field(default=None, alias="lastUpdated")
+    games: Optional[Dict[str, Game]] = Field(default=None)

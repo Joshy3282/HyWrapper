@@ -8,23 +8,23 @@ data class PetsData(
     @SerialName("pet_care")
     val petCare: PetCare? = null,
     val autopet: Autopet? = null,
-    val pets: List<PetData> = emptyList(),
+    val pets: List<PetData>? = null,
 )
 
 @Serializable
 data class PetCare(
     @SerialName("coins_spent")
-    val coinsSpent: Double = 0.0,
+    val coinsSpent: Double? = null,
     // TODO enum
     @SerialName("pet_types_sacrificed")
-    val petTypesSacrificed: List<String> = emptyList(),
+    val petTypesSacrificed: List<String>? = null,
 )
 
 @Serializable
 data class Autopet(
     @SerialName("rules_limit")
-    val rulesLimit: Int = 0,
-    val rules: List<AutopetRule> = emptyList(),
+    val rulesLimit: Int? = null,
+    val rules: List<AutopetRule>? = null,
     val migrated: Boolean? = null,
     @SerialName("migrated_2")
     val migrated2: Boolean? = null,
@@ -32,40 +32,40 @@ data class Autopet(
 
 @Serializable
 data class AutopetRule(
-    val uuid: String = "",
+    val uuid: String? = null,
     // TODO enum
-    val id: String = "",
-    val name: String = "",
-    val uniqueId: String = "",
-    val exceptions: List<AutopetException> = emptyList(),
-    val disabled: Boolean = false,
+    val id: String? = null,
+    val name: String? = null,
+    val uniqueId: String? = null,
+    val exceptions: List<AutopetException>? = null,
+    val disabled: Boolean? = null,
     // TODO enums
-    val data: Map<String, String> = emptyMap(),
+    val data: Map<String, String>? = null,
 )
 
 @Serializable
 data class AutopetException(
-    val id: String = "",
+    val id: String? = null,
     // TODO enums
-    val data: Map<String, String> = emptyMap(),
+    val data: Map<String, String>? = null,
 )
 
 @Serializable
 data class PetData(
-    val uuid: String = "",
-    val uniqueId: String = "",
+    val uuid: String? = null,
+    val uniqueId: String? = null,
     // TODO enum
-    val type: String = "",
-    val exp: Double = 0.0,
+    val type: String? = null,
+    val exp: Double? = null,
     val active: Boolean? = null,
     // TODO enum
-    val tier: String = "",
+    val tier: String? = null,
     // TODO enum
-    val heldItem: String = "",
-    val candyUsed: Int = 0,
+    val heldItem: String? = null,
+    val candyUsed: Int? = null,
     val petSoulbound: Boolean? = null,
     // TODO enum
-    val skin: String = "",
+    val skin: String? = null,
     // TODO enum
-    val extra: Map<String, Int> = emptyMap(),
+    val extra: Map<String, Int>? = null,
 )

@@ -10,34 +10,34 @@ from hywrapper.models.rate_limit import RateLimit
 
 class BazaarResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    lastUpdated: int = Field(default=0)
-    products: Dict[str, Product] = Field(default_factory=dict)
+    lastUpdated: Optional[int] = Field(default=None)
+    products: Optional[Dict[str, Product]] = Field(default=None)
     rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Product(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    productId: str = Field(default="", alias="product_id")
-    sellSummary: List[Summary] = Field(default_factory=list, alias="sell_summary")
-    buySummary: List[Summary] = Field(default_factory=list, alias="buy_summary")
+    productId: Optional[str] = Field(default=None, alias="product_id")
+    sellSummary: Optional[List[Summary]] = Field(default=None, alias="sell_summary")
+    buySummary: Optional[List[Summary]] = Field(default=None, alias="buy_summary")
     quickStatus: Optional[QuickStatus] = Field(default=None, alias="quick_status")
 
 
 class Summary(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    amount: int = Field(default=0)
-    pricePerUnit: float = Field(default=0.0)
-    orders: int = Field(default=0)
+    amount: Optional[int] = Field(default=None)
+    pricePerUnit: Optional[float] = Field(default=None)
+    orders: Optional[int] = Field(default=None)
 
 
 class QuickStatus(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    productId: str = Field(default="")
-    sellPrice: float = Field(default=0.0)
-    sellVolume: int = Field(default=0)
-    sellMovingWeek: int = Field(default=0)
-    sellOrder: int = Field(default=0)
-    buyPrice: float = Field(default=0.0)
-    buyVolume: int = Field(default=0)
-    buyMovingWeek: int = Field(default=0)
-    buyOrders: int = Field(default=0)
+    productId: Optional[str] = Field(default=None)
+    sellPrice: Optional[float] = Field(default=None)
+    sellVolume: Optional[int] = Field(default=None)
+    sellMovingWeek: Optional[int] = Field(default=None)
+    sellOrder: Optional[int] = Field(default=None)
+    buyPrice: Optional[float] = Field(default=None)
+    buyVolume: Optional[int] = Field(default=None)
+    buyMovingWeek: Optional[int] = Field(default=None)
+    buyOrders: Optional[int] = Field(default=None)

@@ -7,15 +7,15 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class BingoResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val id: Int = 0,
-    val name: String = "",
-    val start: Long = 0,
-    val end: Long = 0,
-    val modifier: String = "",
-    val goals: List<Goal> = emptyList(),
+    val lastUpdated: Long? = null,
+    val id: Int? = null,
+    val name: String? = null,
+    val start: Long? = null,
+    val end: Long? = null,
+    val modifier: String? = null,
+    val goals: List<Goal>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -23,11 +23,11 @@ data class BingoResponse(
 
 @Serializable
 data class Goal(
-    val id: String = "",
-    val name: String = "",
-    val tiers: List<Int> = emptyList(),
+    val id: String? = null,
+    val name: String? = null,
+    val tiers: List<Int>? = null,
     val progress: Int? = null,
-    val lore: String = "",
-    val fullLore: List<String> = emptyList(),
+    val lore: String? = null,
+    val fullLore: List<String>? = null,
     val requiredAmount: Int? = null,
 )

@@ -8,12 +8,12 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class GuildsAchievementsResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
+    val lastUpdated: Long? = null,
     @SerialName("one_time")
-    val oneTime: Map<String, GuildOneTimeAchievement> = emptyMap(),
-    val tiered: Map<String, GuildTieredAchievement> = emptyMap(),
+    val oneTime: Map<String, GuildOneTimeAchievement>? = null,
+    val tiered: Map<String, GuildTieredAchievement>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -21,19 +21,19 @@ data class GuildsAchievementsResponse(
 
 @Serializable
 data class GuildOneTimeAchievement(
-    val name: String = "",
-    val description: String = "",
+    val name: String? = null,
+    val description: String? = null,
 )
 
 @Serializable
 data class GuildTieredAchievement(
-    val name: String = "",
-    val description: String = "",
-    val tiers: List<GuildAchievementTier> = emptyList(),
+    val name: String? = null,
+    val description: String? = null,
+    val tiers: List<GuildAchievementTier>? = null,
 )
 
 @Serializable
 data class GuildAchievementTier(
-    val tier: Int = 0,
-    val amount: Int = 0,
+    val tier: Int? = null,
+    val amount: Int? = null,
 )

@@ -9,9 +9,9 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class MuseumResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val members: Map<String, Member> = emptyMap(),
+    val members: Map<String, Member>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -19,16 +19,16 @@ data class MuseumResponse(
 
 @Serializable
 data class Member(
-    val value: Long? = 0,
+    val value: Long? = null,
     val appraisal: Boolean? = null,
-    val items: Map<MuseumItem, MuseumItemInfo> = emptyMap(),
-    val special: List<SpecialItemInfo> = emptyList(),
+    val items: Map<MuseumItem, MuseumItemInfo>? = null,
+    val special: List<SpecialItemInfo>? = null,
 )
 
 @Serializable
 data class MuseumItemInfo(
     @SerialName("donated_time")
-    val donatedTime: Long? = 0,
+    val donatedTime: Long? = null,
     @SerialName("featured_slot")
     val featuredSlot: String? = null,
     val borrowing: Boolean? = null,
@@ -38,12 +38,12 @@ data class MuseumItemInfo(
 @Serializable
 data class SpecialItemInfo(
     @SerialName("donated_time")
-    val donatedTime: Long? = 0,
+    val donatedTime: Long? = null,
     val items: MuseumItem? = null,
 )
 
 @Serializable
 data class MuseumItem(
-    val type: Int = 0,
-    val data: String = "",
+    val type: Int? = null,
+    val data: String? = null,
 )

@@ -8,30 +8,29 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class ChallengesResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val challenges: Map<String, List<Challenge>> = emptyMap(),
+    val lastUpdated: Long? = null,
+    val challenges: Map<String, List<Challenge>>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 
-    fun getChallengesFor(game: GameType): List<Challenge> {
-        return challenges[game.name.lowercase()]
-            ?: challenges[game.databaseName.lowercase()]
-            ?: emptyList()
+    fun getChallengesFor(game: GameType): List<Challenge>? {
+        return challenges?.get(game.name.lowercase())
+            ?: challenges?.get(game.databaseName.lowercase())
     }
 }
 
 @Serializable
 data class Challenge(
-    val id: String = "",
-    val name: String = "",
-    val rewards: List<Reward> = emptyList(),
+    val id: String? = null,
+    val name: String? = null,
+    val rewards: List<Reward>? = null,
 )
 
 @Serializable
 data class Reward(
-    val type: String = "",
-    val amount: Int = 0,
+    val type: String? = null,
+    val amount: Int? = null,
 )

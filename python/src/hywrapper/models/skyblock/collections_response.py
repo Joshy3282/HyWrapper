@@ -10,27 +10,27 @@ from hywrapper.models.rate_limit import RateLimit
 
 class CollectionsResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    lastUpdated: int = Field(default=0)
-    version: str = Field(default="")
-    collections: Dict[str, Collection] = Field(default_factory=dict)
+    lastUpdated: Optional[int] = Field(default=None)
+    version: Optional[str] = Field(default=None)
+    collections: Optional[Dict[str, Collection]] = Field(default=None)
     rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Collection(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    name: str = Field(default="")
-    items: Dict[str, CollectionItem] = Field(default_factory=dict)
+    name: Optional[str] = Field(default=None)
+    items: Optional[Dict[str, CollectionItem]] = Field(default=None)
 
 
 class CollectionItem(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    name: str = Field(default="")
-    maxTiers: int = Field(default=0)
-    tiers: List[CollectionTier] = Field(default_factory=list)
+    name: Optional[str] = Field(default=None)
+    maxTiers: Optional[int] = Field(default=None)
+    tiers: Optional[List[CollectionTier]] = Field(default=None)
 
 
 class CollectionTier(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    tier: int = Field(default=0)
-    amountRequired: int = Field(default=0)
-    unlocks: List[str] = Field(default_factory=list)
+    tier: Optional[int] = Field(default=None)
+    amountRequired: Optional[int] = Field(default=None)
+    unlocks: Optional[List[str]] = Field(default=None)

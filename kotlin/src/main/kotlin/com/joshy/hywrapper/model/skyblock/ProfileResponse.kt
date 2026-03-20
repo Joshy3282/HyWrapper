@@ -9,7 +9,7 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class ProfileResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
     val profile: Profile? = null,
 ) : HypixelResponse {
@@ -20,10 +20,10 @@ data class ProfileResponse(
 @Serializable
 data class Profile(
     @SerialName("profile_id")
-    val profileId: String = "",
+    val profileId: String? = null,
     @SerialName("community_upgrades")
     val communityUpgrades: CommunityUpgrades? = null,
-    val members: Map<String, MemberData> = emptyMap(),
+    val members: Map<String, MemberData>? = null,
     val banking: Banking? = null,
 )
 
@@ -52,7 +52,7 @@ data class MemberData(
     val foraging: Foraging? = null,
     val dungeons: Dungeons? = null,
     @SerialName("player_id")
-    val playerId: String = "",
+    val playerId: String? = null,
     @SerialName("nether_island_player_data")
     val crimsonIslePlayerData: CrimsonIslePlayerData? = null,
 )
@@ -61,84 +61,84 @@ data class MemberData(
 data class GlacitePlayerData(
     // TODO enum
     @SerialName("fossils_donated")
-    val fossilsDonated: List<String> = emptyList(),
+    val fossilsDonated: List<String>? = null,
     @SerialName("fossil_dust")
-    val fossilDust: Double = 0.0,
+    val fossilDust: Double? = null,
     // TODO enum
     @SerialName("corpses_looted")
-    val corpsesLooted: Map<String, Int> = emptyMap(),
+    val corpsesLooted: Map<String, Int>? = null,
     @SerialName("mineshafts_entered")
-    val mineshaftsEntered: Int = 0,
+    val mineshaftsEntered: Int? = null,
 )
 
 @Serializable
 data class ProfileData(
     @SerialName("bank_account")
-    val bankAccount: Double = 0.0,
+    val bankAccount: Double? = null,
     @SerialName("first_join")
-    val firstJoin: Long? = 0L,
+    val firstJoin: Long? = null,
     @SerialName("personal_bank_upgrade")
-    val personalBankUpgrade: Int = 0,
+    val personalBankUpgrade: Int? = null,
     @SerialName("cookie_buff_active")
     val cookieBuffActive: Boolean? = null,
 )
 
 @Serializable
 data class GardenPlayerData(
-    val copper: Int = 0,
+    val copper: Int? = null,
     @SerialName("larva_consumed")
-    val larvaConsumed: Int = 0,
+    val larvaConsumed: Int? = null,
     // TODO enum
     @SerialName("analyzed_greenhouse_crops")
-    val analyzedGreenhouseCrops: List<String> = emptyList(),
+    val analyzedGreenhouseCrops: List<String>? = null,
     // TODO enum
     @SerialName("discovered_greenhouse_crops")
-    val discoveredGreenhouseCrops: List<String> = emptyList(),
+    val discoveredGreenhouseCrops: List<String>? = null,
 )
 
 @Serializable
 data class AccessoryBagStorage(
-    val tuning: Map<String, TuningSlot> = emptyMap(),
+    val tuning: Map<String, TuningSlot>? = null,
     // TODO ENUM
     @SerialName("selected_power")
-    val selectedPower: String = "",
+    val selectedPower: String? = null,
     @SerialName("bag_upgrades_purchased")
-    val bagUpgradesPurchased: Int = 0,
+    val bagUpgradesPurchased: Int? = null,
     // TODO enum
     @SerialName("unlocked_powers")
-    val unlockedPowers: List<String> = emptyList(),
+    val unlockedPowers: List<String>? = null,
     @SerialName("highest_magical_power")
-    val highestMagicalPower: Int = 0,
+    val highestMagicalPower: Int? = null,
 )
 
 @Serializable
 data class TuningSlot(
-    val health: Int = 0,
-    val defense: Int = 0,
+    val health: Int? = null,
+    val defense: Int? = null,
     @SerialName("walk_speed")
-    val walkSpeed: Int = 0,
-    val strength: Int = 0,
+    val walkSpeed: Int? = null,
+    val strength: Int? = null,
     @SerialName("critical_damage")
-    val criticalDamage: Int = 0,
+    val criticalDamage: Int? = null,
     @SerialName("critical_chance")
-    val criticalChance: Int = 0,
+    val criticalChance: Int? = null,
     @SerialName("attack_speed")
-    val attackSpeed: Int = 0,
-    val intelligence: Int = 0,
+    val attackSpeed: Int? = null,
+    val intelligence: Int? = null,
 )
 
 @Serializable
 data class Leveling(
-    val experience: Int = 0,
+    val experience: Int? = null,
     // TODO enum
-    val completions: Map<String, Int> = emptyMap(),
+    val completions: Map<String, Int>? = null,
     // TODO enum
     @SerialName("completed_tasks")
-    val completedTasks: List<String> = emptyList(),
+    val completedTasks: List<String>? = null,
     @SerialName("highest_pet_score")
-    val highestPetScore: Int = 0,
+    val highestPetScore: Int? = null,
     @SerialName("mining_fiesta_ores_mined")
-    val miningFiestaOresMined: Int = 0,
+    val miningFiestaOresMined: Int? = null,
     val migrated: Boolean? = null,
     @SerialName("migrated_completions_2")
     val migratedCompletionsV2: Boolean? = null,
@@ -146,77 +146,77 @@ data class Leveling(
     val claimedTalisman: Boolean? = null,
     // TODO enum
     @SerialName("bop_bonus")
-    val bopBonus: String = "",
+    val bopBonus: String? = null,
     // TODO enum
     @SerialName("emblem_unlocks")
-    val emblemUnlocks: List<String> = emptyList(),
+    val emblemUnlocks: List<String>? = null,
     @SerialName("category_expanded")
     val categoryExpanded: Boolean? = null,
     @SerialName("fishing_festival_sharks_killed")
-    val fishingFestivalSharksKilled: Int = 0,
+    val fishingFestivalSharksKilled: Int? = null,
     // TODO enum
     @SerialName("task_sort")
-    val taskSort: String = "",
+    val taskSort: String? = null,
     // TODO enum
     @SerialName("last_viewed_tasks")
-    val lastViewedTasks: List<String> = emptyList(),
+    val lastViewedTasks: List<String>? = null,
     // TODO enum
     @SerialName("selected_symbol")
-    val selectedSymbol: String = "",
+    val selectedSymbol: String? = null,
 )
 
 @Serializable
 data class ItemData(
-    val soulflow: Int = 0,
+    val soulflow: Int? = null,
     @SerialName("favorite_arrow")
-    val favoriteArrow: String = "",
+    val favoriteArrow: String? = null,
 )
 
 @Serializable
 data class Currencies(
     @SerialName("coin_purse")
-    val coinPurse: Double = 0.0,
+    val coinPurse: Double? = null,
     @SerialName("motes_purse")
-    val motesPurse: Double = 0.0,
-    val essence: Map<String, EssenceInfo> = emptyMap(),
+    val motesPurse: Double? = null,
+    val essence: Map<String, EssenceInfo>? = null,
 )
 
 @Serializable
 data class EssenceInfo(
-    val current: Int = 0,
+    val current: Int? = null,
 )
 
 @Serializable
 data class CommunityUpgrades(
     @SerialName("currently_upgrading")
-    val currentlyUpgrading: String = "",
+    val currentlyUpgrading: String? = null,
     @SerialName("upgrade_states")
-    val upgradeStates: List<UpgradeState> = emptyList(),
+    val upgradeStates: List<UpgradeState>? = null,
 )
 
 @Serializable
 data class UpgradeState(
-    val upgrade: String = "",
-    val tier: Int = 1,
+    val upgrade: String? = null,
+    val tier: Int? = null,
     @SerialName("started_ms")
-    val startedMs: Long = 0L,
+    val startedMs: Long? = null,
     @SerialName("started_by")
-    val startedBy: String = "",
+    val startedBy: String? = null,
     @SerialName("claimed_by")
-    val claimedBy: String = "",
+    val claimedBy: String? = null,
 )
 
 @Serializable
 data class Banking(
-    val balance: Double = 0.0,
-    val transactions: List<Transaction> = emptyList(),
+    val balance: Double? = null,
+    val transactions: List<Transaction>? = null,
 )
 
 @Serializable
 data class Transaction(
-    val amount: Double = 0.0,
-    val timestamp: Long = 0L,
-    val action: String = "",
+    val amount: Double? = null,
+    val timestamp: Long? = null,
+    val action: String? = null,
     @SerialName("initiator_name")
-    val initiatorName: String = "",
+    val initiatorName: String? = null,
 )

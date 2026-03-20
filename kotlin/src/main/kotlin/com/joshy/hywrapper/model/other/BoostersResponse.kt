@@ -9,9 +9,9 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class BoostersResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val boosters: List<Booster>? = emptyList(),
+    val boosters: List<Booster>? = null,
     val boosterState: BoosterState? = null,
 ) : HypixelResponse {
     @Transient
@@ -21,14 +21,14 @@ data class BoostersResponse(
 @Serializable
 data class Booster(
     @SerialName("_id")
-    val id: String = "",
-    val purchaserUuid: String = "",
-    val amount: Double = 0.0,
-    val originalLength: Int = 0,
-    val length: Int = 0,
+    val id: String? = null,
+    val purchaserUuid: String? = null,
+    val amount: Double? = null,
+    val originalLength: Int? = null,
+    val length: Int? = null,
     val gameType: GameType? = null,
-    val dateActivated: Long = 0,
-    val stacked: List<String>? = emptyList(),
+    val dateActivated: Long? = null,
+    val stacked: List<String>? = null,
 )
 
 @Serializable

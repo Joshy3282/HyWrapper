@@ -7,61 +7,61 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class PetData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    uuid: str = ""
-    unique_id: str = Field(default="", alias="uniqueId")
+    uuid: Optional[str] = None
+    unique_id: Optional[str] = Field(default=None, alias="uniqueId")
     # TODO enum
-    type: str = ""
-    exp: float = 0.0
+    type: Optional[str] = None
+    exp: Optional[float] = None
     active: Optional[bool] = None
     # TODO enum
-    tier: str = ""
+    tier: Optional[str] = None
     # TODO enum
-    held_item: str = Field(default="", alias="heldItem")
-    candy_used: int = Field(default=0, alias="candyUsed")
+    held_item: Optional[str] = Field(default=None, alias="heldItem")
+    candy_used: Optional[int] = Field(default=None, alias="candyUsed")
     pet_soulbound: Optional[bool] = Field(default=None, alias="petSoulbound")
     # TODO enum
-    skin: str = ""
+    skin: Optional[str] = None
     # TODO enum
-    extra: Dict[str, int] = Field(default_factory=dict)
+    extra: Optional[Dict[str, int]] = Field(default=None)
 
 
 class AutopetException(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    id: str = ""
+    id: Optional[str] = None
     # TODO enums
-    data: Dict[str, str] = Field(default_factory=dict)
+    data: Optional[Dict[str, str]] = Field(default=None)
 
 
 class AutopetRule(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    uuid: str = ""
+    uuid: Optional[str] = None
     # TODO enum
-    id: str = ""
-    name: str = ""
-    unique_id: str = Field(default="", alias="uniqueId")
-    exceptions: List[AutopetException] = Field(default_factory=list)
-    disabled: bool = False
+    id: Optional[str] = None
+    name: Optional[str] = None
+    unique_id: Optional[str] = Field(default=None, alias="uniqueId")
+    exceptions: Optional[List[AutopetException]] = Field(default=None)
+    disabled: Optional[bool] = None
     # TODO enums
-    data: Dict[str, str] = Field(default_factory=dict)
+    data: Optional[Dict[str, str]] = Field(default=None)
 
 
 class Autopet(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    rules_limit: int = Field(default=0, alias="rules_limit")
-    rules: List[AutopetRule] = Field(default_factory=list)
+    rules_limit: Optional[int] = Field(default=None, alias="rules_limit")
+    rules: Optional[List[AutopetRule]] = Field(default=None)
     migrated: Optional[bool] = None
     migrated_2: Optional[bool] = Field(default=None, alias="migrated_2")
 
 
 class PetCare(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    coins_spent: float = Field(default=0.0, alias="coins_spent")
+    coins_spent: Optional[float] = Field(default=None, alias="coins_spent")
     # TODO enum
-    pet_types_sacrificed: List[str] = Field(default_factory=list, alias="pet_types_sacrificed")
+    pet_types_sacrificed: Optional[List[str]] = Field(default=None, alias="pet_types_sacrificed")
 
 
 class PetsData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     pet_care: Optional[PetCare] = Field(default=None, alias="pet_care")
     autopet: Optional[Autopet] = None
-    pets: List[PetData] = Field(default_factory=list)
+    pets: Optional[List[PetData]] = Field(default=None)

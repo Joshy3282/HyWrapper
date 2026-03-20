@@ -10,14 +10,14 @@ from hywrapper.models.rate_limit import RateLimit
 
 class FiresalesResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    sales: List[Sale] = Field(default_factory=list)
+    sales: Optional[List[Sale]] = Field(default=None)
     rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Sale(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    itemId: str = Field(default="", alias="item_id")
-    start: int = Field(default=0)
-    end: int = Field(default=0)
-    amount: int = Field(default=0)
-    price: int = Field(default=0)
+    itemId: Optional[str] = Field(default=None, alias="item_id")
+    start: Optional[int] = Field(default=None)
+    end: Optional[int] = Field(default=None)
+    amount: Optional[int] = Field(default=None)
+    price: Optional[int] = Field(default=None)

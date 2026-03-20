@@ -9,47 +9,47 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class BazaarResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val products: Map<String, Product> = emptyMap(),
+    val lastUpdated: Long? = null,
+    val products: Map<String, Product>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 
     fun getProduct(item: BazaarItem): Product? {
-        return products[item.id]
+        return products?.get(item.id)
     }
 }
 
 @Serializable
 data class Product(
     @SerialName("product_id")
-    val productId: String = "",
+    val productId: String? = null,
     @SerialName("sell_summary")
-    val sellSummary: List<Summary> = emptyList(),
+    val sellSummary: List<Summary>? = null,
     @SerialName("buy_summary")
-    val buySummary: List<Summary> = emptyList(),
+    val buySummary: List<Summary>? = null,
     @SerialName("quick_status")
     val quickStatus: QuickStatus? = null,
 )
 
 @Serializable
 data class Summary(
-    val amount: Int = 0,
-    val pricePerUnit: Double = 0.0,
-    val orders: Int = 0,
+    val amount: Int? = null,
+    val pricePerUnit: Double? = null,
+    val orders: Int? = null,
 )
 
 @Serializable
 data class QuickStatus(
-    val productId: String = "",
-    val sellPrice: Double = 0.0,
-    val sellVolume: Long = 0L,
-    val sellMovingWeek: Long = 0L,
-    val sellOrder: Int = 0,
-    val buyPrice: Double = 0.0,
-    val buyVolume: Long = 0L,
-    val buyMovingWeek: Long = 0L,
-    val buyOrders: Int = 0,
+    val productId: String? = null,
+    val sellPrice: Double? = null,
+    val sellVolume: Long? = null,
+    val sellMovingWeek: Long? = null,
+    val sellOrder: Int? = null,
+    val buyPrice: Double? = null,
+    val buyVolume: Long? = null,
+    val buyMovingWeek: Long? = null,
+    val buyOrders: Int? = null,
 )

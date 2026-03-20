@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -9,13 +9,13 @@ from hywrapper.models.hypixel_response import HypixelResponse
 
 class Leaderboard(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    path: str = ""
-    prefix: str = ""
-    title: str = ""
-    location: str = ""
-    count: int = 0
-    leaders: List[str] = Field(default_factory=list)
+    path: Optional[str] = None
+    prefix: Optional[str] = None
+    title: Optional[str] = None
+    location: Optional[str] = None
+    count: Optional[int] = None
+    leaders: Optional[List[str]] = Field(default=None)
 
 
 class LeaderboardsResponse(HypixelResponse):
-    leaderboards: Dict[str, List[Leaderboard]] = Field(default_factory=dict)
+    leaderboards: Optional[Dict[str, List[Leaderboard]]] = Field(default=None)

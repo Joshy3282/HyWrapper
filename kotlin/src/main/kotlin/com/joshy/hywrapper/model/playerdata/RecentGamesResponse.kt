@@ -8,10 +8,10 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class RecentGamesResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val uuid: String = "",
-    val games: List<RecentGame> = emptyList(),
+    val uuid: String? = null,
+    val games: List<RecentGame>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -19,12 +19,12 @@ data class RecentGamesResponse(
 
 @Serializable
 data class RecentGame(
-    val date: Long = 0L,
-    val gameType: String = "",
+    val date: Long? = null,
+    val gameType: String? = null,
     val mode: String? = null,
     val map: String? = null,
     val ended: Long? = null,
 ) {
     val parsedGameType: GameType?
-        get() = runCatching { GameType.valueOf(gameType) }.getOrNull()
+        get() = gameType?.let { gt -> runCatching { GameType.valueOf(gt) }.getOrNull() }
 }

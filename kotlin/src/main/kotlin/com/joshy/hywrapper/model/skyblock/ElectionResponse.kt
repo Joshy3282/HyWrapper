@@ -7,9 +7,9 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class ElectionResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
+    val lastUpdated: Long? = null,
     val mayor: Mayor? = null,
     val current: CurrentElection? = null,
 ) : HypixelResponse {
@@ -19,43 +19,43 @@ data class ElectionResponse(
 
 @Serializable
 data class Mayor(
-    val key: String = "",
-    val name: String = "",
-    val perks: List<Perk> = emptyList(),
+    val key: String? = null,
+    val name: String? = null,
+    val perks: List<Perk>? = null,
     val minister: Minister? = null,
     val election: PastElection? = null,
 )
 
 @Serializable
 data class Minister(
-    val key: String = "",
-    val name: String = "",
+    val key: String? = null,
+    val name: String? = null,
     val perk: Perk? = null,
 )
 
 @Serializable
 data class Perk(
-    val name: String = "",
-    val description: String = "",
+    val name: String? = null,
+    val description: String? = null,
     val minister: Boolean? = null,
 )
 
 @Serializable
 data class PastElection(
-    val year: Int = 0,
-    val candidates: List<Candidate> = emptyList(),
+    val year: Int? = null,
+    val candidates: List<Candidate>? = null,
 )
 
 @Serializable
 data class CurrentElection(
-    val year: Int = 0,
-    val candidates: List<Candidate> = emptyList(),
+    val year: Int? = null,
+    val candidates: List<Candidate>? = null,
 )
 
 @Serializable
 data class Candidate(
-    val key: String = "",
-    val name: String = "",
-    val perks: List<Perk> = emptyList(),
-    val votes: Int = 0,
+    val key: String? = null,
+    val name: String? = null,
+    val perks: List<Perk>? = null,
+    val votes: Int? = null,
 )

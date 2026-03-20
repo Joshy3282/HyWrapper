@@ -8,11 +8,11 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class VanityResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val types: List<Type> = emptyList(),
-    val rarities: List<Rarity> = emptyList(),
+    val lastUpdated: Long? = null,
+    val types: List<Type>? = null,
+    val rarities: List<Rarity>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -20,15 +20,15 @@ data class VanityResponse(
 
 @Serializable
 data class Type(
-    val key: String = "",
-    val name: String = "",
+    val key: String? = null,
+    val name: String? = null,
     val rarity: String? = null,
     @SerialName("package")
-    val packageValue: String = "",
+    val packageValue: String? = null,
 )
 
 @Serializable
 data class Rarity(
-    val name: String = "",
-    val color: String = "",
+    val name: String? = null,
+    val color: String? = null,
 )

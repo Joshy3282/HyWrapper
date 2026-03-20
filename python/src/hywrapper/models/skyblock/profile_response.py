@@ -24,9 +24,9 @@ class ProfileResponse(HypixelResponse):
 
 class Profile(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    profileId: str = Field(default="", alias="profile_id")
+    profileId: Optional[str] = Field(default=None, alias="profile_id")
     communityUpgrades: Optional[CommunityUpgrades] = Field(default=None, alias="community_upgrades")
-    members: Dict[str, MemberData] = Field(default_factory=dict)
+    members: Optional[Dict[str, MemberData]] = Field(default=None)
     banking: Optional[Banking] = None
 
 
@@ -51,7 +51,7 @@ class MemberData(BaseModel):
     currencies: Optional[Currencies] = None
     foraging: Optional[Foraging] = None
     dungeons: Optional[Dungeons] = None
-    playerId: str = Field(default="", alias="player_id")
+    playerId: Optional[str] = Field(default=None, alias="player_id")
     crimsonIslePlayerData: Optional[CrimsonIslePlayerData] = Field(
         default=None, alias="nether_island_player_data"
     )
@@ -60,126 +60,128 @@ class MemberData(BaseModel):
 class GlacitePlayerData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     # TODO enum
-    fossilsDonated: List[str] = Field(default_factory=list, alias="fossils_donated")
-    fossilDust: float = Field(default=0.0, alias="fossil_dust")
+    fossilsDonated: Optional[List[str]] = Field(default=None, alias="fossils_donated")
+    fossilDust: Optional[float] = Field(default=None, alias="fossil_dust")
     # TODO enum
-    corpsesLooted: Dict[str, int] = Field(default_factory=dict, alias="corpses_looted")
-    mineshaftsEntered: int = Field(default=0, alias="mineshafts_entered")
+    corpsesLooted: Optional[Dict[str, int]] = Field(default=None, alias="corpses_looted")
+    mineshaftsEntered: Optional[int] = Field(default=None, alias="mineshafts_entered")
 
 
 class ProfileData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    bankAccount: float = Field(default=0.0, alias="bank_account")
-    firstJoin: Optional[int] = Field(default=0, alias="first_join")
-    personalBankUpgrade: int = Field(default=0, alias="personal_bank_upgrade")
+    bankAccount: Optional[float] = Field(default=None, alias="bank_account")
+    firstJoin: Optional[int] = Field(default=None, alias="first_join")
+    personalBankUpgrade: Optional[int] = Field(default=None, alias="personal_bank_upgrade")
     cookieBuffActive: Optional[bool] = Field(default=None, alias="cookie_buff_active")
 
 
 class GardenPlayerData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    copper: int = Field(default=0)
-    larvaConsumed: int = Field(default=0, alias="larva_consumed")
+    copper: Optional[int] = Field(default=None)
+    larvaConsumed: Optional[int] = Field(default=None, alias="larva_consumed")
     # TODO enum
-    analyzedGreenhouseCrops: List[str] = Field(
-        default_factory=list, alias="analyzed_greenhouse_crops"
+    analyzedGreenhouseCrops: Optional[List[str]] = Field(
+        default=None, alias="analyzed_greenhouse_crops"
     )
     # TODO enum
-    discoveredGreenhouseCrops: List[str] = Field(
-        default_factory=list, alias="discovered_greenhouse_crops"
+    discoveredGreenhouseCrops: Optional[List[str]] = Field(
+        default=None, alias="discovered_greenhouse_crops"
     )
 
 
 class AccessoryBagStorage(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    tuning: Dict[str, TuningSlot] = Field(default_factory=dict)
+    tuning: Optional[Dict[str, TuningSlot]] = Field(default=None)
     # TODO ENUM
-    selectedPower: str = Field(default="", alias="selected_power")
-    bagUpgradesPurchased: int = Field(default=0, alias="bag_upgrades_purchased")
+    selectedPower: Optional[str] = Field(default=None, alias="selected_power")
+    bagUpgradesPurchased: Optional[int] = Field(default=None, alias="bag_upgrades_purchased")
     # TODO enum
-    unlockedPowers: List[str] = Field(default_factory=list, alias="unlocked_powers")
-    highestMagicalPower: int = Field(default=0, alias="highest_magical_power")
+    unlockedPowers: Optional[List[str]] = Field(default=None, alias="unlocked_powers")
+    highestMagicalPower: Optional[int] = Field(default=None, alias="highest_magical_power")
 
 
 class TuningSlot(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    health: int = Field(default=0)
-    defense: int = Field(default=0)
-    walkSpeed: int = Field(default=0, alias="walk_speed")
-    strength: int = Field(default=0)
-    criticalDamage: int = Field(default=0, alias="critical_damage")
-    criticalChance: int = Field(default=0, alias="critical_chance")
-    attackSpeed: int = Field(default=0, alias="attack_speed")
-    intelligence: int = Field(default=0)
+    health: Optional[int] = Field(default=None)
+    defense: Optional[int] = Field(default=None)
+    walkSpeed: Optional[int] = Field(default=None, alias="walk_speed")
+    strength: Optional[int] = Field(default=None)
+    criticalDamage: Optional[int] = Field(default=None, alias="critical_damage")
+    criticalChance: Optional[int] = Field(default=None, alias="critical_chance")
+    attackSpeed: Optional[int] = Field(default=None, alias="attack_speed")
+    intelligence: Optional[int] = Field(default=None)
 
 
 class Leveling(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    experience: int = Field(default=0)
+    experience: Optional[int] = Field(default=None)
     # TODO enum
-    completions: Dict[str, int] = Field(default_factory=dict)
+    completions: Optional[Dict[str, int]] = Field(default=None)
     # TODO enum
-    completedTasks: List[str] = Field(default_factory=list, alias="completed_tasks")
-    highestPetScore: int = Field(default=0, alias="highest_pet_score")
-    miningFiestaOresMined: int = Field(default=0, alias="mining_fiesta_ores_mined")
+    completedTasks: Optional[List[str]] = Field(default=None, alias="completed_tasks")
+    highestPetScore: Optional[int] = Field(default=None, alias="highest_pet_score")
+    miningFiestaOresMined: Optional[int] = Field(default=None, alias="mining_fiesta_ores_mined")
     migrated: Optional[bool] = None
     migratedCompletionsV2: Optional[bool] = Field(default=None, alias="migrated_completions_2")
     claimedTalisman: Optional[bool] = Field(default=None, alias="claimed_talisman")
     # TODO enum
-    bopBonus: str = Field(default="", alias="bop_bonus")
+    bopBonus: Optional[str] = Field(default=None, alias="bop_bonus")
     # TODO enum
-    emblemUnlocks: List[str] = Field(default_factory=list, alias="emblem_unlocks")
+    emblemUnlocks: Optional[List[str]] = Field(default=None, alias="emblem_unlocks")
     categoryExpanded: Optional[bool] = Field(default=None, alias="category_expanded")
-    fishingFestivalSharksKilled: int = Field(default=0, alias="fishing_festival_sharks_killed")
+    fishingFestivalSharksKilled: Optional[int] = Field(
+        default=None, alias="fishing_festival_sharks_killed"
+    )
     # TODO enum
-    taskSort: str = Field(default="", alias="task_sort")
+    taskSort: Optional[str] = Field(default=None, alias="task_sort")
     # TODO enum
-    lastViewedTasks: List[str] = Field(default_factory=list, alias="last_viewed_tasks")
+    lastViewedTasks: Optional[List[str]] = Field(default=None, alias="last_viewed_tasks")
     # TODO enum
-    selectedSymbol: str = Field(default="", alias="selected_symbol")
+    selectedSymbol: Optional[str] = Field(default=None, alias="selected_symbol")
 
 
 class ItemData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    soulflow: int = Field(default=0)
-    favoriteArrow: str = Field(default="", alias="favorite_arrow")
+    soulflow: Optional[int] = Field(default=None)
+    favoriteArrow: Optional[str] = Field(default=None, alias="favorite_arrow")
 
 
 class Currencies(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    coinPurse: float = Field(default=0.0, alias="coin_purse")
-    motesPurse: float = Field(default=0.0, alias="motes_purse")
-    essence: Dict[str, EssenceInfo] = Field(default_factory=dict)
+    coinPurse: Optional[float] = Field(default=None, alias="coin_purse")
+    motesPurse: Optional[float] = Field(default=None, alias="motes_purse")
+    essence: Optional[Dict[str, EssenceInfo]] = Field(default=None)
 
 
 class EssenceInfo(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    current: int = Field(default=0)
+    current: Optional[int] = Field(default=None)
 
 
 class CommunityUpgrades(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    currentlyUpgrading: str = Field(default="", alias="currently_upgrading")
-    upgradeStates: List[UpgradeState] = Field(default_factory=list, alias="upgrade_states")
+    currentlyUpgrading: Optional[str] = Field(default=None, alias="currently_upgrading")
+    upgradeStates: Optional[List[UpgradeState]] = Field(default=None, alias="upgrade_states")
 
 
 class UpgradeState(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    upgrade: str = Field(default="")
-    tier: int = Field(default=1)
-    startedMs: int = Field(default=0, alias="started_ms")
-    startedBy: str = Field(default="", alias="started_by")
-    claimedBy: str = Field(default="", alias="claimed_by")
+    upgrade: Optional[str] = Field(default=None)
+    tier: Optional[int] = Field(default=None)
+    startedMs: Optional[int] = Field(default=None, alias="started_ms")
+    startedBy: Optional[str] = Field(default=None, alias="started_by")
+    claimedBy: Optional[str] = Field(default=None, alias="claimed_by")
 
 
 class Banking(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    balance: float = Field(default=0.0)
-    transactions: List[Transaction] = Field(default_factory=list)
+    balance: Optional[float] = Field(default=None)
+    transactions: Optional[List[Transaction]] = Field(default=None)
 
 
 class Transaction(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    amount: float = Field(default=0.0)
-    timestamp: int = Field(default=0)
-    action: str = Field(default="")
-    initiatorName: str = Field(default="", alias="initiator_name")
+    amount: Optional[float] = Field(default=None)
+    timestamp: Optional[int] = Field(default=None)
+    action: Optional[str] = Field(default=None)
+    initiatorName: Optional[str] = Field(default=None, alias="initiator_name")

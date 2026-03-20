@@ -13,5 +13,5 @@ class Session(BaseModel):
 
 
 class OnlineResponse(HypixelResponse):
-    uuid: str = ""
-    session: Session
+    uuid: Optional[str] = None
+    session: Optional[Session] = None

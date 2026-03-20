@@ -11,25 +11,27 @@ from hywrapper.models.rate_limit import RateLimit
 
 class SkillsResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    lastUpdated: int = Field(default=0)
-    version: str = Field(default="")
-    skills: Dict[str, Skill] = Field(default_factory=dict)
+    lastUpdated: Optional[int] = Field(default=None)
+    version: Optional[str] = Field(default=None)
+    skills: Optional[Dict[str, Skill]] = Field(default=None)
     rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
     def get_skill(self, skill_type: SkillType) -> Optional[Skill]:
+        if self.skills is None:
+            return None
         return self.skills.get(skill_type.name)
 
 
 class Skill(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    name: str = Field(default="")
-    description: str = Field(default="")
-    maxLevel: int = Field(default=0)
-    levels: List[Level] = Field(default_factory=list)
+    name: Optional[str] = Field(default=None)
+    description: Optional[str] = Field(default=None)
+    maxLevel: Optional[int] = Field(default=None)
+    levels: Optional[List[Level]] = Field(default=None)
 
 
 class Level(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    level: int
-    totalExpRequired: float = Field(default=0.0)
-    unlocks: List[str] = Field(default_factory=list)
+    level: Optional[int] = Field(default=None)
+    totalExpRequired: Optional[float] = Field(default=None)
+    unlocks: Optional[List[str]] = Field(default=None)

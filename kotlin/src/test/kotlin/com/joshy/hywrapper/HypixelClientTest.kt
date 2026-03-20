@@ -108,8 +108,8 @@ class HypixelClientTest {
 
             val response = client.getSkyblockNews()
             assertEquals(true, response.success)
-            assertEquals(1, response.items.size)
-            assertEquals("SkyBlock v0.11", response.items[0].title)
+            assertEquals(1, response.items?.size)
+            assertEquals("SkyBlock v0.11", response.items?.get(0)?.title)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/news", recordedRequest.path)
@@ -137,8 +137,8 @@ class HypixelClientTest {
 
             val response = client.getSkyblockItems()
             assertEquals(true, response.success)
-            assertEquals(1, response.items.size)
-            assertEquals("SKYBLOCK_ITEM", response.items[0].id)
+            assertEquals(1, response.items?.size)
+            assertEquals("SKYBLOCK_ITEM", response.items?.get(0)?.id)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/skyblock/items", recordedRequest.path)
@@ -170,7 +170,7 @@ class HypixelClientTest {
 
             val response = client.getBazaar()
             assertEquals(true, response.success)
-            assertNotNull(response.products["INK_SACK:3"])
+            assertNotNull(response.products?.get("INK_SACK:3"))
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/bazaar", recordedRequest.path)
@@ -203,7 +203,7 @@ class HypixelClientTest {
 
             val response = client.getCollections()
             assertEquals(true, response.success)
-            assertNotNull(response.collections["FARMING"])
+            assertNotNull(response.collections?.get("FARMING"))
 
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/skyblock/collections", recordedRequest.path)
@@ -257,8 +257,8 @@ class HypixelClientTest {
 
             val response = client.getRecentGames("ac29411d0826412f98c0dd14b334c1fa")
             assertEquals(true, response.success)
-            assertEquals(1, response.games.size)
-            assertEquals("SKYWARS", response.games[0].gameType)
+            assertEquals(1, response.games?.size)
+            assertEquals("SKYWARS", response.games?.get(0)?.gameType)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/recentgames?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
@@ -282,7 +282,7 @@ class HypixelClientTest {
 
             val response = client.getStatus("ac29411d0826412f98c0dd14b334c1fa")
             assertEquals(true, response.success)
-            assertEquals(true, response.session.online)
+            assertEquals(true, response.session?.online)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/status?uuid=ac29411d0826412f98c0dd14b334c1fa", recordedRequest.path)
@@ -357,8 +357,8 @@ class HypixelClientTest {
 
             val response = client.getHousingActive()
             assertEquals(true, response.success)
-            assertEquals(1, response.houses.size)
-            assertEquals("Cool House", response.houses[0].name)
+            assertEquals(1, response.houses?.size)
+            assertEquals("Cool House", response.houses?.get(0)?.name)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/housing/active", recordedRequest.path)
@@ -410,7 +410,7 @@ class HypixelClientTest {
 
             val response = client.getResourceGames()
             assertEquals(true, response.success)
-            assertEquals("SkyWars", response.games["SKYWARS"]?.name)
+            assertEquals("SkyWars", response.games?.get("SKYWARS")?.name)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/games", recordedRequest.path)
@@ -667,8 +667,8 @@ class HypixelClientTest {
 
             val response = client.getAuctionsEnded()
             assertEquals(true, response.success)
-            assertEquals(1, response.auctions.size)
-            assertEquals("auction1", response.auctions[0].auctionId)
+            assertEquals(1, response.auctions?.size)
+            assertEquals("auction1", response.auctions?.get(0)?.auctionId)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/auctions_ended", recordedRequest.path)
@@ -725,7 +725,7 @@ class HypixelClientTest {
 
             val response = client.getMuseum("ad8fefaa8351454bb739a4eaa872173f")
             assertEquals(true, response.success)
-            assertNotNull(response.members["ad8fefaa8351454bb739a4eaa872173f"])
+            assertNotNull(response.members?.get("ad8fefaa8351454bb739a4eaa872173f"))
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/museum?profile=ad8fefaa8351454bb739a4eaa872173f", recordedRequest.path)
@@ -760,8 +760,8 @@ class HypixelClientTest {
             assertEquals(true, response.success)
             assertEquals(1, response.page)
             assertEquals(5, response.totalPages)
-            assertEquals(1, response.auctions.size)
-            assertEquals("Hyperion", response.auctions[0].itemName)
+            assertEquals(1, response.auctions?.size)
+            assertEquals("Hyperion", response.auctions?.get(0)?.itemName)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/auctions?page=1", recordedRequest.path)
@@ -823,8 +823,8 @@ class HypixelClientTest {
 
             val response = client.getFiresales()
             assertEquals(true, response.success)
-            assertEquals(1, response.sales.size)
-            assertEquals("pet_skin_black_cat", response.sales[0].itemId)
+            assertEquals(1, response.sales?.size)
+            assertEquals("pet_skin_black_cat", response.sales?.get(0)?.itemId)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/firesales", recordedRequest.path)
@@ -853,7 +853,7 @@ class HypixelClientTest {
 
             val response = client.getSkyblockSkills()
             assertEquals(true, response.success)
-            assertEquals("Farming", response.skills["FARMING"]?.name)
+            assertEquals("Farming", response.skills?.get("FARMING")?.name)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/skyblock/skills", recordedRequest.path)

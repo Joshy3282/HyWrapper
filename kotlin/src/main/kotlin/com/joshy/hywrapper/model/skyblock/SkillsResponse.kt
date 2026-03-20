@@ -8,31 +8,31 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class SkillsResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val version: String = "",
-    val skills: Map<String, Skill> = emptyMap(),
+    val lastUpdated: Long? = null,
+    val version: String? = null,
+    val skills: Map<String, Skill>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 
     fun getSkill(skillType: SkillType): Skill? {
-        return skills[skillType.name]
+        return skills?.get(skillType.name)
     }
 }
 
 @Serializable
 data class Skill(
-    val name: String = "",
-    val description: String = "",
-    val maxLevel: Int = 0,
-    val levels: List<Level> = emptyList(),
+    val name: String? = null,
+    val description: String? = null,
+    val maxLevel: Int? = null,
+    val levels: List<Level>? = null,
 )
 
 @Serializable
 data class Level(
-    val level: Int,
-    val totalExpRequired: Double = 0.0,
-    val unlocks: List<String> = emptyList(),
+    val level: Int? = null,
+    val totalExpRequired: Double? = null,
+    val unlocks: List<String>? = null,
 )

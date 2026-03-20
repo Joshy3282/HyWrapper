@@ -9,19 +9,19 @@ from hywrapper.models.hypixel_response import HypixelResponse
 
 class Type(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    key: str = ""
-    name: str = ""
+    key: Optional[str] = None
+    name: Optional[str] = None
     rarity: Optional[str] = None
-    package_value: str = Field(default="", alias="package")
+    package_value: Optional[str] = Field(default=None, alias="package")
 
 
 class Rarity(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    name: str = ""
-    color: str = ""
+    name: Optional[str] = None
+    color: Optional[str] = None
 
 
 class VanityResponse(HypixelResponse):
-    last_updated: int = Field(default=0, alias="lastUpdated")
-    types: List[Type] = Field(default_factory=list)
-    rarities: List[Rarity] = Field(default_factory=list)
+    last_updated: Optional[int] = Field(default=None, alias="lastUpdated")
+    types: Optional[List[Type]] = Field(default=None)
+    rarities: Optional[List[Rarity]] = Field(default=None)

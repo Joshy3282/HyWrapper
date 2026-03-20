@@ -158,22 +158,22 @@ class Songs(BaseModel):
 
 class TreeGifts(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    fig: int = Field(default=0, alias="FIG")
-    milestone_tier_claimed: Dict[str, int] = Field(
-        default_factory=dict, alias="milestone_tier_claimed"
+    fig: Optional[int] = Field(default=None, alias="FIG")
+    milestone_tier_claimed: Optional[Dict[str, int]] = Field(
+        default=None, alias="milestone_tier_claimed"
     )
-    mangrove: int = Field(default=0, alias="MANGROVE")
+    mangrove: Optional[int] = Field(default=None, alias="MANGROVE")
 
 
 class HinaTasks(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     # TODO enum
-    completed_tasks: List[str] = Field(default_factory=list, alias="completed_tasks")
+    completed_tasks: Optional[List[str]] = Field(default=None, alias="completed_tasks")
     # TODO enum
-    task_progress: Dict[str, int] = Field(default_factory=dict, alias="task_progress")
+    task_progress: Optional[Dict[str, int]] = Field(default=None, alias="task_progress")
     # TODO enum
-    claimed_rewards: List[str] = Field(default_factory=list, alias="claimed_rewards")
-    tier_claimed: int = Field(default=0, alias="tier_claimed")
+    claimed_rewards: Optional[List[str]] = Field(default=None, alias="claimed_rewards")
+    tier_claimed: Optional[int] = Field(default=None, alias="tier_claimed")
 
 
 class Hina(BaseModel):
@@ -184,14 +184,14 @@ class Hina(BaseModel):
 class Starlyn(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     # TODO enum
-    personal_bests: Dict[str, int] = Field(default_factory=dict, alias="personal_bests")
+    personal_bests: Optional[Dict[str, int]] = Field(default=None, alias="personal_bests")
 
 
 class Foraging(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     starlyn: Optional[Starlyn] = None
     # TODO enum
-    fish_family: List[str] = Field(default_factory=list, alias="fish_family")
+    fish_family: Optional[List[str]] = Field(default=None, alias="fish_family")
     hina: Optional[Hina] = None
     tree_gifts: Optional[TreeGifts] = Field(default=None, alias="tree_gifts")
     songs: Optional[Songs] = None

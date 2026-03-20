@@ -7,8 +7,8 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class InventoryData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: int = 0
-    data: str = ""
+    type: Optional[int] = None
+    data: Optional[str] = None
 
 
 class Inventory(BaseModel):
@@ -19,30 +19,30 @@ class Inventory(BaseModel):
         default=None, alias="ender_chest_contents"
     )
     # TODO all null?
-    ender_chest_page_icons: List[InventoryData] = Field(
-        default_factory=list, alias="ender_chest_page_icons"
+    ender_chest_page_icons: Optional[List[InventoryData]] = Field(
+        default=None, alias="ender_chest_page_icons"
     )
     equipment_contents: Optional[InventoryData] = Field(default=None, alias="equipment_contents")
 
 
 class Dreadfarm(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    shania_stage: int = Field(default=0, alias="shania_stage")
-    caducous_feeder_uses: List[int] = Field(default_factory=list, alias="caducous_feeder_uses")
+    shania_stage: Optional[int] = Field(default=None, alias="shania_stage")
+    caducous_feeder_uses: Optional[List[int]] = Field(default=None, alias="caducous_feeder_uses")
 
 
 class Access(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    last_free: int = Field(default=0, alias="last_free")
+    last_free: Optional[int] = Field(default=None, alias="last_free")
     consumed_prism: Optional[bool] = Field(default=None, alias="consumed_prism")
-    charge_track_timestamp: int = Field(default=0, alias="charge_track_timestamp")
+    charge_track_timestamp: Optional[int] = Field(default=None, alias="charge_track_timestamp")
 
 
 class Castle(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     unlocked_pathway_skip: Optional[bool] = Field(default=None, alias="unlocked_pathway_skip")
-    fairy_step: int = Field(default=0, alias="fairy_step")
-    grubber_stacks: int = Field(default=0, alias="grubber_stacks")
+    fairy_step: Optional[int] = Field(default=None, alias="fairy_step")
+    grubber_stacks: Optional[int] = Field(default=None, alias="grubber_stacks")
 
 
 class WyldWoods(BaseModel):
@@ -52,34 +52,34 @@ class WyldWoods(BaseModel):
     sirius_completed_q_a: Optional[bool] = Field(default=None, alias="sirius_completed_q_a")
     sirius_claimed_doubloon: Optional[bool] = Field(default=None, alias="sirius_claimed_doubloon")
     # TODO enum?
-    talked_three_brothers: List[str] = Field(default_factory=list, alias="talked_threebrothers")
-    bughunter_step: int = Field(default=0, alias="bughunter_step")
+    talked_three_brothers: Optional[List[str]] = Field(default=None, alias="talked_threebrothers")
+    bughunter_step: Optional[int] = Field(default=None, alias="bughunter_step")
 
 
 class KatHouse(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    bin_collected_silverfish: int = Field(default=0, alias="bin_collected_silverfish")
-    bin_collected_spider: int = Field(default=0, alias="bin_collected_spider")
-    bin_collected_mosquito: int = Field(default=0, alias="bin_collected_mosquito")
+    bin_collected_silverfish: Optional[int] = Field(default=None, alias="bin_collected_silverfish")
+    bin_collected_spider: Optional[int] = Field(default=None, alias="bin_collected_spider")
+    bin_collected_mosquito: Optional[int] = Field(default=None, alias="bin_collected_mosquito")
 
 
 class Mirrorverse(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     # TODO enum
-    visited_rooms: List[str] = Field(default_factory=list, alias="visited_rooms")
+    visited_rooms: Optional[List[str]] = Field(default=None, alias="visited_rooms")
     upside_down_hard: Optional[bool] = Field(default=None, alias="upside_down_hard")
     # TODO item enum
-    claimed_chest_items: List[str] = Field(default_factory=list, alias="claimed_chest_items")
+    claimed_chest_items: Optional[List[str]] = Field(default=None, alias="claimed_chest_items")
     claimed_reward: Optional[bool] = Field(default=None, alias="claimed_reward")
 
 
 class CrazyKloon(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     # TODO enum
-    selected_colors: Dict[str, str] = Field(default_factory=dict, alias="selected_colors")
+    selected_colors: Optional[Dict[str, str]] = Field(default=None, alias="selected_colors")
     talked: Optional[bool] = None
     # TODO enum??? its just numbers
-    hacked_terminals: List[str] = Field(default_factory=list, alias="hacked_terminals")
+    hacked_terminals: Optional[List[str]] = Field(default=None, alias="hacked_terminals")
     quest_complete: Optional[bool] = Field(default=None, alias="quest_complete")
 
 
@@ -88,7 +88,7 @@ class Glyph(BaseModel):
     claimed_wand: Optional[bool] = Field(default=None, alias="claimed_wand")
     current_glyph_delivered: Optional[bool] = Field(default=None, alias="current_glyph_delivered")
     current_glyph_completed: Optional[bool] = Field(default=None, alias="current_glyph_completed")
-    current_glyph: int = Field(default=0, alias="current_glyph")
+    current_glyph: Optional[int] = Field(default=None, alias="current_glyph")
     completed: Optional[bool] = None
     claimed_bracelet: Optional[bool] = Field(default=None, alias="claimed_bracelet")
 
@@ -103,66 +103,66 @@ class WestVillage(BaseModel):
 
 class RecentMobKill(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    xp: float = 0.0
-    timestamp: int = 0
+    xp: Optional[float] = None
+    timestamp: Optional[int] = None
 
 
 class SlayerQuest(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: str = ""
-    tier: int = 0
-    start_timestamp: int = Field(default=0, alias="start_timestamp")
-    completion_state: int = Field(default=0, alias="completion_state")
+    type: Optional[str] = None
+    tier: Optional[int] = None
+    start_timestamp: Optional[int] = Field(default=None, alias="start_timestamp")
+    completion_state: Optional[int] = Field(default=None, alias="completion_state")
     used_armor: Optional[bool] = Field(default=None, alias="used_armor")
     solo: Optional[bool] = None
-    combat_xp: int = Field(default=0, alias="combat_xp")
-    recent_mob_kills: List[RecentMobKill] = Field(default_factory=list, alias="recent_mob_kills")
-    last_killed_mob_island: str = Field(default="", alias="last_killed_mob_island")
-    spawn_timestamp: int = Field(default=0, alias="spawn_timestamp")
+    combat_xp: Optional[int] = Field(default=None, alias="combat_xp")
+    recent_mob_kills: Optional[List[RecentMobKill]] = Field(default=None, alias="recent_mob_kills")
+    last_killed_mob_island: Optional[str] = Field(default=None, alias="last_killed_mob_island")
+    spawn_timestamp: Optional[int] = Field(default=None, alias="spawn_timestamp")
 
 
 class SecuredTrophy(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: str = ""
-    timestamp: int = 0
-    visits: int = 0
+    type: Optional[str] = None
+    timestamp: Optional[int] = None
+    visits: Optional[int] = None
 
 
 class Gallery(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    elise_step: int = Field(default=0, alias="elise_step")
-    secured_trophies: List[SecuredTrophy] = Field(default_factory=list, alias="secured_trophies")
+    elise_step: Optional[int] = Field(default=None, alias="elise_step")
+    secured_trophies: Optional[List[SecuredTrophy]] = Field(default=None, alias="secured_trophies")
     # TODO enum maybe? not too helpful
-    sent_trophy_dialogues: List[str] = Field(default_factory=list, alias="sent_trophy_dialogues")
+    sent_trophy_dialogues: Optional[List[str]] = Field(default=None, alias="sent_trophy_dialogues")
 
 
 class Enigma(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     bought_cloak: Optional[bool] = Field(default=None, alias="bought_cloak")
     # TODO enum
-    found_souls: List[str] = Field(default_factory=list, alias="found_souls")
-    claimed_bonus_index: int = Field(default=0, alias="claimed_bonus_index")
+    found_souls: Optional[List[str]] = Field(default=None, alias="found_souls")
+    claimed_bonus_index: Optional[int] = Field(default=None, alias="claimed_bonus_index")
 
 
 class WizardTower(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    wizard_quest_step: int = Field(default=0, alias="wizard_quest_step")
-    crumbs_laid_out: int = Field(default=0, alias="crumbs_laid_out")
+    wizard_quest_step: Optional[int] = Field(default=None, alias="wizard_quest_step")
+    crumbs_laid_out: Optional[int] = Field(default=None, alias="crumbs_laid_out")
 
 
 class Montezuma(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     # TODO says null so what is this
     uuid: Optional[str] = None
-    unique_id: str = Field(default="", alias="uniqueId")
-    type: str = ""
-    exp: float = 0.0
+    unique_id: Optional[str] = Field(default=None, alias="uniqueId")
+    type: Optional[str] = None
+    exp: Optional[float] = None
     active: Optional[bool] = None
-    tier: str = ""
+    tier: Optional[str] = None
     # TODO same as uuid
     held_item: Optional[str] = Field(default=None, alias="heldItem")
     # TODO
-    candy_used: int = Field(default=0, alias="candyUsed")
+    candy_used: Optional[int] = Field(default=None, alias="candyUsed")
     pet_soulbound: Optional[bool] = Field(default=None, alias="petSoulbound")
     # TODO
     skin: Optional[str] = None
@@ -174,7 +174,7 @@ class DeadCats(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     talked_to_jacquelle: Optional[bool] = Field(default=None, alias="talked_to_jacquelle")
     picked_up_detector: Optional[bool] = Field(default=None, alias="picked_up_detector")
-    found_cats: List[str] = Field(default_factory=list, alias="found_cats")
+    found_cats: Optional[List[str]] = Field(default=None, alias="found_cats")
     unlocked_pet: Optional[bool] = Field(default=None, alias="unlocked_pet")
     montezuma: Optional[Montezuma] = None
 
@@ -183,46 +183,46 @@ class BlackLagoon(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     talked_to_edwin: Optional[bool] = Field(default=None, alias="talked_to_edwin")
     received_science_paper: Optional[bool] = Field(default=None, alias="received_science_paper")
-    completed_step: int = Field(default=0, alias="completed_step")
+    completed_step: Optional[int] = Field(default=None, alias="completed_step")
     delivered_science_paper: Optional[bool] = Field(default=None, alias="delivered_science_paper")
 
 
 class WitherCage(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    killed_eyes: List[str] = Field(default_factory=list, alias="killed_eyes")
+    killed_eyes: Optional[List[str]] = Field(default=None, alias="killed_eyes")
 
 
 class Seraphine(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    step_index: int = Field(default=0, alias="step_index")
+    step_index: Optional[int] = Field(default=None, alias="step_index")
 
 
 class Lonely(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    seconds_sitting: int = Field(default=0, alias="seconds_sitting")
+    seconds_sitting: Optional[int] = Field(default=None, alias="seconds_sitting")
 
 
 class Cowboy(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    stage: int = 0
-    hay_eaten: int = Field(default=0, alias="hay_eaten")
-    rabbit_name: str = Field(default="", alias="rabbit_name")
-    exported_carrots: int = Field(default=0, alias="exported_carrots")
+    stage: Optional[int] = None
+    hay_eaten: Optional[int] = Field(default=None, alias="hay_eaten")
+    rabbit_name: Optional[str] = Field(default=None, alias="rabbit_name")
+    exported_carrots: Optional[int] = Field(default=None, alias="exported_carrots")
 
 
 class BarryCenter(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     first_talk_to_barry: Optional[bool] = Field(default=None, alias="first_talk_to_barry")
-    convinced: List[str] = Field(default_factory=list)
+    convinced: Optional[List[str]] = Field(default=None)
     received_reward: Optional[bool] = Field(default=None, alias="received_reward")
 
 
 class Murder(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    step_index: int = Field(default=0, alias="step_index")
-    room_clues: List[str] = Field(default_factory=list, alias="room_clues")
-    step_index_pt2: int = Field(default=0, alias="step_index_pt2")
-    step_index_pt3: int = Field(default=0, alias="step_index_pt3")
+    step_index: Optional[int] = Field(default=None, alias="step_index")
+    room_clues: Optional[List[str]] = Field(default=None, alias="room_clues")
+    step_index_pt2: Optional[int] = Field(default=None, alias="step_index_pt2")
+    step_index_pt3: Optional[int] = Field(default=None, alias="step_index_pt3")
 
 
 class VillagePlaza(BaseModel):
@@ -246,8 +246,8 @@ class Rift(BaseModel):
     enigma: Optional[Enigma] = None
     slayer_quest: Optional[SlayerQuest] = Field(default=None, alias="slayer_quest")
     # TODO enum?
-    lifetime_purchased_boundaries: List[str] = Field(
-        default_factory=list, alias="lifetime_purchased_boundaries"
+    lifetime_purchased_boundaries: Optional[List[str]] = Field(
+        default=None, alias="lifetime_purchased_boundaries"
     )
     west_village: Optional[WestVillage] = Field(default=None, alias="west_village")
     wyld_woods: Optional[WyldWoods] = Field(default=None, alias="wyld_woods")

@@ -9,35 +9,35 @@ from hywrapper.models.hypixel_response import HypixelResponse
 
 class AchievementTier(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    tier: int = 0
-    points: int = 0
-    amount: int = 0
+    tier: Optional[int] = None
+    points: Optional[int] = None
+    amount: Optional[int] = None
 
 
 class TieredAchievement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    name: str
-    description: str = ""
-    tiers: List[AchievementTier] = Field(default_factory=list)
+    name: Optional[str] = None
+    description: Optional[str] = None
+    tiers: Optional[List[AchievementTier]] = Field(default=None)
 
 
 class OneTimeAchievement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    name: str = ""
-    description: str = ""
-    points: int = 0
+    name: Optional[str] = None
+    description: Optional[str] = None
+    points: Optional[int] = None
     game_percent_unlocked: Optional[float] = Field(default=None, alias="gamePercentUnlocked")
     global_percent_unlocked: Optional[float] = Field(default=None, alias="globalPercentUnlocked")
 
 
 class GameAchievement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    one_time: Dict[str, OneTimeAchievement] = Field(default_factory=dict, alias="one_time")
-    tiered: Dict[str, TieredAchievement] = Field(default_factory=dict)
-    total_points: int = Field(default=0, alias="total_points")
-    total_legacy_points: int = Field(default=0, alias="total_legacy_points")
+    one_time: Optional[Dict[str, OneTimeAchievement]] = Field(default=None, alias="one_time")
+    tiered: Optional[Dict[str, TieredAchievement]] = Field(default=None)
+    total_points: Optional[int] = Field(default=None, alias="total_points")
+    total_legacy_points: Optional[int] = Field(default=None, alias="total_legacy_points")
 
 
 class AchievementsResponse(HypixelResponse):
-    last_updated: int = Field(default=0, alias="lastUpdated")
-    achievements: Dict[str, GameAchievement] = Field(default_factory=dict)
+    last_updated: Optional[int] = Field(default=None, alias="lastUpdated")
+    achievements: Optional[Dict[str, GameAchievement]] = Field(default=None)

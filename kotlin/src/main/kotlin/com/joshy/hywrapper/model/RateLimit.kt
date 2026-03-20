@@ -5,9 +5,9 @@ import okhttp3.Headers
 
 @Serializable
 data class RateLimit(
-    val limit: Int,
-    val remaining: Int,
-    val reset: Int,
+    val limit: Int? = null,
+    val remaining: Int? = null,
+    val reset: Int? = null,
 )
 
 fun parseRateLimit(headers: Headers): RateLimit? {

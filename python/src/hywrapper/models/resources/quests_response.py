@@ -9,32 +9,32 @@ from hywrapper.models.hypixel_response import HypixelResponse
 
 class QuestReward(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: str = ""
-    amount: int = 0
+    type: Optional[str] = None
+    amount: Optional[int] = None
 
 
 class QuestObjective(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    id: str = ""
-    type: str = ""
+    id: Optional[str] = None
+    type: Optional[str] = None
     integer_value: Optional[int] = Field(default=None, alias="integer")
 
 
 class QuestRequirement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: str = ""
+    type: Optional[str] = None
 
 
 class Quest(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    id: str = ""
-    name: str = ""
-    description: str = ""
-    rewards: List[QuestReward] = Field(default_factory=list)
-    objectives: List[QuestObjective] = Field(default_factory=list)
-    requirements: List[QuestRequirement] = Field(default_factory=list)
+    id: Optional[str] = None
+    name: Optional[str] = None
+    description: Optional[str] = None
+    rewards: Optional[List[QuestReward]] = Field(default=None)
+    objectives: Optional[List[QuestObjective]] = Field(default=None)
+    requirements: Optional[List[QuestRequirement]] = Field(default=None)
 
 
 class QuestsResponse(HypixelResponse):
-    last_updated: int = Field(default=0, alias="lastUpdated")
-    quests: Dict[str, List[Quest]] = Field(default_factory=dict)
+    last_updated: Optional[int] = Field(default=None, alias="lastUpdated")
+    quests: Optional[Dict[str, List[Quest]]] = Field(default=None)

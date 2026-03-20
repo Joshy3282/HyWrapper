@@ -10,10 +10,10 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class ItemsResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long? = 0,
-    val items: List<Item> = emptyList(),
+    val lastUpdated: Long? = null,
+    val items: List<Item>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
@@ -21,8 +21,8 @@ data class ItemsResponse(
 
 @Serializable
 data class Item(
-    val material: String = "",
-    val durability: Int = 0,
+    val material: String? = null,
+    val durability: Int? = null,
     val skin: Skin? = null,
     val name: String? = null,
     val category: String? = null,
@@ -30,23 +30,23 @@ data class Item(
     @SerialName("npc_sell_price")
     val npcSellPrice: Int? = null,
     val id: String? = null,
-    val salvages: List<Salvage> = emptyList(),
+    val salvages: List<Salvage>? = null,
     @SerialName("rarity_salvageable")
     val raritySalvageable: Boolean? = null,
     val description: String? = null,
     @SerialName("item_model")
     val itemModel: String? = null,
-    val stats: Map<StatType, Int> = emptyMap(),
+    val stats: Map<StatType, Int>? = null,
     val unstackable: Boolean? = null,
     @SerialName("dungeon_item_conversion_cost")
     val dungeonItemConversionCost: DungeonItemConversionCost? = null,
     @SerialName("upgrade_costs")
-    val upgradeCosts: List<List<UpgradeCost>> = emptyList(),
+    val upgradeCosts: List<List<UpgradeCost>>? = null,
     @SerialName("museum_data")
     val museumData: MuseumData? = null,
     // TODO requirements
-    val color: String = "",
-    val soulbound: String = "",
+    val color: String? = null,
+    val soulbound: String? = null,
     @SerialName("has_uuid")
     val hasUuid: Boolean? = null,
     @SerialName("can_auction")
@@ -58,14 +58,14 @@ data class Item(
     @SerialName("can_place")
     val canPlace: Boolean? = null,
     val museum: Boolean? = null,
-    val generator: String = "",
+    val generator: String? = null,
     @SerialName("generator_tier")
-    val generatorTier: Int = 0,
-    val furniture: String = "",
+    val generatorTier: Int? = null,
+    val furniture: String? = null,
     // TODO item_specific
     val editioned: Boolean? = null,
     @SerialName("gear_score")
-    val gearScore: Int = 0,
+    val gearScore: Int? = null,
     @SerialName("dungeon_item")
     val dungeonItem: Boolean? = null,
     @SerialName("catacombs_requirements")
@@ -79,21 +79,21 @@ data class Item(
     @SerialName("salvageable_from_recipe")
     val salvageableFromRecipe: Boolean? = null,
     @SerialName("motes_sell_price")
-    val motesSellPrice: Int? = 0,
+    val motesSellPrice: Int? = null,
     @SerialName("double_tap_to_drop")
     val doubleTapToDrop: Boolean? = null,
     // TODO enchantments. why are there only a few
     @SerialName("rift_transferrable")
     val riftTransferrable: Boolean? = null,
-    val origin: String = "",
+    val origin: String? = null,
     @SerialName("hide_from_viewrecipe_command")
     val hideFromViewrecipeCommand: Boolean? = null,
     @SerialName("force_wipe_recomb")
     val forceWipeRecomb: Boolean? = null,
     @SerialName("ability_damage_scaling")
-    val abilityDamageScaling: Int = 0,
+    val abilityDamageScaling: Int? = null,
     // TODO tiered_stats
-    val crystal: String = "",
+    val crystal: String? = null,
     @SerialName("can_burn_in_furnace")
     val canBurnInFurnace: Boolean? = null,
     // TODO salvage? only used once looks temp or mistake
@@ -142,32 +142,32 @@ data class Salvage(
 @Serializable
 data class DungeonItemConversionCost(
     @SerialName("essence_type")
-    val essenceType: String = "",
-    val amount: Int = 0,
+    val essenceType: String? = null,
+    val amount: Int? = null,
 )
 
 @Serializable
 data class UpgradeCost(
-    val type: String = "",
+    val type: String? = null,
     @SerialName("essence_type")
-    val essenceType: String = "",
-    val amount: Int = 0,
+    val essenceType: String? = null,
+    val amount: Int? = null,
 )
 
 @Serializable
 data class MuseumData(
-    val category: String = "",
-    val parent: Map<MuseumItem, MuseumItem> = emptyMap(),
+    val category: String? = null,
+    val parent: Map<MuseumItem, MuseumItem>? = null,
     @SerialName("armor_set_donation_xp")
-    val armorSetDonationXp: Map<MuseumItem, Int> = emptyMap(),
+    val armorSetDonationXp: Map<MuseumItem, Int>? = null,
     @SerialName("game_stage")
-    val gameStage: String = "",
+    val gameStage: String? = null,
 )
 
 @Serializable
 data class CatacombsRequirement(
-    val type: String = "",
+    val type: String? = null,
     @SerialName("dungeon_type")
-    val dungeonType: String = "",
-    val level: Int = 0,
+    val dungeonType: String? = null,
+    val level: Int? = null,
 )

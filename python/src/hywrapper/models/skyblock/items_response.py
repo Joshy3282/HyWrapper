@@ -12,45 +12,45 @@ from hywrapper.models.rate_limit import RateLimit
 
 class ItemsResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    lastUpdated: Optional[int] = Field(default=0)
-    items: List[Item] = Field(default_factory=list)
+    lastUpdated: Optional[int] = Field(default=None)
+    items: Optional[List[Item]] = Field(default=None)
     rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
 
 
 class Item(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    material: str = Field(default="")
-    durability: int = Field(default=0)
+    material: Optional[str] = Field(default=None)
+    durability: Optional[int] = Field(default=None)
     skin: Optional[Skin] = None
     name: Optional[str] = None
     category: Optional[str] = None
     tier: Optional[str] = None
     npcSellPrice: Optional[int] = Field(default=None, alias="npc_sell_price")
     id: Optional[str] = None
-    salvages: List[Salvage] = Field(default_factory=list)
+    salvages: Optional[List[Salvage]] = Field(default=None)
     raritySalvageable: Optional[bool] = Field(default=None, alias="rarity_salvageable")
     description: Optional[str] = None
     itemModel: Optional[str] = Field(default=None, alias="item_model")
-    stats: Dict[StatType, int] = Field(default_factory=dict)
+    stats: Optional[Dict[StatType, int]] = Field(default=None)
     unstackable: Optional[bool] = None
     dungeonItemConversionCost: Optional[DungeonItemConversionCost] = Field(
         default=None, alias="dungeon_item_conversion_cost"
     )
-    upgradeCosts: List[List[UpgradeCost]] = Field(default_factory=list, alias="upgrade_costs")
+    upgradeCosts: Optional[List[List[UpgradeCost]]] = Field(default=None, alias="upgrade_costs")
     museumData: Optional[MuseumData] = Field(default=None, alias="museum_data")
-    color: str = Field(default="")
-    soulbound: str = Field(default="")
+    color: Optional[str] = Field(default=None)
+    soulbound: Optional[str] = Field(default=None)
     hasUuid: Optional[bool] = Field(default=None, alias="has_uuid")
     canAuction: Optional[bool] = Field(default=None, alias="can_auction")
     glowing: Optional[bool] = None
     canTrade: Optional[bool] = Field(default=None, alias="can_trade")
     canPlace: Optional[bool] = Field(default=None, alias="can_place")
     museum: Optional[bool] = None
-    generator: str = Field(default="")
-    generatorTier: int = Field(default=0, alias="generator_tier")
-    furniture: str = Field(default="")
+    generator: Optional[str] = Field(default=None)
+    generatorTier: Optional[int] = Field(default=None, alias="generator_tier")
+    furniture: Optional[str] = Field(default=None)
     editioned: Optional[bool] = None
-    gearScore: int = Field(default=0, alias="gear_score")
+    gearScore: Optional[int] = Field(default=None, alias="gear_score")
     dungeonItem: Optional[bool] = Field(default=None, alias="dungeon_item")
     catacombsRequirement: Optional[CatacombsRequirement] = Field(
         default=None, alias="catacombs_requirements"
@@ -59,16 +59,16 @@ class Item(BaseModel):
     hideFromApi: Optional[bool] = Field(default=None, alias="hide_from_api")
     canRecombobulate: Optional[bool] = Field(default=None, alias="can_recombobulate")
     salvageableFromRecipe: Optional[bool] = Field(default=None, alias="salvageable_from_recipe")
-    motesSellPrice: Optional[int] = Field(default=0, alias="motes_sell_price")
+    motesSellPrice: Optional[int] = Field(default=None, alias="motes_sell_price")
     doubleTapToDrop: Optional[bool] = Field(default=None, alias="double_tap_to_drop")
     riftTransferrable: Optional[bool] = Field(default=None, alias="rift_transferrable")
-    origin: str = Field(default="")
+    origin: Optional[str] = Field(default=None)
     hideFromViewrecipeCommand: Optional[bool] = Field(
         default=None, alias="hide_from_viewrecipe_command"
     )
     forceWipeRecomb: Optional[bool] = Field(default=None, alias="force_wipe_recomb")
-    abilityDamageScaling: int = Field(default=0, alias="ability_damage_scaling")
-    crystal: str = Field(default="")
+    abilityDamageScaling: Optional[int] = Field(default=None, alias="ability_damage_scaling")
+    crystal: Optional[str] = Field(default=None)
     canBurnInFurnace: Optional[bool] = Field(default=None, alias="can_burn_in_furnace")
     serializable: Optional[bool] = None
     canHaveAttributes: Optional[bool] = Field(default=None, alias="can_have_attributes")
@@ -104,29 +104,29 @@ class Salvage(BaseModel):
 
 class DungeonItemConversionCost(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    essenceType: str = Field(default="", alias="essence_type")
-    amount: int = Field(default=0)
+    essenceType: Optional[str] = Field(default=None, alias="essence_type")
+    amount: Optional[int] = Field(default=None)
 
 
 class UpgradeCost(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: str = Field(default="")
-    essenceType: str = Field(default="", alias="essence_type")
-    amount: int = Field(default=0)
+    type: Optional[str] = Field(default=None)
+    essenceType: Optional[str] = Field(default=None, alias="essence_type")
+    amount: Optional[int] = Field(default=None)
 
 
 class MuseumData(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    category: str = Field(default="")
-    parent: Dict[MuseumItem, MuseumItem] = Field(default_factory=dict)
-    armorSetDonationXp: Dict[MuseumItem, int] = Field(
-        default_factory=dict, alias="armor_set_donation_xp"
+    category: Optional[str] = Field(default=None)
+    parent: Optional[Dict[MuseumItem, MuseumItem]] = Field(default=None)
+    armorSetDonationXp: Optional[Dict[MuseumItem, int]] = Field(
+        default=None, alias="armor_set_donation_xp"
     )
-    gameStage: str = Field(default="", alias="game_stage")
+    gameStage: Optional[str] = Field(default=None, alias="game_stage")
 
 
 class CatacombsRequirement(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    type: str = Field(default="")
-    dungeonType: str = Field(default="", alias="dungeon_type")
-    level: int = Field(default=0)
+    type: Optional[str] = Field(default=None)
+    dungeonType: Optional[str] = Field(default=None, alias="dungeon_type")
+    level: Optional[int] = Field(default=None)

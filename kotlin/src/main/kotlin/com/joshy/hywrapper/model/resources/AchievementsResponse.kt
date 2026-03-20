@@ -9,50 +9,50 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class AchievementsResponse(
-    override val success: Boolean = false,
+    override val success: Boolean? = null,
     override val cause: String? = null,
-    val lastUpdated: Long = 0L,
-    val achievements: Map<String, GameAchievement> = emptyMap(),
+    val lastUpdated: Long? = null,
+    val achievements: Map<String, GameAchievement>? = null,
 ) : HypixelResponse {
     @Transient
     override var rateLimit: RateLimit? = null
 
     fun getAchievementsFor(game: GameType): GameAchievement? {
-        return achievements[game.databaseName.lowercase()]
-            ?: achievements[game.name.lowercase()]
+        return achievements?.get(game.databaseName.lowercase())
+            ?: achievements?.get(game.name.lowercase())
     }
 }
 
 @Serializable
 data class GameAchievement(
     @SerialName("one_time")
-    val oneTime: Map<String, OneTimeAchievement> = emptyMap(),
-    val tiered: Map<String, TieredAchievement> = emptyMap(),
+    val oneTime: Map<String, OneTimeAchievement>? = null,
+    val tiered: Map<String, TieredAchievement>? = null,
     @SerialName("total_points")
-    val totalPoints: Int = 0,
+    val totalPoints: Int? = null,
     @SerialName("total_legacy_points")
-    val totalLegacyPoints: Int = 0,
+    val totalLegacyPoints: Int? = null,
 )
 
 @Serializable
 data class OneTimeAchievement(
-    val name: String = "",
-    val description: String = "",
-    val points: Int = 0,
+    val name: String? = null,
+    val description: String? = null,
+    val points: Int? = null,
     val gamePercentUnlocked: Double? = null,
     val globalPercentUnlocked: Double? = null,
 )
 
 @Serializable
 data class TieredAchievement(
-    val name: String,
-    val description: String = "",
-    val tiers: List<AchievementTier> = emptyList(),
+    val name: String? = null,
+    val description: String? = null,
+    val tiers: List<AchievementTier>? = null,
 )
 
 @Serializable
 data class AchievementTier(
-    val tier: Int = 0,
-    val points: Int = 0,
-    val amount: Long = 0L,
+    val tier: Int? = null,
+    val points: Int? = null,
+    val amount: Long? = null,
 )
