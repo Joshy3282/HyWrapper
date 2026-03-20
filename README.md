@@ -37,6 +37,8 @@ asyncio.run(main())
 
 ## Examples
 
+For more detailed examples in different languages, see the [examples/](./examples/) folder.
+
 ### Bazaar (Kotlin)
 ```kotlin
 val bazaar = client.getBazaar()
@@ -56,3 +58,4 @@ println("Guild Name: ${guild.guild?.name}")
 - [ ] Add more helper methods
 - [ ] Add documentation
 - [ ] Expand test coverage (mostly python)
+
