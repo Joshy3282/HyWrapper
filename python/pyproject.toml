@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 license = { file = "LICENSE" }
 name = "HyWrapper"
-version = "0.1.1"
+version = "0.1.2"
 description = "An asynchronous Python wrapper for the Hypixel API"
 readme = "README.md"
 requires-python = ">=3.9"
