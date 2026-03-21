@@ -17,6 +17,7 @@ class HousingActiveResponse(HypixelResponse):
         houses: A list of [House].
         rateLimit: The rate limit information for the request.
     """
+
     model_config = ConfigDict(populate_by_name=True)
     success: Optional[bool] = Field(default=None)
     houses: Optional[List[House]] = Field(default=None)
@@ -32,6 +33,7 @@ class HousingHouseResponse(HypixelResponse):
         house: The [House] details.
         rateLimit: The rate limit information for the request.
     """
+
     model_config = ConfigDict(populate_by_name=True)
     success: Optional[bool] = Field(default=None)
     house: Optional[House] = Field(default=None)
@@ -50,6 +52,7 @@ class House(BaseModel):
         players: The current number of players in the house.
         cookies: The [Cookies] statistics for the house.
     """
+
     model_config = ConfigDict(populate_by_name=True)
     uuid: Optional[str] = Field(default=None)
     owner: Optional[str] = Field(default=None)
@@ -66,6 +69,7 @@ class Cookies(BaseModel):
     Attributes:
         current: The current number of cookies the house has received.
     """
+
     model_config = ConfigDict(populate_by_name=True)
     current: Optional[int] = Field(default=None)
 
@@ -79,6 +83,7 @@ class HousingHousesResponse(HypixelResponse):
         houses: A list of [House] belonging to the player.
         rateLimit: The rate limit information for the request.
     """
+
     model_config = ConfigDict(populate_by_name=True)
     success: Optional[bool] = Field(default=None)
     houses: Optional[List[House]] = Field(default=None)
