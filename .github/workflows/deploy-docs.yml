@@ -33,8 +33,7 @@ jobs:
         run: |
           cd kotlin
           chmod +x gradlew
-          ./gradlew dokkaHtml
-          # Move Dokka output into a 'kotlin' subfolder in the MkDocs site
+          ./gradlew dokkaGeneratePublicationHtml
           mkdir -p ../public/kotlin
           cp -r build/dokka/html/* ../public/kotlin/
 
