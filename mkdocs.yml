@@ -1,0 +1,58 @@
+site_name: HyWrapper
+site_url: https://Joshy3282.github.io/HyWrapper/
+repo_url: https://github.com/Joshy3282/HyWrapper
+repo_name: Joshy3282/HyWrapper
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [python/src]
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Custom Guides:
+      - Quick Start: guides/quickstart.md
+      - FAQ: guides/faq.md
+  - Python API Reference:
+      - Client: api/python/client.md
+      - UUID Utils: api/python/uuid_utils.md
+  - Kotlin API Reference: kotlin/index.html
+  - Contributing: contributing.md

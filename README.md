@@ -3,9 +3,12 @@
 
 An asynchronous and multi-platform Hypixel API wrapper for Python, Kotlin, and Java.
 
-## Setup
+## Installation
 
-TODO
+### Python
+```
+pip install hywrapper
+```
 
 ## Usage
 
@@ -51,11 +54,3 @@ println("Sell Price: ${enchantedDiamond?.quickStatus?.sellPrice}")
 val guild = client.getGuildByPlayer("ac29411d0826412f98c0dd14b334c1fa")
 println("Guild Name: ${guild.guild?.name}")
 ```
-
-## Todo List
-- [ ] Complete non-skyblock models
-- [ ] Complete skyblock models
-- [ ] Add more helper methods
-- [ ] Add documentation
-- [ ] Expand test coverage (mostly python)
-

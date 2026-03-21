@@ -1,0 +1,3 @@
+# HypixelClient
+
+::: hywrapper.client
