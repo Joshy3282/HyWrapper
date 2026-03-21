@@ -30,8 +30,16 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Run tests
-        run: ./gradlew check
+      - name: Run tests and generate coverage
+        run: ./gradlew check jacocoTestReport
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5.5.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./kotlin/build/reports/jacoco/test/jacocoTestReport.xml
+          flags: kotlin
+          fail_ci_if_error: false
 
       - name: Build
         run: ./gradlew build
