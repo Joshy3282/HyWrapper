@@ -110,8 +110,8 @@ class HypixelClientTest {
 
             val response = client.getNews()
             assertEquals(true, response.success)
-            assertEquals(1, response.items?.size)
-            assertEquals("SkyBlock v0.11", response.items?.get(0)?.title)
+            assertEquals(1, response.news?.size)
+            assertEquals("SkyBlock v0.11", response.news?.get(0)?.title)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/news", recordedRequest.path)
