@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>StatType</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    HyWrapper
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":dokkaHtml/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":dokkaHtml/main"
+                                       data-filter=":dokkaHtml/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    HyWrapper
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="HyWrapper::com.joshy.hywrapper.data.skyblock/StatType///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">HyWrapper</a><span class="delimiter">/</span><a href="../index.html">com.joshy.hywrapper.data.skyblock</a><span class="delimiter">/</span><span class="current">StatType</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Stat</span><wbr></wbr><span><span>Type</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="index.html">StatType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">StatType</a><span class="token operator">&gt; </span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="-1956214889%2FClasslikes%2F769193423" anchor-label="ABILITY_DAMAGE_PERCENT" id="-1956214889%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-b-i-l-i-t-y_-d-a-m-a-g-e_-p-e-r-c-e-n-t/index.html">ABILITY_DAMAGE_PERCENT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1956214889%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;ABILITY_DAMAGE_PERCENT&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-a-b-i-l-i-t-y_-d-a-m-a-g-e_-p-e-r-c-e-n-t/index.html">ABILITY_DAMAGE_PERCENT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2109254260%2FClasslikes%2F769193423" anchor-label="ALCHEMY_WISDOM" id="-2109254260%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-l-c-h-e-m-y_-w-i-s-d-o-m/index.html">ALCHEMY_WISDOM</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2109254260%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;ALCHEMY_WISDOM&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-a-l-c-h-e-m-y_-w-i-s-d-o-m/index.html">ALCHEMY_WISDOM</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="846623901%2FClasslikes%2F769193423" anchor-label="ATTACK_SPEED" id="846623901%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-t-t-a-c-k_-s-p-e-e-d/index.html">ATTACK_SPEED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="846623901%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;ATTACK_SPEED&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-a-t-t-a-c-k_-s-p-e-e-d/index.html">ATTACK_SPEED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1117776682%2FClasslikes%2F769193423" anchor-label="BLOCK_FORTUNE" id="1117776682%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-b-l-o-c-k_-f-o-r-t-u-n-e/index.html">BLOCK_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1117776682%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;BLOCK_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-b-l-o-c-k_-f-o-r-t-u-n-e/index.html">BLOCK_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="724198680%2FClasslikes%2F769193423" anchor-label="BONUS_PEST_CHANCE" id="724198680%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-b-o-n-u-s_-p-e-s-t_-c-h-a-n-c-e/index.html">BONUS_PEST_CHANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="724198680%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;BONUS_PEST_CHANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-b-o-n-u-s_-p-e-s-t_-c-h-a-n-c-e/index.html">BONUS_PEST_CHANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-895736490%2FClasslikes%2F769193423" anchor-label="BREAKING_POWER" id="-895736490%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-b-r-e-a-k-i-n-g_-p-o-w-e-r/index.html">BREAKING_POWER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-895736490%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;BREAKING_POWER&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-b-r-e-a-k-i-n-g_-p-o-w-e-r/index.html">BREAKING_POWER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-453328708%2FClasslikes%2F769193423" anchor-label="CACTUS_FORTUNE" id="-453328708%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-c-t-u-s_-f-o-r-t-u-n-e/index.html">CACTUS_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-453328708%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;CACTUS_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-a-c-t-u-s_-f-o-r-t-u-n-e/index.html">CACTUS_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="83579282%2FClasslikes%2F769193423" anchor-label="CARROT_FORTUNE" id="83579282%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-r-r-o-t_-f-o-r-t-u-n-e/index.html">CARROT_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="83579282%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;CARROT_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-a-r-r-o-t_-f-o-r-t-u-n-e/index.html">CARROT_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1411425738%2FClasslikes%2F769193423" anchor-label="COCOA_BEANS_FORTUNE" id="1411425738%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-c-o-a_-b-e-a-n-s_-f-o-r-t-u-n-e/index.html">COCOA_BEANS_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1411425738%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;COCOA_BEANS_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-o-c-o-a_-b-e-a-n-s_-f-o-r-t-u-n-e/index.html">COCOA_BEANS_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="249648335%2FClasslikes%2F769193423" anchor-label="COLD_RESISTANCE" id="249648335%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-l-d_-r-e-s-i-s-t-a-n-c-e/index.html">COLD_RESISTANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="249648335%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;COLD_RESISTANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-o-l-d_-r-e-s-i-s-t-a-n-c-e/index.html">COLD_RESISTANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-401333881%2FClasslikes%2F769193423" anchor-label="COMBAT_WISDOM" id="-401333881%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-m-b-a-t_-w-i-s-d-o-m/index.html">COMBAT_WISDOM</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-401333881%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;COMBAT_WISDOM&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-o-m-b-a-t_-w-i-s-d-o-m/index.html">COMBAT_WISDOM</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1117375535%2FClasslikes%2F769193423" anchor-label="CRITICAL_CHANCE" id="1117375535%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-i-t-i-c-a-l_-c-h-a-n-c-e/index.html">CRITICAL_CHANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1117375535%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;CRITICAL_CHANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-r-i-t-i-c-a-l_-c-h-a-n-c-e/index.html">CRITICAL_CHANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-672307414%2FClasslikes%2F769193423" anchor-label="CRITICAL_DAMAGE" id="-672307414%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-i-t-i-c-a-l_-d-a-m-a-g-e/index.html">CRITICAL_DAMAGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-672307414%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;CRITICAL_DAMAGE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-c-r-i-t-i-c-a-l_-d-a-m-a-g-e/index.html">CRITICAL_DAMAGE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-229382372%2FClasslikes%2F769193423" anchor-label="DAMAGE" id="-229382372%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-m-a-g-e/index.html">DAMAGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-229382372%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;DAMAGE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-d-a-m-a-g-e/index.html">DAMAGE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1602970747%2FClasslikes%2F769193423" anchor-label="DEFENSE" id="1602970747%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-f-e-n-s-e/index.html">DEFENSE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1602970747%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;DEFENSE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-d-e-f-e-n-s-e/index.html">DEFENSE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="745132367%2FClasslikes%2F769193423" anchor-label="DOUBLE_HOOK_CHANCE" id="745132367%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-o-u-b-l-e_-h-o-o-k_-c-h-a-n-c-e/index.html">DOUBLE_HOOK_CHANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="745132367%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;DOUBLE_HOOK_CHANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-d-o-u-b-l-e_-h-o-o-k_-c-h-a-n-c-e/index.html">DOUBLE_HOOK_CHANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1672128032%2FClasslikes%2F769193423" anchor-label="DWARVEN_METAL_FORTUNE" id="-1672128032%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-w-a-r-v-e-n_-m-e-t-a-l_-f-o-r-t-u-n-e/index.html">DWARVEN_METAL_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1672128032%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;DWARVEN_METAL_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-d-w-a-r-v-e-n_-m-e-t-a-l_-f-o-r-t-u-n-e/index.html">DWARVEN_METAL_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1625128329%2FClasslikes%2F769193423" anchor-label="FARMING_FORTUNE" id="1625128329%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-a-r-m-i-n-g_-f-o-r-t-u-n-e/index.html">FARMING_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1625128329%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FARMING_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-a-r-m-i-n-g_-f-o-r-t-u-n-e/index.html">FARMING_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1739648639%2FClasslikes%2F769193423" anchor-label="FARMING_WISDOM" id="-1739648639%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-a-r-m-i-n-g_-w-i-s-d-o-m/index.html">FARMING_WISDOM</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1739648639%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FARMING_WISDOM&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-a-r-m-i-n-g_-w-i-s-d-o-m/index.html">FARMING_WISDOM</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1611199325%2FClasslikes%2F769193423" anchor-label="FEAR" id="1611199325%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-e-a-r/index.html">FEAR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1611199325%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FEAR&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-e-a-r/index.html">FEAR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2017454572%2FClasslikes%2F769193423" anchor-label="FEROCITY" id="-2017454572%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-e-r-o-c-i-t-y/index.html">FEROCITY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2017454572%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FEROCITY&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-e-r-o-c-i-t-y/index.html">FEROCITY</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="167558945%2FClasslikes%2F769193423" anchor-label="FIG_FORTUNE" id="167558945%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-g_-f-o-r-t-u-n-e/index.html">FIG_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="167558945%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FIG_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-i-g_-f-o-r-t-u-n-e/index.html">FIG_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-187961427%2FClasslikes%2F769193423" anchor-label="FISHING_SPEED" id="-187961427%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-s-h-i-n-g_-s-p-e-e-d/index.html">FISHING_SPEED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-187961427%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FISHING_SPEED&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-i-s-h-i-n-g_-s-p-e-e-d/index.html">FISHING_SPEED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="604229027%2FClasslikes%2F769193423" anchor-label="FISHING_WISDOM" id="604229027%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-s-h-i-n-g_-w-i-s-d-o-m/index.html">FISHING_WISDOM</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="604229027%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FISHING_WISDOM&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-i-s-h-i-n-g_-w-i-s-d-o-m/index.html">FISHING_WISDOM</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1299791710%2FClasslikes%2F769193423" anchor-label="FORAGING_FORTUNE" id="-1299791710%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-o-r-a-g-i-n-g_-f-o-r-t-u-n-e/index.html">FORAGING_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1299791710%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FORAGING_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-o-r-a-g-i-n-g_-f-o-r-t-u-n-e/index.html">FORAGING_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="659851080%2FClasslikes%2F769193423" anchor-label="FORAGING_WISDOM" id="659851080%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-o-r-a-g-i-n-g_-w-i-s-d-o-m/index.html">FORAGING_WISDOM</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="659851080%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;FORAGING_WISDOM&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-f-o-r-a-g-i-n-g_-w-i-s-d-o-m/index.html">FORAGING_WISDOM</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-768454139%2FClasslikes%2F769193423" anchor-label="GEMSTONE_FORTUNE" id="-768454139%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-e-m-s-t-o-n-e_-f-o-r-t-u-n-e/index.html">GEMSTONE_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-768454139%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;GEMSTONE_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-g-e-m-s-t-o-n-e_-f-o-r-t-u-n-e/index.html">GEMSTONE_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="572876105%2FClasslikes%2F769193423" anchor-label="HEALTH" id="572876105%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-e-a-l-t-h/index.html">HEALTH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="572876105%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;HEALTH&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-h-e-a-l-t-h/index.html">HEALTH</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-144072727%2FClasslikes%2F769193423" anchor-label="HEALTH_REGENERATION" id="-144072727%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-e-a-l-t-h_-r-e-g-e-n-e-r-a-t-i-o-n/index.html">HEALTH_REGENERATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-144072727%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;HEALTH_REGENERATION&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-h-e-a-l-t-h_-r-e-g-e-n-e-r-a-t-i-o-n/index.html">HEALTH_REGENERATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-857201853%2FClasslikes%2F769193423" anchor-label="HEAT_RESISTANCE" id="-857201853%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-e-a-t_-r-e-s-i-s-t-a-n-c-e/index.html">HEAT_RESISTANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-857201853%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;HEAT_RESISTANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-h-e-a-t_-r-e-s-i-s-t-a-n-c-e/index.html">HEAT_RESISTANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-397214804%2FClasslikes%2F769193423" anchor-label="INTELLIGENCE" id="-397214804%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-l-l-i-g-e-n-c-e/index.html">INTELLIGENCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-397214804%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;INTELLIGENCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-i-n-t-e-l-l-i-g-e-n-c-e/index.html">INTELLIGENCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-519768232%2FClasslikes%2F769193423" anchor-label="MAGIC_FIND" id="-519768232%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-g-i-c_-f-i-n-d/index.html">MAGIC_FIND</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-519768232%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MAGIC_FIND&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-a-g-i-c_-f-i-n-d/index.html">MAGIC_FIND</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1924762312%2FClasslikes%2F769193423" anchor-label="MANGROVE_FORTUNE" id="1924762312%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-n-g-r-o-v-e_-f-o-r-t-u-n-e/index.html">MANGROVE_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924762312%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MANGROVE_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-a-n-g-r-o-v-e_-f-o-r-t-u-n-e/index.html">MANGROVE_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1033592624%2FClasslikes%2F769193423" anchor-label="MELON_FORTUNE" id="-1033592624%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-l-o-n_-f-o-r-t-u-n-e/index.html">MELON_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1033592624%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MELON_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-e-l-o-n_-f-o-r-t-u-n-e/index.html">MELON_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1971569423%2FClasslikes%2F769193423" anchor-label="MENDING" id="1971569423%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-n-d-i-n-g/index.html">MENDING</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1971569423%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MENDING&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-e-n-d-i-n-g/index.html">MENDING</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1768705377%2FClasslikes%2F769193423" anchor-label="MINING_FORTUNE" id="-1768705377%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-i-n-i-n-g_-f-o-r-t-u-n-e/index.html">MINING_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1768705377%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MINING_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-i-n-i-n-g_-f-o-r-t-u-n-e/index.html">MINING_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1694907045%2FClasslikes%2F769193423" anchor-label="MINING_SPEED" id="1694907045%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-i-n-i-n-g_-s-p-e-e-d/index.html">MINING_SPEED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1694907045%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MINING_SPEED&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-i-n-i-n-g_-s-p-e-e-d/index.html">MINING_SPEED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="335784551%2FClasslikes%2F769193423" anchor-label="MUSHROOM_FORTUNE" id="335784551%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-u-s-h-r-o-o-m_-f-o-r-t-u-n-e/index.html">MUSHROOM_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="335784551%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;MUSHROOM_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-m-u-s-h-r-o-o-m_-f-o-r-t-u-n-e/index.html">MUSHROOM_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-123682201%2FClasslikes%2F769193423" anchor-label="NETHER_STALK_FORTUNE" id="-123682201%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-e-t-h-e-r_-s-t-a-l-k_-f-o-r-t-u-n-e/index.html">NETHER_STALK_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-123682201%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;NETHER_STALK_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-n-e-t-h-e-r_-s-t-a-l-k_-f-o-r-t-u-n-e/index.html">NETHER_STALK_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1184963713%2FClasslikes%2F769193423" anchor-label="ORE_FORTUNE" id="-1184963713%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-r-e_-f-o-r-t-u-n-e/index.html">ORE_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1184963713%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;ORE_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-o-r-e_-f-o-r-t-u-n-e/index.html">ORE_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1924607198%2FClasslikes%2F769193423" anchor-label="PET_LUCK" id="1924607198%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-e-t_-l-u-c-k/index.html">PET_LUCK</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924607198%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;PET_LUCK&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-p-e-t_-l-u-c-k/index.html">PET_LUCK</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="89291062%2FClasslikes%2F769193423" anchor-label="POTATO_FORTUNE" id="89291062%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-o-t-a-t-o_-f-o-r-t-u-n-e/index.html">POTATO_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="89291062%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;POTATO_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-p-o-t-a-t-o_-f-o-r-t-u-n-e/index.html">POTATO_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="473401102%2FClasslikes%2F769193423" anchor-label="PRESSURE_RESISTANCE" id="473401102%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-s-s-u-r-e_-r-e-s-i-s-t-a-n-c-e/index.html">PRESSURE_RESISTANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="473401102%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;PRESSURE_RESISTANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-p-r-e-s-s-u-r-e_-r-e-s-i-s-t-a-n-c-e/index.html">PRESSURE_RESISTANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-440808635%2FClasslikes%2F769193423" anchor-label="PRISTINE" id="-440808635%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-i-s-t-i-n-e/index.html">PRISTINE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-440808635%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;PRISTINE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-p-r-i-s-t-i-n-e/index.html">PRISTINE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-215175758%2FClasslikes%2F769193423" anchor-label="PULL" id="-215175758%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-u-l-l/index.html">PULL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-215175758%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;PULL&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-p-u-l-l/index.html">PULL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-598975483%2FClasslikes%2F769193423" anchor-label="PUMPKIN_FORTUNE" id="-598975483%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-u-m-p-k-i-n_-f-o-r-t-u-n-e/index.html">PUMPKIN_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-598975483%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;PUMPKIN_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-p-u-m-p-k-i-n_-f-o-r-t-u-n-e/index.html">PUMPKIN_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-740080809%2FClasslikes%2F769193423" anchor-label="RESPIRATION" id="-740080809%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-s-p-i-r-a-t-i-o-n/index.html">RESPIRATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-740080809%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RESPIRATION&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-e-s-p-i-r-a-t-i-o-n/index.html">RESPIRATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1909973188%2FClasslikes%2F769193423" anchor-label="RIFT_DAMAGE" id="1909973188%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-f-t_-d-a-m-a-g-e/index.html">RIFT_DAMAGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1909973188%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RIFT_DAMAGE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-i-f-t_-d-a-m-a-g-e/index.html">RIFT_DAMAGE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1582735631%2FClasslikes%2F769193423" anchor-label="RIFT_HEALTH" id="-1582735631%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-f-t_-h-e-a-l-t-h/index.html">RIFT_HEALTH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1582735631%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RIFT_HEALTH&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-i-f-t_-h-e-a-l-t-h/index.html">RIFT_HEALTH</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="542054228%2FClasslikes%2F769193423" anchor-label="RIFT_INTELLIGENCE" id="542054228%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-f-t_-i-n-t-e-l-l-i-g-e-n-c-e/index.html">RIFT_INTELLIGENCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="542054228%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RIFT_INTELLIGENCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-i-f-t_-i-n-t-e-l-l-i-g-e-n-c-e/index.html">RIFT_INTELLIGENCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="15275642%2FClasslikes%2F769193423" anchor-label="RIFT_MANA_REGEN" id="15275642%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-f-t_-m-a-n-a_-r-e-g-e-n/index.html">RIFT_MANA_REGEN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="15275642%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RIFT_MANA_REGEN&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-i-f-t_-m-a-n-a_-r-e-g-e-n/index.html">RIFT_MANA_REGEN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-940337182%2FClasslikes%2F769193423" anchor-label="RIFT_TIME" id="-940337182%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-f-t_-t-i-m-e/index.html">RIFT_TIME</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-940337182%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RIFT_TIME&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-i-f-t_-t-i-m-e/index.html">RIFT_TIME</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1363598214%2FClasslikes%2F769193423" anchor-label="RIFT_WALK_SPEED" id="1363598214%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-f-t_-w-a-l-k_-s-p-e-e-d/index.html">RIFT_WALK_SPEED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1363598214%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;RIFT_WALK_SPEED&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-r-i-f-t_-w-a-l-k_-s-p-e-e-d/index.html">RIFT_WALK_SPEED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1637161985%2FClasslikes%2F769193423" anchor-label="SEA_CREATURE_CHANCE" id="-1637161985%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-a_-c-r-e-a-t-u-r-e_-c-h-a-n-c-e/index.html">SEA_CREATURE_CHANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1637161985%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;SEA_CREATURE_CHANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-s-e-a_-c-r-e-a-t-u-r-e_-c-h-a-n-c-e/index.html">SEA_CREATURE_CHANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-873209298%2FClasslikes%2F769193423" anchor-label="STRENGTH" id="-873209298%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-r-e-n-g-t-h/index.html">STRENGTH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-873209298%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;STRENGTH&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-s-t-r-e-n-g-t-h/index.html">STRENGTH</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-77327507%2FClasslikes%2F769193423" anchor-label="SUGAR_CANE_FORTUNE" id="-77327507%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-u-g-a-r_-c-a-n-e_-f-o-r-t-u-n-e/index.html">SUGAR_CANE_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-77327507%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;SUGAR_CANE_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-s-u-g-a-r_-c-a-n-e_-f-o-r-t-u-n-e/index.html">SUGAR_CANE_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2010448359%2FClasslikes%2F769193423" anchor-label="SWEEP" id="2010448359%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-w-e-e-p/index.html">SWEEP</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2010448359%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;SWEEP&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-s-w-e-e-p/index.html">SWEEP</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1338998185%2FClasslikes%2F769193423" anchor-label="SWING_RANGE" id="-1338998185%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-w-i-n-g_-r-a-n-g-e/index.html">SWING_RANGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1338998185%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;SWING_RANGE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-s-w-i-n-g_-r-a-n-g-e/index.html">SWING_RANGE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1797229020%2FClasslikes%2F769193423" anchor-label="TRACKING" id="-1797229020%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-a-c-k-i-n-g/index.html">TRACKING</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1797229020%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;TRACKING&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-t-r-a-c-k-i-n-g/index.html">TRACKING</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="222399263%2FClasslikes%2F769193423" anchor-label="TREASURE_CHANCE" id="222399263%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-e-a-s-u-r-e_-c-h-a-n-c-e/index.html">TREASURE_CHANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="222399263%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;TREASURE_CHANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-t-r-e-a-s-u-r-e_-c-h-a-n-c-e/index.html">TREASURE_CHANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1588541223%2FClasslikes%2F769193423" anchor-label="TROPHY_FISH_CHANCE" id="-1588541223%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-o-p-h-y_-f-i-s-h_-c-h-a-n-c-e/index.html">TROPHY_FISH_CHANCE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1588541223%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;TROPHY_FISH_CHANCE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-t-r-o-p-h-y_-f-i-s-h_-c-h-a-n-c-e/index.html">TROPHY_FISH_CHANCE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1387003556%2FClasslikes%2F769193423" anchor-label="TRUE_DEFENSE" id="-1387003556%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-u-e_-d-e-f-e-n-s-e/index.html">TRUE_DEFENSE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1387003556%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;TRUE_DEFENSE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-t-r-u-e_-d-e-f-e-n-s-e/index.html">TRUE_DEFENSE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-646446257%2FClasslikes%2F769193423" anchor-label="VITALITY" id="-646446257%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v-i-t-a-l-i-t-y/index.html">VITALITY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-646446257%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;VITALITY&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-v-i-t-a-l-i-t-y/index.html">VITALITY</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1926760994%2FClasslikes%2F769193423" anchor-label="WALK_SPEED" id="-1926760994%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-a-l-k_-s-p-e-e-d/index.html">WALK_SPEED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1926760994%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;WALK_SPEED&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-w-a-l-k_-s-p-e-e-d/index.html">WALK_SPEED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1594919074%2FClasslikes%2F769193423" anchor-label="WEAPON_ABILITY_DAMAGE" id="1594919074%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-e-a-p-o-n_-a-b-i-l-i-t-y_-d-a-m-a-g-e/index.html">WEAPON_ABILITY_DAMAGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1594919074%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;WEAPON_ABILITY_DAMAGE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-w-e-a-p-o-n_-a-b-i-l-i-t-y_-d-a-m-a-g-e/index.html">WEAPON_ABILITY_DAMAGE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1411475964%2FClasslikes%2F769193423" anchor-label="WHEAT_FORTUNE" id="-1411475964%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-h-e-a-t_-f-o-r-t-u-n-e/index.html">WHEAT_FORTUNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1411475964%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;WHEAT_FORTUNE&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span></div></div><a href="-w-h-e-a-t_-f-o-r-t-u-n-e/index.html">WHEAT_FORTUNE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-324277213%2FProperties%2F769193423" anchor-label="cleanName" id="-324277213%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clean-name.html"><span>clean</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-324277213%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="clean-name.html">cleanName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-289790457%2FProperties%2F769193423" anchor-label="entries" id="-289790457%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-289790457%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">StatType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F769193423" anchor-label="name" id="-372974862%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-visitor/-m-a-y-o-r_-a-a-t-r-o-x/index.html#-372974862%2FProperties%2F769193423"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-visitor/-m-a-y-o-r_-a-a-t-r-o-x/index.html#-372974862%2FProperties%2F769193423">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F769193423" anchor-label="ordinal" id="-739389684%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-visitor/-m-a-y-o-r_-a-a-t-r-o-x/index.html#-739389684%2FProperties%2F769193423"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-visitor/-m-a-y-o-r_-a-a-t-r-o-x/index.html#-739389684%2FProperties%2F769193423">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1716517621%2FFunctions%2F769193423" anchor-label="valueOf" id="1716517621%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1716517621%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">StatType</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-362354495%2FFunctions%2F769193423" anchor-label="values" id="-362354495%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-362354495%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">StatType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
