@@ -41,5 +41,13 @@ jobs:
       - name: Typecheck with mypy
         run: mypy src
 
-      - name: Run tests with pytest
-        run: pytest
+      - name: Run tests with pytest and coverage
+        run: pytest --cov=hywrapper --cov-report=xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5.5.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./python/coverage.xml
+          flags: python
+          fail_ci_if_error: false

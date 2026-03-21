@@ -3,6 +3,7 @@ val okhttpVersion: String by project
 val coroutinesVersion: String by project
 val junitVersion: String by project
 val nbtVersion: String by project
+val jacocoVersion: String by project
 
 plugins {
     kotlin("jvm")
@@ -10,7 +11,20 @@ plugins {
     id("java")
     `maven-publish`
     id("application")
-    id("org.jetbrains.dokka") version "2.0.0"
+    id("org.jetbrains.dokka")
+    jacoco
+}
+
+jacoco {
+    toolVersion = jacocoVersion
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
 }
 
 configure<JavaApplication> {
