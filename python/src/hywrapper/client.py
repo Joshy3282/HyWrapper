@@ -549,8 +549,8 @@ class HypixelClient:
                 decoded = response.json()
                 model = response_model.model_validate(decoded)
 
-                if hasattr(model, "rateLimit"):
-                    model.rateLimit = rate_limit
+                if hasattr(model, "rate_limit"):
+                    model.rate_limit = rate_limit
 
                 success = getattr(model, "success", False)
                 if not success:

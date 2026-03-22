@@ -11,4 +11,4 @@ class HypixelResponse(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     success: Optional[bool] = None
     cause: Optional[str] = None
-    rateLimit: Optional[RateLimit] = Field(default=None)
+    rate_limit: Optional[RateLimit] = Field(default=None, alias="rateLimit")

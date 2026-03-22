@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -29,19 +29,9 @@ class TimeTower(BaseModel):
     level: Optional[int] = None
 
 
-class Rabbits(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    # TODO enum
-    collected_eggs: Optional[Dict[str, int]] = Field(default=None, alias="collected_eggs")
-    # TODO enum
-    collected_locations: Optional[Dict[str, List[str]]] = Field(
-        default=None, alias="collected_locations"
-    )
-
-
 class Easter(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    rabbits: Optional[Rabbits] = None
+    rabbits: Optional[Dict[str, Any]] = None
     time_tower: Optional[TimeTower] = Field(default=None, alias="timeTower")
     # TODO enum
     employees: Optional[Dict[str, int]] = Field(default=None)

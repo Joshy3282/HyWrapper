@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -18,8 +18,7 @@ class Inventory(BaseModel):
     ender_chest_contents: Optional[InventoryData] = Field(
         default=None, alias="ender_chest_contents"
     )
-    # TODO all null?
-    ender_chest_page_icons: Optional[List[InventoryData]] = Field(
+    ender_chest_page_icons: Optional[List[Optional[InventoryData]]] = Field(
         default=None, alias="ender_chest_page_icons"
     )
     equipment_contents: Optional[InventoryData] = Field(default=None, alias="equipment_contents")
@@ -152,22 +151,17 @@ class WizardTower(BaseModel):
 
 class Montezuma(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    # TODO says null so what is this
     uuid: Optional[str] = None
     unique_id: Optional[str] = Field(default=None, alias="uniqueId")
     type: Optional[str] = None
     exp: Optional[float] = None
     active: Optional[bool] = None
     tier: Optional[str] = None
-    # TODO same as uuid
-    held_item: Optional[str] = Field(default=None, alias="heldItem")
-    # TODO
-    candy_used: Optional[int] = Field(default=None, alias="candyUsed")
-    pet_soulbound: Optional[bool] = Field(default=None, alias="petSoulbound")
-    # TODO
+    held_item: Optional[str] = Field(default=None, alias="held_item")
+    candy_used: Optional[int] = Field(default=None, alias="candy_used")
+    pet_soulbound: Optional[bool] = Field(default=None, alias="pet_soulbound")
     skin: Optional[str] = None
-    # TODO
-    extra: Optional[str] = None
+    extra: Optional[Dict[str, Any]] = None
 
 
 class DeadCats(BaseModel):
@@ -230,7 +224,7 @@ class VillagePlaza(BaseModel):
     murder: Optional[Murder] = None
     barry_center: Optional[BarryCenter] = Field(default=None, alias="barryCenter")
     cowboy: Optional[Cowboy] = None
-    # TODO barter_bank ??
+    barter_bank: Optional[Dict[str, Any]] = Field(default=None, alias="barter_bank")
     lonely: Optional[Lonely] = None
     seraphine: Optional[Seraphine] = None
     got_scammed: Optional[bool] = Field(default=None, alias="got_scammed")

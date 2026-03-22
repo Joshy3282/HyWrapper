@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class CrimsonIslePlayerData(
@@ -28,14 +29,16 @@ data class CrimsonIslePlayerData(
 @Serializable
 data class Quests(
     @SerialName("quest_data")
-    val questData: QuestData? = null,
-    // TODO miniboss_daily
-    // TODO kuudra_boss_daily
+    val questData: Map<String, JsonElement>? = null,
+    @SerialName("miniboss_daily")
+    val minibossDaily: Map<String, JsonElement>? = null,
+    @SerialName("kuuda_boss_daily")
+    val kuudraBossDaily: Map<String, JsonElement>? = null,
     @SerialName("quest_rewards")
     val questRewards: QuestRewards? = null,
     @SerialName("alchemist_quest")
     val alchemistQuest: AlchemistQuest? = null,
-    // TODO rulenor
+    val rulenor: Map<String, JsonElement>? = null,
     @SerialName("chicken_quest")
     val chickenQuest: ChickenQuest? = null,
     @SerialName("pomtair_quest")
@@ -48,9 +51,12 @@ data class Quests(
     val duelTrainingQuest: DuelTrainingQuest? = null,
     @SerialName("sirih_quest")
     val sirihQuest: SirihQuest? = null,
-    // TODO edelis_quest
-    // TODO mollim_quest
-    // TODO aranya_quest
+    @SerialName("edelis_quest")
+    val edelisQuest: Map<String, JsonElement>? = null,
+    @SerialName("mollim_quest")
+    val mollimQuest: Map<String, JsonElement>? = null,
+    @SerialName("aranya_quest")
+    val aranyaQuest: Map<String, JsonElement>? = null,
     @SerialName("last_reset")
     val lastReset: Int? = null,
     @SerialName("paid_bruuh")
@@ -81,22 +87,6 @@ data class Quests(
     val unlockedCavityNpcs: List<String>? = null, // TODO enum
     @SerialName("cavity_rarity")
     val cavityRarity: String? = null, // TODO enum
-)
-
-@Serializable
-data class QuestData(
-    @SerialName("quest_list")
-    val questList: List<String>? = null, // TODO enum
-    val quests: List<QuestDataData>? = null, // TODO no way this is right
-)
-
-@Serializable
-data class QuestDataData(
-    // TODO name..
-    val status: String? = null,
-    val progress: Int? = null,
-    @SerialName("completed_at")
-    val completedAt: Long? = null,
 )
 
 @Serializable
@@ -137,7 +127,8 @@ data class ChickenQuest(
     val chickenQuestProgress: Int? = null,
     @SerialName("chicken_quest_start")
     val chickenQuestStart: Boolean? = null,
-    // TODO chicken_quest_collected
+    @SerialName("chicken_quest_collected")
+    val chickenQuestCollected: List<JsonElement>? = null,
 )
 
 @Serializable
@@ -182,8 +173,9 @@ data class SirihQuest(
 
 @Serializable
 data class Abiphone(
-    // TODO contact_data
-    // TODO games
+    @SerialName("contact_data")
+    val contactData: Map<String, JsonElement>? = null,
+    val games: Map<String, JsonElement>? = null,
     @SerialName("operator_chip")
     val operatorChip: OperatorChip? = null,
     @SerialName("active_contacts")

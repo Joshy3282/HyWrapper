@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class MiningCore(
@@ -67,7 +68,7 @@ data class Crystal(
 @Serializable
 data class Biomes(
     val precursor: Precursor? = null,
-    // TODO dwarven
+    val dwarven: Map<String, JsonElement>? = null,
     val goblin: Goblin? = null,
     val jungle: Jungle? = null,
 )

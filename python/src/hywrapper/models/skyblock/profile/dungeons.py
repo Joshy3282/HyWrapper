@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -97,6 +97,12 @@ class DailyRuns(BaseModel):
     completed_runs_count: Optional[int] = Field(default=None, alias="completed_runs_count")
 
 
+class Treasures(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    runs: Optional[List[Any]] = Field(default=None)
+    chests: Optional[List[Any]] = Field(default=None)
+
+
 class DungeonHubRaceSettings(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     selected_race: Optional[str] = Field(default=None, alias="selected_race")
@@ -114,6 +120,7 @@ class Dungeons(BaseModel):
     dungeons_blah_blah: Optional[List[str]] = Field(default=None, alias="dungeons_blah_blah")
     selected_dungeon_class: Optional[str] = Field(default=None, alias="selected_dungeon_class")
     daily_runs: Optional[DailyRuns] = Field(default=None, alias="daily_runs")
+    treasures: Optional[Treasures] = None
     dungeon_hub_race_settings: Optional[DungeonHubRaceSettings] = Field(
         default=None, alias="dungeon_hub_race_settings"
     )

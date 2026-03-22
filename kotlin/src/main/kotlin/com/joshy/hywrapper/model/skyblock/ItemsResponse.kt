@@ -7,6 +7,7 @@ import com.joshy.hywrapper.model.RateLimit
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class ItemsResponse(
@@ -44,14 +45,15 @@ data class Item(
     val upgradeCosts: List<List<UpgradeCost>>? = null,
     @SerialName("museum_data")
     val museumData: MuseumData? = null,
-    // TODO requirements
+    val requirements: List<Requirement>? = null,
     val color: String? = null,
     val soulbound: String? = null,
     @SerialName("has_uuid")
     val hasUuid: Boolean? = null,
     @SerialName("can_auction")
     val canAuction: Boolean? = null,
-    // TODO gemstone_slots
+    @SerialName("gemstone_slots")
+    val gemstoneSlots: List<GemstoneSlot>? = null,
     val glowing: Boolean? = null,
     @SerialName("can_trade")
     val canTrade: Boolean? = null,
@@ -62,7 +64,8 @@ data class Item(
     @SerialName("generator_tier")
     val generatorTier: Int? = null,
     val furniture: String? = null,
-    // TODO item_specific
+    @SerialName("item_specific")
+    val itemSpecific: Map<String, JsonElement>? = null,
     val editioned: Boolean? = null,
     @SerialName("gear_score")
     val gearScore: Int? = null,
@@ -82,7 +85,7 @@ data class Item(
     val motesSellPrice: Int? = null,
     @SerialName("double_tap_to_drop")
     val doubleTapToDrop: Boolean? = null,
-    // TODO enchantments. why are there only a few
+    val enchantments: Map<String, Int>? = null,
     @SerialName("rift_transferrable")
     val riftTransferrable: Boolean? = null,
     val origin: String? = null,
@@ -92,11 +95,12 @@ data class Item(
     val forceWipeRecomb: Boolean? = null,
     @SerialName("ability_damage_scaling")
     val abilityDamageScaling: Int? = null,
-    // TODO tiered_stats
+    @SerialName("tiered_stats")
+    val tieredStats: Map<StatType, List<Int>>? = null,
     val crystal: String? = null,
     @SerialName("can_burn_in_furnace")
     val canBurnInFurnace: Boolean? = null,
-    // TODO salvage? only used once looks temp or mistake
+    val salvage: SalvageData? = null,
     val serializable: Boolean? = null,
     @SerialName("can_have_attributes")
     val canHaveAttributes: Boolean? = null,
@@ -117,12 +121,12 @@ data class Item(
     val swordType: String? = null,
     @SerialName("is_upgradeable_without_soulbinding")
     val isUpgradeableWithoutSoulbinding: Boolean? = null,
-    // TODO recipes
+    val recipes: List<Recipe>? = null,
     @SerialName("cannot_reforge")
     val cannotReforge: Boolean? = null,
     @SerialName("lose_motes_value_on_transfer")
     val loseMotesValueOnTransfer: Boolean? = null,
-    // TODO prestige
+    val prestige: Prestige? = null,
 )
 
 @Serializable
@@ -140,6 +144,13 @@ data class Salvage(
 )
 
 @Serializable
+data class SalvageData(
+    @SerialName("item_id")
+    val itemId: String? = null,
+    val amount: Int? = null,
+)
+
+@Serializable
 data class DungeonItemConversionCost(
     @SerialName("essence_type")
     val essenceType: String? = null,
@@ -152,6 +163,8 @@ data class UpgradeCost(
     @SerialName("essence_type")
     val essenceType: String? = null,
     val amount: Int? = null,
+    @SerialName("item_id")
+    val itemId: String? = null,
 )
 
 @Serializable
@@ -170,4 +183,64 @@ data class CatacombsRequirement(
     @SerialName("dungeon_type")
     val dungeonType: String? = null,
     val level: Int? = null,
+)
+
+@Serializable
+data class Requirement(
+    val type: String? = null,
+    val skill: String? = null,
+    @SerialName("slayer_boss_type")
+    val slayerBossType: String? = null,
+    val level: Int? = null,
+    @SerialName("dungeon_type")
+    val dungeonType: String? = null,
+)
+
+@Serializable
+data class GemstoneSlot(
+    @SerialName("slot_type")
+    val slotType: String? = null,
+    val costs: List<GemstoneCost>? = null,
+    val requirements: List<GemstoneRequirement>? = null,
+)
+
+@Serializable
+data class GemstoneCost(
+    val type: String? = null,
+    @SerialName("item_id")
+    val itemId: String? = null,
+    val amount: Int? = null,
+    val coins: Int? = null,
+    @SerialName("essence_type")
+    val essenceType: String? = null,
+)
+
+@Serializable
+data class GemstoneRequirement(
+    val type: String? = null,
+    @SerialName("data_key")
+    val dataKey: String? = null,
+    val value: String? = null,
+    val operator: String? = null,
+)
+
+@Serializable
+data class Recipe(
+    val output: RecipeOutput? = null,
+    @SerialName("ingredient_symbols")
+    val ingredientSymbols: Map<String, String>? = null,
+    val matrix: List<String?>? = null,
+)
+
+@Serializable
+data class RecipeOutput(
+    @SerialName("item_id")
+    val itemId: String? = null,
+)
+
+@Serializable
+data class Prestige(
+    @SerialName("item_id")
+    val itemId: String? = null,
+    val costs: List<GemstoneCost>? = null,
 )

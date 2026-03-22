@@ -1,5 +1,6 @@
 package com.joshy.hywrapper
 
+import com.joshy.hywrapper.data.skyblock.SkillType
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -109,8 +110,8 @@ class HypixelClientTest {
 
             val response = client.getNews()
             assertEquals(true, response.success)
-            assertEquals(1, response.items?.size)
-            assertEquals("SkyBlock v0.11", response.items?.get(0)?.title)
+            assertEquals(1, response.news?.size)
+            assertEquals("SkyBlock v0.11", response.news?.get(0)?.title)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/skyblock/news", recordedRequest.path)
@@ -879,7 +880,7 @@ class HypixelClientTest {
 
             val response = client.getSkills()
             assertEquals(true, response.success)
-            assertEquals("Farming", response.skills?.get("FARMING")?.name)
+            assertEquals("Farming", response.skills?.get(SkillType.FARMING)?.name)
 
             val recordedRequest = server.takeRequest()
             assertEquals("/resources/skyblock/skills", recordedRequest.path)

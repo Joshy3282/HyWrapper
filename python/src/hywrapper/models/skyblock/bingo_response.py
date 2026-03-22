@@ -10,14 +10,14 @@ from hywrapper.models.rate_limit import RateLimit
 
 class BingoResponse(HypixelResponse):
     model_config = ConfigDict(populate_by_name=True)
-    lastUpdated: Optional[int] = Field(default=None)
+    last_updated: Optional[int] = Field(default=None, alias="lastUpdated")
     id: Optional[int] = Field(default=None)
     name: Optional[str] = Field(default=None)
     start: Optional[int] = Field(default=None)
     end: Optional[int] = Field(default=None)
     modifier: Optional[str] = Field(default=None)
     goals: Optional[List[Goal]] = Field(default=None)
-    rateLimit: Optional[RateLimit] = Field(default=None, exclude=True)
+    rate_limit: Optional[RateLimit] = Field(default=None, exclude=True, alias="rateLimit")
 
 
 class Goal(BaseModel):
@@ -27,5 +27,5 @@ class Goal(BaseModel):
     tiers: Optional[List[int]] = Field(default=None)
     progress: Optional[int] = Field(default=None)
     lore: Optional[str] = Field(default=None)
-    fullLore: Optional[List[str]] = Field(default=None)
-    requiredAmount: Optional[int] = Field(default=None)
+    full_lore: Optional[List[str]] = Field(default=None, alias="fullLore")
+    required_amount: Optional[int] = Field(default=None, alias="requiredAmount")

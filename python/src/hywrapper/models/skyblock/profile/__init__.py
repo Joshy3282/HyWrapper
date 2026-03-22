@@ -3,7 +3,6 @@ from hywrapper.models.skyblock.profile.event import (
     Easter,
     Event,
     RabbitHitmen,
-    Rabbits,
     Shop,
     TimeTower,
 )
@@ -42,7 +41,6 @@ from hywrapper.models.skyblock.profile.pets_data import (
 from hywrapper.models.skyblock.profile.player_data import ActiveEffect, PlayerData
 from hywrapper.models.skyblock.profile.player_stats import (
     Auctions,
-    CandyCollected,
     DragonFight,
     DungeonHub,
     EndIsland,
@@ -124,7 +122,6 @@ __all__ = [
     "BagContents",
     "Bestiary",
     "Biomes",
-    "CandyCollected",
     "Crystal",
     "DragonFight",
     "DungeonHub",
@@ -211,7 +208,6 @@ __all__ = [
     "ProfileData",
     "ProfileResponse",
     "RabbitHitmen",
-    "Rabbits",
     "RecentMobKill",
     "Rift",
     "SecuredTrophy",

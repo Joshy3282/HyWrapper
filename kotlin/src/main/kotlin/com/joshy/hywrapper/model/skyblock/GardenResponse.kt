@@ -9,6 +9,7 @@ import com.joshy.hywrapper.model.RateLimit
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class GardenResponse(
@@ -31,7 +32,8 @@ data class Garden(
     val resourcesCollected: Map<GardenResource, Long>? = null,
     @SerialName("garden_experience")
     val gardenExperience: Double? = null,
-    // TODO active_commissions
+    @SerialName("active_commissions")
+    val activeCommissions: List<JsonElement>? = null,
     @SerialName("composter_data")
     val composterData: ComposterData? = null,
     @SerialName("selected_barn_skin")

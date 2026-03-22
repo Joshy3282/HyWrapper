@@ -6,6 +6,7 @@ import com.joshy.hywrapper.model.skyblock.profile.*
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class ProfileResponse(
@@ -38,7 +39,8 @@ data class MemberData(
     val event: Event? = null,
     @SerialName("garden_player_data")
     val gardenPlayerData: GardenPlayerData? = null,
-    // TODO skill_tree
+    @SerialName("skill_tree")
+    val skillTree: SkillTree? = null,
     @SerialName("pets_data")
     val petsData: PetsData? = null,
     @SerialName("accessory_bag_storage")
@@ -68,7 +70,7 @@ data class MemberData(
     val inventory: PlayerInventory? = null,
     @SerialName("winter_player_data")
     val winterPlayerData: WinterPlayerData? = null,
-    // TODO forge
+    val forge: Forge? = null,
     @SerialName("fairy_soul")
     val fairySoul: FairySoul? = null,
     val temples: Temples? = null,
@@ -76,9 +78,21 @@ data class MemberData(
     val sharedInventory: SharedInventory? = null,
     val attributes: Attributes? = null,
     val slayer: Slayer? = null,
-    // TODO trophy_fish
+    @SerialName("trophy_fish")
+    val trophyFish: Map<String, JsonElement>? = null,
     val objectives: List<Objective>? = null,
     val collection: Map<String, Long>? = null,
+)
+
+@Serializable
+data class SkillTree(
+    val nodes: Map<String, Map<String, JsonElement>>? = null
+)
+
+@Serializable
+data class Forge(
+    @SerialName("forge_processes")
+    val forgeProcesses: Map<String, Map<String, JsonElement>>? = null
 )
 
 @Serializable
@@ -220,7 +234,8 @@ data class ForagingCore(
     val dailyGifts: Int? = null,
     @SerialName("daily_log_cut_day")
     val dailyLogCutDay: Int? = null,
-    // TODO daily_log_cut
+    @SerialName("daily_log_cut")
+    val dailyLogCut: List<JsonElement>? = null,
     @SerialName("forests_whispers")
     val forestWhispers: Long? = null,
     @SerialName("forests_whispers_spent")
@@ -233,7 +248,7 @@ data class ForagingCore(
 
 @Serializable
 data class Shards(
-    // TODO traps
+    val traps: Map<String, JsonElement>? = null,
     @SerialName("shard_sort")
     val shardSort: String? = null,
     @SerialName("fusion_result_sort")

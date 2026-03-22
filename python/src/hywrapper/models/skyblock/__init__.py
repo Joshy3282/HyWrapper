@@ -10,11 +10,10 @@ from hywrapper.models.skyblock.collections_response import (
 )
 from hywrapper.models.skyblock.election_response import (
     Candidate,
-    CurrentElection,
+    Election,
     ElectionResponse,
     Mayor,
     Minister,
-    PastElection,
     Perk,
 )
 from hywrapper.models.skyblock.firesales_response import FiresalesResponse, Sale
@@ -48,7 +47,6 @@ from hywrapper.models.skyblock.profile.event import (
     Easter,
     Event,
     RabbitHitmen,
-    Rabbits,
     Shop,
     TimeTower,
 )
@@ -175,11 +173,11 @@ __all__ = [
     "Cowboy",
     "CrazyKloon",
     "Currencies",
-    "CurrentElection",
     "DeadCats",
     "Dreadfarm",
     "DungeonItemConversionCost",
     "Easter",
+    "Election",
     "ElectionResponse",
     "EndedAuction",
     "Enigma",
@@ -222,7 +220,6 @@ __all__ = [
     "NewsItem",
     "NewsMaterial",
     "NewsResponse",
-    "PastElection",
     "Perk",
     "Perks",
     "PetCare",
@@ -236,7 +233,6 @@ __all__ = [
     "ProfilesResponse",
     "QuickStatus",
     "RabbitHitmen",
-    "Rabbits",
     "RecentMobKill",
     "Rift",
     "Sale",

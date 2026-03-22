@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -9,8 +9,7 @@ class ActiveEffect(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     effect: Optional[str] = None
     level: Optional[int] = None
-    # TODO what is this
-    modifiers: Optional[List[str]] = Field(default=None)
+    modifiers: Optional[List[Any]] = Field(default=None)
     ticks_remaining: Optional[int] = Field(default=None, alias="ticks_remaining")
     infinite: Optional[bool] = None
     flags: Optional[int] = None
@@ -26,11 +25,13 @@ class PlayerData(BaseModel):
     # TODO enum
     garden_chips: Optional[Dict[str, int]] = Field(default=None, alias="garden_chips")
     active_effects: Optional[List[ActiveEffect]] = Field(default=None, alias="active_effects")
-    # TODO paused_effects
+    paused_effects: Optional[List[Any]] = Field(default=None, alias="paused_effects")
     reaper_peppers_eaten: Optional[int] = Field(default=None, alias="reaper_peppers_eaten")
-    # TODO temp_stat_buffs
+    temp_stat_buffs: Optional[List[Any]] = Field(default=None, alias="temp_stat_buffs")
     death_count: Optional[int] = Field(default=None, alias="death_count")
-    # TODO disabled_potion_effects
+    disabled_potion_effects: Optional[List[Any]] = Field(
+        default=None, alias="disabled_potion_effects"
+    )
     # TODO enum
     achievement_spawned_island_types: Optional[List[str]] = Field(
         default=None, alias="achievement_spawned_island_types"

@@ -5,18 +5,18 @@ from typing import Any, Optional
 
 
 class SkillType(str, Enum):
-    FARMING = "Farming"
-    MINING = "Mining"
-    COMBAT = "Combat"
-    FORAGING = "Foraging"
-    FISHING = "Fishing"
-    ENCHANTING = "Enchanting"
-    ALCHEMY = "Alchemy"
-    CARPENTRY = "Carpentry"
-    RUNECRAFTING = "Runecrafting"
-    SOCIAL = "Social"
-    TAMING = "Taming"
-    HUNTING = "Hunting"
+    FARMING = "FARMING"
+    MINING = "MINING"
+    COMBAT = "COMBAT"
+    FORAGING = "FORAGING"
+    FISHING = "FISHING"
+    ENCHANTING = "ENCHANTING"
+    ALCHEMY = "ALCHEMY"
+    CARPENTRY = "CARPENTRY"
+    RUNECRAFTING = "RUNECRAFTING"
+    SOCIAL = "SOCIAL"
+    TAMING = "TAMING"
+    HUNTING = "HUNTING"
 
     @property
     def clean_name(self) -> str:
