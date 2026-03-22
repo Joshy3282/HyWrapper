@@ -9,7 +9,12 @@ from hywrapper.client import (
     RateLimitException,
     ResourceNotFoundException,
 )
-from hywrapper.models import BazaarResponse, BingoResponse, PlayerResponse
+from hywrapper.models import (
+    BazaarResponse,
+    BingoResponse,
+    FiresalesResponse,
+    PlayerResponse,
+)
 
 
 @pytest.fixture
@@ -54,6 +59,29 @@ async def test_get_player_success(client, httpx_mock):
     assert response.success is True
     assert response.player.displayname == "PlayerName"
     assert isinstance(response, PlayerResponse)
+
+
+@pytest.mark.asyncio
+async def test_get_firesales_success(client, httpx_mock):
+    json_response = {
+        "success": True,
+        "sales": [
+            {
+                "item_id": "pet_skin_black_cat",
+                "start": 1618214400000,
+                "end": 1618214400000,
+                "amount": 1000,
+                "price": 500,
+            }
+        ],
+    }
+    httpx_mock.add_response(url="https://api.hypixel.net/v2/skyblock/firesales", json=json_response)
+
+    response = await client.get_firesales()
+    assert response.success is True
+    assert len(response.sales) == 1
+    assert response.sales[0].itemId == "pet_skin_black_cat"
+    assert isinstance(response, FiresalesResponse)
 
 
 @pytest.mark.asyncio
