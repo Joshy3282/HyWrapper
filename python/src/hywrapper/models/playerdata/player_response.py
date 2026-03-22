@@ -1,10 +1,13 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional, Type, TypeVar
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from hywrapper.data.playerdata.housing_setting import HousingSetting
 from hywrapper.models.hypixel_response import HypixelResponse
+
+T = TypeVar("T")
 
 
 class HousingMeta(BaseModel):
@@ -15,6 +18,33 @@ class HousingMeta(BaseModel):
     allowed_blocks: Optional[List[str]] = Field(default=None, alias="allowedBlocks")
     player_settings: Optional[Dict[str, str]] = Field(default=None, alias="playerSettings")
     selected_channels_v3: Optional[List[str]] = Field(default=None, alias="selectedChannels_v3")
+
+    def get_housing_setting(self, setting: HousingSetting) -> Optional[T]:
+        if not self.player_settings:
+            return None
+
+        raw = self.player_settings.get(setting.name)
+        if not raw:
+            return None
+
+        # Value is usually "SettingName-Value"
+        if "-" not in raw:
+            value_str = raw
+        else:
+            value_str = raw.split("-", 1)[1]
+
+        target_type = setting.type
+        if target_type is bool:
+            parsed: Any = value_str.lower() == "true"
+        elif target_type is int:
+            try:
+                parsed = int(value_str)
+            except ValueError:
+                parsed = value_str
+        else:
+            parsed = value_str
+
+        return parsed  # type: ignore
 
 
 class Eugene(BaseModel):

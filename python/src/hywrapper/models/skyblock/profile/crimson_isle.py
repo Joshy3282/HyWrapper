@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -37,6 +37,8 @@ class OperatorChip(BaseModel):
 
 class Abiphone(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
+    contact_data: Optional[Dict[str, Any]] = Field(default=None, alias="contact_data")
+    games: Optional[Dict[str, Any]] = None
     operator_chip: Optional[OperatorChip] = Field(default=None, alias="operator_chip")
     active_contacts: Optional[List[str]] = Field(default=None, alias="active_contacts")
     trio_contact_addons: Optional[int] = Field(default=None, alias="trio_contact_addons")
@@ -85,6 +87,9 @@ class ChickenQuest(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     chicken_quest_progress: Optional[int] = Field(default=None, alias="chicken_quest_progress")
     chicken_quest_start: Optional[bool] = Field(default=None, alias="chicken_quest_start")
+    chicken_quest_collected: Optional[List[Any]] = Field(
+        default=None, alias="chicken_quest_collected"
+    )
 
 
 class AlchemistQuest(BaseModel):
@@ -113,24 +118,14 @@ class QuestRewards(BaseModel):
     crimson_isle_rescue_s: Optional[str] = Field(default=None, alias="crimson_isle_rescue_s")
 
 
-class QuestDataData(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    status: Optional[str] = Field(default=None)
-    progress: Optional[int] = Field(default=None)
-    completed_at: Optional[int] = Field(default=None, alias="completed_at")
-
-
-class QuestData(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
-    quest_list: Optional[List[str]] = Field(default=None, alias="quest_list")
-    quests: Optional[List[QuestDataData]] = Field(default=None)
-
-
 class Quests(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    quest_data: Optional[QuestData] = Field(default=None, alias="quest_data")
+    quest_data: Optional[Dict[str, Any]] = Field(default=None, alias="quest_data")
+    miniboss_daily: Optional[Dict[str, Any]] = Field(default=None, alias="miniboss_daily")
+    kuudra_boss_daily: Optional[Dict[str, Any]] = Field(default=None, alias="kuuda_boss_daily")
     quest_rewards: Optional[QuestRewards] = Field(default=None, alias="quest_rewards")
     alchemist_quest: Optional[AlchemistQuest] = Field(default=None, alias="alchemist_quest")
+    rulenor: Optional[Dict[str, Any]] = None
     chicken_quest: Optional[ChickenQuest] = Field(default=None, alias="chicken_quest")
     pomtair_quest: Optional[PomtairQuest] = Field(default=None, alias="pomtair_quest")
     suus_quest: Optional[SuusQuest] = Field(default=None, alias="suus_quest")
@@ -139,6 +134,9 @@ class Quests(BaseModel):
         default=None, alias="duel_training_quest"
     )
     sirih_quest: Optional[SirihQuest] = Field(default=None, alias="sirih_quest")
+    edelis_quest: Optional[Dict[str, Any]] = Field(default=None, alias="edelis_quest")
+    mollim_quest: Optional[Dict[str, Any]] = Field(default=None, alias="mollim_quest")
+    aranya_quest: Optional[Dict[str, Any]] = Field(default=None, alias="aranya_quest")
     last_reset: Optional[int] = Field(default=None, alias="last_reset")
     paid_bruuh: Optional[bool] = Field(default=None, alias="paid_bruuh")
     miniboss_data: Optional[Dict[str, bool]] = Field(default=None, alias="miniboss_data")

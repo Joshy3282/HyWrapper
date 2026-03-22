@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 // TODO bunch of enums
 
@@ -19,7 +20,7 @@ data class Dungeons(
     val selectedDungeonClass: String? = null,
     @SerialName("daily_runs")
     val dailyRuns: DailyRuns? = null,
-    // TODO treasures
+    val treasures: Treasures? = null,
     @SerialName("dungeon_hub_race_settings")
     val dungeonHubRaceSettings: DungeonHubRaceSettings? = null,
     @SerialName("last_dungeon_run")
@@ -156,6 +157,12 @@ data class DailyRuns(
     val currentDayStamp: Int? = null,
     @SerialName("completed_runs_count")
     val completedRunsCount: Int? = null,
+)
+
+@Serializable
+data class Treasures(
+    val runs: List<JsonElement>? = null,
+    val chests: List<JsonElement>? = null,
 )
 
 @Serializable

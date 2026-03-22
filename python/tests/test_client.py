@@ -41,6 +41,7 @@ async def test_get_bingo_success(client, httpx_mock):
     response = await client.get_bingo()
     assert response.success is True
     assert response.name == "Bingo"
+    assert response.last_updated == 1618214400000
     assert isinstance(response, BingoResponse)
 
     request = httpx_mock.get_request()
@@ -80,7 +81,7 @@ async def test_get_firesales_success(client, httpx_mock):
     response = await client.get_firesales()
     assert response.success is True
     assert len(response.sales) == 1
-    assert response.sales[0].itemId == "pet_skin_black_cat"
+    assert response.sales[0].item_id == "pet_skin_black_cat"
     assert isinstance(response, FiresalesResponse)
 
 
@@ -178,9 +179,9 @@ async def test_rate_limit_parsing(client, httpx_mock):
     )
 
     response = await client.get_bingo()
-    assert response.rateLimit.limit == 300
-    assert response.rateLimit.remaining == 299
-    assert response.rateLimit.reset == 59
+    assert response.rate_limit.limit == 300
+    assert response.rate_limit.remaining == 299
+    assert response.rate_limit.reset == 59
     assert client.last_rate_limit.limit == 300
 
 

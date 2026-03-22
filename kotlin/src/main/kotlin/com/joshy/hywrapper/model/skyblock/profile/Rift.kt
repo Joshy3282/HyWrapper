@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class Rift(
@@ -36,7 +37,8 @@ data class VillagePlaza(
     val murder: Murder? = null,
     val barryCenter: BarryCenter? = null,
     val cowboy: Cowboy? = null,
-    // TODO barter_bank ??
+    @SerialName("barter_bank")
+    val barterBank: Map<String, JsonElement>? = null,
     val lonely: Lonely? = null,
     val seraphine: Seraphine? = null,
     @SerialName("got_scammed")
@@ -120,22 +122,20 @@ data class DeadCats(
 
 @Serializable
 data class Montezuma(
-    // TODO says null so what is this
     val uuid: String? = null,
     val uniqueId: String? = null,
     val type: String? = null,
     val exp: Double? = null,
     val active: Boolean? = null,
     val tier: String? = null,
-    // TODO same as uuid
+    @SerialName("held_item")
     val heldItem: String? = null,
-    // TODO
+    @SerialName("candy_used")
     val candyUsed: Int? = null,
+    @SerialName("pet_soulbound")
     val petSoulbound: Boolean? = null,
-    // TODO
     val skin: String? = null,
-    // TODO
-    val extra: String? = null,
+    val extra: Map<String, JsonElement>? = null,
 )
 
 @Serializable
@@ -317,9 +317,8 @@ data class Inventory(
     val invArmor: InventoryData? = null,
     @SerialName("ender_chest_contents")
     val enderChestContents: InventoryData? = null,
-    // TODO all null?
     @SerialName("ender_chest_page_icons")
-    val enderChestPageIcons: List<InventoryData>? = null,
+    val enderChestPageIcons: List<InventoryData?>? = null,
     @SerialName("equipment_contents")
     val equipmentContents: InventoryData? = null,
 )

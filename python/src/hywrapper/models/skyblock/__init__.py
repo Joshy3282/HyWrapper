@@ -47,7 +47,6 @@ from hywrapper.models.skyblock.profile.event import (
     Easter,
     Event,
     RabbitHitmen,
-    Rabbits,
     Shop,
     TimeTower,
 )
@@ -234,7 +233,6 @@ __all__ = [
     "ProfilesResponse",
     "QuickStatus",
     "RabbitHitmen",
-    "Rabbits",
     "RecentMobKill",
     "Rift",
     "Sale",

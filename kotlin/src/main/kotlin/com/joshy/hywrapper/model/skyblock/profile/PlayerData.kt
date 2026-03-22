@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class PlayerData(
@@ -17,13 +18,16 @@ data class PlayerData(
     val gardenChips: Map<String, Int>? = null,
     @SerialName("active_effects")
     val activeEffects: List<ActiveEffect>? = null,
-    // TODO paused_effects
+    @SerialName("paused_effects")
+    val pausedEffects: List<JsonElement>? = null,
     @SerialName("reaper_peppers_eaten")
     val reaperPeppersEaten: Int? = null,
-    // TODO temp_stat_buffs
+    @SerialName("temp_stat_buffs")
+    val tempStatBuffs: List<JsonElement>? = null,
     @SerialName("death_count")
     val deathCount: Int? = null,
-    // TODO disabled_potion_effects
+    @SerialName("disabled_potion_effects")
+    val disabledPotionEffects: List<JsonElement>? = null,
     // TODO enum
     @SerialName("achievement_spawned_island_types")
     val achievementSpawnedIslandTypes: List<String>? = null,
@@ -46,8 +50,7 @@ data class PlayerData(
 data class ActiveEffect(
     val effect: String? = null,
     val level: Int? = null,
-    // TODO what is this
-    val modifiers: List<String>? = null,
+    val modifiers: List<JsonElement>? = null,
     @SerialName("ticks_remaining")
     val ticksRemaining: Long? = null,
     val infinite: Boolean? = null,

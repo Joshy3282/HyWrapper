@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, Optional
+from typing import Any, Dict, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -54,6 +54,7 @@ class Crystal(BaseModel):
 class Biomes(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
     precursor: Optional[Precursor] = None
+    dwarven: Optional[Dict[str, Any]] = None
     goblin: Optional[Goblin] = None
     jungle: Optional[Jungle] = None
 

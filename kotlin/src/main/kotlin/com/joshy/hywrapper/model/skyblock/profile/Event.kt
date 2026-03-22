@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class Event(
@@ -10,7 +11,7 @@ data class Event(
 
 @Serializable
 data class Easter(
-    val rabbits: Rabbits? = null,
+    val rabbits: Map<String, JsonElement>? = null,
     val timeTower: TimeTower? = null,
     // TODO enum
     val employees: Map<String, Int>? = null,
@@ -50,17 +51,6 @@ data class Easter(
     val goldenClickYear: Int? = null,
     @SerialName("rabbit_hotspot_filer")
     val rabbitHotspotFiler: String? = null,
-)
-
-@Serializable
-data class Rabbits(
-    // TODO enum
-    @SerialName("collected_eggs")
-    val collectedEggs: Map<String, Long>? = null,
-    // TODO enum
-    @SerialName("collected_locations")
-    val collectedLocations: Map<String, List<String>>? = null,
-    // TODO rabbits
 )
 
 @Serializable

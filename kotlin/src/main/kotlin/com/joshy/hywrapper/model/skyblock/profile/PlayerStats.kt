@@ -2,6 +2,7 @@ package com.joshy.hywrapper.model.skyblock.profile
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class PlayerStats(
@@ -46,21 +47,7 @@ data class PlayerStats(
 
 @Serializable
 data class CandyCollected(
-    val total: Int? = null,
-    @SerialName("green_candy")
-    val greenCandy: Int? = null,
-    @SerialName("purple_candy")
-    val purpleCandy: Int? = null
-    // TODO festivals
-)
-
-@Serializable
-data class Festival(
-    val total: Int? = null,
-    @SerialName("green_candy")
-    val greenCandy: Int? = null,
-    @SerialName("purple_candy")
-    val purpleCandy: Int? = null
+    val data: Map<String, JsonElement>? = null
 )
 
 @Serializable
