@@ -1,0 +1,3227 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Joshy3282.github.io/HyWrapper/api/typescript/enums/StatType/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>StatType - HyWrapper</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enumeration-stattype" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HyWrapper" class="md-header__button md-logo" aria-label="HyWrapper" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyWrapper
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              StatType
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Joshy3282/HyWrapper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Joshy3282/HyWrapper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guides/quickstart/" class="md-tabs__link">
+          
+  
+  
+  Custom Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../python/client/" class="md-tabs__link">
+          
+  
+  
+  Python API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.md" class="md-tabs__link">
+          
+  
+  
+  TypeScript API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../kotlin/index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kotlin API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HyWrapper" class="md-nav__button md-logo" aria-label="HyWrapper" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyWrapper
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Joshy3282/HyWrapper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Joshy3282/HyWrapper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Custom Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/uuid_utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UUID Utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeScript API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TypeScript API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kotlin API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of contents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumeration-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumeration Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeration-members_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumeration Members
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumeration Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ability_damage_percent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABILITY_DAMAGE_PERCENT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ABILITY_DAMAGE_PERCENT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alchemy_wisdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALCHEMY_WISDOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ALCHEMY_WISDOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ATTACK_SPEED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ATTACK_SPEED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLOCK_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BLOCK_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonus_pest_chance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BONUS_PEST_CHANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BONUS_PEST_CHANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking_power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BREAKING_POWER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BREAKING_POWER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cactus_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CACTUS_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CACTUS_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carrot_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CARROT_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CARROT_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cocoa_beans_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COCOA_BEANS_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COCOA_BEANS_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cold_resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COLD_RESISTANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COLD_RESISTANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combat_wisdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMBAT_WISDOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMBAT_WISDOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical_chance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRITICAL_CHANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CRITICAL_CHANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical_damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRITICAL_DAMAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CRITICAL_DAMAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAMAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAMAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFENSE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DEFENSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double_hook_chance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DOUBLE_HOOK_CHANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DOUBLE_HOOK_CHANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dwarven_metal_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DWARVEN_METAL_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DWARVEN_METAL_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farming_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FARMING_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FARMING_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farming_wisdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FARMING_WISDOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FARMING_WISDOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FEAR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FEAR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ferocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FEROCITY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FEROCITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fig_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIG_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIG_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fishing_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FISHING_SPEED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FISHING_SPEED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fishing_wisdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FISHING_WISDOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FISHING_WISDOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foraging_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORAGING_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FORAGING_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foraging_wisdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORAGING_WISDOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FORAGING_WISDOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gemstone_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEMSTONE_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GEMSTONE_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEALTH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HEALTH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health_regeneration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEALTH_REGENERATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HEALTH_REGENERATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heat_resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEAT_RESISTANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HEAT_RESISTANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTELLIGENCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INTELLIGENCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic_find" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAGIC_FIND
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAGIC_FIND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mangrove_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MANGROVE_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MANGROVE_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melon_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MELON_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MELON_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mending" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MENDING
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MENDING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mining_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MINING_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MINING_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mining_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MINING_SPEED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MINING_SPEED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mushroom_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUSHROOM_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MUSHROOM_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nether_stalk_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NETHER_STALK_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NETHER_STALK_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ore_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORE_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORE_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pet_luck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PET_LUCK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PET_LUCK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potato_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POTATO_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="POTATO_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressure_resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRESSURE_RESISTANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PRESSURE_RESISTANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pristine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRISTINE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PRISTINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PULL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PULL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pumpkin_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUMPKIN_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PUMPKIN_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RESPIRATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RESPIRATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rift_damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIFT_DAMAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RIFT_DAMAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rift_health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIFT_HEALTH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RIFT_HEALTH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rift_intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIFT_INTELLIGENCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RIFT_INTELLIGENCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rift_mana_regen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIFT_MANA_REGEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RIFT_MANA_REGEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rift_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIFT_TIME
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RIFT_TIME">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rift_walk_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RIFT_WALK_SPEED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RIFT_WALK_SPEED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sea_creature_chance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEA_CREATURE_CHANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SEA_CREATURE_CHANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strength" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STRENGTH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="STRENGTH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sugar_cane_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SUGAR_CANE_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SUGAR_CANE_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SWEEP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SWEEP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swing_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SWING_RANGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SWING_RANGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRACKING
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRACKING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treasure_chance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TREASURE_CHANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TREASURE_CHANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trophy_fish_chance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TROPHY_FISH_CHANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TROPHY_FISH_CHANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#true_defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRUE_DEFENSE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRUE_DEFENSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vitality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VITALITY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VITALITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#walk_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WALK_SPEED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WALK_SPEED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weapon_ability_damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEAPON_ABILITY_DAMAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WEAPON_ABILITY_DAMAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wheat_fortune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHEAT_FORTUNE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WHEAT_FORTUNE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a href="../../">hywrapper-ts</a> / <a href="../../modules/">Exports</a> / StatType</p>
+<h1 id="enumeration-stattype">Enumeration: StatType</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<h3 id="enumeration-members">Enumeration Members</h3>
+<ul>
+<li><a href="./#ability_damage_percent">ABILITY_DAMAGE_PERCENT</a></li>
+<li><a href="./#alchemy_wisdom">ALCHEMY_WISDOM</a></li>
+<li><a href="./#attack_speed">ATTACK_SPEED</a></li>
+<li><a href="./#block_fortune">BLOCK_FORTUNE</a></li>
+<li><a href="./#bonus_pest_chance">BONUS_PEST_CHANCE</a></li>
+<li><a href="./#breaking_power">BREAKING_POWER</a></li>
+<li><a href="./#cactus_fortune">CACTUS_FORTUNE</a></li>
+<li><a href="./#carrot_fortune">CARROT_FORTUNE</a></li>
+<li><a href="./#cocoa_beans_fortune">COCOA_BEANS_FORTUNE</a></li>
+<li><a href="./#cold_resistance">COLD_RESISTANCE</a></li>
+<li><a href="./#combat_wisdom">COMBAT_WISDOM</a></li>
+<li><a href="./#critical_chance">CRITICAL_CHANCE</a></li>
+<li><a href="./#critical_damage">CRITICAL_DAMAGE</a></li>
+<li><a href="./#damage">DAMAGE</a></li>
+<li><a href="./#defense">DEFENSE</a></li>
+<li><a href="./#double_hook_chance">DOUBLE_HOOK_CHANCE</a></li>
+<li><a href="./#dwarven_metal_fortune">DWARVEN_METAL_FORTUNE</a></li>
+<li><a href="./#farming_fortune">FARMING_FORTUNE</a></li>
+<li><a href="./#farming_wisdom">FARMING_WISDOM</a></li>
+<li><a href="./#fear">FEAR</a></li>
+<li><a href="./#ferocity">FEROCITY</a></li>
+<li><a href="./#fig_fortune">FIG_FORTUNE</a></li>
+<li><a href="./#fishing_speed">FISHING_SPEED</a></li>
+<li><a href="./#fishing_wisdom">FISHING_WISDOM</a></li>
+<li><a href="./#foraging_fortune">FORAGING_FORTUNE</a></li>
+<li><a href="./#foraging_wisdom">FORAGING_WISDOM</a></li>
+<li><a href="./#gemstone_fortune">GEMSTONE_FORTUNE</a></li>
+<li><a href="./#health">HEALTH</a></li>
+<li><a href="./#health_regeneration">HEALTH_REGENERATION</a></li>
+<li><a href="./#heat_resistance">HEAT_RESISTANCE</a></li>
+<li><a href="./#intelligence">INTELLIGENCE</a></li>
+<li><a href="./#magic_find">MAGIC_FIND</a></li>
+<li><a href="./#mangrove_fortune">MANGROVE_FORTUNE</a></li>
+<li><a href="./#melon_fortune">MELON_FORTUNE</a></li>
+<li><a href="./#mending">MENDING</a></li>
+<li><a href="./#mining_fortune">MINING_FORTUNE</a></li>
+<li><a href="./#mining_speed">MINING_SPEED</a></li>
+<li><a href="./#mushroom_fortune">MUSHROOM_FORTUNE</a></li>
+<li><a href="./#nether_stalk_fortune">NETHER_STALK_FORTUNE</a></li>
+<li><a href="./#ore_fortune">ORE_FORTUNE</a></li>
+<li><a href="./#pet_luck">PET_LUCK</a></li>
+<li><a href="./#potato_fortune">POTATO_FORTUNE</a></li>
+<li><a href="./#pressure_resistance">PRESSURE_RESISTANCE</a></li>
+<li><a href="./#pristine">PRISTINE</a></li>
+<li><a href="./#pull">PULL</a></li>
+<li><a href="./#pumpkin_fortune">PUMPKIN_FORTUNE</a></li>
+<li><a href="./#respiration">RESPIRATION</a></li>
+<li><a href="./#rift_damage">RIFT_DAMAGE</a></li>
+<li><a href="./#rift_health">RIFT_HEALTH</a></li>
+<li><a href="./#rift_intelligence">RIFT_INTELLIGENCE</a></li>
+<li><a href="./#rift_mana_regen">RIFT_MANA_REGEN</a></li>
+<li><a href="./#rift_time">RIFT_TIME</a></li>
+<li><a href="./#rift_walk_speed">RIFT_WALK_SPEED</a></li>
+<li><a href="./#sea_creature_chance">SEA_CREATURE_CHANCE</a></li>
+<li><a href="./#strength">STRENGTH</a></li>
+<li><a href="./#sugar_cane_fortune">SUGAR_CANE_FORTUNE</a></li>
+<li><a href="./#sweep">SWEEP</a></li>
+<li><a href="./#swing_range">SWING_RANGE</a></li>
+<li><a href="./#tracking">TRACKING</a></li>
+<li><a href="./#treasure_chance">TREASURE_CHANCE</a></li>
+<li><a href="./#trophy_fish_chance">TROPHY_FISH_CHANCE</a></li>
+<li><a href="./#true_defense">TRUE_DEFENSE</a></li>
+<li><a href="./#vitality">VITALITY</a></li>
+<li><a href="./#walk_speed">WALK_SPEED</a></li>
+<li><a href="./#weapon_ability_damage">WEAPON_ABILITY_DAMAGE</a></li>
+<li><a href="./#wheat_fortune">WHEAT_FORTUNE</a></li>
+</ul>
+<h2 id="enumeration-members_1">Enumeration Members</h2>
+<h3 id="ability_damage_percent">ABILITY_DAMAGE_PERCENT</h3>
+<p>• <strong>ABILITY_DAMAGE_PERCENT</strong> = <code>"ABILITY_DAMAGE_PERCENT"</code></p>
+<h4 id="defined-in">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:2</p>
+<hr />
+<h3 id="alchemy_wisdom">ALCHEMY_WISDOM</h3>
+<p>• <strong>ALCHEMY_WISDOM</strong> = <code>"ALCHEMY_WISDOM"</code></p>
+<h4 id="defined-in_1">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:3</p>
+<hr />
+<h3 id="attack_speed">ATTACK_SPEED</h3>
+<p>• <strong>ATTACK_SPEED</strong> = <code>"ATTACK_SPEED"</code></p>
+<h4 id="defined-in_2">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:4</p>
+<hr />
+<h3 id="block_fortune">BLOCK_FORTUNE</h3>
+<p>• <strong>BLOCK_FORTUNE</strong> = <code>"BLOCK_FORTUNE"</code></p>
+<h4 id="defined-in_3">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:5</p>
+<hr />
+<h3 id="bonus_pest_chance">BONUS_PEST_CHANCE</h3>
+<p>• <strong>BONUS_PEST_CHANCE</strong> = <code>"BONUS_PEST_CHANCE"</code></p>
+<h4 id="defined-in_4">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:6</p>
+<hr />
+<h3 id="breaking_power">BREAKING_POWER</h3>
+<p>• <strong>BREAKING_POWER</strong> = <code>"BREAKING_POWER"</code></p>
+<h4 id="defined-in_5">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:7</p>
+<hr />
+<h3 id="cactus_fortune">CACTUS_FORTUNE</h3>
+<p>• <strong>CACTUS_FORTUNE</strong> = <code>"CACTUS_FORTUNE"</code></p>
+<h4 id="defined-in_6">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:8</p>
+<hr />
+<h3 id="carrot_fortune">CARROT_FORTUNE</h3>
+<p>• <strong>CARROT_FORTUNE</strong> = <code>"CARROT_FORTUNE"</code></p>
+<h4 id="defined-in_7">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:9</p>
+<hr />
+<h3 id="cocoa_beans_fortune">COCOA_BEANS_FORTUNE</h3>
+<p>• <strong>COCOA_BEANS_FORTUNE</strong> = <code>"COCOA_BEANS_FORTUNE"</code></p>
+<h4 id="defined-in_8">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:10</p>
+<hr />
+<h3 id="cold_resistance">COLD_RESISTANCE</h3>
+<p>• <strong>COLD_RESISTANCE</strong> = <code>"COLD_RESISTANCE"</code></p>
+<h4 id="defined-in_9">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:11</p>
+<hr />
+<h3 id="combat_wisdom">COMBAT_WISDOM</h3>
+<p>• <strong>COMBAT_WISDOM</strong> = <code>"COMBAT_WISDOM"</code></p>
+<h4 id="defined-in_10">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:12</p>
+<hr />
+<h3 id="critical_chance">CRITICAL_CHANCE</h3>
+<p>• <strong>CRITICAL_CHANCE</strong> = <code>"CRITICAL_CHANCE"</code></p>
+<h4 id="defined-in_11">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:13</p>
+<hr />
+<h3 id="critical_damage">CRITICAL_DAMAGE</h3>
+<p>• <strong>CRITICAL_DAMAGE</strong> = <code>"CRITICAL_DAMAGE"</code></p>
+<h4 id="defined-in_12">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:14</p>
+<hr />
+<h3 id="damage">DAMAGE</h3>
+<p>• <strong>DAMAGE</strong> = <code>"DAMAGE"</code></p>
+<h4 id="defined-in_13">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:15</p>
+<hr />
+<h3 id="defense">DEFENSE</h3>
+<p>• <strong>DEFENSE</strong> = <code>"DEFENSE"</code></p>
+<h4 id="defined-in_14">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:16</p>
+<hr />
+<h3 id="double_hook_chance">DOUBLE_HOOK_CHANCE</h3>
+<p>• <strong>DOUBLE_HOOK_CHANCE</strong> = <code>"DOUBLE_HOOK_CHANCE"</code></p>
+<h4 id="defined-in_15">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:17</p>
+<hr />
+<h3 id="dwarven_metal_fortune">DWARVEN_METAL_FORTUNE</h3>
+<p>• <strong>DWARVEN_METAL_FORTUNE</strong> = <code>"DWARVEN_METAL_FORTUNE"</code></p>
+<h4 id="defined-in_16">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:18</p>
+<hr />
+<h3 id="farming_fortune">FARMING_FORTUNE</h3>
+<p>• <strong>FARMING_FORTUNE</strong> = <code>"FARMING_FORTUNE"</code></p>
+<h4 id="defined-in_17">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:19</p>
+<hr />
+<h3 id="farming_wisdom">FARMING_WISDOM</h3>
+<p>• <strong>FARMING_WISDOM</strong> = <code>"FARMING_WISDOM"</code></p>
+<h4 id="defined-in_18">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:20</p>
+<hr />
+<h3 id="fear">FEAR</h3>
+<p>• <strong>FEAR</strong> = <code>"FEAR"</code></p>
+<h4 id="defined-in_19">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:21</p>
+<hr />
+<h3 id="ferocity">FEROCITY</h3>
+<p>• <strong>FEROCITY</strong> = <code>"FEROCITY"</code></p>
+<h4 id="defined-in_20">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:22</p>
+<hr />
+<h3 id="fig_fortune">FIG_FORTUNE</h3>
+<p>• <strong>FIG_FORTUNE</strong> = <code>"FIG_FORTUNE"</code></p>
+<h4 id="defined-in_21">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:23</p>
+<hr />
+<h3 id="fishing_speed">FISHING_SPEED</h3>
+<p>• <strong>FISHING_SPEED</strong> = <code>"FISHING_SPEED"</code></p>
+<h4 id="defined-in_22">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:24</p>
+<hr />
+<h3 id="fishing_wisdom">FISHING_WISDOM</h3>
+<p>• <strong>FISHING_WISDOM</strong> = <code>"FISHING_WISDOM"</code></p>
+<h4 id="defined-in_23">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:25</p>
+<hr />
+<h3 id="foraging_fortune">FORAGING_FORTUNE</h3>
+<p>• <strong>FORAGING_FORTUNE</strong> = <code>"FORAGING_FORTUNE"</code></p>
+<h4 id="defined-in_24">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:26</p>
+<hr />
+<h3 id="foraging_wisdom">FORAGING_WISDOM</h3>
+<p>• <strong>FORAGING_WISDOM</strong> = <code>"FORAGING_WISDOM"</code></p>
+<h4 id="defined-in_25">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:27</p>
+<hr />
+<h3 id="gemstone_fortune">GEMSTONE_FORTUNE</h3>
+<p>• <strong>GEMSTONE_FORTUNE</strong> = <code>"GEMSTONE_FORTUNE"</code></p>
+<h4 id="defined-in_26">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:28</p>
+<hr />
+<h3 id="health">HEALTH</h3>
+<p>• <strong>HEALTH</strong> = <code>"HEALTH"</code></p>
+<h4 id="defined-in_27">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:29</p>
+<hr />
+<h3 id="health_regeneration">HEALTH_REGENERATION</h3>
+<p>• <strong>HEALTH_REGENERATION</strong> = <code>"HEALTH_REGENERATION"</code></p>
+<h4 id="defined-in_28">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:30</p>
+<hr />
+<h3 id="heat_resistance">HEAT_RESISTANCE</h3>
+<p>• <strong>HEAT_RESISTANCE</strong> = <code>"HEAT_RESISTANCE"</code></p>
+<h4 id="defined-in_29">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:31</p>
+<hr />
+<h3 id="intelligence">INTELLIGENCE</h3>
+<p>• <strong>INTELLIGENCE</strong> = <code>"INTELLIGENCE"</code></p>
+<h4 id="defined-in_30">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:32</p>
+<hr />
+<h3 id="magic_find">MAGIC_FIND</h3>
+<p>• <strong>MAGIC_FIND</strong> = <code>"MAGIC_FIND"</code></p>
+<h4 id="defined-in_31">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:33</p>
+<hr />
+<h3 id="mangrove_fortune">MANGROVE_FORTUNE</h3>
+<p>• <strong>MANGROVE_FORTUNE</strong> = <code>"MANGROVE_FORTUNE"</code></p>
+<h4 id="defined-in_32">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:34</p>
+<hr />
+<h3 id="melon_fortune">MELON_FORTUNE</h3>
+<p>• <strong>MELON_FORTUNE</strong> = <code>"MELON_FORTUNE"</code></p>
+<h4 id="defined-in_33">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:35</p>
+<hr />
+<h3 id="mending">MENDING</h3>
+<p>• <strong>MENDING</strong> = <code>"MENDING"</code></p>
+<h4 id="defined-in_34">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:36</p>
+<hr />
+<h3 id="mining_fortune">MINING_FORTUNE</h3>
+<p>• <strong>MINING_FORTUNE</strong> = <code>"MINING_FORTUNE"</code></p>
+<h4 id="defined-in_35">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:37</p>
+<hr />
+<h3 id="mining_speed">MINING_SPEED</h3>
+<p>• <strong>MINING_SPEED</strong> = <code>"MINING_SPEED"</code></p>
+<h4 id="defined-in_36">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:38</p>
+<hr />
+<h3 id="mushroom_fortune">MUSHROOM_FORTUNE</h3>
+<p>• <strong>MUSHROOM_FORTUNE</strong> = <code>"MUSHROOM_FORTUNE"</code></p>
+<h4 id="defined-in_37">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:39</p>
+<hr />
+<h3 id="nether_stalk_fortune">NETHER_STALK_FORTUNE</h3>
+<p>• <strong>NETHER_STALK_FORTUNE</strong> = <code>"NETHER_STALK_FORTUNE"</code></p>
+<h4 id="defined-in_38">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:40</p>
+<hr />
+<h3 id="ore_fortune">ORE_FORTUNE</h3>
+<p>• <strong>ORE_FORTUNE</strong> = <code>"ORE_FORTUNE"</code></p>
+<h4 id="defined-in_39">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:41</p>
+<hr />
+<h3 id="pet_luck">PET_LUCK</h3>
+<p>• <strong>PET_LUCK</strong> = <code>"PET_LUCK"</code></p>
+<h4 id="defined-in_40">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:42</p>
+<hr />
+<h3 id="potato_fortune">POTATO_FORTUNE</h3>
+<p>• <strong>POTATO_FORTUNE</strong> = <code>"POTATO_FORTUNE"</code></p>
+<h4 id="defined-in_41">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:43</p>
+<hr />
+<h3 id="pressure_resistance">PRESSURE_RESISTANCE</h3>
+<p>• <strong>PRESSURE_RESISTANCE</strong> = <code>"PRESSURE_RESISTANCE"</code></p>
+<h4 id="defined-in_42">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:44</p>
+<hr />
+<h3 id="pristine">PRISTINE</h3>
+<p>• <strong>PRISTINE</strong> = <code>"PRISTINE"</code></p>
+<h4 id="defined-in_43">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:45</p>
+<hr />
+<h3 id="pull">PULL</h3>
+<p>• <strong>PULL</strong> = <code>"PULL"</code></p>
+<h4 id="defined-in_44">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:46</p>
+<hr />
+<h3 id="pumpkin_fortune">PUMPKIN_FORTUNE</h3>
+<p>• <strong>PUMPKIN_FORTUNE</strong> = <code>"PUMPKIN_FORTUNE"</code></p>
+<h4 id="defined-in_45">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:47</p>
+<hr />
+<h3 id="respiration">RESPIRATION</h3>
+<p>• <strong>RESPIRATION</strong> = <code>"RESPIRATION"</code></p>
+<h4 id="defined-in_46">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:48</p>
+<hr />
+<h3 id="rift_damage">RIFT_DAMAGE</h3>
+<p>• <strong>RIFT_DAMAGE</strong> = <code>"RIFT_DAMAGE"</code></p>
+<h4 id="defined-in_47">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:49</p>
+<hr />
+<h3 id="rift_health">RIFT_HEALTH</h3>
+<p>• <strong>RIFT_HEALTH</strong> = <code>"RIFT_HEALTH"</code></p>
+<h4 id="defined-in_48">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:50</p>
+<hr />
+<h3 id="rift_intelligence">RIFT_INTELLIGENCE</h3>
+<p>• <strong>RIFT_INTELLIGENCE</strong> = <code>"RIFT_INTELLIGENCE"</code></p>
+<h4 id="defined-in_49">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:51</p>
+<hr />
+<h3 id="rift_mana_regen">RIFT_MANA_REGEN</h3>
+<p>• <strong>RIFT_MANA_REGEN</strong> = <code>"RIFT_MANA_REGEN"</code></p>
+<h4 id="defined-in_50">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:52</p>
+<hr />
+<h3 id="rift_time">RIFT_TIME</h3>
+<p>• <strong>RIFT_TIME</strong> = <code>"RIFT_TIME"</code></p>
+<h4 id="defined-in_51">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:53</p>
+<hr />
+<h3 id="rift_walk_speed">RIFT_WALK_SPEED</h3>
+<p>• <strong>RIFT_WALK_SPEED</strong> = <code>"RIFT_WALK_SPEED"</code></p>
+<h4 id="defined-in_52">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:54</p>
+<hr />
+<h3 id="sea_creature_chance">SEA_CREATURE_CHANCE</h3>
+<p>• <strong>SEA_CREATURE_CHANCE</strong> = <code>"SEA_CREATURE_CHANCE"</code></p>
+<h4 id="defined-in_53">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:55</p>
+<hr />
+<h3 id="strength">STRENGTH</h3>
+<p>• <strong>STRENGTH</strong> = <code>"STRENGTH"</code></p>
+<h4 id="defined-in_54">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:56</p>
+<hr />
+<h3 id="sugar_cane_fortune">SUGAR_CANE_FORTUNE</h3>
+<p>• <strong>SUGAR_CANE_FORTUNE</strong> = <code>"SUGAR_CANE_FORTUNE"</code></p>
+<h4 id="defined-in_55">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:57</p>
+<hr />
+<h3 id="sweep">SWEEP</h3>
+<p>• <strong>SWEEP</strong> = <code>"SWEEP"</code></p>
+<h4 id="defined-in_56">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:58</p>
+<hr />
+<h3 id="swing_range">SWING_RANGE</h3>
+<p>• <strong>SWING_RANGE</strong> = <code>"SWING_RANGE"</code></p>
+<h4 id="defined-in_57">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:59</p>
+<hr />
+<h3 id="tracking">TRACKING</h3>
+<p>• <strong>TRACKING</strong> = <code>"TRACKING"</code></p>
+<h4 id="defined-in_58">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:60</p>
+<hr />
+<h3 id="treasure_chance">TREASURE_CHANCE</h3>
+<p>• <strong>TREASURE_CHANCE</strong> = <code>"TREASURE_CHANCE"</code></p>
+<h4 id="defined-in_59">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:61</p>
+<hr />
+<h3 id="trophy_fish_chance">TROPHY_FISH_CHANCE</h3>
+<p>• <strong>TROPHY_FISH_CHANCE</strong> = <code>"TROPHY_FISH_CHANCE"</code></p>
+<h4 id="defined-in_60">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:62</p>
+<hr />
+<h3 id="true_defense">TRUE_DEFENSE</h3>
+<p>• <strong>TRUE_DEFENSE</strong> = <code>"TRUE_DEFENSE"</code></p>
+<h4 id="defined-in_61">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:63</p>
+<hr />
+<h3 id="vitality">VITALITY</h3>
+<p>• <strong>VITALITY</strong> = <code>"VITALITY"</code></p>
+<h4 id="defined-in_62">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:64</p>
+<hr />
+<h3 id="walk_speed">WALK_SPEED</h3>
+<p>• <strong>WALK_SPEED</strong> = <code>"WALK_SPEED"</code></p>
+<h4 id="defined-in_63">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:65</p>
+<hr />
+<h3 id="weapon_ability_damage">WEAPON_ABILITY_DAMAGE</h3>
+<p>• <strong>WEAPON_ABILITY_DAMAGE</strong> = <code>"WEAPON_ABILITY_DAMAGE"</code></p>
+<h4 id="defined-in_64">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:66</p>
+<hr />
+<h3 id="wheat_fortune">WHEAT_FORTUNE</h3>
+<p>• <strong>WHEAT_FORTUNE</strong> = <code>"WHEAT_FORTUNE"</code></p>
+<h4 id="defined-in_65">Defined in</h4>
+<p>src/data/skyblock/StatType.ts:67</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

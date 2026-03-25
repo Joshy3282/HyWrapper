@@ -1,0 +1,3836 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Joshy3282.github.io/HyWrapper/api/typescript/classes/HypixelClient/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HypixelClient - HyWrapper</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-hypixelclient" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HyWrapper" class="md-header__button md-logo" aria-label="HyWrapper" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyWrapper
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HypixelClient
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Joshy3282/HyWrapper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Joshy3282/HyWrapper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guides/quickstart/" class="md-tabs__link">
+          
+  
+  
+  Custom Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../python/client/" class="md-tabs__link">
+          
+  
+  
+  Python API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.md" class="md-tabs__link">
+          
+  
+  
+  TypeScript API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../kotlin/index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kotlin API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HyWrapper" class="md-nav__button md-logo" aria-label="HyWrapper" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyWrapper
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Joshy3282/HyWrapper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Joshy3282/HyWrapper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Custom Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/uuid_utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UUID Utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeScript API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TypeScript API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kotlin API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of contents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructors_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        constructor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="constructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_lastratelimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _lastRateLimit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="_lastRateLimit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apikey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        apiKey
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="apiKey">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoretry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        autoRetry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="autoRetry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axiosinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axiosInstance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="axiosInstance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        baseUrl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="baseUrl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaultcachedurationminutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        defaultCacheDurationMinutes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="defaultCacheDurationMinutes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxretries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maxRetries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="maxRetries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessors_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lastratelimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lastRateLimit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="lastRateLimit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fetch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fetch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getachievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getAchievements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAchievements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getauction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getAuction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAuction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getauctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getAuctions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAuctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getauctionsended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getAuctionsEnded
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAuctionsEnded">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbazaar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getBazaar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getBazaar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbingo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getBingo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getBingo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboosters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getBoosters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getBoosters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getchallenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getChallenges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getChallenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getCollections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getCollections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getCounts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getCounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getelection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getElection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getElection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfiresales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getFiresales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getFiresales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getGames
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getGames">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getGarden
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getGarden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getguildachievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getGuildAchievements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getGuildAchievements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getguildbyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getGuildById
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getGuildById">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getguildbyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getGuildByName
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getGuildByName">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getguildbyplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getGuildByPlayer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getGuildByPlayer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethousingactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getHousingActive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getHousingActive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethousinghouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getHousingHouse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getHousingHouse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethousinghouses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getHousingHouses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getHousingHouses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getItems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getItems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getleaderboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getLeaderboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getLeaderboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmuseum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getMuseum
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getMuseum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getNews
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getNews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getPlayer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPlayer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getplayerbingo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getPlayerBingo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPlayerBingo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getProfile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getProfile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getprofiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getProfiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getProfiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpunishmentstats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getPunishmentStats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPunishmentStats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getquests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getQuests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getQuests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrecentgames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getRecentGames
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getRecentGames">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getskills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getSkills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getSkills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getStatus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getStatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvanitycompanions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getVanityCompanions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getVanityCompanions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvanitypets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getVanityPets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getVanityPets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parseratelimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        parseRateLimit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="parseRateLimit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a href="../../">hywrapper-ts</a> / <a href="../../modules/">Exports</a> / HypixelClient</p>
+<h1 id="class-hypixelclient">Class: HypixelClient</h1>
+<p>A client for interacting with the Hypixel API.</p>
+<p>This client handles authentication, rate limiting, and automatic retries.
+It uses Promises for asynchronous requests.</p>
+<p><strong><code>Param</code></strong></p>
+<p>The Hypixel API key.</p>
+<p><strong><code>Param</code></strong></p>
+<p>The base URL for the Hypixel API.</p>
+<p><strong><code>Param</code></strong></p>
+<p>The duration for which successful responses should be cached.</p>
+<p><strong><code>Param</code></strong></p>
+<p>Whether to automatically retry requests that fail due to rate limiting.</p>
+<p><strong><code>Param</code></strong></p>
+<p>The maximum number of retries for rate-limited requests.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<h3 id="constructors">Constructors</h3>
+<ul>
+<li><a href="./#constructor">constructor</a></li>
+</ul>
+<h3 id="properties">Properties</h3>
+<ul>
+<li><a href="./#_lastratelimit">_lastRateLimit</a></li>
+<li><a href="./#apikey">apiKey</a></li>
+<li><a href="./#autoretry">autoRetry</a></li>
+<li><a href="./#axiosinstance">axiosInstance</a></li>
+<li><a href="./#baseurl">baseUrl</a></li>
+<li><a href="./#defaultcachedurationminutes">defaultCacheDurationMinutes</a></li>
+<li><a href="./#maxretries">maxRetries</a></li>
+</ul>
+<h3 id="accessors">Accessors</h3>
+<ul>
+<li><a href="./#lastratelimit">lastRateLimit</a></li>
+</ul>
+<h3 id="methods">Methods</h3>
+<ul>
+<li><a href="./#fetch">fetch</a></li>
+<li><a href="./#getachievements">getAchievements</a></li>
+<li><a href="./#getauction">getAuction</a></li>
+<li><a href="./#getauctions">getAuctions</a></li>
+<li><a href="./#getauctionsended">getAuctionsEnded</a></li>
+<li><a href="./#getbazaar">getBazaar</a></li>
+<li><a href="./#getbingo">getBingo</a></li>
+<li><a href="./#getboosters">getBoosters</a></li>
+<li><a href="./#getchallenges">getChallenges</a></li>
+<li><a href="./#getcollections">getCollections</a></li>
+<li><a href="./#getcounts">getCounts</a></li>
+<li><a href="./#getelection">getElection</a></li>
+<li><a href="./#getfiresales">getFiresales</a></li>
+<li><a href="./#getgames">getGames</a></li>
+<li><a href="./#getgarden">getGarden</a></li>
+<li><a href="./#getguildachievements">getGuildAchievements</a></li>
+<li><a href="./#getguildbyid">getGuildById</a></li>
+<li><a href="./#getguildbyname">getGuildByName</a></li>
+<li><a href="./#getguildbyplayer">getGuildByPlayer</a></li>
+<li><a href="./#gethousingactive">getHousingActive</a></li>
+<li><a href="./#gethousinghouse">getHousingHouse</a></li>
+<li><a href="./#gethousinghouses">getHousingHouses</a></li>
+<li><a href="./#getitems">getItems</a></li>
+<li><a href="./#getleaderboards">getLeaderboards</a></li>
+<li><a href="./#getmuseum">getMuseum</a></li>
+<li><a href="./#getnews">getNews</a></li>
+<li><a href="./#getplayer">getPlayer</a></li>
+<li><a href="./#getplayerbingo">getPlayerBingo</a></li>
+<li><a href="./#getprofile">getProfile</a></li>
+<li><a href="./#getprofiles">getProfiles</a></li>
+<li><a href="./#getpunishmentstats">getPunishmentStats</a></li>
+<li><a href="./#getquests">getQuests</a></li>
+<li><a href="./#getrecentgames">getRecentGames</a></li>
+<li><a href="./#getskills">getSkills</a></li>
+<li><a href="./#getstatus">getStatus</a></li>
+<li><a href="./#getvanitycompanions">getVanityCompanions</a></li>
+<li><a href="./#getvanitypets">getVanityPets</a></li>
+<li><a href="./#parseratelimit">parseRateLimit</a></li>
+</ul>
+<h2 id="constructors_1">Constructors</h2>
+<h3 id="constructor">constructor</h3>
+<p>• <strong>new HypixelClient</strong>(<code>options</code>): <a href="./"><code>HypixelClient</code></a></p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>options</code></td>
+<td style="text-align: left;"><a href="../../interfaces/ClientOptions/"><code>ClientOptions</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p><a href="./"><code>HypixelClient</code></a></p>
+<h4 id="defined-in">Defined in</h4>
+<p>src/client.ts:78</p>
+<h2 id="properties_1">Properties</h2>
+<h3 id="_lastratelimit">_lastRateLimit</h3>
+<p>• <code>Private</code> <strong>_lastRateLimit</strong>: <code>null</code> | <a href="../../interfaces/RateLimit/"><code>RateLimit</code></a> = <code>null</code></p>
+<h4 id="defined-in_1">Defined in</h4>
+<p>src/client.ts:76</p>
+<hr />
+<h3 id="apikey">apiKey</h3>
+<p>• <code>Private</code> <code>Readonly</code> <strong>apiKey</strong>: <code>string</code></p>
+<h4 id="defined-in_2">Defined in</h4>
+<p>src/client.ts:69</p>
+<hr />
+<h3 id="autoretry">autoRetry</h3>
+<p>• <code>Private</code> <code>Readonly</code> <strong>autoRetry</strong>: <code>boolean</code></p>
+<h4 id="defined-in_3">Defined in</h4>
+<p>src/client.ts:72</p>
+<hr />
+<h3 id="axiosinstance">axiosInstance</h3>
+<p>• <code>Private</code> <code>Readonly</code> <strong>axiosInstance</strong>: <code>AxiosInstance</code></p>
+<h4 id="defined-in_4">Defined in</h4>
+<p>src/client.ts:74</p>
+<hr />
+<h3 id="baseurl">baseUrl</h3>
+<p>• <code>Private</code> <code>Readonly</code> <strong>baseUrl</strong>: <code>string</code></p>
+<h4 id="defined-in_5">Defined in</h4>
+<p>src/client.ts:70</p>
+<hr />
+<h3 id="defaultcachedurationminutes">defaultCacheDurationMinutes</h3>
+<p>• <code>Private</code> <code>Readonly</code> <strong>defaultCacheDurationMinutes</strong>: <code>number</code></p>
+<h4 id="defined-in_6">Defined in</h4>
+<p>src/client.ts:71</p>
+<hr />
+<h3 id="maxretries">maxRetries</h3>
+<p>• <code>Private</code> <code>Readonly</code> <strong>maxRetries</strong>: <code>number</code></p>
+<h4 id="defined-in_7">Defined in</h4>
+<p>src/client.ts:73</p>
+<h2 id="accessors_1">Accessors</h2>
+<h3 id="lastratelimit">lastRateLimit</h3>
+<p>• <code>get</code> <strong>lastRateLimit</strong>(): <code>null</code> | <a href="../../interfaces/RateLimit/"><code>RateLimit</code></a></p>
+<p>The rate limit information from the last successful API request.</p>
+<h4 id="returns_1">Returns</h4>
+<p><code>null</code> | <a href="../../interfaces/RateLimit/"><code>RateLimit</code></a></p>
+<h4 id="defined-in_8">Defined in</h4>
+<p>src/client.ts:104</p>
+<h2 id="methods_1">Methods</h2>
+<h3 id="fetch">fetch</h3>
+<p>▸ <strong>fetch</strong>\&lt;<code>T</code>&gt;(<code>endpoint</code>, <code>params?</code>, <code>authenticated?</code>): <code>Promise</code>\&lt;<code>T</code>&gt;</p>
+<h4 id="type-parameters">Type parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>T</code></td>
+<td style="text-align: left;">extends <a href="../../interfaces/HypixelResponse/"><code>HypixelResponse</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="parameters_1">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>endpoint</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;"><code>undefined</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>params</code></td>
+<td style="text-align: left;"><code>Record</code>\&lt;<code>string</code>, <code>string</code>&gt;</td>
+<td style="text-align: left;"><code>{}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>authenticated</code></td>
+<td style="text-align: left;"><code>boolean</code></td>
+<td style="text-align: left;"><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_2">Returns</h4>
+<p><code>Promise</code>\&lt;<code>T</code>&gt;</p>
+<h4 id="defined-in_9">Defined in</h4>
+<p>src/client.ts:439</p>
+<hr />
+<h3 id="getachievements">getAchievements</h3>
+<p>▸ <strong>getAchievements</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/AchievementsResponse/"><code>AchievementsResponse</code></a>&gt;</p>
+<p>Retrieves the list of achievements.
+https://api.hypixel.net/v2/resources/achievements</p>
+<h4 id="returns_3">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/AchievementsResponse/"><code>AchievementsResponse</code></a>&gt;</p>
+<h4 id="defined-in_10">Defined in</h4>
+<p>src/client.ts:187</p>
+<hr />
+<h3 id="getauction">getAuction</h3>
+<p>▸ <strong>getAuction</strong>(<code>uuid?</code>, <code>player?</code>, <code>profile?</code>): <code>Promise</code>\&lt;<a href="../../interfaces/AuctionsResponse/"><code>AuctionsResponse</code></a>&gt;</p>
+<p>Searches for SkyBlock auctions by UUID, player, or profile.
+https://api.hypixel.net/v2/skyblock/auction</p>
+<h4 id="parameters_2">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid?</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The auction UUID.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>player?</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The player UUID.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>profile?</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The profile UUID.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_4">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/AuctionsResponse/"><code>AuctionsResponse</code></a>&gt;</p>
+<h4 id="defined-in_11">Defined in</h4>
+<p>src/client.ts:287</p>
+<hr />
+<h3 id="getauctions">getAuctions</h3>
+<p>▸ <strong>getAuctions</strong>(<code>page?</code>): <code>Promise</code>\&lt;<a href="../../interfaces/AuctionsResponse/"><code>AuctionsResponse</code></a>&gt;</p>
+<p>Retrieves active SkyBlock auctions.
+https://api.hypixel.net/v2/skyblock/auctions</p>
+<h4 id="parameters_3">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>page</code></td>
+<td style="text-align: left;"><code>number</code></td>
+<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: left;">The page number to get.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_5">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/AuctionsResponse/"><code>AuctionsResponse</code></a>&gt;</p>
+<h4 id="defined-in_12">Defined in</h4>
+<p>src/client.ts:301</p>
+<hr />
+<h3 id="getauctionsended">getAuctionsEnded</h3>
+<p>▸ <strong>getAuctionsEnded</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/AuctionsEndedResponse/"><code>AuctionsEndedResponse</code></a>&gt;</p>
+<p>Retrieves recently ended SkyBlock auctions.
+https://api.hypixel.net/v2/skyblock/auctions_ended</p>
+<h4 id="returns_6">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/AuctionsEndedResponse/"><code>AuctionsEndedResponse</code></a>&gt;</p>
+<h4 id="defined-in_13">Defined in</h4>
+<p>src/client.ts:309</p>
+<hr />
+<h3 id="getbazaar">getBazaar</h3>
+<p>▸ <strong>getBazaar</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/BazaarResponse/"><code>BazaarResponse</code></a>&gt;</p>
+<p>Retrieves current bazaar data.
+https://api.hypixel.net/v2/skyblock/bazaar</p>
+<h4 id="returns_7">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/BazaarResponse/"><code>BazaarResponse</code></a>&gt;</p>
+<h4 id="defined-in_14">Defined in</h4>
+<p>src/client.ts:317</p>
+<hr />
+<h3 id="getbingo">getBingo</h3>
+<p>▸ <strong>getBingo</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/BingoResponse/"><code>BingoResponse</code></a>&gt;</p>
+<p>Retrieves the current SkyBlock bingo information.
+https://api.hypixel.net/v2/resources/skyblock/bingo</p>
+<h4 id="returns_8">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/BingoResponse/"><code>BingoResponse</code></a>&gt;</p>
+<h4 id="defined-in_15">Defined in</h4>
+<p>src/client.ts:267</p>
+<hr />
+<h3 id="getboosters">getBoosters</h3>
+<p>▸ <strong>getBoosters</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/BoostersResponse/"><code>BoostersResponse</code></a>&gt;</p>
+<p>Retrieves the current boosters.
+https://api.hypixel.net/v2/boosters</p>
+<h4 id="returns_9">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/BoostersResponse/"><code>BoostersResponse</code></a>&gt;</p>
+<h4 id="defined-in_16">Defined in</h4>
+<p>src/client.ts:411</p>
+<hr />
+<h3 id="getchallenges">getChallenges</h3>
+<p>▸ <strong>getChallenges</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/ChallengesResponse/"><code>ChallengesResponse</code></a>&gt;</p>
+<p>Retrieves the list of challenges.
+https://api.hypixel.net/v2/resources/challenges</p>
+<h4 id="returns_10">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/ChallengesResponse/"><code>ChallengesResponse</code></a>&gt;</p>
+<h4 id="defined-in_17">Defined in</h4>
+<p>src/client.ts:195</p>
+<hr />
+<h3 id="getcollections">getCollections</h3>
+<p>▸ <strong>getCollections</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/CollectionsResponse/"><code>CollectionsResponse</code></a>&gt;</p>
+<p>Retrieves the list of SkyBlock collections.
+https://api.hypixel.net/v2/resources/skyblock/collections</p>
+<h4 id="returns_11">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/CollectionsResponse/"><code>CollectionsResponse</code></a>&gt;</p>
+<h4 id="defined-in_18">Defined in</h4>
+<p>src/client.ts:235</p>
+<hr />
+<h3 id="getcounts">getCounts</h3>
+<p>▸ <strong>getCounts</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/CountsResponse/"><code>CountsResponse</code></a>&gt;</p>
+<p>Retrieves the player counts across various games.
+https://api.hypixel.net/v2/counts</p>
+<h4 id="returns_12">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/CountsResponse/"><code>CountsResponse</code></a>&gt;</p>
+<h4 id="defined-in_19">Defined in</h4>
+<p>src/client.ts:419</p>
+<hr />
+<h3 id="getelection">getElection</h3>
+<p>▸ <strong>getElection</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/ElectionResponse/"><code>ElectionResponse</code></a>&gt;</p>
+<p>Retrieves the current SkyBlock election information.
+https://api.hypixel.net/v2/resources/skyblock/election</p>
+<h4 id="returns_13">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/ElectionResponse/"><code>ElectionResponse</code></a>&gt;</p>
+<h4 id="defined-in_20">Defined in</h4>
+<p>src/client.ts:259</p>
+<hr />
+<h3 id="getfiresales">getFiresales</h3>
+<p>▸ <strong>getFiresales</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/FiresalesResponse/"><code>FiresalesResponse</code></a>&gt;</p>
+<p>Retrieves current SkyBlock fire sales.
+https://api.hypixel.net/v2/skyblock/firesales</p>
+<h4 id="returns_14">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/FiresalesResponse/"><code>FiresalesResponse</code></a>&gt;</p>
+<h4 id="defined-in_21">Defined in</h4>
+<p>src/client.ts:375</p>
+<hr />
+<h3 id="getgames">getGames</h3>
+<p>▸ <strong>getGames</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/GamesResponse/"><code>GamesResponse</code></a>&gt;</p>
+<p>Retrieves the list of games.
+https://api.hypixel.net/v2/resources/games</p>
+<h4 id="returns_15">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/GamesResponse/"><code>GamesResponse</code></a>&gt;</p>
+<h4 id="defined-in_22">Defined in</h4>
+<p>src/client.ts:179</p>
+<hr />
+<h3 id="getgarden">getGarden</h3>
+<p>▸ <strong>getGarden</strong>(<code>profileUuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/GardenResponse/"><code>GardenResponse</code></a>&gt;</p>
+<p>Retrieves SkyBlock garden information for a profile.
+https://api.hypixel.net/v2/skyblock/garden</p>
+<h4 id="parameters_4">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>profileUuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the SkyBlock profile.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_16">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/GardenResponse/"><code>GardenResponse</code></a>&gt;</p>
+<h4 id="defined-in_23">Defined in</h4>
+<p>src/client.ts:357</p>
+<hr />
+<h3 id="getguildachievements">getGuildAchievements</h3>
+<p>▸ <strong>getGuildAchievements</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/GuildsAchievementsResponse/"><code>GuildsAchievementsResponse</code></a>&gt;</p>
+<p>Retrieves the list of guild achievements.
+https://api.hypixel.net/v2/resources/guilds/achievements</p>
+<h4 id="returns_17">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/GuildsAchievementsResponse/"><code>GuildsAchievementsResponse</code></a>&gt;</p>
+<h4 id="defined-in_24">Defined in</h4>
+<p>src/client.ts:211</p>
+<hr />
+<h3 id="getguildbyid">getGuildById</h3>
+<p>▸ <strong>getGuildById</strong>(<code>id</code>): <code>Promise</code>\&lt;<a href="../../interfaces/GuildResponse/"><code>GuildResponse</code></a>&gt;</p>
+<p>Retrieves a guild by an id.
+https://api.hypixel.net/v2/guild</p>
+<h4 id="parameters_5">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The ID of the guild.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_18">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/GuildResponse/"><code>GuildResponse</code></a>&gt;</p>
+<p>A <a href="../../interfaces/GuildResponse/">GuildResponse</a> containing the guild's data.</p>
+<h4 id="defined-in_25">Defined in</h4>
+<p>src/client.ts:149</p>
+<hr />
+<h3 id="getguildbyname">getGuildByName</h3>
+<p>▸ <strong>getGuildByName</strong>(<code>name</code>): <code>Promise</code>\&lt;<a href="../../interfaces/GuildResponse/"><code>GuildResponse</code></a>&gt;</p>
+<p>Retrieves a guild by a name.
+https://api.hypixel.net/v2/guild</p>
+<h4 id="parameters_6">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The name of the guild.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_19">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/GuildResponse/"><code>GuildResponse</code></a>&gt;</p>
+<p>A <a href="../../interfaces/GuildResponse/">GuildResponse</a> containing the guild's data.</p>
+<h4 id="defined-in_26">Defined in</h4>
+<p>src/client.ts:171</p>
+<hr />
+<h3 id="getguildbyplayer">getGuildByPlayer</h3>
+<p>▸ <strong>getGuildByPlayer</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/GuildResponse/"><code>GuildResponse</code></a>&gt;</p>
+<p>Retrieves a guild by a player.
+https://api.hypixel.net/v2/guild</p>
+<h4 id="parameters_7">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_20">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/GuildResponse/"><code>GuildResponse</code></a>&gt;</p>
+<p>A <a href="../../interfaces/GuildResponse/">GuildResponse</a> containing the guild's data.</p>
+<h4 id="defined-in_27">Defined in</h4>
+<p>src/client.ts:160</p>
+<hr />
+<h3 id="gethousingactive">getHousingActive</h3>
+<p>▸ <strong>getHousingActive</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/HousingActiveResponse/"><code>HousingActiveResponse</code></a>&gt;</p>
+<p>Retrieves the currently active housing.
+https://api.hypixel.net/v2/housing/active</p>
+<h4 id="returns_21">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/HousingActiveResponse/"><code>HousingActiveResponse</code></a>&gt;</p>
+<h4 id="defined-in_28">Defined in</h4>
+<p>src/client.ts:383</p>
+<hr />
+<h3 id="gethousinghouse">getHousingHouse</h3>
+<p>▸ <strong>getHousingHouse</strong>(<code>houseUuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/HousingHouseResponse/"><code>HousingHouseResponse</code></a>&gt;</p>
+<p>Retrieves information about a specific housing instance.
+https://api.hypixel.net/v2/housing/house</p>
+<h4 id="parameters_8">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>houseUuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the housing instance.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_22">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/HousingHouseResponse/"><code>HousingHouseResponse</code></a>&gt;</p>
+<h4 id="defined-in_29">Defined in</h4>
+<p>src/client.ts:393</p>
+<hr />
+<h3 id="gethousinghouses">getHousingHouses</h3>
+<p>▸ <strong>getHousingHouses</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/HousingHousesResponse/"><code>HousingHousesResponse</code></a>&gt;</p>
+<p>Retrieves the housing instances owned by a player.
+https://api.hypixel.net/v2/housing/houses</p>
+<h4 id="parameters_9">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_23">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/HousingHousesResponse/"><code>HousingHousesResponse</code></a>&gt;</p>
+<h4 id="defined-in_30">Defined in</h4>
+<p>src/client.ts:403</p>
+<hr />
+<h3 id="getitems">getItems</h3>
+<p>▸ <strong>getItems</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/ItemsResponse/"><code>ItemsResponse</code></a>&gt;</p>
+<p>Retrieves the list of SkyBlock items.
+https://api.hypixel.net/v2/resources/skyblock/items</p>
+<h4 id="returns_24">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/ItemsResponse/"><code>ItemsResponse</code></a>&gt;</p>
+<h4 id="defined-in_31">Defined in</h4>
+<p>src/client.ts:251</p>
+<hr />
+<h3 id="getleaderboards">getLeaderboards</h3>
+<p>▸ <strong>getLeaderboards</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/LeaderboardsResponse/"><code>LeaderboardsResponse</code></a>&gt;</p>
+<p>Retrieves the current leaderboards.
+https://api.hypixel.net/v2/leaderboards</p>
+<h4 id="returns_25">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/LeaderboardsResponse/"><code>LeaderboardsResponse</code></a>&gt;</p>
+<h4 id="defined-in_32">Defined in</h4>
+<p>src/client.ts:427</p>
+<hr />
+<h3 id="getmuseum">getMuseum</h3>
+<p>▸ <strong>getMuseum</strong>(<code>profileUuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/MuseumResponse/"><code>MuseumResponse</code></a>&gt;</p>
+<p>Retrieves SkyBlock museum information for a profile.
+https://api.hypixel.net/v2/skyblock/museum</p>
+<h4 id="parameters_10">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>profileUuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the SkyBlock profile.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_26">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/MuseumResponse/"><code>MuseumResponse</code></a>&gt;</p>
+<h4 id="defined-in_33">Defined in</h4>
+<p>src/client.ts:347</p>
+<hr />
+<h3 id="getnews">getNews</h3>
+<p>▸ <strong>getNews</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/NewsResponse/"><code>NewsResponse</code></a>&gt;</p>
+<p>Retrieves SkyBlock news.
+https://api.hypixel.net/v2/skyblock/news</p>
+<h4 id="returns_27">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/NewsResponse/"><code>NewsResponse</code></a>&gt;</p>
+<h4 id="defined-in_34">Defined in</h4>
+<p>src/client.ts:275</p>
+<hr />
+<h3 id="getplayer">getPlayer</h3>
+<p>▸ <strong>getPlayer</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/PlayerResponse/"><code>PlayerResponse</code></a>&gt;</p>
+<p>Retrieves data of a specific player, including game stats.
+https://api.hypixel.net/v2/player</p>
+<h4 id="parameters_11">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_28">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/PlayerResponse/"><code>PlayerResponse</code></a>&gt;</p>
+<p>A <a href="../../interfaces/PlayerResponse/">PlayerResponse</a> containing the player's data.</p>
+<p><strong><code>Throws</code></strong></p>
+<p>HypixelException if the API returns an error.</p>
+<h4 id="defined-in_35">Defined in</h4>
+<p>src/client.ts:116</p>
+<hr />
+<h3 id="getplayerbingo">getPlayerBingo</h3>
+<p>▸ <strong>getPlayerBingo</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/BingoResponse/"><code>BingoResponse</code></a>&gt;</p>
+<p>Retrieves SkyBlock bingo data for a player.
+https://api.hypixel.net/v2/skyblock/bingo</p>
+<h4 id="parameters_12">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_29">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/BingoResponse/"><code>BingoResponse</code></a>&gt;</p>
+<h4 id="defined-in_36">Defined in</h4>
+<p>src/client.ts:367</p>
+<hr />
+<h3 id="getprofile">getProfile</h3>
+<p>▸ <strong>getProfile</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/ProfileResponse/"><code>ProfileResponse</code></a>&gt;</p>
+<p>Retrieves a specific SkyBlock profile by its UUID.
+https://api.hypixel.net/v2/skyblock/profile</p>
+<h4 id="parameters_13">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the profile.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_30">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/ProfileResponse/"><code>ProfileResponse</code></a>&gt;</p>
+<h4 id="defined-in_37">Defined in</h4>
+<p>src/client.ts:327</p>
+<hr />
+<h3 id="getprofiles">getProfiles</h3>
+<p>▸ <strong>getProfiles</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/ProfilesResponse/"><code>ProfilesResponse</code></a>&gt;</p>
+<p>Retrieves all SkyBlock profiles for a player.
+https://api.hypixel.net/v2/skyblock/profiles</p>
+<h4 id="parameters_14">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_31">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/ProfilesResponse/"><code>ProfilesResponse</code></a>&gt;</p>
+<h4 id="defined-in_38">Defined in</h4>
+<p>src/client.ts:337</p>
+<hr />
+<h3 id="getpunishmentstats">getPunishmentStats</h3>
+<p>▸ <strong>getPunishmentStats</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/PunishmentStatsResponse/"><code>PunishmentStatsResponse</code></a>&gt;</p>
+<p>Retrieves punishment statistics.
+https://api.hypixel.net/v2/punishmentstats</p>
+<h4 id="returns_32">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/PunishmentStatsResponse/"><code>PunishmentStatsResponse</code></a>&gt;</p>
+<h4 id="defined-in_39">Defined in</h4>
+<p>src/client.ts:435</p>
+<hr />
+<h3 id="getquests">getQuests</h3>
+<p>▸ <strong>getQuests</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/QuestsResponse/"><code>QuestsResponse</code></a>&gt;</p>
+<p>Retrieves the list of quests.
+https://api.hypixel.net/v2/resources/quests</p>
+<h4 id="returns_33">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/QuestsResponse/"><code>QuestsResponse</code></a>&gt;</p>
+<h4 id="defined-in_40">Defined in</h4>
+<p>src/client.ts:203</p>
+<hr />
+<h3 id="getrecentgames">getRecentGames</h3>
+<p>▸ <strong>getRecentGames</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/RecentGamesResponse/"><code>RecentGamesResponse</code></a>&gt;</p>
+<p>Retrieves the recently played games of a specific player.
+https://api.hypixel.net/v2/recentgames</p>
+<h4 id="parameters_15">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_34">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/RecentGamesResponse/"><code>RecentGamesResponse</code></a>&gt;</p>
+<p>A <a href="../../interfaces/RecentGamesResponse/">RecentGamesResponse</a> containing the recent games data.</p>
+<h4 id="defined-in_41">Defined in</h4>
+<p>src/client.ts:127</p>
+<hr />
+<h3 id="getskills">getSkills</h3>
+<p>▸ <strong>getSkills</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/SkillsResponse/"><code>SkillsResponse</code></a>&gt;</p>
+<p>Retrieves SkyBlock skills information.
+https://api.hypixel.net/v2/resources/skyblock/skills</p>
+<h4 id="returns_35">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/SkillsResponse/"><code>SkillsResponse</code></a>&gt;</p>
+<h4 id="defined-in_42">Defined in</h4>
+<p>src/client.ts:243</p>
+<hr />
+<h3 id="getstatus">getStatus</h3>
+<p>▸ <strong>getStatus</strong>(<code>uuid</code>): <code>Promise</code>\&lt;<a href="../../interfaces/OnlineResponse/"><code>OnlineResponse</code></a>&gt;</p>
+<p>Retrieves the current online status of a specific player.
+https://api.hypixel.net/v2/status</p>
+<h4 id="parameters_16">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uuid</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">The UUID of the player.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_36">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/OnlineResponse/"><code>OnlineResponse</code></a>&gt;</p>
+<p>An <a href="../../interfaces/OnlineResponse/">OnlineResponse</a> containing the player's online status.</p>
+<h4 id="defined-in_43">Defined in</h4>
+<p>src/client.ts:138</p>
+<hr />
+<h3 id="getvanitycompanions">getVanityCompanions</h3>
+<p>▸ <strong>getVanityCompanions</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/VanityResponse/"><code>VanityResponse</code></a>&gt;</p>
+<p>Retrieves the list of vanity companions.
+https://api.hypixel.net/v2/resources/vanity/companions</p>
+<h4 id="returns_37">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/VanityResponse/"><code>VanityResponse</code></a>&gt;</p>
+<h4 id="defined-in_44">Defined in</h4>
+<p>src/client.ts:227</p>
+<hr />
+<h3 id="getvanitypets">getVanityPets</h3>
+<p>▸ <strong>getVanityPets</strong>(): <code>Promise</code>\&lt;<a href="../../interfaces/VanityResponse/"><code>VanityResponse</code></a>&gt;</p>
+<p>Retrieves the list of vanity pets.
+https://api.hypixel.net/v2/resources/vanity/pets</p>
+<h4 id="returns_38">Returns</h4>
+<p><code>Promise</code>\&lt;<a href="../../interfaces/VanityResponse/"><code>VanityResponse</code></a>&gt;</p>
+<h4 id="defined-in_45">Defined in</h4>
+<p>src/client.ts:219</p>
+<hr />
+<h3 id="parseratelimit">parseRateLimit</h3>
+<p>▸ <strong>parseRateLimit</strong>(<code>headers</code>): <code>null</code> | <a href="../../interfaces/RateLimit/"><code>RateLimit</code></a></p>
+<h4 id="parameters_17">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>headers</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_39">Returns</h4>
+<p><code>null</code> | <a href="../../interfaces/RateLimit/"><code>RateLimit</code></a></p>
+<h4 id="defined-in_46">Defined in</h4>
+<p>src/client.ts:534</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

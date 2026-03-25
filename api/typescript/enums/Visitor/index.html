@@ -1,0 +1,5607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Joshy3282.github.io/HyWrapper/api/typescript/enums/Visitor/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Visitor - HyWrapper</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enumeration-visitor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HyWrapper" class="md-header__button md-logo" aria-label="HyWrapper" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyWrapper
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visitor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Joshy3282/HyWrapper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Joshy3282/HyWrapper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guides/quickstart/" class="md-tabs__link">
+          
+  
+  
+  Custom Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../python/client/" class="md-tabs__link">
+          
+  
+  
+  Python API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.md" class="md-tabs__link">
+          
+  
+  
+  TypeScript API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../kotlin/index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kotlin API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HyWrapper" class="md-nav__button md-logo" aria-label="HyWrapper" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyWrapper
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Joshy3282/HyWrapper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Joshy3282/HyWrapper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Custom Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/uuid_utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UUID Utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeScript API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TypeScript API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kotlin API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of contents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumeration-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumeration Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeration-members_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumeration Members
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumeration Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adventurer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADVENTURER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADVENTURER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alchemist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALCHEMIST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ALCHEMIST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ANDREW
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANDREW">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ANITA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANITA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archaeologist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARCHAEOLOGIST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHAEOLOGIST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arthur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARTHUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARTHUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARTIST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARTIST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BAKER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BAKER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banker_broadjaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BANKER_BROADJAW
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BANKER_BROADJAW">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bartender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BARTENDER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BARTENDER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bear_pete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BEAR_PETE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BEAR_PETE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bednom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BEDNOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BEDNOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BETH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BETH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bruuh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BRUUH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BRUUH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carpenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CARPENTER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CARPENTER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chantelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CHANTELLE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CHANTELLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chief_scorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CHIEF_SCORN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CHIEF_SCORN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CHUNK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CHUNK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cold_enjoyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COLD_ENJOYER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COLD_ENJOYER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dalbrek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DALBREK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DALBREK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dante_goon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DANTE_GOON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DANTE_GOON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disguised_rats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISGUISED_RATS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DISGUISED_RATS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragon_ritualist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DRAGON_RITUALIST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DRAGON_RITUALIST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duke" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DUKE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DUKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dulin_tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DULIN_TUNNELS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DULIN_TUNNELS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duncan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DUNCAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DUNCAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dusk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DUSK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DUSK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ELLE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary_carlton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EMISSARY_CARLTON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EMISSARY_CARLTON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary_ceanna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EMISSARY_CEANNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EMISSARY_CEANNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary_fraiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EMISSARY_FRAISER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EMISSARY_FRAISER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary_sisko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EMISSARY_SISKO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EMISSARY_SISKO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary_wilson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EMISSARY_WILSON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EMISSARY_WILSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end_dealer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        END_DEALER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="END_DEALER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erihann" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ERIHANN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ERIHANN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmer_jon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FARMER_JON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FARMER_JON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmhand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FARMHAND
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FARMHAND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farm_merchant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FARM_MERCHANT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FARM_MERCHANT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fear_mongerer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FEAR_MONGERER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FEAR_MONGERER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#felix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FELIX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FELIX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fire_guy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIRE_GUY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIRE_GUY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fisherman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FISHERMAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FISHERMAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragilis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FRAGILIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FRAGILIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friendly_hiker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FRIENDLY_HIKER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FRIENDLY_HIKER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frozen_alex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FROZEN_ALEX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FROZEN_ALEX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEMMA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GEMMA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonathan_greatforge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEONATHAN_GREATFORGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GEONATHAN_GREATFORGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gimley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GIMLEY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GIMLEY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gold_forger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GOLD_FORGER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GOLD_FORGER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grandma_wolf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GRANDMA_WOLF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GRANDMA_WOLF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GUY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gwendolyn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GWENDOLYN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GWENDOLYN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hendrik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HENDRIK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HENDRIK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoppity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOPPITY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HOPPITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hornum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HORNUM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HORNUM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hungry_hiker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HUNGRY_HIKER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HUNGRY_HIKER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iron_forger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IRON_FORGER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IRON_FORGER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JACK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JACK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jacob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JACOB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JACOB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jacobus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JACOBUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JACOBUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jamie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JAMIE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JAMIE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jerry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JERRY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JERRY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jotraeline_greatforge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JOTRAELINE_GREATFORGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JOTRAELINE_GREATFORGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazy_miner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LAZY_MINER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LAZY_MINER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LEO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LEO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIAM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#librarian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIBRARIAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIBRARIAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lift_operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIFT_OPERATOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFT_OPERATOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ludleth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LUDLETH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LUDLETH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lumberjack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LUMBERJACK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LUMBERJACK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lumina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LUMINA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LUMINA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lynn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LYNN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LYNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#madame_eleanor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MADAME_ELEANOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MADAME_ELEANOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maeve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAEVE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAEVE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mage_alchemist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAGE_ALCHEMIST
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAGE_ALCHEMIST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marigold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MARIGOLD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MARIGOLD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mason" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MASON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MASON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master_tactician" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MASTER_TACTICIAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MASTER_TACTICIAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_aatrox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_AATROX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_AATROX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_cole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_COLE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_COLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_diana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_DIANA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_DIANA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_diaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_DIAZ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_DIAZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_finnegan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_FINNEGAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_FINNEGAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_foxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_FOXY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_FOXY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_marina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_MARINA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_MARINA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor_paul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAYOR_PAUL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAYOR_PAUL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moby" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOBY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MOBY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odawa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ODAWA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ODAWA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#old_man_garry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OLD_MAN_GARRY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OLD_MAN_GARRY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ophelia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPHELIA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OPHELIA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oringo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORINGO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORINGO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pest_wrangler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PEST_WRANGLER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PEST_WRANGLER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pet_trainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PET_TRAINER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PET_TRAINER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plumber_joe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PLUMBER_JOE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PLUMBER_JOE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puzzler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUZZLER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PUZZLER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queen_mismyla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QUEEN_MISMYLA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QUEEN_MISMYLA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queen_nyx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QUEEN_NYX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QUEEN_NYX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_97" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ravenous_rhino" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RAVENOUS_RHINO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAVENOUS_RHINO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_98" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RHYS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RHYS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#romero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROMERO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ROMERO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#royal_resident_neighbour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROYAL_RESIDENT_NEIGHBOUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ROYAL_RESIDENT_NEIGHBOUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#royal_resident_peasant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROYAL_RESIDENT_PEASANT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ROYAL_RESIDENT_PEASANT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#royal_resident_reward" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROYAL_RESIDENT_REWARD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ROYAL_RESIDENT_REWARD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_103" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rusty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RUSTY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RUSTY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_104" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ryu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RYU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RYU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sargwyin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SARGWYIN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SARGWYIN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_106" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scardius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCARDIUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SCARDIUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_107" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seraphine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SERAPHINE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SERAPHINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_108" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seymour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEYMOUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SEYMOUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_109" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shaggy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SHAGGY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SHAGGY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sherry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SHERRY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SHERRY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shifty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SHIFTY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SHIFTY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sirius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SIRIUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SIRIUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snowmaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNOWMAKER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SNOWMAKER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spaceman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPACEMAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SPACEMAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spider_tamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPIDER_TAMER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SPIDER_TAMER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STELLA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="STELLA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_117" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#st_jerry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ST_JERRY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ST_JERRY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tammy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TAMMY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TAMMY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_119" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarwen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TARWEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TARWEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TERRY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TERRY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TIA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TIA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomioka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOMIOKA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TOMIOKA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_124" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trevor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TREVOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TREVOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRINITY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRINITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vargul_garden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VARGUL_GARDEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VARGUL_GARDEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_127" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VEX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VEX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_128" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vincent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VINCENT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VINCENT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_129" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vinyl_collector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VINYL_COLLECTOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VINYL_COLLECTOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_130" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weaponsmith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEAPONSMITH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WEAPONSMITH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WIZARD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WIZARD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolf_shaman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WOLF_SHAMAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WOLF_SHAMAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xalx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XALX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XALX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZOG
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ZOG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defined-in_135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defined in
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a href="../../">hywrapper-ts</a> / <a href="../../modules/">Exports</a> / Visitor</p>
+<h1 id="enumeration-visitor">Enumeration: Visitor</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<h3 id="enumeration-members">Enumeration Members</h3>
+<ul>
+<li><a href="./#adventurer">ADVENTURER</a></li>
+<li><a href="./#alchemist">ALCHEMIST</a></li>
+<li><a href="./#an">AN</a></li>
+<li><a href="./#andrew">ANDREW</a></li>
+<li><a href="./#anita">ANITA</a></li>
+<li><a href="./#archaeologist">ARCHAEOLOGIST</a></li>
+<li><a href="./#arthur">ARTHUR</a></li>
+<li><a href="./#artist">ARTIST</a></li>
+<li><a href="./#baker">BAKER</a></li>
+<li><a href="./#banker_broadjaw">BANKER_BROADJAW</a></li>
+<li><a href="./#bartender">BARTENDER</a></li>
+<li><a href="./#bear_pete">BEAR_PETE</a></li>
+<li><a href="./#bednom">BEDNOM</a></li>
+<li><a href="./#beth">BETH</a></li>
+<li><a href="./#bruuh">BRUUH</a></li>
+<li><a href="./#carpenter">CARPENTER</a></li>
+<li><a href="./#chantelle">CHANTELLE</a></li>
+<li><a href="./#chief_scorn">CHIEF_SCORN</a></li>
+<li><a href="./#chunk">CHUNK</a></li>
+<li><a href="./#cold_enjoyer">COLD_ENJOYER</a></li>
+<li><a href="./#dalbrek">DALBREK</a></li>
+<li><a href="./#dante_goon">DANTE_GOON</a></li>
+<li><a href="./#disguised_rats">DISGUISED_RATS</a></li>
+<li><a href="./#dragon_ritualist">DRAGON_RITUALIST</a></li>
+<li><a href="./#duke">DUKE</a></li>
+<li><a href="./#dulin_tunnels">DULIN_TUNNELS</a></li>
+<li><a href="./#duncan">DUNCAN</a></li>
+<li><a href="./#dusk">DUSK</a></li>
+<li><a href="./#elle">ELLE</a></li>
+<li><a href="./#emissary_carlton">EMISSARY_CARLTON</a></li>
+<li><a href="./#emissary_ceanna">EMISSARY_CEANNA</a></li>
+<li><a href="./#emissary_fraiser">EMISSARY_FRAISER</a></li>
+<li><a href="./#emissary_sisko">EMISSARY_SISKO</a></li>
+<li><a href="./#emissary_wilson">EMISSARY_WILSON</a></li>
+<li><a href="./#end_dealer">END_DEALER</a></li>
+<li><a href="./#erihann">ERIHANN</a></li>
+<li><a href="./#farmer_jon">FARMER_JON</a></li>
+<li><a href="./#farmhand">FARMHAND</a></li>
+<li><a href="./#farm_merchant">FARM_MERCHANT</a></li>
+<li><a href="./#fear_mongerer">FEAR_MONGERER</a></li>
+<li><a href="./#felix">FELIX</a></li>
+<li><a href="./#fire_guy">FIRE_GUY</a></li>
+<li><a href="./#fisherman">FISHERMAN</a></li>
+<li><a href="./#fragilis">FRAGILIS</a></li>
+<li><a href="./#friendly_hiker">FRIENDLY_HIKER</a></li>
+<li><a href="./#frozen_alex">FROZEN_ALEX</a></li>
+<li><a href="./#gemma">GEMMA</a></li>
+<li><a href="./#geonathan_greatforge">GEONATHAN_GREATFORGE</a></li>
+<li><a href="./#gimley">GIMLEY</a></li>
+<li><a href="./#gold_forger">GOLD_FORGER</a></li>
+<li><a href="./#grandma_wolf">GRANDMA_WOLF</a></li>
+<li><a href="./#guy">GUY</a></li>
+<li><a href="./#gwendolyn">GWENDOLYN</a></li>
+<li><a href="./#hendrik">HENDRIK</a></li>
+<li><a href="./#hoppity">HOPPITY</a></li>
+<li><a href="./#hornum">HORNUM</a></li>
+<li><a href="./#hungry_hiker">HUNGRY_HIKER</a></li>
+<li><a href="./#iron_forger">IRON_FORGER</a></li>
+<li><a href="./#jack">JACK</a></li>
+<li><a href="./#jacob">JACOB</a></li>
+<li><a href="./#jacobus">JACOBUS</a></li>
+<li><a href="./#jamie">JAMIE</a></li>
+<li><a href="./#jerry">JERRY</a></li>
+<li><a href="./#jotraeline_greatforge">JOTRAELINE_GREATFORGE</a></li>
+<li><a href="./#lazy_miner">LAZY_MINER</a></li>
+<li><a href="./#leo">LEO</a></li>
+<li><a href="./#liam">LIAM</a></li>
+<li><a href="./#librarian">LIBRARIAN</a></li>
+<li><a href="./#lift_operator">LIFT_OPERATOR</a></li>
+<li><a href="./#ludleth">LUDLETH</a></li>
+<li><a href="./#lumberjack">LUMBERJACK</a></li>
+<li><a href="./#lumina">LUMINA</a></li>
+<li><a href="./#lynn">LYNN</a></li>
+<li><a href="./#madame_eleanor">MADAME_ELEANOR</a></li>
+<li><a href="./#maeve">MAEVE</a></li>
+<li><a href="./#mage_alchemist">MAGE_ALCHEMIST</a></li>
+<li><a href="./#marigold">MARIGOLD</a></li>
+<li><a href="./#mason">MASON</a></li>
+<li><a href="./#master_tactician">MASTER_TACTICIAN</a></li>
+<li><a href="./#mayor_aatrox">MAYOR_AATROX</a></li>
+<li><a href="./#mayor_cole">MAYOR_COLE</a></li>
+<li><a href="./#mayor_diana">MAYOR_DIANA</a></li>
+<li><a href="./#mayor_diaz">MAYOR_DIAZ</a></li>
+<li><a href="./#mayor_finnegan">MAYOR_FINNEGAN</a></li>
+<li><a href="./#mayor_foxy">MAYOR_FOXY</a></li>
+<li><a href="./#mayor_marina">MAYOR_MARINA</a></li>
+<li><a href="./#mayor_paul">MAYOR_PAUL</a></li>
+<li><a href="./#moby">MOBY</a></li>
+<li><a href="./#odawa">ODAWA</a></li>
+<li><a href="./#old_man_garry">OLD_MAN_GARRY</a></li>
+<li><a href="./#ophelia">OPHELIA</a></li>
+<li><a href="./#oringo">ORINGO</a></li>
+<li><a href="./#pest_wrangler">PEST_WRANGLER</a></li>
+<li><a href="./#pet_trainer">PET_TRAINER</a></li>
+<li><a href="./#plumber_joe">PLUMBER_JOE</a></li>
+<li><a href="./#puzzler">PUZZLER</a></li>
+<li><a href="./#queen_mismyla">QUEEN_MISMYLA</a></li>
+<li><a href="./#queen_nyx">QUEEN_NYX</a></li>
+<li><a href="./#ravenous_rhino">RAVENOUS_RHINO</a></li>
+<li><a href="./#rhys">RHYS</a></li>
+<li><a href="./#romero">ROMERO</a></li>
+<li><a href="./#royal_resident_neighbour">ROYAL_RESIDENT_NEIGHBOUR</a></li>
+<li><a href="./#royal_resident_peasant">ROYAL_RESIDENT_PEASANT</a></li>
+<li><a href="./#royal_resident_reward">ROYAL_RESIDENT_REWARD</a></li>
+<li><a href="./#rusty">RUSTY</a></li>
+<li><a href="./#ryu">RYU</a></li>
+<li><a href="./#sargwyin">SARGWYIN</a></li>
+<li><a href="./#scardius">SCARDIUS</a></li>
+<li><a href="./#seraphine">SERAPHINE</a></li>
+<li><a href="./#seymour">SEYMOUR</a></li>
+<li><a href="./#shaggy">SHAGGY</a></li>
+<li><a href="./#sherry">SHERRY</a></li>
+<li><a href="./#shifty">SHIFTY</a></li>
+<li><a href="./#sirius">SIRIUS</a></li>
+<li><a href="./#snowmaker">SNOWMAKER</a></li>
+<li><a href="./#spaceman">SPACEMAN</a></li>
+<li><a href="./#spider_tamer">SPIDER_TAMER</a></li>
+<li><a href="./#stella">STELLA</a></li>
+<li><a href="./#st_jerry">ST_JERRY</a></li>
+<li><a href="./#tammy">TAMMY</a></li>
+<li><a href="./#tarwen">TARWEN</a></li>
+<li><a href="./#terry">TERRY</a></li>
+<li><a href="./#tia">TIA</a></li>
+<li><a href="./#tom">TOM</a></li>
+<li><a href="./#tomioka">TOMIOKA</a></li>
+<li><a href="./#trevor">TREVOR</a></li>
+<li><a href="./#trinity">TRINITY</a></li>
+<li><a href="./#vargul_garden">VARGUL_GARDEN</a></li>
+<li><a href="./#vex">VEX</a></li>
+<li><a href="./#vincent">VINCENT</a></li>
+<li><a href="./#vinyl_collector">VINYL_COLLECTOR</a></li>
+<li><a href="./#weaponsmith">WEAPONSMITH</a></li>
+<li><a href="./#wizard">WIZARD</a></li>
+<li><a href="./#wolf_shaman">WOLF_SHAMAN</a></li>
+<li><a href="./#xalx">XALX</a></li>
+<li><a href="./#zog">ZOG</a></li>
+</ul>
+<h2 id="enumeration-members_1">Enumeration Members</h2>
+<h3 id="adventurer">ADVENTURER</h3>
+<p>• <strong>ADVENTURER</strong> = <code>"adventurer"</code></p>
+<h4 id="defined-in">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:27</p>
+<hr />
+<h3 id="alchemist">ALCHEMIST</h3>
+<p>• <strong>ALCHEMIST</strong> = <code>"alchemist"</code></p>
+<h4 id="defined-in_1">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:40</p>
+<hr />
+<h3 id="an">AN</h3>
+<p>• <strong>AN</strong> = <code>"an"</code></p>
+<h4 id="defined-in_2">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:105</p>
+<hr />
+<h3 id="andrew">ANDREW</h3>
+<p>• <strong>ANDREW</strong> = <code>"andrew"</code></p>
+<h4 id="defined-in_3">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:39</p>
+<hr />
+<h3 id="anita">ANITA</h3>
+<p>• <strong>ANITA</strong> = <code>"anita"</code></p>
+<h4 id="defined-in_4">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:7</p>
+<hr />
+<h3 id="archaeologist">ARCHAEOLOGIST</h3>
+<p>• <strong>ARCHAEOLOGIST</strong> = <code>"archaeologist"</code></p>
+<h4 id="defined-in_5">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:109</p>
+<hr />
+<h3 id="arthur">ARTHUR</h3>
+<p>• <strong>ARTHUR</strong> = <code>"arthur"</code></p>
+<h4 id="defined-in_6">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:64</p>
+<hr />
+<h3 id="artist">ARTIST</h3>
+<p>• <strong>ARTIST</strong> = <code>"artist"</code></p>
+<h4 id="defined-in_7">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:122</p>
+<hr />
+<h3 id="baker">BAKER</h3>
+<p>• <strong>BAKER</strong> = <code>"baker"</code></p>
+<h4 id="defined-in_8">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:85</p>
+<hr />
+<h3 id="banker_broadjaw">BANKER_BROADJAW</h3>
+<p>• <strong>BANKER_BROADJAW</strong> = <code>"banker_broadjaw"</code></p>
+<h4 id="defined-in_9">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:51</p>
+<hr />
+<h3 id="bartender">BARTENDER</h3>
+<p>• <strong>BARTENDER</strong> = <code>"bartender"</code></p>
+<h4 id="defined-in_10">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:33</p>
+<hr />
+<h3 id="bear_pete">BEAR_PETE</h3>
+<p>• <strong>BEAR_PETE</strong> = <code>"bear_pete"</code></p>
+<h4 id="defined-in_11">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:78</p>
+<hr />
+<h3 id="bednom">BEDNOM</h3>
+<p>• <strong>BEDNOM</strong> = <code>"bednom"</code></p>
+<h4 id="defined-in_12">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:95</p>
+<hr />
+<h3 id="beth">BETH</h3>
+<p>• <strong>BETH</strong> = <code>"beth"</code></p>
+<h4 id="defined-in_13">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:67</p>
+<hr />
+<h3 id="bruuh">BRUUH</h3>
+<p>• <strong>BRUUH</strong> = <code>"bruuh"</code></p>
+<h4 id="defined-in_14">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:92</p>
+<hr />
+<h3 id="carpenter">CARPENTER</h3>
+<p>• <strong>CARPENTER</strong> = <code>"carpenter"</code></p>
+<h4 id="defined-in_15">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:86</p>
+<hr />
+<h3 id="chantelle">CHANTELLE</h3>
+<p>• <strong>CHANTELLE</strong> = <code>"chantelle"</code></p>
+<h4 id="defined-in_16">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:106</p>
+<hr />
+<h3 id="chief_scorn">CHIEF_SCORN</h3>
+<p>• <strong>CHIEF_SCORN</strong> = <code>"chief_scorn"</code></p>
+<h4 id="defined-in_17">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:112</p>
+<hr />
+<h3 id="chunk">CHUNK</h3>
+<p>• <strong>CHUNK</strong> = <code>"chunk"</code></p>
+<h4 id="defined-in_18">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:129</p>
+<hr />
+<h3 id="cold_enjoyer">COLD_ENJOYER</h3>
+<p>• <strong>COLD_ENJOYER</strong> = <code>"cold_enjoyer"</code></p>
+<h4 id="defined-in_19">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:103</p>
+<hr />
+<h3 id="dalbrek">DALBREK</h3>
+<p>• <strong>DALBREK</strong> = <code>"dalbrek"</code></p>
+<h4 id="defined-in_20">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:47</p>
+<hr />
+<h3 id="dante_goon">DANTE_GOON</h3>
+<p>• <strong>DANTE_GOON</strong> = <code>"dante_goon"</code></p>
+<h4 id="defined-in_21">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:127</p>
+<hr />
+<h3 id="disguised_rats">DISGUISED_RATS</h3>
+<p>• <strong>DISGUISED_RATS</strong> = <code>"disguised_rats"</code></p>
+<h4 id="defined-in_22">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:84</p>
+<hr />
+<h3 id="dragon_ritualist">DRAGON_RITUALIST</h3>
+<p>• <strong>DRAGON_RITUALIST</strong> = <code>"dragon_ritualist"</code></p>
+<h4 id="defined-in_23">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:124</p>
+<hr />
+<h3 id="duke">DUKE</h3>
+<p>• <strong>DUKE</strong> = <code>"duke"</code></p>
+<h4 id="defined-in_24">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:15</p>
+<hr />
+<h3 id="dulin_tunnels">DULIN_TUNNELS</h3>
+<p>• <strong>DULIN_TUNNELS</strong> = <code>"dulin_tunnels"</code></p>
+<h4 id="defined-in_25">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:97</p>
+<hr />
+<h3 id="duncan">DUNCAN</h3>
+<p>• <strong>DUNCAN</strong> = <code>"duncan"</code></p>
+<h4 id="defined-in_26">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:130</p>
+<hr />
+<h3 id="dusk">DUSK</h3>
+<p>• <strong>DUSK</strong> = <code>"dusk"</code></p>
+<h4 id="defined-in_27">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:9</p>
+<hr />
+<h3 id="elle">ELLE</h3>
+<p>• <strong>ELLE</strong> = <code>"elle"</code></p>
+<h4 id="defined-in_28">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:93</p>
+<hr />
+<h3 id="emissary_carlton">EMISSARY_CARLTON</h3>
+<p>• <strong>EMISSARY_CARLTON</strong> = <code>"emissary_carlton"</code></p>
+<h4 id="defined-in_29">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:53</p>
+<hr />
+<h3 id="emissary_ceanna">EMISSARY_CEANNA</h3>
+<p>• <strong>EMISSARY_CEANNA</strong> = <code>"emissary_ceanna"</code></p>
+<h4 id="defined-in_30">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:13</p>
+<hr />
+<h3 id="emissary_fraiser">EMISSARY_FRAISER</h3>
+<p>• <strong>EMISSARY_FRAISER</strong> = <code>"emissary_fraiser"</code></p>
+<h4 id="defined-in_31">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:56</p>
+<hr />
+<h3 id="emissary_sisko">EMISSARY_SISKO</h3>
+<p>• <strong>EMISSARY_SISKO</strong> = <code>"emissary_sisko"</code></p>
+<h4 id="defined-in_32">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:77</p>
+<hr />
+<h3 id="emissary_wilson">EMISSARY_WILSON</h3>
+<p>• <strong>EMISSARY_WILSON</strong> = <code>"emissary_wilson"</code></p>
+<h4 id="defined-in_33">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:14</p>
+<hr />
+<h3 id="end_dealer">END_DEALER</h3>
+<p>• <strong>END_DEALER</strong> = <code>"end_dealer"</code></p>
+<h4 id="defined-in_34">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:101</p>
+<hr />
+<h3 id="erihann">ERIHANN</h3>
+<p>• <strong>ERIHANN</strong> = <code>"erihann"</code></p>
+<h4 id="defined-in_35">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:102</p>
+<hr />
+<h3 id="farmer_jon">FARMER_JON</h3>
+<p>• <strong>FARMER_JON</strong> = <code>"farmer_jon"</code></p>
+<h4 id="defined-in_36">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:75</p>
+<hr />
+<h3 id="farmhand">FARMHAND</h3>
+<p>• <strong>FARMHAND</strong> = <code>"farmhand"</code></p>
+<h4 id="defined-in_37">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:63</p>
+<hr />
+<h3 id="farm_merchant">FARM_MERCHANT</h3>
+<p>• <strong>FARM_MERCHANT</strong> = <code>"farm_merchant"</code></p>
+<h4 id="defined-in_38">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:91</p>
+<hr />
+<h3 id="fear_mongerer">FEAR_MONGERER</h3>
+<p>• <strong>FEAR_MONGERER</strong> = <code>"fear_mongerer"</code></p>
+<h4 id="defined-in_39">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:44</p>
+<hr />
+<h3 id="felix">FELIX</h3>
+<p>• <strong>FELIX</strong> = <code>"felix"</code></p>
+<h4 id="defined-in_40">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:26</p>
+<hr />
+<h3 id="fire_guy">FIRE_GUY</h3>
+<p>• <strong>FIRE_GUY</strong> = <code>"fire_guy"</code></p>
+<h4 id="defined-in_41">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:90</p>
+<hr />
+<h3 id="fisherman">FISHERMAN</h3>
+<p>• <strong>FISHERMAN</strong> = <code>"fisherman"</code></p>
+<h4 id="defined-in_42">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:37</p>
+<hr />
+<h3 id="fragilis">FRAGILIS</h3>
+<p>• <strong>FRAGILIS</strong> = <code>"fragilis"</code></p>
+<h4 id="defined-in_43">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:60</p>
+<hr />
+<h3 id="friendly_hiker">FRIENDLY_HIKER</h3>
+<p>• <strong>FRIENDLY_HIKER</strong> = <code>"friendly_hiker"</code></p>
+<h4 id="defined-in_44">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:29</p>
+<hr />
+<h3 id="frozen_alex">FROZEN_ALEX</h3>
+<p>• <strong>FROZEN_ALEX</strong> = <code>"frozen_alex"</code></p>
+<h4 id="defined-in_45">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:107</p>
+<hr />
+<h3 id="gemma">GEMMA</h3>
+<p>• <strong>GEMMA</strong> = <code>"gemma"</code></p>
+<h4 id="defined-in_46">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:94</p>
+<hr />
+<h3 id="geonathan_greatforge">GEONATHAN_GREATFORGE</h3>
+<p>• <strong>GEONATHAN_GREATFORGE</strong> = <code>"geonathan_greatforge"</code></p>
+<h4 id="defined-in_47">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:28</p>
+<hr />
+<h3 id="gimley">GIMLEY</h3>
+<p>• <strong>GIMLEY</strong> = <code>"gimley"</code></p>
+<h4 id="defined-in_48">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:59</p>
+<hr />
+<h3 id="gold_forger">GOLD_FORGER</h3>
+<p>• <strong>GOLD_FORGER</strong> = <code>"gold_forger"</code></p>
+<h4 id="defined-in_49">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:58</p>
+<hr />
+<h3 id="grandma_wolf">GRANDMA_WOLF</h3>
+<p>• <strong>GRANDMA_WOLF</strong> = <code>"grandma_wolf"</code></p>
+<h4 id="defined-in_50">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:16</p>
+<hr />
+<h3 id="guy">GUY</h3>
+<p>• <strong>GUY</strong> = <code>"guy"</code></p>
+<h4 id="defined-in_51">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:61</p>
+<hr />
+<h3 id="gwendolyn">GWENDOLYN</h3>
+<p>• <strong>GWENDOLYN</strong> = <code>"gwendolyn"</code></p>
+<h4 id="defined-in_52">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:5</p>
+<hr />
+<h3 id="hendrik">HENDRIK</h3>
+<p>• <strong>HENDRIK</strong> = <code>"hendrik"</code></p>
+<h4 id="defined-in_53">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:120</p>
+<hr />
+<h3 id="hoppity">HOPPITY</h3>
+<p>• <strong>HOPPITY</strong> = <code>"hoppity"</code></p>
+<h4 id="defined-in_54">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:126</p>
+<hr />
+<h3 id="hornum">HORNUM</h3>
+<p>• <strong>HORNUM</strong> = <code>"hornum"</code></p>
+<h4 id="defined-in_55">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:66</p>
+<hr />
+<h3 id="hungry_hiker">HUNGRY_HIKER</h3>
+<p>• <strong>HUNGRY_HIKER</strong> = <code>"hungry_hiker"</code></p>
+<h4 id="defined-in_56">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:69</p>
+<hr />
+<h3 id="iron_forger">IRON_FORGER</h3>
+<p>• <strong>IRON_FORGER</strong> = <code>"iron_forger"</code></p>
+<h4 id="defined-in_57">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:11</p>
+<hr />
+<h3 id="jack">JACK</h3>
+<p>• <strong>JACK</strong> = <code>"jack"</code></p>
+<h4 id="defined-in_58">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:3</p>
+<hr />
+<h3 id="jacob">JACOB</h3>
+<p>• <strong>JACOB</strong> = <code>"jacob"</code></p>
+<h4 id="defined-in_59">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:12</p>
+<hr />
+<h3 id="jacobus">JACOBUS</h3>
+<p>• <strong>JACOBUS</strong> = <code>"jacobus"</code></p>
+<h4 id="defined-in_60">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:123</p>
+<hr />
+<h3 id="jamie">JAMIE</h3>
+<p>• <strong>JAMIE</strong> = <code>"jamie"</code></p>
+<h4 id="defined-in_61">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:54</p>
+<hr />
+<h3 id="jerry">JERRY</h3>
+<p>• <strong>JERRY</strong> = <code>"jerry"</code></p>
+<h4 id="defined-in_62">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:2</p>
+<hr />
+<h3 id="jotraeline_greatforge">JOTRAELINE_GREATFORGE</h3>
+<p>• <strong>JOTRAELINE_GREATFORGE</strong> = <code>"jotraeline_greatforge"</code></p>
+<h4 id="defined-in_63">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:34</p>
+<hr />
+<h3 id="lazy_miner">LAZY_MINER</h3>
+<p>• <strong>LAZY_MINER</strong> = <code>"lazy_miner"</code></p>
+<h4 id="defined-in_64">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:35</p>
+<hr />
+<h3 id="leo">LEO</h3>
+<p>• <strong>LEO</strong> = <code>"leo"</code></p>
+<h4 id="defined-in_65">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:6</p>
+<hr />
+<h3 id="liam">LIAM</h3>
+<p>• <strong>LIAM</strong> = <code>"liam"</code></p>
+<h4 id="defined-in_66">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:41</p>
+<hr />
+<h3 id="librarian">LIBRARIAN</h3>
+<p>• <strong>LIBRARIAN</strong> = <code>"librarian"</code></p>
+<h4 id="defined-in_67">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:23</p>
+<hr />
+<h3 id="lift_operator">LIFT_OPERATOR</h3>
+<p>• <strong>LIFT_OPERATOR</strong> = <code>"lift_operator"</code></p>
+<h4 id="defined-in_68">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:88</p>
+<hr />
+<h3 id="ludleth">LUDLETH</h3>
+<p>• <strong>LUDLETH</strong> = <code>"ludleth"</code></p>
+<h4 id="defined-in_69">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:115</p>
+<hr />
+<h3 id="lumberjack">LUMBERJACK</h3>
+<p>• <strong>LUMBERJACK</strong> = <code>"lumberjack"</code></p>
+<h4 id="defined-in_70">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:70</p>
+<hr />
+<h3 id="lumina">LUMINA</h3>
+<p>• <strong>LUMINA</strong> = <code>"lumina"</code></p>
+<h4 id="defined-in_71">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:25</p>
+<hr />
+<h3 id="lynn">LYNN</h3>
+<p>• <strong>LYNN</strong> = <code>"lynn"</code></p>
+<h4 id="defined-in_72">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:19</p>
+<hr />
+<h3 id="madame_eleanor">MADAME_ELEANOR</h3>
+<p>• <strong>MADAME_ELEANOR</strong> = <code>"madame_eleanor"</code></p>
+<h4 id="defined-in_73">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:43</p>
+<hr />
+<h3 id="maeve">MAEVE</h3>
+<p>• <strong>MAEVE</strong> = <code>"maeve"</code></p>
+<h4 id="defined-in_74">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:79</p>
+<hr />
+<h3 id="mage_alchemist">MAGE_ALCHEMIST</h3>
+<p>• <strong>MAGE_ALCHEMIST</strong> = <code>"mage_alchemist"</code></p>
+<h4 id="defined-in_75">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:125</p>
+<hr />
+<h3 id="marigold">MARIGOLD</h3>
+<p>• <strong>MARIGOLD</strong> = <code>"marigold"</code></p>
+<h4 id="defined-in_76">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:111</p>
+<hr />
+<h3 id="mason">MASON</h3>
+<p>• <strong>MASON</strong> = <code>"mason"</code></p>
+<h4 id="defined-in_77">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:52</p>
+<hr />
+<h3 id="master_tactician">MASTER_TACTICIAN</h3>
+<p>• <strong>MASTER_TACTICIAN</strong> = <code>"master_tactician"</code></p>
+<h4 id="defined-in_78">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:100</p>
+<hr />
+<h3 id="mayor_aatrox">MAYOR_AATROX</h3>
+<p>• <strong>MAYOR_AATROX</strong> = <code>"mayor_aatrox"</code></p>
+<h4 id="defined-in_79">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:137</p>
+<hr />
+<h3 id="mayor_cole">MAYOR_COLE</h3>
+<p>• <strong>MAYOR_COLE</strong> = <code>"mayor_cole"</code></p>
+<h4 id="defined-in_80">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:134</p>
+<hr />
+<h3 id="mayor_diana">MAYOR_DIANA</h3>
+<p>• <strong>MAYOR_DIANA</strong> = <code>"mayor_diana"</code></p>
+<h4 id="defined-in_81">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:132</p>
+<hr />
+<h3 id="mayor_diaz">MAYOR_DIAZ</h3>
+<p>• <strong>MAYOR_DIAZ</strong> = <code>"mayor_diaz"</code></p>
+<h4 id="defined-in_82">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:128</p>
+<hr />
+<h3 id="mayor_finnegan">MAYOR_FINNEGAN</h3>
+<p>• <strong>MAYOR_FINNEGAN</strong> = <code>"mayor_finnegan"</code></p>
+<h4 id="defined-in_83">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:135</p>
+<hr />
+<h3 id="mayor_foxy">MAYOR_FOXY</h3>
+<p>• <strong>MAYOR_FOXY</strong> = <code>"mayor_foxy"</code></p>
+<h4 id="defined-in_84">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:136</p>
+<hr />
+<h3 id="mayor_marina">MAYOR_MARINA</h3>
+<p>• <strong>MAYOR_MARINA</strong> = <code>"mayor_marina"</code></p>
+<h4 id="defined-in_85">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:133</p>
+<hr />
+<h3 id="mayor_paul">MAYOR_PAUL</h3>
+<p>• <strong>MAYOR_PAUL</strong> = <code>"mayor_paul"</code></p>
+<h4 id="defined-in_86">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:131</p>
+<hr />
+<h3 id="moby">MOBY</h3>
+<p>• <strong>MOBY</strong> = <code>"moby"</code></p>
+<h4 id="defined-in_87">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:89</p>
+<hr />
+<h3 id="odawa">ODAWA</h3>
+<p>• <strong>ODAWA</strong> = <code>"odawa"</code></p>
+<h4 id="defined-in_88">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:38</p>
+<hr />
+<h3 id="old_man_garry">OLD_MAN_GARRY</h3>
+<p>• <strong>OLD_MAN_GARRY</strong> = <code>"old_man_garry"</code></p>
+<h4 id="defined-in_89">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:49</p>
+<hr />
+<h3 id="ophelia">OPHELIA</h3>
+<p>• <strong>OPHELIA</strong> = <code>"ophelia"</code></p>
+<h4 id="defined-in_90">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:87</p>
+<hr />
+<h3 id="oringo">ORINGO</h3>
+<p>• <strong>ORINGO</strong> = <code>"oringo"</code></p>
+<h4 id="defined-in_91">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:71</p>
+<hr />
+<h3 id="pest_wrangler">PEST_WRANGLER</h3>
+<p>• <strong>PEST_WRANGLER</strong> = <code>"pest_wrangler"</code></p>
+<h4 id="defined-in_92">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:81</p>
+<hr />
+<h3 id="pet_trainer">PET_TRAINER</h3>
+<p>• <strong>PET_TRAINER</strong> = <code>"pet_trainer"</code></p>
+<h4 id="defined-in_93">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:121</p>
+<hr />
+<h3 id="plumber_joe">PLUMBER_JOE</h3>
+<p>• <strong>PLUMBER_JOE</strong> = <code>"plumber_joe"</code></p>
+<h4 id="defined-in_94">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:45</p>
+<hr />
+<h3 id="puzzler">PUZZLER</h3>
+<p>• <strong>PUZZLER</strong> = <code>"puzzler"</code></p>
+<h4 id="defined-in_95">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:76</p>
+<hr />
+<h3 id="queen_mismyla">QUEEN_MISMYLA</h3>
+<p>• <strong>QUEEN_MISMYLA</strong> = <code>"queen_mismyla"</code></p>
+<h4 id="defined-in_96">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:48</p>
+<hr />
+<h3 id="queen_nyx">QUEEN_NYX</h3>
+<p>• <strong>QUEEN_NYX</strong> = <code>"queen_nyx"</code></p>
+<h4 id="defined-in_97">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:108</p>
+<hr />
+<h3 id="ravenous_rhino">RAVENOUS_RHINO</h3>
+<p>• <strong>RAVENOUS_RHINO</strong> = <code>"ravenous_rhino"</code></p>
+<h4 id="defined-in_98">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:83</p>
+<hr />
+<h3 id="rhys">RHYS</h3>
+<p>• <strong>RHYS</strong> = <code>"rhys"</code></p>
+<h4 id="defined-in_99">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:18</p>
+<hr />
+<h3 id="romero">ROMERO</h3>
+<p>• <strong>ROMERO</strong> = <code>"romero"</code></p>
+<h4 id="defined-in_100">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:99</p>
+<hr />
+<h3 id="royal_resident_neighbour">ROYAL_RESIDENT_NEIGHBOUR</h3>
+<p>• <strong>ROYAL_RESIDENT_NEIGHBOUR</strong> = <code>"royal_resident_neighbour"</code></p>
+<h4 id="defined-in_101">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:65</p>
+<hr />
+<h3 id="royal_resident_peasant">ROYAL_RESIDENT_PEASANT</h3>
+<p>• <strong>ROYAL_RESIDENT_PEASANT</strong> = <code>"royal_resident_peasant"</code></p>
+<h4 id="defined-in_102">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:74</p>
+<hr />
+<h3 id="royal_resident_reward">ROYAL_RESIDENT_REWARD</h3>
+<p>• <strong>ROYAL_RESIDENT_REWARD</strong> = <code>"royal_resident_reward"</code></p>
+<h4 id="defined-in_103">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:72</p>
+<hr />
+<h3 id="rusty">RUSTY</h3>
+<p>• <strong>RUSTY</strong> = <code>"rusty"</code></p>
+<h4 id="defined-in_104">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:17</p>
+<hr />
+<h3 id="ryu">RYU</h3>
+<p>• <strong>RYU</strong> = <code>"ryu"</code></p>
+<h4 id="defined-in_105">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:31</p>
+<hr />
+<h3 id="sargwyin">SARGWYIN</h3>
+<p>• <strong>SARGWYIN</strong> = <code>"sargwyn"</code></p>
+<h4 id="defined-in_106">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:50</p>
+<hr />
+<h3 id="scardius">SCARDIUS</h3>
+<p>• <strong>SCARDIUS</strong> = <code>"scardius"</code></p>
+<h4 id="defined-in_107">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:117</p>
+<hr />
+<h3 id="seraphine">SERAPHINE</h3>
+<p>• <strong>SERAPHINE</strong> = <code>"seraphine"</code></p>
+<h4 id="defined-in_108">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:8</p>
+<hr />
+<h3 id="seymour">SEYMOUR</h3>
+<p>• <strong>SEYMOUR</strong> = <code>"seymour"</code></p>
+<h4 id="defined-in_109">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:46</p>
+<hr />
+<h3 id="shaggy">SHAGGY</h3>
+<p>• <strong>SHAGGY</strong> = <code>"shaggy"</code></p>
+<h4 id="defined-in_110">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:73</p>
+<hr />
+<h3 id="sherry">SHERRY</h3>
+<p>• <strong>SHERRY</strong> = <code>"sherry"</code></p>
+<h4 id="defined-in_111">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:104</p>
+<hr />
+<h3 id="shifty">SHIFTY</h3>
+<p>• <strong>SHIFTY</strong> = <code>"shifty"</code></p>
+<h4 id="defined-in_112">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:21</p>
+<hr />
+<h3 id="sirius">SIRIUS</h3>
+<p>• <strong>SIRIUS</strong> = <code>"sirius"</code></p>
+<h4 id="defined-in_113">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:32</p>
+<hr />
+<h3 id="snowmaker">SNOWMAKER</h3>
+<p>• <strong>SNOWMAKER</strong> = <code>"snowmaker"</code></p>
+<h4 id="defined-in_114">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:119</p>
+<hr />
+<h3 id="spaceman">SPACEMAN</h3>
+<p>• <strong>SPACEMAN</strong> = <code>"spaceman"</code></p>
+<h4 id="defined-in_115">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:80</p>
+<hr />
+<h3 id="spider_tamer">SPIDER_TAMER</h3>
+<p>• <strong>SPIDER_TAMER</strong> = <code>"spider_tamer"</code></p>
+<h4 id="defined-in_116">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:98</p>
+<hr />
+<h3 id="stella">STELLA</h3>
+<p>• <strong>STELLA</strong> = <code>"stella"</code></p>
+<h4 id="defined-in_117">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:24</p>
+<hr />
+<h3 id="st_jerry">ST_JERRY</h3>
+<p>• <strong>ST_JERRY</strong> = <code>"st_jerry"</code></p>
+<h4 id="defined-in_118">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:118</p>
+<hr />
+<h3 id="tammy">TAMMY</h3>
+<p>• <strong>TAMMY</strong> = <code>"tammy"</code></p>
+<h4 id="defined-in_119">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:57</p>
+<hr />
+<h3 id="tarwen">TARWEN</h3>
+<p>• <strong>TARWEN</strong> = <code>"tarwen"</code></p>
+<h4 id="defined-in_120">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:62</p>
+<hr />
+<h3 id="terry">TERRY</h3>
+<p>• <strong>TERRY</strong> = <code>"terry"</code></p>
+<h4 id="defined-in_121">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:22</p>
+<hr />
+<h3 id="tia">TIA</h3>
+<p>• <strong>TIA</strong> = <code>"tia"</code></p>
+<h4 id="defined-in_122">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:4</p>
+<hr />
+<h3 id="tom">TOM</h3>
+<p>• <strong>TOM</strong> = <code>"tom"</code></p>
+<h4 id="defined-in_123">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:55</p>
+<hr />
+<h3 id="tomioka">TOMIOKA</h3>
+<p>• <strong>TOMIOKA</strong> = <code>"tomioka"</code></p>
+<h4 id="defined-in_124">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:113</p>
+<hr />
+<h3 id="trevor">TREVOR</h3>
+<p>• <strong>TREVOR</strong> = <code>"trevor"</code></p>
+<h4 id="defined-in_125">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:30</p>
+<hr />
+<h3 id="trinity">TRINITY</h3>
+<p>• <strong>TRINITY</strong> = <code>"trinity"</code></p>
+<h4 id="defined-in_126">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:96</p>
+<hr />
+<h3 id="vargul_garden">VARGUL_GARDEN</h3>
+<p>• <strong>VARGUL_GARDEN</strong> = <code>"vargul_garden"</code></p>
+<h4 id="defined-in_127">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:114</p>
+<hr />
+<h3 id="vex">VEX</h3>
+<p>• <strong>VEX</strong> = <code>"vex"</code></p>
+<h4 id="defined-in_128">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:10</p>
+<hr />
+<h3 id="vincent">VINCENT</h3>
+<p>• <strong>VINCENT</strong> = <code>"vincent"</code></p>
+<h4 id="defined-in_129">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:110</p>
+<hr />
+<h3 id="vinyl_collector">VINYL_COLLECTOR</h3>
+<p>• <strong>VINYL_COLLECTOR</strong> = <code>"vinyl_collector"</code></p>
+<h4 id="defined-in_130">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:82</p>
+<hr />
+<h3 id="weaponsmith">WEAPONSMITH</h3>
+<p>• <strong>WEAPONSMITH</strong> = <code>"weaponsmith"</code></p>
+<h4 id="defined-in_131">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:36</p>
+<hr />
+<h3 id="wizard">WIZARD</h3>
+<p>• <strong>WIZARD</strong> = <code>"wizard"</code></p>
+<h4 id="defined-in_132">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:42</p>
+<hr />
+<h3 id="wolf_shaman">WOLF_SHAMAN</h3>
+<p>• <strong>WOLF_SHAMAN</strong> = <code>"wolf_shaman"</code></p>
+<h4 id="defined-in_133">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:116</p>
+<hr />
+<h3 id="xalx">XALX</h3>
+<p>• <strong>XALX</strong> = <code>"xalx"</code></p>
+<h4 id="defined-in_134">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:68</p>
+<hr />
+<h3 id="zog">ZOG</h3>
+<p>• <strong>ZOG</strong> = <code>"zog"</code></p>
+<h4 id="defined-in_135">Defined in</h4>
+<p>src/data/skyblock/Visitor.ts:20</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
