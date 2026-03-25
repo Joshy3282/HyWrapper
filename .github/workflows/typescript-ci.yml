@@ -3,12 +3,12 @@ name: TypeScript CI
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'typescript/**'
+#    paths:
+#      - 'typescript/**'
   pull_request:
     branches: [ main ]
-    paths:
-      - 'typescript/**'
+#    paths:
+#      - 'typescript/**'
 
 jobs:
   build:
