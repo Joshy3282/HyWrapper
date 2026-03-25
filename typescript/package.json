@@ -6,24 +6,28 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "docs": "typedoc --plugin typedoc-plugin-markdown --out ../docs/api/typescript src/index.ts"
   },
   "dependencies": {
     "axios": "^1.6.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
+    "axios-mock-adapter": "^2.1.0",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
+    "jest": "^30.3.0",
     "prettier": "^3.1.0",
+    "ts-jest": "^29.4.6",
     "typedoc": "^0.25.3",
-    "typedoc-plugin-markdown": "^3.17.1"
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typescript": "^5.4.5"
   }
 }
