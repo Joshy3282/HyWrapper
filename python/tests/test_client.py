@@ -1,5 +1,7 @@
 import pytest
 
+from typing import Any, AsyncGenerator
+
 from hywrapper.client import (
     DataNotPopulatedException,
     HypixelClient,
@@ -18,14 +20,14 @@ from hywrapper.models import (
 
 
 @pytest.fixture
-async def client():
+async def client() -> AsyncGenerator[HypixelClient, None]:
     client = HypixelClient(api_key="test-api-key", base_url="https://api.hypixel.net/v2")
     yield client
     await client.close()
 
 
 @pytest.mark.asyncio
-async def test_get_bingo_success(client, httpx_mock):
+async def test_get_bingo_success(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {
         "success": True,
         "lastUpdated": 1618214400000,
@@ -49,7 +51,7 @@ async def test_get_bingo_success(client, httpx_mock):
 
 
 @pytest.mark.asyncio
-async def test_get_player_success(client, httpx_mock):
+async def test_get_player_success(client: HypixelClient, httpx_mock: Any) -> None:
     uuid = "ac29411d0826412f98c0dd14b334c1fa"
     json_response = {"success": True, "player": {"displayname": "PlayerName", "uuid": uuid}}
     httpx_mock.add_response(
@@ -58,12 +60,13 @@ async def test_get_player_success(client, httpx_mock):
 
     response = await client.get_player(uuid)
     assert response.success is True
+    assert response.player is not None
     assert response.player.displayname == "PlayerName"
     assert isinstance(response, PlayerResponse)
 
 
 @pytest.mark.asyncio
-async def test_get_firesales_success(client, httpx_mock):
+async def test_get_firesales_success(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {
         "success": True,
         "sales": [
@@ -80,13 +83,14 @@ async def test_get_firesales_success(client, httpx_mock):
 
     response = await client.get_firesales()
     assert response.success is True
+    assert response.sales is not None
     assert len(response.sales) == 1
     assert response.sales[0].item_id == "pet_skin_black_cat"
     assert isinstance(response, FiresalesResponse)
 
 
 @pytest.mark.asyncio
-async def test_get_bazaar_success(client, httpx_mock):
+async def test_get_bazaar_success(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {
         "success": True,
         "lastUpdated": 1618214400000,
@@ -111,12 +115,13 @@ async def test_get_bazaar_success(client, httpx_mock):
 
     response = await client.get_bazaar()
     assert response.success is True
+    assert response.products is not None
     assert "INK_SACK:3" in response.products
     assert isinstance(response, BazaarResponse)
 
 
 @pytest.mark.asyncio
-async def test_api_error(client, httpx_mock):
+async def test_api_error(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": False, "cause": "Invalid API Key"}
     httpx_mock.add_response(url="https://api.hypixel.net/v2/skyblock/bingo", json=json_response)
 
@@ -126,7 +131,7 @@ async def test_api_error(client, httpx_mock):
 
 
 @pytest.mark.asyncio
-async def test_403_invalid_api_key(client, httpx_mock):
+async def test_403_invalid_api_key(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": False, "cause": "Invalid API key"}
     httpx_mock.add_response(
         url="https://api.hypixel.net/v2/skyblock/bingo", json=json_response, status_code=403
@@ -137,7 +142,7 @@ async def test_403_invalid_api_key(client, httpx_mock):
 
 
 @pytest.mark.asyncio
-async def test_404_not_found(client, httpx_mock):
+async def test_404_not_found(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": False, "cause": "Not Found"}
     httpx_mock.add_response(
         url="https://api.hypixel.net/v2/skyblock/bingo", json=json_response, status_code=404
@@ -148,7 +153,7 @@ async def test_404_not_found(client, httpx_mock):
 
 
 @pytest.mark.asyncio
-async def test_400_missing_field(client, httpx_mock):
+async def test_400_missing_field(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": False, "cause": "Missing one or more fields"}
     httpx_mock.add_response(
         url="https://api.hypixel.net/v2/skyblock/bingo", json=json_response, status_code=400
@@ -159,7 +164,7 @@ async def test_400_missing_field(client, httpx_mock):
 
 
 @pytest.mark.asyncio
-async def test_429_rate_limit(client, httpx_mock):
+async def test_429_rate_limit(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": False, "cause": "Key throttle", "global": False}
     httpx_mock.add_response(
         url="https://api.hypixel.net/v2/skyblock/bingo", json=json_response, status_code=429
@@ -171,7 +176,7 @@ async def test_429_rate_limit(client, httpx_mock):
 
 
 @pytest.mark.asyncio
-async def test_rate_limit_parsing(client, httpx_mock):
+async def test_rate_limit_parsing(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": True, "name": "Bingo"}
     headers = {"RateLimit-Limit": "300", "RateLimit-Remaining": "299", "RateLimit-Reset": "59"}
     httpx_mock.add_response(
@@ -179,14 +184,16 @@ async def test_rate_limit_parsing(client, httpx_mock):
     )
 
     response = await client.get_bingo()
+    assert response.rate_limit is not None
     assert response.rate_limit.limit == 300
     assert response.rate_limit.remaining == 299
     assert response.rate_limit.reset == 59
+    assert client.last_rate_limit is not None
     assert client.last_rate_limit.limit == 300
 
 
 @pytest.mark.asyncio
-async def test_503_data_not_populated(client, httpx_mock):
+async def test_503_data_not_populated(client: HypixelClient, httpx_mock: Any) -> None:
     json_response = {"success": False, "cause": "Data not populated"}
     httpx_mock.add_response(
         url="https://api.hypixel.net/v2/skyblock/auctions?page=1",
