@@ -31,8 +31,16 @@ configure<JavaApplication> {
     mainClass.set("com.joshy.hywrapper.util.PythonModelGeneratorKt")
 }
 
-group = "com.joshy"
+group = "com.github.joshy3282"
 version = "1.0-SNAPSHOT"
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+        }
+    }
+}
 
 repositories {
     mavenCentral()
@@ -40,6 +48,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.github.joshy3282:hywrapper:1.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
     implementation("com.squareup.okhttp3:okhttp:$okhttpVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")

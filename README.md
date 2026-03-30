@@ -10,6 +10,18 @@ An asynchronous and multi-platform Hypixel API wrapper for Python, Kotlin, and J
 pip install hywrapper
 ```
 
+### Kotlin / Java
+Add the JitPack repository and the dependency to your `build.gradle.kts`:
+```kotlin
+repositories {
+    maven { url = uri("https://jitpack.io") }
+}
+
+dependencies {
+    implementation("com.github.joshy3282:hywrapper:1.0.0")
+}
+```
+
 ## Usage
 
 ### Kotlin
