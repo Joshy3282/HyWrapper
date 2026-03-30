@@ -2,1158 +2,1158 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/contributing/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/installation/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/python/client/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/python/uuid_utils/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/modules/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/BazaarResponseHelper/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/CollectionsResponseHelper/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/DataNotPopulatedException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/HypixelClient/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/HypixelException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/InvalidApiKeyException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/InvalidDataException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/MissingFieldException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/NbtUtils/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/RateLimitException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/ResourceNotFoundException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/classes/UuidUtils/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/BazaarItem/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/CollectionType/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/GameType/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/GardenPlot/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/GardenResource/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/GardenUpgrade/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/HousingSetting/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/MuseumItem/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/SkillTreePerk/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/SkillType/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/StatType/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/enums/Visitor/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Abiphone/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Access/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AccessoryBagStorage/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AchievementSync/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AchievementTier/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AchievementsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ActiveEffect/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AlchemistQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Attributes/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Auction/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Auctions/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AuctionsEndedResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AuctionsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Autopet/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AutopetException/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/AutopetRule/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BagContents/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Banking/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Banner/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BarryCenter/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BazaarResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BestRun/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Bestiary/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Bid/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BingoResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Biomes/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BlackLagoon/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Booster/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BoosterState/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/BoostersResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Candidate/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CandyCollected/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Castle/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Catacombs/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CatacombsRequirement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Challenge/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ChallengesResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ChickenQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ClientOptions/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Collection/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CollectionItem/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CollectionTier/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CollectionsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CommissionData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CommunityUpgrades/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ComposterData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ComposterUpgrades/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Content/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Cookies/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CountsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Cowboy/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CrazyKloon/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CrimsonIslePlayerData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/CrimsonIsleQuests/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Crystal/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Currencies/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DailyRuns/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DeadCats/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DragonFight/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Dreadfarm/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DuelTrainingQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DungeonHub/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DungeonHubRaceSettings/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DungeonItemConversionCost/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DungeonJournal/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/DungeonType/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Dungeons/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Easter/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Election/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ElectionResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/EndIsland/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/EndedAuction/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Enigma/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/EssenceInfo/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Eugene/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Event/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Experimentation/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/FairySoul/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/FiresalesResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Foraging/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ForagingCore/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Forge/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Gallery/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Game/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GameAchievement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GameCount/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GamesResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Garden/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GardenPlayerData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GardenResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GemstoneCost/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GemstoneRequirement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GemstoneSlot/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GiftedMeta/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Gifts/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GlacitePlayerData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Glyph/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Goal/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Goblin/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GreenhouseCoordinate/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GroupBuilder/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Guild/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GuildAchievementTier/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GuildMember/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GuildOneTimeAchievement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GuildResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GuildTieredAchievement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/GuildsAchievementsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Harp/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Hina/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HinaTasks/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/House/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HousingActiveResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HousingHouseResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HousingHousesResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HousingMeta/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HousingSettingData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/HypixelResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/InventoryData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/InventoryObject/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Item/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ItemData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ItemsFished/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ItemsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/JacobsContent/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/JacobsPerks/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Jungle/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/KatHouse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/KuudraPartyFinder/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Leaderboard/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/LeaderboardsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Level/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Lonely/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MasterCatacombs/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Matriarch/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Mayor/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MemberData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Milestone/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MiningCore/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Minister/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Mirrorverse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Miscellaneous/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Montezuma/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Murder/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MuseumData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MuseumItemData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MuseumItemInfo/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MuseumMember/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/MuseumResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Mythos/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/NewsItem/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/NewsMaterial/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/NewsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Numbers/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Objective/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/OneTimeAchievement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/OngoingSlayerQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/OnlineResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/OperatorChip/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PabloQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Pairings/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Pattern/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Perk/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PerkNode/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PetCare/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PetData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Pets/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PetsData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PetsMilestone/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Player/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PlayerData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PlayerInventory/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PlayerLeveling/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PlayerResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PlayerStats/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PomtairQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Precursor/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Prestige/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Product/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Profile/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ProfileData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ProfileLeveling/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ProfileResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ProfilesResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/PunishmentStatsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Quest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuestObjective/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuestRequirement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuestReward/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuestRewards/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuestSettings/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Quests/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuestsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/QuickStatus/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RabbitHitmen/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Races/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Rank/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Rarity/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RateLimit/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RecentGame/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RecentGamesResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RecentMobKill/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Recipe/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RecipeOutput/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Requirement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Reward/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Rift/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RiftData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/RiftInventory/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Sale/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Salvage/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SalvageData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SearchSettings/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SecuredTrophy/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Seraphine/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Session/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ShardOwned/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Shards/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SharedInventory/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Shop/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/ShredderRod/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Simon/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SirihQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Skill/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SkillTree/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SkillsResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Skin/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Slayer/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SlayerData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SlayerQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Songs/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SpecialItemInfo/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Spooky/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Starlyn/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Summary/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/SuusQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Temples/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/TieredAchievement/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/TimeTower/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Tourney/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Transaction/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/TrapperQuest/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Treasures/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/TreeGifts/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/TuningSlot/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/Type/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/UpgradeCost/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/UpgradeState/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/VanityMeta/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/VanityResponse/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/VillagePlaza/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/WestVillage/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/WinterPlayerData/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/WitherCage/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/WizardTower/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/api/typescript/interfaces/WyldWoods/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/guides/faq/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
     <url>
          <loc>https://Joshy3282.github.io/HyWrapper/guides/quickstart/</loc>
-         <lastmod>2026-03-26</lastmod>
+         <lastmod>2026-03-30</lastmod>
     </url>
 </urlset>

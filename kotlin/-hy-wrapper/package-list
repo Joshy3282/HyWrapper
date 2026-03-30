@@ -4288,7 +4288,7 @@ $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/auctionId/#/Poin
 $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/bin/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/bin.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/buyer/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/buyer.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/buyerProfile/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/buyer-profile.html
-$dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/itemBytes/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/item-bytes.html
+$dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/item/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/item.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/price/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/price.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/seller/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/seller.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/EndedAuction/sellerProfile/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-ended-auction/seller-profile.html
@@ -4634,7 +4634,7 @@ $dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/buyPrice/#/Pointi
 $dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/buyVolume/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/buy-volume.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/productId/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/product-id.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/sellMovingWeek/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/sell-moving-week.html
-$dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/sellOrder/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/sell-order.html
+$dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/sellOrders/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/sell-orders.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/sellPrice/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/sell-price.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/QuickStatus/sellVolume/#/PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-quick-status/sell-volume.html
 $dokka.location:com.joshy.hywrapper.model.skyblock/Recipe///PointingToDeclaration/-hy-wrapper/com.joshy.hywrapper.model.skyblock/-recipe/index.html
