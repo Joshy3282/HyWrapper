@@ -7,6 +7,14 @@
 
 An asynchronous and multi-platform Hypixel API wrapper for Python, Kotlin, and Java.
 
+## Features
+
+- **Language Parity**: Consistent models and helper methods across Python, TypeScript, and Kotlin.
+- **Asynchronous**: Fully non-blocking requests using Coroutines (Kotlin), `asyncio/httpx` (Python), and Promises (TypeScript).
+- **Type Safety**: Rich, strongly-typed models with validation (Pydantic, Kotlin Serialization, TypeScript Interfaces).
+- **Comprehensive Coverage**: Support for all major endpoints including SkyBlock (Bazaar, Auctions, Garden), Players, Guilds, and Resources.
+- **Automatic Rate Limiting**: Built-in handling for Hypixel API rate limits to ensure reliable data fetching.
+
 ## Documentation
 
 Full documentation is available at [https://joshy3282.github.io/HyWrapper/](https://joshy3282.github.io/HyWrapper/).
