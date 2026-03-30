@@ -51,6 +51,7 @@ export interface ClientOptions {
     default_cache_duration_minutes?: number;
     auto_retry?: boolean;
     max_retries?: number;
+    axios_instance?: AxiosInstance;
 }
 
 /**
@@ -59,11 +60,7 @@ export interface ClientOptions {
  * This client handles authentication, rate limiting, and automatic retries.
  * It uses Promises for asynchronous requests.
  *
- * @param apiKey The Hypixel API key.
- * @param baseUrl The base URL for the Hypixel API.
- * @param defaultCacheDurationMinutes The duration for which successful responses should be cached.
- * @param autoRetry Whether to automatically retry requests that fail due to rate limiting.
- * @param maxRetries The maximum number of retries for rate-limited requests.
+ * @param options The client configuration options.
  */
 export class HypixelClient {
     private readonly apiKey: string;
@@ -82,19 +79,12 @@ export class HypixelClient {
         this.autoRetry = options.auto_retry ?? false;
         this.maxRetries = options.max_retries ?? 3;
 
-        this.axiosInstance = axios.create({
+        this.axiosInstance = options.axios_instance || axios.create({
             baseURL: this.baseUrl,
             timeout: 30000,
             headers: {
                 Accept: "application/json",
             },
-        });
-
-        this.axiosInstance.interceptors.response.use((response) => {
-            if (response.status >= 200 && response.status < 300 && this.defaultCacheDurationMinutes > 0) {
-                response.headers["Cache-Control"] = `public, max-age=${this.defaultCacheDurationMinutes * 60}`;
-            }
-            return response;
         });
     }
 
@@ -173,8 +163,50 @@ export class HypixelClient {
     }
 
     /**
+     * Retrieves current player counts across all games.
+     * https://api.hypixel.net/v2/counts
+     *
+     * @returns A {@link CountsResponse} containing the player counts.
+     */
+    public async getCounts(): Promise<CountsResponse> {
+        return this.fetch("/counts");
+    }
+
+    /**
+     * Retrieves current boosters.
+     * https://api.hypixel.net/v2/boosters
+     *
+     * @returns A {@link BoostersResponse} containing the boosters.
+     */
+    public async getBoosters(): Promise<BoostersResponse> {
+        return this.fetch("/boosters");
+    }
+
+    /**
+     * Retrieves current leaderboards.
+     * https://api.hypixel.net/v2/leaderboards
+     *
+     * @returns A {@link LeaderboardsResponse} containing the leaderboards.
+     */
+    public async getLeaderboards(): Promise<LeaderboardsResponse> {
+        return this.fetch("/leaderboards");
+    }
+
+    /**
+     * Retrieves punishment statistics.
+     * https://api.hypixel.net/v2/punishmentstats
+     *
+     * @returns A {@link PunishmentStatsResponse} containing the punishment statistics.
+     */
+    public async getPunishmentStats(): Promise<PunishmentStatsResponse> {
+        return this.fetch("/punishmentstats");
+    }
+
+    /**
      * Retrieves the list of games.
      * https://api.hypixel.net/v2/resources/games
+     *
+     * @returns A {@link GamesResponse} containing the list of games.
      */
     public async getGames(): Promise<GamesResponse> {
         return this.fetch("/resources/games", {}, false);
@@ -183,6 +215,8 @@ export class HypixelClient {
     /**
      * Retrieves the list of achievements.
      * https://api.hypixel.net/v2/resources/achievements
+     *
+     * @returns An {@link AchievementsResponse} containing the list of achievements.
      */
     public async getAchievements(): Promise<AchievementsResponse> {
         return this.fetch("/resources/achievements", {}, false);
@@ -191,6 +225,8 @@ export class HypixelClient {
     /**
      * Retrieves the list of challenges.
      * https://api.hypixel.net/v2/resources/challenges
+     *
+     * @returns A {@link ChallengesResponse} containing the list of challenges.
      */
     public async getChallenges(): Promise<ChallengesResponse> {
         return this.fetch("/resources/challenges", {}, false);
@@ -199,6 +235,8 @@ export class HypixelClient {
     /**
      * Retrieves the list of quests.
      * https://api.hypixel.net/v2/resources/quests
+     *
+     * @returns A {@link QuestsResponse} containing the list of quests.
      */
     public async getQuests(): Promise<QuestsResponse> {
         return this.fetch("/resources/quests", {}, false);
@@ -207,6 +245,8 @@ export class HypixelClient {
     /**
      * Retrieves the list of guild achievements.
      * https://api.hypixel.net/v2/resources/guilds/achievements
+     *
+     * @returns A {@link GuildsAchievementsResponse} containing the list of guild achievements.
      */
     public async getGuildAchievements(): Promise<GuildsAchievementsResponse> {
         return this.fetch("/resources/guilds/achievements", {}, false);
@@ -215,6 +255,8 @@ export class HypixelClient {
     /**
      * Retrieves the list of vanity pets.
      * https://api.hypixel.net/v2/resources/vanity/pets
+     *
+     * @returns A {@link VanityResponse} containing the list of vanity pets.
      */
     public async getVanityPets(): Promise<VanityResponse> {
         return this.fetch("/resources/vanity/pets", {}, false);
@@ -223,41 +265,51 @@ export class HypixelClient {
     /**
      * Retrieves the list of vanity companions.
      * https://api.hypixel.net/v2/resources/vanity/companions
+     *
+     * @returns A {@link VanityResponse} containing the list of vanity companions.
      */
     public async getVanityCompanions(): Promise<VanityResponse> {
         return this.fetch("/resources/vanity/companions", {}, false);
     }
 
     /**
+     * Retrieves the current SkyBlock election information.
+     * https://api.hypixel.net/v2/resources/skyblock/election
+     *
+     * @returns An {@link ElectionResponse} containing the election information.
+     */
+    public async getSkyBlockElection(): Promise<ElectionResponse> {
+        return this.fetch("/resources/skyblock/election", {}, false);
+    }
+
+    /**
+     * Retrieves the list of SkyBlock items.
+     * https://api.hypixel.net/v2/resources/skyblock/items
+     *
+     * @returns An {@link ItemsResponse} containing the list of items.
+     */
+    public async getSkyBlockItems(): Promise<ItemsResponse> {
+        return this.fetch("/resources/skyblock/items", {}, false);
+    }
+
+    /**
      * Retrieves the list of SkyBlock collections.
      * https://api.hypixel.net/v2/resources/skyblock/collections
+     *
+     * @returns A {@link CollectionsResponse} containing the list of collections.
      */
-    public async getCollections(): Promise<CollectionsResponse> {
+    public async getSkyBlockCollections(): Promise<CollectionsResponse> {
         return this.fetch("/resources/skyblock/collections", {}, false);
     }
 
     /**
      * Retrieves SkyBlock skills information.
      * https://api.hypixel.net/v2/resources/skyblock/skills
+     *
+     * @returns A {@link SkillsResponse} containing the skills information.
      */
-    public async getSkills(): Promise<SkillsResponse> {
+    public async getSkyBlockSkills(): Promise<SkillsResponse> {
         return this.fetch("/resources/skyblock/skills", {}, false);
-    }
-
-    /**
-     * Retrieves the list of SkyBlock items.
-     * https://api.hypixel.net/v2/resources/skyblock/items
-     */
-    public async getItems(): Promise<ItemsResponse> {
-        return this.fetch("/resources/skyblock/items", {}, false);
-    }
-
-    /**
-     * Retrieves the current SkyBlock election information.
-     * https://api.hypixel.net/v2/resources/skyblock/election
-     */
-    public async getElection(): Promise<ElectionResponse> {
-        return this.fetch("/skyblock/election", {}, false);
     }
 
     /**
@@ -298,7 +350,7 @@ export class HypixelClient {
      *
      * @param page The page number to get.
      */
-    public async getAuctions(page: number = 0): Promise<AuctionsResponse> {
+    public async getAuctions(page = 0): Promise<AuctionsResponse> {
         return this.fetch("/skyblock/auctions", { page: page.toString() }, false);
     }
 
@@ -404,38 +456,6 @@ export class HypixelClient {
         return this.fetch("/housing/houses", { player: UuidUtils.undash(uuid) });
     }
 
-    /**
-     * Retrieves the current boosters.
-     * https://api.hypixel.net/v2/boosters
-     */
-    public async getBoosters(): Promise<BoostersResponse> {
-        return this.fetch("/boosters");
-    }
-
-    /**
-     * Retrieves the player counts across various games.
-     * https://api.hypixel.net/v2/counts
-     */
-    public async getCounts(): Promise<CountsResponse> {
-        return this.fetch("/counts");
-    }
-
-    /**
-     * Retrieves the current leaderboards.
-     * https://api.hypixel.net/v2/leaderboards
-     */
-    public async getLeaderboards(): Promise<LeaderboardsResponse> {
-        return this.fetch("/leaderboards");
-    }
-
-    /**
-     * Retrieves punishment statistics.
-     * https://api.hypixel.net/v2/punishmentstats
-     */
-    public async getPunishmentStats(): Promise<PunishmentStatsResponse> {
-        return this.fetch("/punishmentstats");
-    }
-
     private async fetch<T extends HypixelResponse>(
         endpoint: string,
         params: Record<string, string> = {},
@@ -455,6 +475,10 @@ export class HypixelClient {
                     params,
                     headers,
                 });
+
+                if (response.status >= 200 && response.status < 300 && this.defaultCacheDurationMinutes > 0) {
+                    response.headers["Cache-Control"] = `public, max-age=${this.defaultCacheDurationMinutes * 60}`;
+                }
 
                 const rateLimit = this.parseRateLimit(response.headers);
                 if (rateLimit) {

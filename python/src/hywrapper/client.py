@@ -150,11 +150,14 @@ class HypixelClient:
 
         if http_client is None:
             self.internal_http_client = httpx.AsyncClient(timeout=30.0)
+            self._own_client = True
         else:
             self.internal_http_client = http_client
+            self._own_client = False
 
     async def close(self) -> None:
-        await self.internal_http_client.aclose()
+        if self._own_client:
+            await self.internal_http_client.aclose()
 
     async def get_player(self, uuid: str) -> PlayerResponse:
         """
@@ -512,6 +515,11 @@ class HypixelClient:
                 response = await self.internal_http_client.get(
                     url, params=query_params, headers=headers
                 )
+
+                if not response.is_error and self.default_cache_duration_minutes > 0:
+                    response.headers["Cache-Control"] = (
+                        f"public, max-age={self.default_cache_duration_minutes * 60}"
+                    )
 
                 rate_limit = self._parse_rate_limit(response.headers)
                 if rate_limit:
