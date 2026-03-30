@@ -1,6 +1,5 @@
 package com.joshy.hywrapper.data.skyblock
 
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

@@ -1,0 +1,11 @@
+# Set default behavior to handle line endings automatically.
+* text=auto
+
+*.java    text
+*.js      text
+*.kt      text
+*.md      text
+*.py      text
+*.ts      text
+
+*.cmd     text eol=crlf

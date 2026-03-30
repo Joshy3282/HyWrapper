@@ -7,7 +7,7 @@ import net.querz.nbt.tag.ListTag
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.io.ByteArrayOutputStream
-import java.util.Base64
+import java.util.*
 import java.util.zip.GZIPOutputStream
 
 class NbtUtilsTest {

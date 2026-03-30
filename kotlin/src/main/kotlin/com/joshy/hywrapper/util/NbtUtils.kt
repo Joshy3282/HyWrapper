@@ -3,7 +3,7 @@ package com.joshy.hywrapper.util
 import net.querz.nbt.io.NBTDeserializer
 import net.querz.nbt.tag.CompoundTag
 import java.io.ByteArrayInputStream
-import java.util.Base64
+import java.util.*
 import java.util.zip.GZIPInputStream
 
 object NbtUtils {
