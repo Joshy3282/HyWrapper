@@ -39,3 +39,17 @@ fun main() = runBlocking {
 - Coroutines support for asynchronous requests
 - Multi-platform support
 - Type-safe models with Kotlin Serialization
+
+## Building
+
+To build the project manually using Gradle:
+
+```bash
+./gradlew build
+```
+
+To install it to your local Maven repository:
+
+```bash
+./gradlew publishToMavenLocal
+```

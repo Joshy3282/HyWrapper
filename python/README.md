@@ -29,3 +29,11 @@ if __name__ == "__main__":
 - Fully asynchronous using `httpx`
 - Type hints and validation using `pydantic`
 - Supports all major Hypixel API endpoints
+
+## Building
+
+To build the package manually, you'll need `uv` installed:
+
+```bash
+uv build
+```

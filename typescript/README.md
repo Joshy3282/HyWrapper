@@ -30,3 +30,12 @@ main();
 - Strong TypeScript definitions
 - Promise-based API
 - Supports all major Hypixel API endpoints
+
+## Building
+
+To build the project manually:
+
+```bash
+npm install
+npm run build
+```
