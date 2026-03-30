@@ -48,7 +48,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.joshy3282:hywrapper:1.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
     implementation("com.squareup.okhttp3:okhttp:$okhttpVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
