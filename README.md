@@ -3,6 +3,10 @@
 
 An asynchronous and multi-platform Hypixel API wrapper for Python, Kotlin, and Java.
 
+## Documentation
+
+Full documentation is available at [https://joshy3282.github.io/HyWrapper/](https://joshy3282.github.io/HyWrapper/).
+
 ## Installation
 
 ### Python
