@@ -1,4 +1,4 @@
-package com.joshy.hywrapper.example;
+package com.example;
 
 import com.joshy.hywrapper.HypixelClient;
 import com.joshy.hywrapper.model.playerdata.Player;
@@ -6,21 +6,29 @@ import com.joshy.hywrapper.model.playerdata.PlayerResponse;
 import com.joshy.hywrapper.model.skyblock.BazaarResponse;
 import com.joshy.hywrapper.model.skyblock.Product;
 import kotlinx.coroutines.BuildersKt;
-import kotlinx.coroutines.EmptyCoroutineContext;
+import kotlin.coroutines.EmptyCoroutineContext;
+import okhttp3.OkHttpClient;
 
 import java.util.Map;
 
-public class MainJava {
+public class Main {
     public static void main(String[] args) {
         String apiKey = System.getenv("HYPIXEL_API_KEY") != null
                 ? System.getenv("HYPIXEL_API_KEY")
                 : "YOUR_API_KEY";
 
-        HypixelClient client = new HypixelClient(apiKey);
+        HypixelClient client = new HypixelClient(
+                apiKey,
+                new OkHttpClient(),
+                "https://api.hypixel.net/v2",
+                1,
+                false,
+                3
+        );
 
         try {
             PlayerResponse playerResponse = BuildersKt.runBlocking(EmptyCoroutineContext.INSTANCE,
-                    (scope, continuation) -> client.getPlayer("f7c77398-6623-4a31-8c7a-bc0c56b9d28e", continuation));
+                    (scope, continuation) -> client.getPlayer("ac29411d0826412f98c0dd14b334c1fa", continuation));
 
             Player player = playerResponse.getPlayer();
             if (player != null) {

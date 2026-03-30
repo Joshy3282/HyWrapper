@@ -7,7 +7,7 @@ async def main():
     client = HypixelClient(api_key)
 
     try:
-        player_response = await client.get_player('f7c77398-6623-4a31-8c7a-bc0c56b9d28e')
+        player_response = await client.get_player('ac29411d0826412f98c0dd14b334c1fa')
         player = player_response.player
         
         if player:
@@ -23,7 +23,7 @@ async def main():
 
         for product_id in list(products.keys())[:5]:
             product = products[product_id]
-            print(f'- {product_id}: Buy Price {product.quickStatus.buyPrice}')
+            print(f'- {product_id}: Buy Price {product.quick_status.buy_price}')
 
     except Exception as e:
         print(f'Error: {e}')

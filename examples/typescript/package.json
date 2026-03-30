@@ -1,0 +1,17 @@
+{
+  "name": "hywrapper-ts-example",
+  "version": "1.0.0",
+  "description": "Example usage of hywrapper in TypeScript",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "hywrapper": "file:../../typescript"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

@@ -66,6 +66,22 @@ async def main():
 asyncio.run(main())
 ```
 
+### TypeScript
+```typescript
+import { HypixelClient } from 'hywrapper-ts';
+
+async function main() {
+    const client = new HypixelClient('your-api-key');
+    const response = await client.getPlayer('ac29411d0826412f98c0dd14b334c1fa');
+    
+    if (response.success) {
+        console.log(`Player Found: ${response.player?.displayname}`);
+    }
+}
+
+main();
+```
+
 ## Examples
 
 For more detailed examples in different languages, see the [examples/](./examples/) folder.

@@ -1,4 +1,4 @@
-package com.joshy.hywrapper.example
+package com.example
 
 import com.joshy.hywrapper.HypixelClient
 import kotlinx.coroutines.runBlocking
@@ -8,7 +8,7 @@ fun main() = runBlocking {
     val client = HypixelClient(apiKey)
 
     try {
-        val playerResponse = client.getPlayer("f7c77398-6623-4a31-8c7a-bc0c56b9d28e")
+        val playerResponse = client.getPlayer("ac29411d0826412f98c0dd14b334c1fa")
         val player = playerResponse.player
 
         if (player != null) {

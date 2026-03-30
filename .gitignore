@@ -72,3 +72,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+
+### Examples ###
+examples/**/node_modules/
+examples/**/dist/
+examples/**/build/
+examples/**/.gradle/
+examples/**/__pycache__/
+examples/**/.venv/
+examples/**/target/
+examples/**/.kotlin/
+

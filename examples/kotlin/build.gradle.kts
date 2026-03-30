@@ -1,0 +1,23 @@
+plugins {
+    kotlin("jvm") version "2.3.20"
+    application
+}
+
+group = "com.example"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+}
+
+dependencies {
+    implementation("com.github.username:repo:v1.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+    implementation("com.squareup.okhttp3:okhttp:5.3.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
+}
+
+application {
+    mainClass.set("com.example.MainKt")
+}

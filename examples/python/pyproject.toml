@@ -1,0 +1,13 @@
+[project]
+name = "hywrapper-example"
+version = "0.1.0"
+description = "Example usage of hywrapper"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "hywrapper",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
