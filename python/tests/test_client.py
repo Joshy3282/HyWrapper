@@ -1,6 +1,6 @@
-import pytest
-
 from typing import Any, AsyncGenerator
+
+import pytest
 
 from hywrapper.client import (
     DataNotPopulatedException,
