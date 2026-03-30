@@ -55,6 +55,6 @@ nav:
       - Client: api/python/client.md
       - UUID Utils: api/python/uuid_utils.md
   - TypeScript API Reference:
-      - API: api/typescript/index.md
-  - Kotlin API Reference: kotlin/index.html
+      - API: api/typescript/README.md
+  - Kotlin API Reference: https://Joshy3282.github.io/HyWrapper/kotlin/
   - Contributing: contributing.md

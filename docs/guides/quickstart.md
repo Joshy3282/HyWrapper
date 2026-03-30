@@ -28,11 +28,41 @@ async def main():
 asyncio.run(main())
 ```
 
-## 3. Kotlin Quick Start
+## 3. TypeScript Quick Start
+
+### Installation
+```bash
+npm install hywrapper-ts
+```
+
+### Basic Usage
+```typescript
+import { HypixelClient } from 'hywrapper-ts';
+
+async function main() {
+    const client = new HypixelClient('your-api-key');
+    const response = await client.getPlayer('ac29411d-0826-412f-98c0-dd14b334c1fa');
+
+    if (response.success) {
+        console.log(`Found player: ${response.player?.displayname}`);
+    }
+}
+
+main();
+```
+
+## 4. Kotlin Quick Start
 
 ### Dependency (Gradle)
 ```kotlin
-implementation("com.joshy:hywrapper:0.1.2")
+repositories {
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+}
+
+dependencies {
+    implementation("com.github.Joshy3282:HyWrapper:1.0-SNAPSHOT")
+}
 ```
 
 ### Basic Usage

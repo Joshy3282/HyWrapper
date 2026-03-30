@@ -1,6 +1,6 @@
 # Installation
 
-HyWrapper is available for both Python and JVM-based languages.
+HyWrapper is available for Python, TypeScript, and JVM-based languages (Kotlin/Java).
 
 ## Python Installation
 
@@ -16,38 +16,69 @@ Or with `uv`:
 uv add hywrapper
 ```
 
+## TypeScript Installation
+
+HyWrapper is available on npm. You can install it using `npm`:
+
+```bash
+npm install hywrapper-ts
+```
+
+Or with `yarn`:
+
+```bash
+yarn add hywrapper-ts
+```
+
 ## Kotlin/Java Installation
 
-HyWrapper is available on Maven Central.
+HyWrapper is available on JitPack and Maven Central.
 
 ### Gradle (Kotlin)
 
-Add the dependency to your `build.gradle.kts`:
+Add the JitPack repository and the dependency to your `build.gradle.kts`:
 
 ```kotlin
+repositories {
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+}
+
 dependencies {
-    implementation("com.joshy:hywrapper:0.1.2")
+    implementation("com.github.Joshy3282:HyWrapper:1.0-SNAPSHOT")
 }
 ```
 
 ### Gradle (Groovy)
 
-Add the dependency to your `build.gradle`:
+Add the JitPack repository and the dependency to your `build.gradle`:
 
 ```groovy
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
 dependencies {
-    implementation 'com.joshy:hywrapper:0.1.2'
+    implementation 'com.github.Joshy3282:HyWrapper:1.0-SNAPSHOT'
 }
 ```
 
 ### Maven
 
-Add the dependency to your `pom.xml`:
+Add the JitPack repository and the dependency to your `pom.xml`:
 
 ```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
 <dependency>
-    <groupId>com.joshy</groupId>
-    <artifactId>hywrapper</artifactId>
-    <version>0.1.2</version>
+    <groupId>com.github.Joshy3282</groupId>
+    <artifactId>HyWrapper</artifactId>
+    <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
