@@ -1,3 +1,8 @@
+/**
+ * Information about a player's Rift data.
+ *
+ * @property village_plaza Information related to the Village Plaza
+ */
 export interface Rift {
     village_plaza?: VillagePlaza;
     wither_cage?: WitherCage;
@@ -5,6 +10,7 @@ export interface Rift {
     dead_cats?: DeadCats;
     wizard_tower?: WizardTower;
     enigma?: Enigma;
+    gallery?: Gallery;
     slayer_quest?: SlayerQuest;
     /** TODO enum? */
     lifetime_purchased_boundaries?: string[];
@@ -16,6 +22,11 @@ export interface Rift {
     inventory?: RiftInventory;
 }
 
+/**
+ * Information related to the Village Plaza
+ *
+ * @property murder Detective Amog's murder quest
+ */
 export interface VillagePlaza {
     murder?: Murder;
     barryCenter?: BarryCenter;
@@ -26,6 +37,9 @@ export interface VillagePlaza {
     got_scammed?: boolean;
 }
 
+/**
+ * Information
+ */
 export interface Murder {
     step_index?: number;
     room_clues?: string[];
@@ -205,6 +219,12 @@ export interface RiftInventory {
     equipment_contents?: InventoryData;
 }
 
+/**
+ * Used for inventory data
+ *
+ * @property type TODO unknown
+ * @property data Base64 encoded Gzipped inventory nbt data.
+ */
 export interface InventoryData {
     type?: number;
     data?: string;

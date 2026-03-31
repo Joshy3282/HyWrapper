@@ -1,5 +1,6 @@
-import pytest
 import httpx
+import pytest
+
 from hywrapper.client import HypixelClient
 
 
@@ -38,6 +39,6 @@ async def test_caching_parity(httpx_mock):
         json={"success": True, "name": "Bingo"},
     )
 
-    response = await client.get_bingo()
+    await client.get_bingo()
 
     await client.close()

@@ -4,6 +4,11 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 
+/**
+ * Information about a player's Rift data.
+ *
+ * @property villagePlaza Information related to the Village Plaza
+ * */
 @Serializable
 data class Rift(
     @SerialName("village_plaza")
@@ -32,6 +37,11 @@ data class Rift(
     val inventory: Inventory? = null,
 )
 
+/**
+ * Information related to the Village Plaza
+ *
+ * @property murder Detective Amog's murder quest
+ * */
 @Serializable
 data class VillagePlaza(
     val murder: Murder? = null,
@@ -45,6 +55,10 @@ data class VillagePlaza(
     val gotScammed: Boolean? = null,
 )
 
+/**
+ * Information
+ *
+ * */
 @Serializable
 data class Murder(
     @SerialName("step_index")
@@ -323,6 +337,12 @@ data class Inventory(
     val equipmentContents: InventoryData? = null,
 )
 
+/**
+ * Used for inventory data
+ *
+ * @property type TODO unknown
+ * @property data Base64 encoded Gzipped inventory nbt data.
+ * */
 @Serializable
 data class InventoryData(
     val type: Int? = null,

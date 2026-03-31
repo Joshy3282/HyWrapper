@@ -1,6 +1,8 @@
-import pytest
-from hywrapper.client import HypixelClient, RateLimitException
 import asyncio
+
+import pytest
+
+from hywrapper.client import HypixelClient, RateLimitException
 
 
 @pytest.mark.asyncio

@@ -6,6 +6,13 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class InventoryData(BaseModel):
+    """
+    Used for inventory data
+
+    :param type: TODO unknown
+    :param data: Base64 encoded Gzipped inventory nbt data.
+    """
+
     model_config = ConfigDict(populate_by_name=True)
     type: Optional[int] = None
     data: Optional[str] = None
@@ -212,6 +219,11 @@ class BarryCenter(BaseModel):
 
 
 class Murder(BaseModel):
+    """
+    Information
+
+    """
+
     model_config = ConfigDict(populate_by_name=True)
     step_index: Optional[int] = Field(default=None, alias="step_index")
     room_clues: Optional[List[str]] = Field(default=None, alias="room_clues")
@@ -220,6 +232,12 @@ class Murder(BaseModel):
 
 
 class VillagePlaza(BaseModel):
+    """
+    Information related to the Village Plaza
+
+    :param murder: Detective Amog's murder quest
+    """
+
     model_config = ConfigDict(populate_by_name=True)
     murder: Optional[Murder] = None
     barry_center: Optional[BarryCenter] = Field(default=None, alias="barryCenter")
@@ -231,6 +249,12 @@ class VillagePlaza(BaseModel):
 
 
 class Rift(BaseModel):
+    """
+    Information about a player's Rift data.
+
+    :param village_plaza: Information related to the Village Plaza
+    """
+
     model_config = ConfigDict(populate_by_name=True)
     village_plaza: Optional[VillagePlaza] = Field(default=None, alias="village_plaza")
     wither_cage: Optional[WitherCage] = Field(default=None, alias="wither_cage")
@@ -238,6 +262,7 @@ class Rift(BaseModel):
     dead_cats: Optional[DeadCats] = Field(default=None, alias="dead_cats")
     wizard_tower: Optional[WizardTower] = Field(default=None, alias="wizard_tower")
     enigma: Optional[Enigma] = None
+    gallery: Optional[Gallery] = None
     slayer_quest: Optional[SlayerQuest] = Field(default=None, alias="slayer_quest")
     # TODO enum?
     lifetime_purchased_boundaries: Optional[List[str]] = Field(
